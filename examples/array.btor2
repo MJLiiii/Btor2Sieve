@@ -1,0 +1,21 @@
+; A word-level read/write property and an array with constant initialization.
+1 sort bitvec 1
+2 sort bitvec 4
+3 sort bitvec 8
+4 sort array 2 3
+5 zero 3
+6 state 4 memory
+7 init 4 6 5
+8 input 2 address
+9 input 3 value
+10 write 4 6 8 9
+11 next 4 6 10
+12 read 3 10 8
+13 neq 1 12 9
+14 bad 13 write_read_mismatch
+15 constd 3 42
+16 eq 1 12 15
+17 bad -16 value_must_be_42
+18 read 3 6 8
+19 eq 1 18 15
+20 bad -19 memory_at_address_must_be_42

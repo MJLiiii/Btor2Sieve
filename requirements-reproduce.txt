@@ -1,0 +1,4 @@
+# Versions used for the recorded 2026-11-08 experiment (Python 3.12.13).
+z3-solver==5.3.3.0
+cvc5==1.4.2
+pytest==9.2.0

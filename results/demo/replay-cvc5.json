@@ -1,0 +1,1157 @@
+{
+  "backend": "cvc5",
+  "solver_version": "1.4.2",
+  "solver_options": {
+    "tlimit-per": 5000,
+    "arrays-exp": true,
+    "produce-models": true
+  },
+  "checked": 127,
+  "mismatched": 0,
+  "incomplete_run_errors": 0,
+  "checks": [
+    {
+      "id": "m0000-00001",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.015700874999311054,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00003",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0013736669970967341,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00005",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011102079988631885,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00006",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012282500028959475,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00007",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001612167001439957,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00012",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001435666999896057,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00015",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001088875000277767,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00016",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012201249992358498,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00018",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011972499996772967,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00023",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011666669997794088,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00031",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011204580005141906,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00033",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0014389999996637926,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00035",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011467080003058072,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00036",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012802079982066061,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00039",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010317919986846391,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00040",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011756250023609027,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00042",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011798330015153624,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00044",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0014447499997913837,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00046",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011869170011777896,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00047",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0013099579991830979,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00048",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012309170015214477,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00053",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012128750022384338,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00056",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001042583000526065,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00057",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0013190419995225966,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00059",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012417500001902226,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00064",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011939169999095611,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00072",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010413749987492338,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00074",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011975419984082691,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00076",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001036832996760495,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00077",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012090829986846074,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00080",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010759169999801088,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00081",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011776669998653233,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00106",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010205409998889081,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00107",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.000996291000774363,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00109",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0009973330015782267,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00110",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010067910006910097,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00112",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0009866670006886125,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00115",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0009818329999689013,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00117",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011118340007669758,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00119",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001154082998255035,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00120",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010194999995292164,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00123",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010562079987721518,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00124",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011556669996934943,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00126",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010177920012210961,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00129",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010021249981946312,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00178",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011801250002463348,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00179",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0015702089986007195,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00180",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010783750003611203,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00181",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012154169999121223,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00182",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011882500002684537,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00183",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011697910013026558,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00184",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010199579992331564,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00185",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0014790000022912864,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00186",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0014372919977176934,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00187",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001245584000571398,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00188",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011877500000991859,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00189",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011953749999520369,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00190",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001016958001855528,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00191",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011819999999715947,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00192",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001385291001497535,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00193",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012926669987791684,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00203",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001277999999729218,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00204",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001117125000746455,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00205",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012032920021738391,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00206",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010344170004827902,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00207",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011847079986182507,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00208",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012273339998500887,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000-00209",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012367499984975439,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00047",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001255999999557389,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00048",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012395410012686625,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00052",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012414170014380943,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00053",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0013577909994637594,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00055",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0011085419973824173,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00057",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012555410030472558,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00059",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012813749999622814,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00061",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010499579984752927,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00062",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012573330022860318,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00064",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001255499999388121,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00067",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010387920010543894,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00069",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0013675000009243377,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00071",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001147709001088515,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00073",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010787920000439044,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00075",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0014349170014611445,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00077",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010787499995785765,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00079",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012265410005056765,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00081",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010455830015416723,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00082",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0013076670002192259,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00085",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010419999998703133,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00086",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012075419981556479,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00110",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012752080001519062,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00111",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012410409981384873,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00113",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001224957999511389,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00114",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012275830013095401,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00116",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0013423749987850897,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00118",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0013571250019595027,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00120",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001272166999115143,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00122",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010315830004401505,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00123",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012470420006138738,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00125",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012488749998738058,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00128",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012150419970566873,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00130",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012578750029206276,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00132",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010274999985995237,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00134",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001030958999763243,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00136",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0012345410032139625,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00138",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010284169984515756,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00140",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.00123399999938556,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00142",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010315839972463436,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00143",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0016639589994156267,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00146",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.001098291999369394,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00147",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0013450830010697246,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00215",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010799170013342518,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001-00217",
+      "kind": "implication",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010086250003951136,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000:property:11:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.0011792500008596107,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000:property:14:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.001230457997735357,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000:model:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.0011154170024383347,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000:initial:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.0010450410009070765,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0000:transition:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.001086167001631111,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001:property:14:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.001073125000402797,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001:property:17:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.001187666999612702,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001:property:20:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.0012065830014762469,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001:model:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.0010149170011573005,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001:initial:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.0010326250012440141,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0001:transition:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.0010163330007344484,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0002:property:5:hypothesis",
+      "kind": "hypothesis",
+      "expected": "unsat",
+      "status": "unsat",
+      "duration_seconds": 0.0010126250017492566,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0002:model:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.0010826249999809079,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0002:initial:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.001159292001830181,
+      "reason": null,
+      "matches": true
+    },
+    {
+      "id": "m0002:transition:hypothesis",
+      "kind": "hypothesis",
+      "expected": "sat",
+      "status": "sat",
+      "duration_seconds": 0.0009929999978339765,
+      "reason": null,
+      "matches": true
+    }
+  ]
+}

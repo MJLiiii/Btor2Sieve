@@ -1,0 +1,10 @@
+(set-logic ALL)
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-fun i_6 () (_ BitVec 8))
+(assert
+ true)
+(assert
+ (let (($x3238 (= i_6 (_ bv255 8))))
+(not $x3238)))
+(check-sat)

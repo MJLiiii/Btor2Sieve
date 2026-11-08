@@ -1,0 +1,70 @@
+{
+  "source_sha256": {
+    "src/btor2sieve/__init__.py": "fb5133ba8c959ca26c5885062d2dcff0f1a0217e446019b4437fafdbc3ba90d9",
+    "src/btor2sieve/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/btor2sieve/btor2.py": "4a315bcbd1103efa7639c043bf427186a6dfce9bbc704500b1164e9fd61716e9",
+    "src/btor2sieve/candidates.py": "f0ecbc470a9bc5f75ae570d0fc93254e36017022b92c5e8f85a71825d1b677d8",
+    "src/btor2sieve/cli.py": "3e1d602b94f248c063ebe6ada61e8a86ae68edc72d61f4d9d044431069d5de55",
+    "src/btor2sieve/encoding.py": "edaa23e1a3a2e5347eac2bd75a1305f504f78d80d63a47d020f547a4ef609281",
+    "src/btor2sieve/pipeline.py": "18ad7df7516f4ee7a522f5d02c23e323b676472c70ecfbdc4af8d72acf872ed7",
+    "src/btor2sieve/reporting.py": "01f6c79d0be413c56cee7ecc0cbcabe0af9cb8992def7b2614de0b2b5b0845d3",
+    "src/btor2sieve/validation.py": "5d8fd107467f83518a9a615e3d349a38025a3af2636f3cc996a517038d4f9c6b"
+  },
+  "test_receipt": "pytest.txt",
+  "test_summary": "95 passed in 2.43s",
+  "public_replay": {
+    "syntax": {
+      "z3": {
+        "backend": "z3",
+        "solver_version": "5.3.3.0",
+        "solver_options": {
+          "timeout": 5000,
+          "random_seed": 0
+        },
+        "checked": 126,
+        "mismatched": 0,
+        "incomplete_run_errors": 0
+      },
+      "cvc5": {
+        "backend": "cvc5",
+        "solver_version": "1.4.2",
+        "solver_options": {
+          "tlimit-per": 5000,
+          "arrays-exp": true,
+          "produce-models": true
+        },
+        "checked": 126,
+        "mismatched": 0,
+        "incomplete_run_errors": 0
+      }
+    },
+    "semantic": {
+      "z3": {
+        "backend": "z3",
+        "solver_version": "5.3.3.0",
+        "solver_options": {
+          "timeout": 5000,
+          "random_seed": 0
+        },
+        "checked": 128,
+        "mismatched": 0,
+        "incomplete_run_errors": 0
+      },
+      "cvc5": {
+        "backend": "cvc5",
+        "solver_version": "1.4.2",
+        "solver_options": {
+          "tlimit-per": 5000,
+          "arrays-exp": true,
+          "produce-models": true
+        },
+        "checked": 128,
+        "mismatched": 0,
+        "incomplete_run_errors": 0
+      }
+    }
+  },
+  "wheel_sha256": "814fed3c59df90b7a7aef0a01db862803df417e2e14f192ca77b40035cad09f8",
+  "review": "../docs/review-final.md",
+  "corpus_manifest_sha256": "e741b54efc3563763e86f96da891cf472139164449f35d9767b46e567efad5ff"
+}

@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "retrieved_on": "2026-11-08",
+  "description": "Small licensed public corpus for frontend and extraction smoke tests; not a competition-scale performance sample.",
+  "source_provenance": "https://gitlab.com/sosy-lab/research/data/word-level-hwmc-benchmarks/-/blob/main/README.md",
+  "sources": {
+    "mann": {
+      "repository": "https://github.com/makaimann/btor-benchmarks",
+      "commit": "d9a2792dcee39f17607c889500ac76ad3df35a50",
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/mann-BSD-3-Clause.txt",
+      "license_url": "https://raw.githubusercontent.com/makaimann/btor-benchmarks/d9a2792dcee39f17607c889500ac76ad3df35a50/LICENSE"
+    },
+    "btor2tools": {
+      "repository": "https://github.com/hwmcc/btor2tools",
+      "commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+      "license": "MIT",
+      "license_path": "public/licenses/btor2tools-MIT.txt",
+      "license_url": "https://raw.githubusercontent.com/hwmcc/btor2tools/e6941e37e056084ab6e51c5c1eee6233089a330d/LICENSE.txt"
+    },
+    "pono": {
+      "repository": "https://github.com/stanford-centaur/pono",
+      "commit": "b0aa8fe43b4449d5ad62abb0f700e04dbbaa8fce",
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/pono-BSD-3-Clause.txt",
+      "license_url": "https://raw.githubusercontent.com/stanford-centaur/pono/b0aa8fe43b4449d5ad62abb0f700e04dbbaa8fce/LICENSE"
+    }
+  },
+  "licenses": [
+    {
+      "path": "public/licenses/mann-BSD-3-Clause.txt",
+      "url": "https://raw.githubusercontent.com/makaimann/btor-benchmarks/d9a2792dcee39f17607c889500ac76ad3df35a50/LICENSE",
+      "bytes": 1517,
+      "sha256": "cd9cdf2322f1036daf43e3a4684b131e7e8f8229f2341abd20db0a37bb01644c"
+    },
+    {
+      "path": "public/licenses/btor2tools-MIT.txt",
+      "url": "https://raw.githubusercontent.com/hwmcc/btor2tools/e6941e37e056084ab6e51c5c1eee6233089a330d/LICENSE.txt",
+      "bytes": 1235,
+      "sha256": "a628555a9f856a99f2d5e27fe39d13d98d0ea8844af7ffc1a8b4b576d72aad9a"
+    },
+    {
+      "path": "public/licenses/pono-BSD-3-Clause.txt",
+      "url": "https://raw.githubusercontent.com/stanford-centaur/pono/b0aa8fe43b4449d5ad62abb0f700e04dbbaa8fce/LICENSE",
+      "bytes": 2419,
+      "sha256": "7199b208de32b59293b0f1f19f5df37a64c3b73515269f7b4a287d1980b484bb"
+    }
+  ],
+  "benchmarks": [
+    {
+      "id": "mann-analog-safe",
+      "path": "public/mann-analog-safe.btor2",
+      "group": "hwmcc-derived",
+      "source": "mann",
+      "url": "https://raw.githubusercontent.com/makaimann/btor-benchmarks/d9a2792dcee39f17607c889500ac76ad3df35a50/safe/analog_estimation_convergence.btor",
+      "upstream_path": "safe/analog_estimation_convergence.btor",
+      "sha256": "03600d55d44f1f6487cf307fd059605b374c7c76ec5ade540613b534f93e1fe8",
+      "bytes": 3619,
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/mann-BSD-3-Clause.txt",
+      "counts": {
+        "lines": 178,
+        "nodes": 152,
+        "sorts": 24,
+        "array_sorts": 0,
+        "states": 5,
+        "inputs": 3,
+        "inits": 1,
+        "nexts": 5,
+        "constraints": 2,
+        "bads": 1
+      },
+      "bad_node_ids": [
+        83
+      ],
+      "upstream_label": "safe",
+      "label_note": "Source directory label, not independently proved by this project.",
+      "hwmcc19_evidence": {
+        "url": "https://raw.githubusercontent.com/zhanghongce/HWMCC19-in-CHC/65c2d913d25646d9a0a0f351032e6eddb409e59f/btor2/bv/mann/safe/analog_estimation_convergence.btor",
+        "sha256": "03600d55d44f1f6487cf307fd059605b374c7c76ec5ade540613b534f93e1fe8",
+        "byte_identical": true,
+        "mirror_provenance": "https://github.com/zhanghongce/HWMCC19-in-CHC/blob/65c2d913d25646d9a0a0f351032e6eddb409e59f/README.md"
+      },
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "mann-analog-unsafe",
+      "path": "public/mann-analog-unsafe.btor2",
+      "group": "hwmcc-derived",
+      "source": "mann",
+      "url": "https://raw.githubusercontent.com/makaimann/btor-benchmarks/d9a2792dcee39f17607c889500ac76ad3df35a50/unsafe/analog_estimation_convergence.btor",
+      "upstream_path": "unsafe/analog_estimation_convergence.btor",
+      "sha256": "bcc576cd35dfc231bbfc3ed7585843d2609572a1e5cbcf1b260e360f45b48247",
+      "bytes": 2950,
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/mann-BSD-3-Clause.txt",
+      "counts": {
+        "lines": 149,
+        "nodes": 125,
+        "sorts": 22,
+        "array_sorts": 0,
+        "states": 5,
+        "inputs": 3,
+        "inits": 1,
+        "nexts": 5,
+        "constraints": 2,
+        "bads": 1
+      },
+      "bad_node_ids": [
+        83
+      ],
+      "upstream_label": "unsafe",
+      "label_note": "Source directory label, not independently proved by this project.",
+      "hwmcc19_evidence": {
+        "status": "family source verified; exact selected competition membership not established"
+      },
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "mann-intersymbol-safe",
+      "path": "public/mann-intersymbol-safe.btor2",
+      "group": "hwmcc-derived",
+      "source": "mann",
+      "url": "https://raw.githubusercontent.com/makaimann/btor-benchmarks/d9a2792dcee39f17607c889500ac76ad3df35a50/safe/intersymbol_analog_estimation_convergence.btor",
+      "upstream_path": "safe/intersymbol_analog_estimation_convergence.btor",
+      "sha256": "3265b36f965b8e3ec75fe1c2334439960ef4bf835482b1b1c0ff5b0d42584df4",
+      "bytes": 6532,
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/mann-BSD-3-Clause.txt",
+      "counts": {
+        "lines": 310,
+        "nodes": 276,
+        "sorts": 32,
+        "array_sorts": 0,
+        "states": 8,
+        "inputs": 3,
+        "inits": 1,
+        "nexts": 8,
+        "constraints": 2,
+        "bads": 1
+      },
+      "bad_node_ids": [
+        124
+      ],
+      "upstream_label": "safe",
+      "label_note": "Source directory label, not independently proved by this project.",
+      "hwmcc19_evidence": {
+        "status": "family source verified; exact selected competition membership not established"
+      },
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "mann-intersymbol-unsafe",
+      "path": "public/mann-intersymbol-unsafe.btor2",
+      "group": "hwmcc-derived",
+      "source": "mann",
+      "url": "https://raw.githubusercontent.com/makaimann/btor-benchmarks/d9a2792dcee39f17607c889500ac76ad3df35a50/unsafe/intersymbol_analog_estimation_convergence.btor",
+      "upstream_path": "unsafe/intersymbol_analog_estimation_convergence.btor",
+      "sha256": "909df3fb39e1bcda0d88d7020bd5d06dec97da179f2ad347c98d6320be6b0de8",
+      "bytes": 9311,
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/mann-BSD-3-Clause.txt",
+      "counts": {
+        "lines": 434,
+        "nodes": 369,
+        "sorts": 63,
+        "array_sorts": 0,
+        "states": 9,
+        "inputs": 3,
+        "inits": 1,
+        "nexts": 8,
+        "constraints": 2,
+        "bads": 1
+      },
+      "bad_node_ids": [
+        127
+      ],
+      "upstream_label": "unsafe",
+      "label_note": "Source directory label, not independently proved by this project.",
+      "hwmcc19_evidence": {
+        "url": "https://raw.githubusercontent.com/zhanghongce/HWMCC19-in-CHC/65c2d913d25646d9a0a0f351032e6eddb409e59f/btor2/bv/mann/unsafe/intersymbol_analog_estimation_convergence.btor",
+        "sha256": "909df3fb39e1bcda0d88d7020bd5d06dec97da179f2ad347c98d6320be6b0de8",
+        "byte_identical": true,
+        "mirror_provenance": "https://github.com/zhanghongce/HWMCC19-in-CHC/blob/65c2d913d25646d9a0a0f351032e6eddb409e59f/README.md"
+      },
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "mann-fifo-safe",
+      "path": "public/mann-fifo-safe.btor2",
+      "group": "hwmcc-derived",
+      "source": "mann",
+      "url": "https://raw.githubusercontent.com/makaimann/btor-benchmarks/d9a2792dcee39f17607c889500ac76ad3df35a50/safe/arbitrated_fifos_n2d8w8.btor",
+      "upstream_path": "safe/arbitrated_fifos_n2d8w8.btor",
+      "sha256": "481fa14514e93007252fba94ca5168c2c8d634b12f86e81b1d56a7de14a4c5da",
+      "bytes": 11421,
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/mann-BSD-3-Clause.txt",
+      "counts": {
+        "lines": 457,
+        "nodes": 444,
+        "sorts": 11,
+        "array_sorts": 1,
+        "states": 22,
+        "inputs": 7,
+        "inits": 1,
+        "nexts": 14,
+        "constraints": 5,
+        "bads": 1
+      },
+      "bad_node_ids": [
+        116
+      ],
+      "upstream_label": "safe",
+      "label_note": "Source directory label, not independently proved by this project.",
+      "hwmcc19_evidence": {
+        "url": "https://raw.githubusercontent.com/zhanghongce/HWMCC19-in-CHC/65c2d913d25646d9a0a0f351032e6eddb409e59f/btor2/array/mann/safe/arbitrated_fifos_n2d8w8.btor",
+        "sha256": "481fa14514e93007252fba94ca5168c2c8d634b12f86e81b1d56a7de14a4c5da",
+        "byte_identical": true,
+        "mirror_provenance": "https://github.com/zhanghongce/HWMCC19-in-CHC/blob/65c2d913d25646d9a0a0f351032e6eddb409e59f/README.md"
+      },
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "mann-fifo-unsafe",
+      "path": "public/mann-fifo-unsafe.btor2",
+      "group": "hwmcc-derived",
+      "source": "mann",
+      "url": "https://raw.githubusercontent.com/makaimann/btor-benchmarks/d9a2792dcee39f17607c889500ac76ad3df35a50/unsafe/arbitrated_fifos_n2d8w8.btor",
+      "upstream_path": "unsafe/arbitrated_fifos_n2d8w8.btor",
+      "sha256": "6d830a6c363bf940b1ea8af4d4de8eb71f23c48af70ae568e2c7513c23e3e953",
+      "bytes": 11385,
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/mann-BSD-3-Clause.txt",
+      "counts": {
+        "lines": 455,
+        "nodes": 442,
+        "sorts": 11,
+        "array_sorts": 1,
+        "states": 22,
+        "inputs": 7,
+        "inits": 1,
+        "nexts": 14,
+        "constraints": 5,
+        "bads": 1
+      },
+      "bad_node_ids": [
+        114
+      ],
+      "upstream_label": "unsafe",
+      "label_note": "Source directory label, not independently proved by this project.",
+      "hwmcc19_evidence": {
+        "url": "https://raw.githubusercontent.com/zhanghongce/HWMCC19-in-CHC/65c2d913d25646d9a0a0f351032e6eddb409e59f/btor2/array/mann/unsafe/arbitrated_fifos_n2d8w8.btor",
+        "sha256": "6d830a6c363bf940b1ea8af4d4de8eb71f23c48af70ae568e2c7513c23e3e953",
+        "byte_identical": true,
+        "mirror_provenance": "https://github.com/zhanghongce/HWMCC19-in-CHC/blob/65c2d913d25646d9a0a0f351032e6eddb409e59f/README.md"
+      },
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "btor2tools-factorial4even",
+      "path": "public/btor2tools-factorial4even.btor2",
+      "group": "upstream-regression",
+      "source": "btor2tools",
+      "url": "https://raw.githubusercontent.com/hwmcc/btor2tools/e6941e37e056084ab6e51c5c1eee6233089a330d/examples/btorsim/factorial4even.btor2",
+      "upstream_path": "examples/btorsim/factorial4even.btor2",
+      "sha256": "a43b34615ab736f5d722c26bf92f692156d891a29835b4b4a5f76a5743843945",
+      "bytes": 411,
+      "license": "MIT",
+      "license_path": "public/licenses/btor2tools-MIT.txt",
+      "counts": {
+        "lines": 26,
+        "nodes": 17,
+        "sorts": 2,
+        "array_sorts": 0,
+        "states": 2,
+        "inputs": 0,
+        "inits": 2,
+        "nexts": 2,
+        "constraints": 0,
+        "bads": 2
+      },
+      "bad_node_ids": [
+        14,
+        19
+      ],
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "btor2tools-twocount2c",
+      "path": "public/btor2tools-twocount2c.btor2",
+      "group": "upstream-regression",
+      "source": "btor2tools",
+      "url": "https://raw.githubusercontent.com/hwmcc/btor2tools/e6941e37e056084ab6e51c5c1eee6233089a330d/examples/btorsim/twocount2c.btor2",
+      "upstream_path": "examples/btorsim/twocount2c.btor2",
+      "sha256": "fa4b8493f8436a06d6c885db9ba0f6fa38b4adfb6fed6ac19e346a35f3e75d79",
+      "bytes": 306,
+      "license": "MIT",
+      "license_path": "public/licenses/btor2tools-MIT.txt",
+      "counts": {
+        "lines": 23,
+        "nodes": 21,
+        "sorts": 2,
+        "array_sorts": 0,
+        "states": 2,
+        "inputs": 2,
+        "inits": 2,
+        "nexts": 2,
+        "constraints": 1,
+        "bads": 1
+      },
+      "bad_node_ids": [
+        21
+      ],
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "btor2tools-noninitstate",
+      "path": "public/btor2tools-noninitstate.btor2",
+      "group": "upstream-regression",
+      "source": "btor2tools",
+      "url": "https://raw.githubusercontent.com/hwmcc/btor2tools/e6941e37e056084ab6e51c5c1eee6233089a330d/examples/btorsim/noninitstate.btor2",
+      "upstream_path": "examples/btorsim/noninitstate.btor2",
+      "sha256": "3b114ff5670a1e8efd80bf7231add91be1e0caa19c1e11ce4adfff73e179605d",
+      "bytes": 250,
+      "license": "MIT",
+      "license_path": "public/licenses/btor2tools-MIT.txt",
+      "counts": {
+        "lines": 17,
+        "nodes": 16,
+        "sorts": 1,
+        "array_sorts": 0,
+        "states": 3,
+        "inputs": 1,
+        "inits": 1,
+        "nexts": 3,
+        "constraints": 1,
+        "bads": 1
+      },
+      "bad_node_ids": [
+        17
+      ],
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "pono-constarrtest",
+      "path": "public/pono-constarrtest.btor2",
+      "group": "upstream-regression",
+      "source": "pono",
+      "url": "https://raw.githubusercontent.com/stanford-centaur/pono/b0aa8fe43b4449d5ad62abb0f700e04dbbaa8fce/samples/constarrtest.btor2",
+      "upstream_path": "samples/constarrtest.btor2",
+      "sha256": "d1d455339e035a07feb8ff04e191d0b940a4d26fa7ad407f655a1c124ee06138",
+      "bytes": 216,
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/pono-BSD-3-Clause.txt",
+      "counts": {
+        "lines": 15,
+        "nodes": 11,
+        "sorts": 4,
+        "array_sorts": 1,
+        "states": 3,
+        "inputs": 0,
+        "inits": 1,
+        "nexts": 2,
+        "constraints": 0,
+        "bads": 1
+      },
+      "bad_node_ids": [
+        15
+      ],
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "pono-array_lt200",
+      "path": "public/pono-array_lt200.btor2",
+      "group": "upstream-regression",
+      "source": "pono",
+      "url": "https://raw.githubusercontent.com/stanford-centaur/pono/b0aa8fe43b4449d5ad62abb0f700e04dbbaa8fce/samples/array_lt200.btor2",
+      "upstream_path": "samples/array_lt200.btor2",
+      "sha256": "1dde32dafe7db5ed173d12834f1698459039f541fcd9304346d30bcbb2de6c47",
+      "bytes": 1205,
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/pono-BSD-3-Clause.txt",
+      "counts": {
+        "lines": 36,
+        "nodes": 30,
+        "sorts": 4,
+        "array_sorts": 1,
+        "states": 1,
+        "inputs": 4,
+        "inits": 1,
+        "nexts": 1,
+        "constraints": 0,
+        "bads": 1
+      },
+      "bad_node_ids": [
+        20
+      ],
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "pono-state2input",
+      "path": "public/pono-state2input.btor2",
+      "group": "upstream-regression",
+      "source": "pono",
+      "url": "https://raw.githubusercontent.com/stanford-centaur/pono/b0aa8fe43b4449d5ad62abb0f700e04dbbaa8fce/tests/encoders/inputs/btor2/state2input.btor2",
+      "upstream_path": "tests/encoders/inputs/btor2/state2input.btor2",
+      "sha256": "a4dd82fb9e353533c3c490f9d33d235b7a66f1f6026658afdc1f8678af102bdc",
+      "bytes": 194,
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/pono-BSD-3-Clause.txt",
+      "counts": {
+        "lines": 13,
+        "nodes": 11,
+        "sorts": 2,
+        "array_sorts": 0,
+        "states": 2,
+        "inputs": 1,
+        "inits": 2,
+        "nexts": 1,
+        "constraints": 0,
+        "bads": 1
+      },
+      "bad_node_ids": [
+        11
+      ],
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "id": "pono-rotate",
+      "path": "public/pono-rotate.btor2",
+      "group": "upstream-regression",
+      "source": "pono",
+      "url": "https://raw.githubusercontent.com/stanford-centaur/pono/b0aa8fe43b4449d5ad62abb0f700e04dbbaa8fce/tests/encoders/inputs/btor2/rotate.btor2",
+      "upstream_path": "tests/encoders/inputs/btor2/rotate.btor2",
+      "sha256": "38a6dbe867ff0fd4827f12fde3e6b0d5b4d77db5b2c718680e7955752a32470d",
+      "bytes": 1224,
+      "license": "BSD-3-Clause",
+      "license_path": "public/licenses/pono-BSD-3-Clause.txt",
+      "counts": {
+        "lines": 63,
+        "nodes": 49,
+        "sorts": 6,
+        "array_sorts": 0,
+        "states": 0,
+        "inputs": 2,
+        "inits": 0,
+        "nexts": 0,
+        "constraints": 0,
+        "bads": 10
+      },
+      "bad_node_ids": [
+        17,
+        20,
+        23,
+        26,
+        29,
+        32,
+        35,
+        38,
+        49,
+        55
+      ],
+      "official_parser_check": {
+        "tool": "catbtor",
+        "source_commit": "e6941e37e056084ab6e51c5c1eee6233089a330d",
+        "status": "accepted",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}

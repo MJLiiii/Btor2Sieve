@@ -1,0 +1,16 @@
+(set-logic ALL)
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-fun s_76 () (_ BitVec 16))
+(declare-fun i_4 () (_ BitVec 1))
+(declare-fun s_5 () (_ BitVec 1))
+(assert
+ (let ((?x64 (ite (bvule s_76 ((_ zero_extend 15) (_ bv1 1))) (_ bv1 1) (_ bv0 1))))
+ (let ((?x65 (bvxor i_4 ?x64)))
+ (let ((?x66 (bvnot ?x65)))
+ (let ((?x67 (bvor ?x66 ?x66)))
+ (and (= (bvor s_5 (bvnot (bvnot s_5))) (_ bv1 1)) (= ?x67 (_ bv1 1))))))))
+(assert
+ (let (($x127 (= ((_ extract 15 1) s_76) (_ bv0 15))))
+(not $x127)))
+(check-sat)

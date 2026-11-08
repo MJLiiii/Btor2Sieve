@@ -1,0 +1,217 @@
+{
+  "configuration": {
+    "out": "results/final-evaluation",
+    "timeout_ms": 200,
+    "max_candidates": 80,
+    "max_terms": 12,
+    "max_queries": 96,
+    "skip_cvc5": false
+  },
+  "benchmarks": 13,
+  "runs": {
+    "syntax": {
+      "command": [
+        "/Users/snuffred/Repository/Btor2Sieve/.venv/bin/python",
+        "-m",
+        "btor2sieve",
+        "batch",
+        "benchmarks/public/mann-analog-safe.btor2",
+        "benchmarks/public/mann-analog-unsafe.btor2",
+        "benchmarks/public/mann-intersymbol-safe.btor2",
+        "benchmarks/public/mann-intersymbol-unsafe.btor2",
+        "benchmarks/public/mann-fifo-safe.btor2",
+        "benchmarks/public/mann-fifo-unsafe.btor2",
+        "benchmarks/public/btor2tools-factorial4even.btor2",
+        "benchmarks/public/btor2tools-twocount2c.btor2",
+        "benchmarks/public/btor2tools-noninitstate.btor2",
+        "benchmarks/public/pono-constarrtest.btor2",
+        "benchmarks/public/pono-array_lt200.btor2",
+        "benchmarks/public/pono-state2input.btor2",
+        "benchmarks/public/pono-rotate.btor2",
+        "--out",
+        "/Users/snuffred/Repository/Btor2Sieve/results/final-evaluation/syntax",
+        "--max-candidates",
+        "80",
+        "--max-terms",
+        "12",
+        "--max-queries",
+        "96",
+        "--timeout-ms",
+        "200",
+        "--reuse",
+        "--max-reuse",
+        "30",
+        "--syntax-only"
+      ],
+      "models": 13,
+      "scopes": 36,
+      "candidates": 1912,
+      "counts": {
+        "rejected": 1822,
+        "accepted": 90
+      },
+      "families": {
+        "array": {
+          "rejected": 49,
+          "accepted": 8
+        },
+        "disequality": {
+          "rejected": 466,
+          "accepted": 25
+        },
+        "equality": {
+          "rejected": 462,
+          "accepted": 22
+        },
+        "implication": {
+          "rejected": 48,
+          "accepted": 8
+        },
+        "masked_bits": {
+          "rejected": 16
+        },
+        "signed_bound": {
+          "rejected": 393,
+          "accepted": 17
+        },
+        "unsigned_bound": {
+          "rejected": 388,
+          "accepted": 10
+        }
+      },
+      "reuse": {
+        "rejected": 1
+      },
+      "duration_seconds": 3.9136737090011593,
+      "extraction_seconds": 0.414460374002374,
+      "validation_seconds": 1.5433649230726587,
+      "replay": {
+        "z3": {
+          "backend": "z3",
+          "solver_version": "5.3.3.0",
+          "solver_options": {
+            "timeout": 5000,
+            "random_seed": 0
+          },
+          "checked": 126,
+          "mismatched": 0,
+          "incomplete_run_errors": 0
+        },
+        "cvc5": {
+          "backend": "cvc5",
+          "solver_version": "1.4.2",
+          "solver_options": {
+            "tlimit-per": 5000,
+            "arrays-exp": true,
+            "produce-models": true
+          },
+          "checked": 126,
+          "mismatched": 0,
+          "incomplete_run_errors": 0
+        }
+      }
+    },
+    "semantic": {
+      "command": [
+        "/Users/snuffred/Repository/Btor2Sieve/.venv/bin/python",
+        "-m",
+        "btor2sieve",
+        "batch",
+        "benchmarks/public/mann-analog-safe.btor2",
+        "benchmarks/public/mann-analog-unsafe.btor2",
+        "benchmarks/public/mann-intersymbol-safe.btor2",
+        "benchmarks/public/mann-intersymbol-unsafe.btor2",
+        "benchmarks/public/mann-fifo-safe.btor2",
+        "benchmarks/public/mann-fifo-unsafe.btor2",
+        "benchmarks/public/btor2tools-factorial4even.btor2",
+        "benchmarks/public/btor2tools-twocount2c.btor2",
+        "benchmarks/public/btor2tools-noninitstate.btor2",
+        "benchmarks/public/pono-constarrtest.btor2",
+        "benchmarks/public/pono-array_lt200.btor2",
+        "benchmarks/public/pono-state2input.btor2",
+        "benchmarks/public/pono-rotate.btor2",
+        "--out",
+        "/Users/snuffred/Repository/Btor2Sieve/results/final-evaluation/semantic",
+        "--max-candidates",
+        "80",
+        "--max-terms",
+        "12",
+        "--max-queries",
+        "96",
+        "--timeout-ms",
+        "200",
+        "--reuse",
+        "--max-reuse",
+        "30"
+      ],
+      "models": 13,
+      "scopes": 36,
+      "candidates": 1914,
+      "counts": {
+        "rejected": 1822,
+        "accepted": 92
+      },
+      "families": {
+        "array": {
+          "rejected": 49,
+          "accepted": 8
+        },
+        "disequality": {
+          "rejected": 466,
+          "accepted": 25
+        },
+        "equality": {
+          "rejected": 462,
+          "accepted": 12
+        },
+        "implication": {
+          "rejected": 48,
+          "accepted": 8
+        },
+        "masked_bits": {
+          "rejected": 16,
+          "accepted": 1
+        },
+        "signed_bound": {
+          "rejected": 393,
+          "accepted": 17
+        },
+        "unsigned_bound": {
+          "rejected": 388,
+          "accepted": 21
+        }
+      },
+      "reuse": {
+        "rejected": 1
+      },
+      "duration_seconds": 4.199298708001152,
+      "extraction_seconds": 0.6424610420035606,
+      "validation_seconds": 1.5538658689692966,
+      "replay": {
+        "z3": {
+          "backend": "z3",
+          "solver_version": "5.3.3.0",
+          "solver_options": {
+            "timeout": 5000,
+            "random_seed": 0
+          },
+          "checked": 128,
+          "mismatched": 0,
+          "incomplete_run_errors": 0
+        },
+        "cvc5": {
+          "backend": "cvc5",
+          "solver_version": "1.4.2",
+          "solver_options": {
+            "tlimit-per": 5000,
+            "arrays-exp": true,
+            "produce-models": true
+          },
+          "checked": 128,
+          "mismatched": 0,
+          "incomplete_run_errors": 0
+        }
+      }
+    }
+  }
+}

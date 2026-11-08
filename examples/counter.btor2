@@ -1,0 +1,15 @@
+; An unsafe wrapping counter. Property consequences are NOT reachable invariants.
+1 sort bitvec 1
+2 sort bitvec 8
+3 zero 2
+4 constd 2 10
+5 state 2 counter
+6 init 2 5 3
+7 one 2
+8 add 2 5 7
+9 next 2 5 8
+10 ugte 1 5 4
+11 bad 10 counter_below_ten
+12 constd 2 20
+13 ugte 1 5 12
+14 bad 13 counter_below_twenty

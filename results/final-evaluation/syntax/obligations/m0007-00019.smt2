@@ -1,0 +1,14 @@
+(set-logic ALL)
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-fun s_7 () (_ BitVec 2))
+(declare-fun s_6 () (_ BitVec 2))
+(assert
+ (let ((?x2944 (ite (= (_ bv3 2) s_7) (_ bv1 1) (_ bv0 1))))
+ (let ((?x2380 (ite (= (_ bv3 2) s_6) (_ bv1 1) (_ bv0 1))))
+ (let ((?x2018 (bvand ?x2380 ?x2944)))
+ (not (= ?x2018 (_ bv1 1)))))))
+(assert
+ (let (($x1725 (bvule s_6 (_ bv2 2))))
+(not $x1725)))
+(check-sat)

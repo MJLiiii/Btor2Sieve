@@ -1,0 +1,17 @@
+OK public/licenses/mann-BSD-3-Clause.txt
+OK public/licenses/btor2tools-MIT.txt
+OK public/licenses/pono-BSD-3-Clause.txt
+OK public/mann-analog-safe.btor2
+OK public/mann-analog-unsafe.btor2
+OK public/mann-intersymbol-safe.btor2
+OK public/mann-intersymbol-unsafe.btor2
+OK public/mann-fifo-safe.btor2
+OK public/mann-fifo-unsafe.btor2
+OK public/btor2tools-factorial4even.btor2
+OK public/btor2tools-twocount2c.btor2
+OK public/btor2tools-noninitstate.btor2
+OK public/pono-constarrtest.btor2
+OK public/pono-array_lt200.btor2
+OK public/pono-state2input.btor2
+OK public/pono-rotate.btor2
+16/16 files verified

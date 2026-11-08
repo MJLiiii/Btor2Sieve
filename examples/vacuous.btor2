@@ -1,0 +1,6 @@
+; P = enable AND NOT enable is inconsistent; implications must be vacuous.
+1 sort bitvec 1
+2 input 1 enable
+3 not 1 2
+4 and 1 2 3
+5 bad -4 always_bad
