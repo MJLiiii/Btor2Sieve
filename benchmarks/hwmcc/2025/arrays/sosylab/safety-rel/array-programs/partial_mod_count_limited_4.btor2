@@ -1,0 +1,191 @@
+1 sort bitvec 32
+2 sort array 1 1
+3 sort bitvec 1
+4 constd 3 0
+5 constd 3 1
+6 input 1 !{$(in_main#0)<$(in___VERIFIER_nondet_int#0)<h#<__VERIFIER_nondet_int.return>>>}
+7 input 2 %{$(in_main#0)<a.1>}#1
+8 input 1 !{$(in_main#0)<R>}.next
+9 input 1 !{$(in_main#0)<i>}.next
+10 input 1 !{$(in_main#0)<j>}.next
+11 input 1 !{$(in_main#0)<k>}.next
+12 input 1 !{$(in_main#0)<lim>}.next
+13 input 2 !{$(in_main#0)<a.1>}.next
+14 input 1 !{N}.next
+15 input 3 !pc[0].next
+16 input 3 !pc[1].next
+17 input 3 !pc[2].next
+18 state 1 !{$(in_main#0)<R>}
+19 state 1 !{$(in_main#0)<i>}
+20 state 1 !{$(in_main#0)<j>}
+21 state 1 !{$(in_main#0)<k>}
+22 state 1 !{$(in_main#0)<lim>}
+23 state 2 !{$(in_main#0)<a.1>}
+24 state 1 !{N}
+25 state 3 !pc[0]
+26 state 3 !pc[1]
+27 state 3 !pc[2]
+28 state 3 reset0
+29 state 3 valid
+30 not 3 28
+31 not 3 26
+32 and 3 25 31
+33 not 3 27
+34 and 3 33 32
+35 not 3 15
+36 and 3 16 35
+37 not 3 17
+38 and 3 37 36
+39 and 3 38 34
+40 eq 3 18 8
+41 constd 1 0
+42 eq 3 9 41
+43 and 3 42 40
+44 eq 3 20 10
+45 and 3 44 43
+46 eq 3 21 11
+47 and 3 46 45
+48 eq 3 22 12
+49 and 3 48 47
+50 eq 3 23 13
+51 and 3 50 49
+52 eq 3 24 14
+53 and 3 52 51
+54 slt 3 19 24
+55 not 3 54
+56 and 3 55 53
+57 and 3 56 39
+58 not 3 16
+59 and 3 15 58
+60 and 3 59 37
+61 and 3 60 34
+62 urem 1 19 18
+63 write 2 23 19 62
+64 constd 1 1
+65 add 1 64 19
+66 write 2 23 19 65
+67 slt 3 21 22
+68 constd 1 2
+69 sdiv 1 24 68
+70 slt 3 69 19
+71 and 3 70 67
+72 not 3 71
+73 ite 2 72 66 63
+74 eq 3 13 73
+75 add 1 64 21
+76 read 1 73 19
+77 eq 3 76 41
+78 not 3 77
+79 ite 1 78 21 75
+80 eq 3 11 79
+81 eq 3 9 65
+82 and 3 40 81
+83 and 3 82 44
+84 and 3 83 80
+85 and 3 48 84
+86 and 3 85 74
+87 and 3 52 86
+88 and 3 54 87
+89 and 3 88 61
+90 or 3 89 57
+91 and 3 58 35
+92 and 3 17 91
+93 not 3 25
+94 and 3 26 93
+95 and 3 33 94
+96 and 3 95 92
+97 and 3 55 40
+98 eq 3 19 9
+99 and 3 98 97
+100 and 3 99 44
+101 and 3 46 100
+102 and 3 48 101
+103 and 3 50 102
+104 and 3 52 103
+105 and 3 104 96
+106 and 3 95 38
+107 add 1 64 20
+108 read 1 23 19
+109 eq 3 108 41
+110 not 3 109
+111 ite 1 110 20 107
+112 eq 3 10 111
+113 and 3 112 82
+114 and 3 46 113
+115 and 3 48 114
+116 and 3 50 115
+117 and 3 52 116
+118 sll 1 18 64
+119 udiv 1 24 118
+120 ult 3 111 119
+121 ite 1 120 64 41
+122 eq 3 121 41
+123 not 3 122
+124 and 3 123 117
+125 and 3 54 124
+126 and 3 125 106
+127 and 3 15 16
+128 and 3 37 127
+129 and 3 95 128
+130 and 3 122 40
+131 and 3 130 98
+132 and 3 131 112
+133 and 3 132 46
+134 and 3 133 48
+135 and 3 134 50
+136 and 3 135 52
+137 and 3 54 136
+138 and 3 137 129
+139 or 3 138 126
+140 or 3 139 105
+141 and 3 93 31
+142 and 3 141 33
+143 and 3 142 60
+144 constd 1 1000
+145 eq 3 14 144
+146 eq 3 13 7
+147 eq 3 12 6
+148 eq 3 11 41
+149 eq 3 10 41
+150 constd 1 4
+151 eq 3 8 150
+152 and 3 151 42
+153 and 3 152 149
+154 and 3 153 148
+155 and 3 154 147
+156 and 3 155 146
+157 and 3 156 145
+158 constd 1 250
+159 ult 3 6 158
+160 slt 3 41 6
+161 and 3 160 159
+162 ite 1 161 64 41
+163 eq 3 162 41
+164 not 3 163
+165 and 3 164 157
+166 and 3 165 143
+167 or 3 166 140
+168 or 3 167 90
+169 and 3 168 29
+170 or 3 169 30
+171 and 3 37 91
+172 or 3 28 171
+173 and 3 172 170
+174 and 3 25 26
+175 and 3 33 174
+176 and 3 175 29
+177 next 1 18 8
+178 next 1 19 9
+179 next 1 20 10
+180 next 1 21 11
+181 next 1 22 12
+182 next 2 23 13
+183 next 1 24 14
+184 next 3 25 15
+185 next 3 26 16
+186 next 3 27 17
+187 init 3 28 4
+188 next 3 28 5
+189 init 3 29 4
+190 next 3 29 173
+191 bad 176

@@ -1,0 +1,6461 @@
+1 sort bitvec 4
+2 sort bitvec 2
+3 sort bitvec 8
+4 sort bitvec 32
+5 sort array 4 2
+6 sort array 4 3
+7 sort array 4 4
+8 sort bitvec 1
+9 constd 8 0
+10 constd 8 1
+11 input 1 !{$(in_main#0)<$temp.2>}
+12 input 1 !{$(in_main#0)<$tmp.2>}
+13 input 2 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#0)<h#<__VERIFIER_nondet_headerT.return->type>>>>>}
+14 input 3 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#0)<h#<__VERIFIER_nondet_headerT.return->address>>>>>}
+15 input 3 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#0)<h#<__VERIFIER_nondet_headerT.return->data>>>>>}
+16 input 2 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#1)<h#<__VERIFIER_nondet_headerT.return->type>>>>>}
+17 input 3 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#1)<h#<__VERIFIER_nondet_headerT.return->address>>>>>}
+18 input 3 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#1)<h#<__VERIFIER_nondet_headerT.return->data>>>>>}
+19 input 2 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#2)<h#<__VERIFIER_nondet_headerT.return->type>>>>>}
+20 input 3 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#2)<h#<__VERIFIER_nondet_headerT.return->address>>>>>}
+21 input 3 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#2)<h#<__VERIFIER_nondet_headerT.return->data>>>>>}
+22 input 2 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#3)<h#<__VERIFIER_nondet_headerT.return->type>>>>>}
+23 input 3 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#3)<h#<__VERIFIER_nondet_headerT.return->address>>>>>}
+24 input 3 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<$(in___VERIFIER_nondet_headerT#3)<h#<__VERIFIER_nondet_headerT.return->data>>>>>}
+25 input 4 !{$(in_main#0)<$(in___VERIFIER_nondet_int#18)<h#<__VERIFIER_nondet_int.return>>>}
+26 input 1 !{$(in_main#0)<$(in___VERIFIER_nondet_step#19)<__VERIFIER_nondet_step.return>>}
+27 input 1 !{$(in_main#0)<$(in___VERIFIER_nondet_step#19)<h#<__VERIFIER_nondet_step.return>>>}
+28 input 4 %{$(in_main#0)<cpu0Reads_issued>}#1
+29 input 4 %{$(in_main#0)<cpu0Writes_issued>}#1
+30 input 4 %{$(in_main#0)<cpu1Reads_issued>}#1
+31 input 4 %{$(in_main#0)<cpu1Writes_issued>}#1
+32 input 4 %{$(in_main#0)<cpu2Reads_issued>}#1
+33 input 4 %{$(in_main#0)<cpu2Writes_issued>}#1
+34 input 4 %{$(in_main#0)<cpu3Reads_issued>}#1
+35 input 4 %{$(in_main#0)<cpu3Writes_issued>}#1
+36 input 4 %{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i1>>>}#2
+37 input 4 %{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i0>>>}#2
+38 input 4 %{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i2>>>}#2
+39 input 4 %{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i3>>>}#2
+40 input 4 %{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i4>>>}#2
+41 input 4 %{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i5>>>}#2
+42 input 4 %{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i6>>>}#2
+43 input 4 %{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i7>>>}#2
+44 input 3 %{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<ch_tail>>>}#1
+45 input 4 %{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<i>>>}#1
+46 input 3 %{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<data>>>}#1
+47 input 5 %{%mem.r.2.0}#2
+48 input 4 %{$(in_main#0)<$(in_tso_core_read#32)<g_history>>}#2
+49 input 4 %{$(in_main#0)<$(in_tso_core_read#32)<global_time>>}#2
+50 input 4 %{$(in_main#0)<$(in_tso_core_read#32)<sharedmemory>>}#2
+51 input 3 %{$(in_main#0)<$(in_tso_core_read#32)<rd_address>>}#3
+52 input 2 %{$(in_main#0)<$(in_tso_core_read#32)<user_action->type>>}#3
+53 input 3 %{$(in_main#0)<$(in_tso_core_read#32)<user_action->thread>>}#3
+54 input 3 %{$(in_main#0)<$(in_tso_core_read#32)<user_action->address>>}#3
+55 input 3 %{$(in_main#0)<$(in_tso_core_read#32)<user_action->data>>}#3
+56 input 3 %{$(in_main#0)<$(in_tso_core_read#32)<user_action->mdata>>}#3
+57 input 4 %{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<wrBuffer>>>}#2
+58 input 3 %{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<address>>>}#2
+59 input 4 %{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<checked>>>}#3
+60 input 4 %{$(in_main#0)<$temp.1>}#4
+61 input 4 %{$(in_main#0)<cpu3Reads_issued>}#2
+62 input 6 %{%mem.3}#6
+63 input 4 %{$(in_main#0)<cpu3Writes_issued>}#2
+64 input 6 %{%mem.3}#11
+65 input 5 %{%mem.r.2.0}#3
+66 input 7 %{%mem.r.1.1}#2
+67 input 3 %{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<ch_tail>>>}#1
+68 input 4 %{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<i>>>}#1
+69 input 3 %{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<data>>>}#1
+70 input 4 %{$(in_main#0)<$(in_tso_core_read#28)<g_history>>}#2
+71 input 4 %{$(in_main#0)<$(in_tso_core_read#28)<global_time>>}#2
+72 input 4 %{$(in_main#0)<$(in_tso_core_read#28)<sharedmemory>>}#2
+73 input 3 %{$(in_main#0)<$(in_tso_core_read#28)<rd_address>>}#3
+74 input 2 %{$(in_main#0)<$(in_tso_core_read#28)<user_action->type>>}#3
+75 input 3 %{$(in_main#0)<$(in_tso_core_read#28)<user_action->thread>>}#3
+76 input 3 %{$(in_main#0)<$(in_tso_core_read#28)<user_action->address>>}#3
+77 input 3 %{$(in_main#0)<$(in_tso_core_read#28)<user_action->data>>}#3
+78 input 3 %{$(in_main#0)<$(in_tso_core_read#28)<user_action->mdata>>}#3
+79 input 4 %{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<wrBuffer>>>}#2
+80 input 3 %{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<address>>>}#2
+81 input 4 %{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<checked>>>}#3
+82 input 4 %{$(in_main#0)<cpu2Reads_issued>}#2
+83 input 4 %{$(in_main#0)<cpu2Writes_issued>}#2
+84 input 4 %{$(in_main#0)<$aux>}#6
+85 input 2 %{$(in_main#0)<input_action->type>}#2
+86 input 3 %{$(in_main#0)<input_action->thread>}#2
+87 input 3 %{$(in_main#0)<input_action->address>}#2
+88 input 3 %{$(in_main#0)<input_action->data>}#2
+89 input 3 %{$(in_main#0)<input_action->mdata>}#2
+90 input 3 %{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<ch_tail>>>}#1
+91 input 4 %{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<i>>>}#1
+92 input 3 %{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<data>>>}#1
+93 input 4 %{$(in_main#0)<$(in_tso_core_read#24)<g_history>>}#2
+94 input 4 %{$(in_main#0)<$(in_tso_core_read#24)<global_time>>}#2
+95 input 4 %{$(in_main#0)<$(in_tso_core_read#24)<sharedmemory>>}#2
+96 input 3 %{$(in_main#0)<$(in_tso_core_read#24)<rd_address>>}#3
+97 input 2 %{$(in_main#0)<$(in_tso_core_read#24)<user_action->type>>}#3
+98 input 3 %{$(in_main#0)<$(in_tso_core_read#24)<user_action->thread>>}#3
+99 input 3 %{$(in_main#0)<$(in_tso_core_read#24)<user_action->address>>}#3
+100 input 3 %{$(in_main#0)<$(in_tso_core_read#24)<user_action->data>>}#3
+101 input 3 %{$(in_main#0)<$(in_tso_core_read#24)<user_action->mdata>>}#3
+102 input 4 %{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<wrBuffer>>>}#2
+103 input 3 %{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<address>>>}#2
+104 input 4 %{$(in_main#0)<cpu1Reads_issued>}#2
+105 input 4 %{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<checked>>>}#3
+106 input 4 %{$(in_main#0)<cpu1Writes_issued>}#2
+107 input 3 %{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<ch_tail>>>}#1
+108 input 4 %{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<i>>>}#1
+109 input 3 %{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<data>>>}#1
+110 input 4 %{$(in_main#0)<$(in_tso_core_read#20)<g_history>>}#2
+111 input 4 %{$(in_main#0)<$(in_tso_core_read#20)<global_time>>}#2
+112 input 4 %{$(in_main#0)<$(in_tso_core_read#20)<sharedmemory>>}#2
+113 input 3 %{$(in_main#0)<$(in_tso_core_read#20)<rd_address>>}#3
+114 input 2 %{$(in_main#0)<$(in_tso_core_read#20)<user_action->type>>}#3
+115 input 3 %{$(in_main#0)<$(in_tso_core_read#20)<user_action->thread>>}#3
+116 input 4 %{$(in_main#0)<cpu0Reads_issued>}#2
+117 input 3 %{$(in_main#0)<$(in_tso_core_read#20)<user_action->address>>}#3
+118 input 3 %{$(in_main#0)<$(in_tso_core_read#20)<user_action->data>>}#3
+119 input 3 %{$(in_main#0)<$(in_tso_core_read#20)<user_action->mdata>>}#3
+120 input 4 %{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<wrBuffer>>>}#2
+121 input 3 %{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<address>>>}#2
+122 input 4 %{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<checked>>>}#3
+123 input 4 %{$(in_main#0)<cpu0Writes_issued>}#2
+124 input 3 %{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<ch_tail>>>}#2
+125 input 4 %{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<checked>>>}#2
+126 input 4 %{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<check_buffer.return>>>}#2
+127 input 3 %{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<data>>>}#2
+128 input 3 %{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<ch_tail>>>}#2
+129 input 4 %{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<checked>>>}#2
+130 input 4 %{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<check_buffer.return>>>}#2
+131 input 3 %{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<data>>>}#2
+132 input 3 %{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<ch_tail>>>}#2
+133 input 4 %{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<checked>>>}#2
+134 input 4 %{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<check_buffer.return>>>}#2
+135 input 3 %{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<data>>>}#2
+136 input 3 %{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<ch_tail>>>}#2
+137 input 4 %{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<checked>>>}#2
+138 input 4 %{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<check_buffer.return>>>}#2
+139 input 3 %{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<data>>>}#2
+140 input 6 %{%mem.3}#5
+141 input 4 %{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<i#1>>>}#1
+142 input 4 %{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<i#2>>>}#1
+143 input 4 %{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<i#3>>>}#1
+144 input 4 !{%memaddr}.next
+145 input 6 !{%mem.3}.next
+146 input 7 !{%mem.r.0.0}.next
+147 input 7 !{%mem.r.1.1}.next
+148 input 5 !{%mem.r.2.0}.next
+149 input 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<g_history>>>}.next
+150 input 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i0>>>}.next
+151 input 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i1>>>}.next
+152 input 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i2>>>}.next
+153 input 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i3>>>}.next
+154 input 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i4>>>}.next
+155 input 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i5>>>}.next
+156 input 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i6>>>}.next
+157 input 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i7>>>}.next
+158 input 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<i>>>}.next
+159 input 4 !{$(in_main#0)<$(in_tso_core_read#28)<g_history>>}.next
+160 input 4 !{$(in_main#0)<cpu0Reads_issued>}.next
+161 input 4 !{$(in_main#0)<$(in_tso_core_read#28)<global_time>>}.next
+162 input 4 !{$(in_main#0)<cpu0Writes_issued>}.next
+163 input 4 !{$(in_main#0)<cpu1Reads_issued>}.next
+164 input 4 !{$(in_main#0)<$(in_tso_core_read#28)<sharedmemory>>}.next
+165 input 4 !{$(in_main#0)<cpu1Writes_issued>}.next
+166 input 4 !{$(in_main#0)<cpu2Reads_issued>}.next
+167 input 4 !{$(in_main#0)<cpu2Writes_issued>}.next
+168 input 4 !{$(in_main#0)<cpu3Reads_issued>}.next
+169 input 3 !{$(in_main#0)<$(in_tso_core_read#28)<rd_address>>}.next
+170 input 4 !{$(in_main#0)<cpu3Writes_issued>}.next
+171 input 4 !{$(in_main#0)<&g_history>}.next
+172 input 4 !{$(in_main#0)<&sharedMemory>}.next
+173 input 2 !{$(in_main#0)<$(in_tso_core_read#28)<user_action->type>>}.next
+174 input 3 !{$(in_main#0)<$(in_tso_core_read#28)<user_action->thread>>}.next
+175 input 3 !{$(in_main#0)<$(in_tso_core_read#28)<user_action->address>>}.next
+176 input 3 !{$(in_main#0)<$(in_tso_core_read#28)<user_action->data>>}.next
+177 input 3 !{$(in_main#0)<$(in_tso_core_read#28)<user_action->mdata>>}.next
+178 input 4 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<wrBuffer>>>}.next
+179 input 3 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<address>>>}.next
+180 input 3 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<ch_tail>>>}.next
+181 input 4 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<checked>>>}.next
+182 input 4 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<i>>>}.next
+183 input 3 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<data>>>}.next
+184 input 4 !{$(in_main#0)<$(in_tso_core_read#20)<g_history>>}.next
+185 input 4 !{$(in_main#0)<$(in_tso_core_read#20)<global_time>>}.next
+186 input 4 !{$(in_main#0)<$(in_tso_core_read#20)<sharedmemory>>}.next
+187 input 4 !{$(in_main#0)<&wrBuffer0>}.next
+188 input 4 !{$(in_main#0)<&wrBuffer1>}.next
+189 input 4 !{$(in_main#0)<&wrBuffer2>}.next
+190 input 3 !{$(in_main#0)<$(in_tso_core_read#20)<rd_address>>}.next
+191 input 4 !{$(in_main#0)<&wrBuffer3>}.next
+192 input 4 !{$(in_main#0)<&litmus_input>}.next
+193 input 4 !{$(in_main#0)<&global_time>}.next
+194 input 2 !{$(in_main#0)<$(in_tso_core_read#20)<user_action->type>>}.next
+195 input 3 !{$(in_main#0)<$(in_tso_core_read#20)<user_action->thread>>}.next
+196 input 3 !{$(in_main#0)<$(in_tso_core_read#20)<user_action->address>>}.next
+197 input 3 !{$(in_main#0)<$(in_tso_core_read#20)<user_action->data>>}.next
+198 input 3 !{$(in_main#0)<$(in_tso_core_read#20)<user_action->mdata>>}.next
+199 input 4 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<wrBuffer>>>}.next
+200 input 3 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<address>>>}.next
+201 input 3 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<ch_tail>>>}.next
+202 input 4 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<checked>>>}.next
+203 input 4 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<i>>>}.next
+204 input 3 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<data>>>}.next
+205 input 4 !{$(in_main#0)<$(in_initHistory#12)<history>>}.next
+206 input 4 !{$(in_main#0)<$(in_initHistory#12)<i>>}.next
+207 input 4 !{$(in_main#0)<$(in_initWriteBuffer#13)<wrBuffer>>}.next
+208 input 4 !{$(in_main#0)<$(in_initWriteBuffer#13)<i>>}.next
+209 input 4 !{$(in_main#0)<$(in_initWriteBuffer#14)<wrBuffer>>}.next
+210 input 4 !{$(in_main#0)<$(in_initWriteBuffer#14)<i>>}.next
+211 input 4 !{$(in_main#0)<$(in_initWriteBuffer#15)<wrBuffer>>}.next
+212 input 4 !{$(in_main#0)<$(in_initWriteBuffer#15)<i>>}.next
+213 input 4 !{$(in_main#0)<$(in_tso_core_read#32)<g_history>>}.next
+214 input 4 !{$(in_main#0)<$(in_tso_core_read#32)<global_time>>}.next
+215 input 4 !{$(in_main#0)<$(in_tso_core_read#32)<sharedmemory>>}.next
+216 input 4 !{$(in_main#0)<$(in_initWriteBuffer#16)<wrBuffer>>}.next
+217 input 3 !{$(in_main#0)<$(in_tso_core_read#32)<rd_address>>}.next
+218 input 4 !{$(in_main#0)<$(in_initWriteBuffer#16)<i>>}.next
+219 input 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<litmus_input>>}.next
+220 input 2 !{$(in_main#0)<$(in_tso_core_read#32)<user_action->type>>}.next
+221 input 3 !{$(in_main#0)<$(in_tso_core_read#32)<user_action->thread>>}.next
+222 input 3 !{$(in_main#0)<$(in_tso_core_read#32)<user_action->address>>}.next
+223 input 3 !{$(in_main#0)<$(in_tso_core_read#32)<user_action->data>>}.next
+224 input 3 !{$(in_main#0)<$(in_tso_core_read#32)<user_action->mdata>>}.next
+225 input 4 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<wrBuffer>>>}.next
+226 input 3 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<address>>>}.next
+227 input 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<litmus_input>>>}.next
+228 input 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<cpu0_operations>>>}.next
+229 input 3 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<ch_tail>>>}.next
+230 input 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<cpu1_operations>>>}.next
+231 input 4 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<checked>>>}.next
+232 input 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<cpu2_operations>>>}.next
+233 input 4 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<i>>>}.next
+234 input 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<cpu3_operations>>>}.next
+235 input 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<i>>>}.next
+236 input 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<i#1>>>}.next
+237 input 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<i#2>>>}.next
+238 input 3 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<data>>>}.next
+239 input 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<i#3>>>}.next
+240 input 4 !{$(in_main#0)<$(in_tso_core_read#24)<g_history>>}.next
+241 input 4 !{$(in_main#0)<$(in_tso_core_read#24)<global_time>>}.next
+242 input 4 !{$(in_main#0)<$(in_tso_core_read#24)<sharedmemory>>}.next
+243 input 3 !{$(in_main#0)<$(in_tso_core_read#24)<rd_address>>}.next
+244 input 2 !{$(in_main#0)<$(in_tso_core_read#24)<user_action->type>>}.next
+245 input 3 !{$(in_main#0)<$(in_tso_core_read#24)<user_action->thread>>}.next
+246 input 3 !{$(in_main#0)<$(in_tso_core_read#24)<user_action->address>>}.next
+247 input 3 !{$(in_main#0)<$(in_tso_core_read#24)<user_action->data>>}.next
+248 input 3 !{$(in_main#0)<$(in_tso_core_read#24)<user_action->mdata>>}.next
+249 input 4 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<wrBuffer>>>}.next
+250 input 3 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<address>>>}.next
+251 input 3 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<ch_tail>>>}.next
+252 input 4 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<checked>>>}.next
+253 input 4 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<i>>>}.next
+254 input 3 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<data>>>}.next
+255 input 8 !pc[0].next
+256 input 8 !pc[1].next
+257 input 8 !pc[2].next
+258 input 8 !pc[3].next
+259 input 8 !pc[4].next
+260 state 4 !{%memaddr}
+261 state 6 !{%mem.3}
+262 state 7 !{%mem.r.0.0}
+263 state 7 !{%mem.r.1.1}
+264 state 5 !{%mem.r.2.0}
+265 state 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<g_history>>>}
+266 state 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i0>>>}
+267 state 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i1>>>}
+268 state 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i2>>>}
+269 state 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i3>>>}
+270 state 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i4>>>}
+271 state 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i5>>>}
+272 state 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i6>>>}
+273 state 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<event_i7>>>}
+274 state 4 !{$(in_main#0)<$(in_test_assertions#36)<$(in_store_buffering_4_assertions#0)<i>>>}
+275 state 4 !{$(in_main#0)<$(in_tso_core_read#28)<g_history>>}
+276 state 4 !{$(in_main#0)<cpu0Reads_issued>}
+277 state 4 !{$(in_main#0)<$(in_tso_core_read#28)<global_time>>}
+278 state 4 !{$(in_main#0)<cpu0Writes_issued>}
+279 state 4 !{$(in_main#0)<cpu1Reads_issued>}
+280 state 4 !{$(in_main#0)<$(in_tso_core_read#28)<sharedmemory>>}
+281 state 4 !{$(in_main#0)<cpu1Writes_issued>}
+282 state 4 !{$(in_main#0)<cpu2Reads_issued>}
+283 state 4 !{$(in_main#0)<cpu2Writes_issued>}
+284 state 4 !{$(in_main#0)<cpu3Reads_issued>}
+285 state 3 !{$(in_main#0)<$(in_tso_core_read#28)<rd_address>>}
+286 state 4 !{$(in_main#0)<cpu3Writes_issued>}
+287 state 4 !{$(in_main#0)<&g_history>}
+288 state 4 !{$(in_main#0)<&sharedMemory>}
+289 state 2 !{$(in_main#0)<$(in_tso_core_read#28)<user_action->type>>}
+290 state 3 !{$(in_main#0)<$(in_tso_core_read#28)<user_action->thread>>}
+291 state 3 !{$(in_main#0)<$(in_tso_core_read#28)<user_action->address>>}
+292 state 3 !{$(in_main#0)<$(in_tso_core_read#28)<user_action->data>>}
+293 state 3 !{$(in_main#0)<$(in_tso_core_read#28)<user_action->mdata>>}
+294 state 4 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<wrBuffer>>>}
+295 state 3 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<address>>>}
+296 state 3 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<ch_tail>>>}
+297 state 4 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<checked>>>}
+298 state 4 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<i>>>}
+299 state 3 !{$(in_main#0)<$(in_tso_core_read#28)<$(in_check_buffer#0)<data>>>}
+300 state 4 !{$(in_main#0)<$(in_tso_core_read#20)<g_history>>}
+301 state 4 !{$(in_main#0)<$(in_tso_core_read#20)<global_time>>}
+302 state 4 !{$(in_main#0)<$(in_tso_core_read#20)<sharedmemory>>}
+303 state 4 !{$(in_main#0)<&wrBuffer0>}
+304 state 4 !{$(in_main#0)<&wrBuffer1>}
+305 state 4 !{$(in_main#0)<&wrBuffer2>}
+306 state 3 !{$(in_main#0)<$(in_tso_core_read#20)<rd_address>>}
+307 state 4 !{$(in_main#0)<&wrBuffer3>}
+308 state 4 !{$(in_main#0)<&litmus_input>}
+309 state 4 !{$(in_main#0)<&global_time>}
+310 state 2 !{$(in_main#0)<$(in_tso_core_read#20)<user_action->type>>}
+311 state 3 !{$(in_main#0)<$(in_tso_core_read#20)<user_action->thread>>}
+312 state 3 !{$(in_main#0)<$(in_tso_core_read#20)<user_action->address>>}
+313 state 3 !{$(in_main#0)<$(in_tso_core_read#20)<user_action->data>>}
+314 state 3 !{$(in_main#0)<$(in_tso_core_read#20)<user_action->mdata>>}
+315 state 4 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<wrBuffer>>>}
+316 state 3 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<address>>>}
+317 state 3 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<ch_tail>>>}
+318 state 4 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<checked>>>}
+319 state 4 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<i>>>}
+320 state 3 !{$(in_main#0)<$(in_tso_core_read#20)<$(in_check_buffer#0)<data>>>}
+321 state 4 !{$(in_main#0)<$(in_initHistory#12)<history>>}
+322 state 4 !{$(in_main#0)<$(in_initHistory#12)<i>>}
+323 state 4 !{$(in_main#0)<$(in_initWriteBuffer#13)<wrBuffer>>}
+324 state 4 !{$(in_main#0)<$(in_initWriteBuffer#13)<i>>}
+325 state 4 !{$(in_main#0)<$(in_initWriteBuffer#14)<wrBuffer>>}
+326 state 4 !{$(in_main#0)<$(in_initWriteBuffer#14)<i>>}
+327 state 4 !{$(in_main#0)<$(in_initWriteBuffer#15)<wrBuffer>>}
+328 state 4 !{$(in_main#0)<$(in_initWriteBuffer#15)<i>>}
+329 state 4 !{$(in_main#0)<$(in_tso_core_read#32)<g_history>>}
+330 state 4 !{$(in_main#0)<$(in_tso_core_read#32)<global_time>>}
+331 state 4 !{$(in_main#0)<$(in_tso_core_read#32)<sharedmemory>>}
+332 state 4 !{$(in_main#0)<$(in_initWriteBuffer#16)<wrBuffer>>}
+333 state 3 !{$(in_main#0)<$(in_tso_core_read#32)<rd_address>>}
+334 state 4 !{$(in_main#0)<$(in_initWriteBuffer#16)<i>>}
+335 state 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<litmus_input>>}
+336 state 2 !{$(in_main#0)<$(in_tso_core_read#32)<user_action->type>>}
+337 state 3 !{$(in_main#0)<$(in_tso_core_read#32)<user_action->thread>>}
+338 state 3 !{$(in_main#0)<$(in_tso_core_read#32)<user_action->address>>}
+339 state 3 !{$(in_main#0)<$(in_tso_core_read#32)<user_action->data>>}
+340 state 3 !{$(in_main#0)<$(in_tso_core_read#32)<user_action->mdata>>}
+341 state 4 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<wrBuffer>>>}
+342 state 3 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<address>>>}
+343 state 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<litmus_input>>>}
+344 state 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<cpu0_operations>>>}
+345 state 3 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<ch_tail>>>}
+346 state 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<cpu1_operations>>>}
+347 state 4 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<checked>>>}
+348 state 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<cpu2_operations>>>}
+349 state 4 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<i>>>}
+350 state 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<cpu3_operations>>>}
+351 state 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<i>>>}
+352 state 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<i#1>>>}
+353 state 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<i#2>>>}
+354 state 3 !{$(in_main#0)<$(in_tso_core_read#32)<$(in_check_buffer#0)<data>>>}
+355 state 4 !{$(in_main#0)<$(in_set_and_randomise_input#17)<$(in_randomise_input#1)<i#3>>>}
+356 state 4 !{$(in_main#0)<$(in_tso_core_read#24)<g_history>>}
+357 state 4 !{$(in_main#0)<$(in_tso_core_read#24)<global_time>>}
+358 state 4 !{$(in_main#0)<$(in_tso_core_read#24)<sharedmemory>>}
+359 state 3 !{$(in_main#0)<$(in_tso_core_read#24)<rd_address>>}
+360 state 2 !{$(in_main#0)<$(in_tso_core_read#24)<user_action->type>>}
+361 state 3 !{$(in_main#0)<$(in_tso_core_read#24)<user_action->thread>>}
+362 state 3 !{$(in_main#0)<$(in_tso_core_read#24)<user_action->address>>}
+363 state 3 !{$(in_main#0)<$(in_tso_core_read#24)<user_action->data>>}
+364 state 3 !{$(in_main#0)<$(in_tso_core_read#24)<user_action->mdata>>}
+365 state 4 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<wrBuffer>>>}
+366 state 3 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<address>>>}
+367 state 3 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<ch_tail>>>}
+368 state 4 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<checked>>>}
+369 state 4 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<i>>>}
+370 state 3 !{$(in_main#0)<$(in_tso_core_read#24)<$(in_check_buffer#0)<data>>>}
+371 state 8 !pc[0]
+372 state 8 !pc[1]
+373 state 8 !pc[2]
+374 state 8 !pc[3]
+375 state 8 !pc[4]
+376 state 8 reset0
+377 state 8 valid
+378 not 8 376
+379 not 8 372
+380 and 8 371 379
+381 not 8 373
+382 and 8 381 380
+383 not 8 374
+384 and 8 383 382
+385 not 8 375
+386 and 8 385 384
+387 not 8 258
+388 not 8 257
+389 not 8 256
+390 and 8 255 389
+391 and 8 390 388
+392 and 8 391 387
+393 and 8 259 392
+394 and 8 393 386
+395 constd 4 0
+396 eq 8 208 395
+397 eq 8 303 207
+398 eq 8 322 206
+399 eq 8 321 205
+400 eq 8 309 193
+401 eq 8 308 192
+402 eq 8 307 191
+403 eq 8 305 189
+404 eq 8 304 188
+405 eq 8 303 187
+406 eq 8 288 172
+407 eq 8 287 171
+408 eq 8 286 170
+409 eq 8 284 168
+410 eq 8 283 167
+411 eq 8 282 166
+412 eq 8 281 165
+413 eq 8 279 163
+414 eq 8 278 162
+415 eq 8 276 160
+416 eq 8 261 145
+417 eq 8 260 144
+418 and 8 417 416
+419 eq 8 262 146
+420 and 8 419 418
+421 eq 8 263 147
+422 and 8 421 420
+423 eq 8 264 148
+424 and 8 423 422
+425 eq 8 265 149
+426 and 8 425 424
+427 eq 8 266 150
+428 and 8 427 426
+429 eq 8 267 151
+430 and 8 429 428
+431 eq 8 268 152
+432 and 8 431 430
+433 eq 8 269 153
+434 and 8 433 432
+435 eq 8 270 154
+436 and 8 435 434
+437 eq 8 271 155
+438 and 8 437 436
+439 eq 8 272 156
+440 and 8 439 438
+441 eq 8 273 157
+442 and 8 441 440
+443 eq 8 274 158
+444 and 8 443 442
+445 eq 8 275 159
+446 and 8 445 444
+447 and 8 446 415
+448 eq 8 277 161
+449 and 8 448 447
+450 and 8 449 414
+451 and 8 450 413
+452 eq 8 280 164
+453 and 8 452 451
+454 and 8 453 412
+455 and 8 454 411
+456 and 8 455 410
+457 and 8 456 409
+458 eq 8 285 169
+459 and 8 458 457
+460 and 8 459 408
+461 and 8 460 407
+462 and 8 461 406
+463 eq 8 289 173
+464 and 8 463 462
+465 eq 8 290 174
+466 and 8 465 464
+467 eq 8 291 175
+468 and 8 467 466
+469 eq 8 292 176
+470 and 8 469 468
+471 eq 8 293 177
+472 and 8 471 470
+473 eq 8 294 178
+474 and 8 473 472
+475 eq 8 295 179
+476 and 8 475 474
+477 eq 8 296 180
+478 and 8 477 476
+479 eq 8 297 181
+480 and 8 479 478
+481 eq 8 298 182
+482 and 8 481 480
+483 eq 8 299 183
+484 and 8 483 482
+485 eq 8 300 184
+486 and 8 485 484
+487 eq 8 301 185
+488 and 8 487 486
+489 eq 8 302 186
+490 and 8 489 488
+491 and 8 490 405
+492 and 8 491 404
+493 and 8 492 403
+494 eq 8 306 190
+495 and 8 494 493
+496 and 8 495 402
+497 and 8 496 401
+498 and 8 497 400
+499 eq 8 310 194
+500 and 8 499 498
+501 eq 8 311 195
+502 and 8 501 500
+503 eq 8 312 196
+504 and 8 503 502
+505 eq 8 313 197
+506 and 8 505 504
+507 eq 8 314 198
+508 and 8 507 506
+509 eq 8 315 199
+510 and 8 509 508
+511 eq 8 316 200
+512 and 8 511 510
+513 eq 8 317 201
+514 and 8 513 512
+515 eq 8 318 202
+516 and 8 515 514
+517 eq 8 319 203
+518 and 8 517 516
+519 eq 8 320 204
+520 and 8 519 518
+521 and 8 520 399
+522 and 8 521 398
+523 and 8 522 397
+524 and 8 523 396
+525 eq 8 325 209
+526 and 8 525 524
+527 eq 8 326 210
+528 and 8 527 526
+529 eq 8 327 211
+530 and 8 529 528
+531 eq 8 328 212
+532 and 8 531 530
+533 eq 8 329 213
+534 and 8 533 532
+535 eq 8 330 214
+536 and 8 535 534
+537 eq 8 331 215
+538 and 8 537 536
+539 eq 8 332 216
+540 and 8 539 538
+541 eq 8 333 217
+542 and 8 541 540
+543 eq 8 334 218
+544 and 8 543 542
+545 eq 8 335 219
+546 and 8 545 544
+547 eq 8 336 220
+548 and 8 547 546
+549 eq 8 337 221
+550 and 8 549 548
+551 eq 8 338 222
+552 and 8 551 550
+553 eq 8 339 223
+554 and 8 553 552
+555 eq 8 340 224
+556 and 8 555 554
+557 eq 8 341 225
+558 and 8 557 556
+559 eq 8 342 226
+560 and 8 559 558
+561 eq 8 343 227
+562 and 8 561 560
+563 eq 8 344 228
+564 and 8 563 562
+565 eq 8 345 229
+566 and 8 565 564
+567 eq 8 346 230
+568 and 8 567 566
+569 eq 8 347 231
+570 and 8 569 568
+571 eq 8 348 232
+572 and 8 571 570
+573 eq 8 349 233
+574 and 8 573 572
+575 eq 8 350 234
+576 and 8 575 574
+577 eq 8 351 235
+578 and 8 577 576
+579 eq 8 352 236
+580 and 8 579 578
+581 eq 8 353 237
+582 and 8 581 580
+583 eq 8 354 238
+584 and 8 583 582
+585 eq 8 355 239
+586 and 8 585 584
+587 eq 8 356 240
+588 and 8 587 586
+589 eq 8 357 241
+590 and 8 589 588
+591 eq 8 358 242
+592 and 8 591 590
+593 eq 8 359 243
+594 and 8 593 592
+595 eq 8 360 244
+596 and 8 595 594
+597 eq 8 361 245
+598 and 8 597 596
+599 eq 8 362 246
+600 and 8 599 598
+601 eq 8 363 247
+602 and 8 601 600
+603 eq 8 364 248
+604 and 8 603 602
+605 eq 8 365 249
+606 and 8 605 604
+607 eq 8 366 250
+608 and 8 607 606
+609 eq 8 367 251
+610 and 8 609 608
+611 eq 8 368 252
+612 and 8 611 610
+613 eq 8 369 253
+614 and 8 613 612
+615 eq 8 370 254
+616 and 8 615 614
+617 constd 4 14
+618 slt 8 322 617
+619 not 8 618
+620 and 8 619 616
+621 and 8 620 394
+622 not 8 259
+623 and 8 392 622
+624 and 8 623 386
+625 constd 4 1
+626 add 4 625 322
+627 eq 8 206 626
+628 constd 2 0
+629 constd 4 5
+630 mul 4 629 322
+631 add 4 321 630
+632 write 5 264 631 628
+633 eq 8 148 632
+634 constd 3 0
+635 constd 4 4
+636 add 4 635 631
+637 constd 4 3
+638 add 4 637 631
+639 constd 4 2
+640 add 4 639 631
+641 add 4 625 631
+642 write 6 261 641 634
+643 write 6 642 640 634
+644 write 6 643 638 634
+645 write 6 644 636 634
+646 eq 8 145 645
+647 and 8 417 646
+648 and 8 419 647
+649 and 8 421 648
+650 and 8 649 633
+651 and 8 425 650
+652 and 8 427 651
+653 and 8 429 652
+654 and 8 431 653
+655 and 8 433 654
+656 and 8 435 655
+657 and 8 437 656
+658 and 8 439 657
+659 and 8 441 658
+660 and 8 443 659
+661 and 8 445 660
+662 and 8 415 661
+663 and 8 448 662
+664 and 8 414 663
+665 and 8 413 664
+666 and 8 452 665
+667 and 8 412 666
+668 and 8 411 667
+669 and 8 410 668
+670 and 8 409 669
+671 and 8 458 670
+672 and 8 408 671
+673 and 8 407 672
+674 and 8 406 673
+675 and 8 463 674
+676 and 8 465 675
+677 and 8 467 676
+678 and 8 469 677
+679 and 8 471 678
+680 and 8 473 679
+681 and 8 475 680
+682 and 8 477 681
+683 and 8 479 682
+684 and 8 481 683
+685 and 8 483 684
+686 and 8 485 685
+687 and 8 487 686
+688 and 8 489 687
+689 and 8 405 688
+690 and 8 404 689
+691 and 8 403 690
+692 and 8 494 691
+693 and 8 402 692
+694 and 8 401 693
+695 and 8 400 694
+696 and 8 499 695
+697 and 8 501 696
+698 and 8 503 697
+699 and 8 505 698
+700 and 8 507 699
+701 and 8 509 700
+702 and 8 511 701
+703 and 8 513 702
+704 and 8 515 703
+705 and 8 517 704
+706 and 8 519 705
+707 and 8 399 706
+708 and 8 707 627
+709 eq 8 323 207
+710 and 8 709 708
+711 eq 8 324 208
+712 and 8 711 710
+713 and 8 525 712
+714 and 8 527 713
+715 and 8 529 714
+716 and 8 531 715
+717 and 8 533 716
+718 and 8 535 717
+719 and 8 537 718
+720 and 8 539 719
+721 and 8 541 720
+722 and 8 543 721
+723 and 8 545 722
+724 and 8 547 723
+725 and 8 549 724
+726 and 8 551 725
+727 and 8 553 726
+728 and 8 555 727
+729 and 8 557 728
+730 and 8 559 729
+731 and 8 561 730
+732 and 8 563 731
+733 and 8 565 732
+734 and 8 567 733
+735 and 8 569 734
+736 and 8 571 735
+737 and 8 573 736
+738 and 8 575 737
+739 and 8 577 738
+740 and 8 579 739
+741 and 8 581 740
+742 and 8 583 741
+743 and 8 585 742
+744 and 8 587 743
+745 and 8 589 744
+746 and 8 591 745
+747 and 8 593 746
+748 and 8 595 747
+749 and 8 597 748
+750 and 8 599 749
+751 and 8 601 750
+752 and 8 603 751
+753 and 8 605 752
+754 and 8 607 753
+755 and 8 609 754
+756 and 8 611 755
+757 and 8 613 756
+758 and 8 615 757
+759 and 8 618 758
+760 and 8 759 624
+761 or 8 760 621
+762 and 8 375 384
+763 not 8 255
+764 and 8 389 763
+765 and 8 388 764
+766 and 8 387 765
+767 and 8 259 766
+768 and 8 767 762
+769 eq 8 210 395
+770 eq 8 304 209
+771 add 4 639 323
+772 add 4 625 323
+773 write 6 261 772 634
+774 write 6 773 771 634
+775 eq 8 145 774
+776 and 8 417 775
+777 and 8 419 776
+778 and 8 421 777
+779 and 8 423 778
+780 and 8 425 779
+781 and 8 427 780
+782 and 8 429 781
+783 and 8 431 782
+784 and 8 433 783
+785 and 8 435 784
+786 and 8 437 785
+787 and 8 439 786
+788 and 8 441 787
+789 and 8 443 788
+790 and 8 445 789
+791 and 8 415 790
+792 and 8 448 791
+793 and 8 414 792
+794 and 8 413 793
+795 and 8 452 794
+796 and 8 412 795
+797 and 8 411 796
+798 and 8 410 797
+799 and 8 409 798
+800 and 8 458 799
+801 and 8 408 800
+802 and 8 407 801
+803 and 8 406 802
+804 and 8 463 803
+805 and 8 465 804
+806 and 8 467 805
+807 and 8 469 806
+808 and 8 471 807
+809 and 8 473 808
+810 and 8 475 809
+811 and 8 477 810
+812 and 8 479 811
+813 and 8 481 812
+814 and 8 483 813
+815 and 8 485 814
+816 and 8 487 815
+817 and 8 489 816
+818 and 8 405 817
+819 and 8 404 818
+820 and 8 403 819
+821 and 8 494 820
+822 and 8 402 821
+823 and 8 401 822
+824 and 8 400 823
+825 and 8 499 824
+826 and 8 501 825
+827 and 8 503 826
+828 and 8 505 827
+829 and 8 507 828
+830 and 8 509 829
+831 and 8 511 830
+832 and 8 513 831
+833 and 8 515 832
+834 and 8 517 833
+835 and 8 519 834
+836 and 8 399 835
+837 and 8 398 836
+838 and 8 709 837
+839 and 8 711 838
+840 and 8 839 770
+841 and 8 840 769
+842 and 8 529 841
+843 and 8 531 842
+844 and 8 533 843
+845 and 8 535 844
+846 and 8 537 845
+847 and 8 539 846
+848 and 8 541 847
+849 and 8 543 848
+850 and 8 545 849
+851 and 8 547 850
+852 and 8 549 851
+853 and 8 551 852
+854 and 8 553 853
+855 and 8 555 854
+856 and 8 557 855
+857 and 8 559 856
+858 and 8 561 857
+859 and 8 563 858
+860 and 8 565 859
+861 and 8 567 860
+862 and 8 569 861
+863 and 8 571 862
+864 and 8 573 863
+865 and 8 575 864
+866 and 8 577 865
+867 and 8 579 866
+868 and 8 581 867
+869 and 8 583 868
+870 and 8 585 869
+871 and 8 587 870
+872 and 8 589 871
+873 and 8 591 872
+874 and 8 593 873
+875 and 8 595 874
+876 and 8 597 875
+877 and 8 599 876
+878 and 8 601 877
+879 and 8 603 878
+880 and 8 605 879
+881 and 8 607 880
+882 and 8 609 881
+883 and 8 611 882
+884 and 8 613 883
+885 and 8 615 884
+886 slt 8 324 639
+887 not 8 886
+888 and 8 887 885
+889 and 8 888 768
+890 and 8 762 393
+891 add 4 625 324
+892 eq 8 208 891
+893 mul 4 629 324
+894 read 4 262 323
+895 add 4 894 893
+896 write 5 264 895 628
+897 eq 8 148 896
+898 add 4 635 895
+899 add 4 637 895
+900 add 4 639 895
+901 add 4 625 895
+902 write 6 261 901 634
+903 write 6 902 900 634
+904 write 6 903 899 634
+905 write 6 904 898 634
+906 eq 8 145 905
+907 and 8 417 906
+908 and 8 419 907
+909 and 8 421 908
+910 and 8 909 897
+911 and 8 425 910
+912 and 8 427 911
+913 and 8 429 912
+914 and 8 431 913
+915 and 8 433 914
+916 and 8 435 915
+917 and 8 437 916
+918 and 8 439 917
+919 and 8 441 918
+920 and 8 443 919
+921 and 8 445 920
+922 and 8 415 921
+923 and 8 448 922
+924 and 8 414 923
+925 and 8 413 924
+926 and 8 452 925
+927 and 8 412 926
+928 and 8 411 927
+929 and 8 410 928
+930 and 8 409 929
+931 and 8 458 930
+932 and 8 408 931
+933 and 8 407 932
+934 and 8 406 933
+935 and 8 463 934
+936 and 8 465 935
+937 and 8 467 936
+938 and 8 469 937
+939 and 8 471 938
+940 and 8 473 939
+941 and 8 475 940
+942 and 8 477 941
+943 and 8 479 942
+944 and 8 481 943
+945 and 8 483 944
+946 and 8 485 945
+947 and 8 487 946
+948 and 8 489 947
+949 and 8 405 948
+950 and 8 404 949
+951 and 8 403 950
+952 and 8 494 951
+953 and 8 402 952
+954 and 8 401 953
+955 and 8 400 954
+956 and 8 499 955
+957 and 8 501 956
+958 and 8 503 957
+959 and 8 505 958
+960 and 8 507 959
+961 and 8 509 960
+962 and 8 511 961
+963 and 8 513 962
+964 and 8 515 963
+965 and 8 517 964
+966 and 8 519 965
+967 and 8 399 966
+968 and 8 398 967
+969 and 8 709 968
+970 and 8 969 892
+971 and 8 525 970
+972 and 8 527 971
+973 and 8 529 972
+974 and 8 531 973
+975 and 8 533 974
+976 and 8 535 975
+977 and 8 537 976
+978 and 8 539 977
+979 and 8 541 978
+980 and 8 543 979
+981 and 8 545 980
+982 and 8 547 981
+983 and 8 549 982
+984 and 8 551 983
+985 and 8 553 984
+986 and 8 555 985
+987 and 8 557 986
+988 and 8 559 987
+989 and 8 561 988
+990 and 8 563 989
+991 and 8 565 990
+992 and 8 567 991
+993 and 8 569 992
+994 and 8 571 993
+995 and 8 573 994
+996 and 8 575 995
+997 and 8 577 996
+998 and 8 579 997
+999 and 8 581 998
+1000 and 8 583 999
+1001 and 8 585 1000
+1002 and 8 587 1001
+1003 and 8 589 1002
+1004 and 8 591 1003
+1005 and 8 593 1004
+1006 and 8 595 1005
+1007 and 8 597 1006
+1008 and 8 599 1007
+1009 and 8 601 1008
+1010 and 8 603 1009
+1011 and 8 605 1010
+1012 and 8 607 1011
+1013 and 8 609 1012
+1014 and 8 611 1013
+1015 and 8 613 1014
+1016 and 8 615 1015
+1017 and 8 886 1016
+1018 and 8 1017 890
+1019 or 8 1018 889
+1020 not 8 371
+1021 and 8 1020 379
+1022 and 8 1021 381
+1023 and 8 1022 383
+1024 and 8 375 1023
+1025 and 8 255 256
+1026 and 8 257 1025
+1027 and 8 258 1026
+1028 and 8 622 1027
+1029 and 8 1028 1024
+1030 eq 8 212 395
+1031 eq 8 305 211
+1032 add 4 639 325
+1033 add 4 625 325
+1034 write 6 261 1033 634
+1035 write 6 1034 1032 634
+1036 eq 8 145 1035
+1037 and 8 417 1036
+1038 and 8 419 1037
+1039 and 8 421 1038
+1040 and 8 423 1039
+1041 and 8 425 1040
+1042 and 8 427 1041
+1043 and 8 429 1042
+1044 and 8 431 1043
+1045 and 8 433 1044
+1046 and 8 435 1045
+1047 and 8 437 1046
+1048 and 8 439 1047
+1049 and 8 441 1048
+1050 and 8 443 1049
+1051 and 8 445 1050
+1052 and 8 415 1051
+1053 and 8 448 1052
+1054 and 8 414 1053
+1055 and 8 413 1054
+1056 and 8 452 1055
+1057 and 8 412 1056
+1058 and 8 411 1057
+1059 and 8 410 1058
+1060 and 8 409 1059
+1061 and 8 458 1060
+1062 and 8 408 1061
+1063 and 8 407 1062
+1064 and 8 406 1063
+1065 and 8 463 1064
+1066 and 8 465 1065
+1067 and 8 467 1066
+1068 and 8 469 1067
+1069 and 8 471 1068
+1070 and 8 473 1069
+1071 and 8 475 1070
+1072 and 8 477 1071
+1073 and 8 479 1072
+1074 and 8 481 1073
+1075 and 8 483 1074
+1076 and 8 485 1075
+1077 and 8 487 1076
+1078 and 8 489 1077
+1079 and 8 405 1078
+1080 and 8 404 1079
+1081 and 8 403 1080
+1082 and 8 494 1081
+1083 and 8 402 1082
+1084 and 8 401 1083
+1085 and 8 400 1084
+1086 and 8 499 1085
+1087 and 8 501 1086
+1088 and 8 503 1087
+1089 and 8 505 1088
+1090 and 8 507 1089
+1091 and 8 509 1090
+1092 and 8 511 1091
+1093 and 8 513 1092
+1094 and 8 515 1093
+1095 and 8 517 1094
+1096 and 8 519 1095
+1097 and 8 399 1096
+1098 and 8 398 1097
+1099 and 8 709 1098
+1100 and 8 711 1099
+1101 and 8 525 1100
+1102 and 8 527 1101
+1103 and 8 1102 1031
+1104 and 8 1103 1030
+1105 and 8 533 1104
+1106 and 8 535 1105
+1107 and 8 537 1106
+1108 and 8 539 1107
+1109 and 8 541 1108
+1110 and 8 543 1109
+1111 and 8 545 1110
+1112 and 8 547 1111
+1113 and 8 549 1112
+1114 and 8 551 1113
+1115 and 8 553 1114
+1116 and 8 555 1115
+1117 and 8 557 1116
+1118 and 8 559 1117
+1119 and 8 561 1118
+1120 and 8 563 1119
+1121 and 8 565 1120
+1122 and 8 567 1121
+1123 and 8 569 1122
+1124 and 8 571 1123
+1125 and 8 573 1124
+1126 and 8 575 1125
+1127 and 8 577 1126
+1128 and 8 579 1127
+1129 and 8 581 1128
+1130 and 8 583 1129
+1131 and 8 585 1130
+1132 and 8 587 1131
+1133 and 8 589 1132
+1134 and 8 591 1133
+1135 and 8 593 1134
+1136 and 8 595 1135
+1137 and 8 597 1136
+1138 and 8 599 1137
+1139 and 8 601 1138
+1140 and 8 603 1139
+1141 and 8 605 1140
+1142 and 8 607 1141
+1143 and 8 609 1142
+1144 and 8 611 1143
+1145 and 8 613 1144
+1146 and 8 615 1145
+1147 slt 8 326 639
+1148 not 8 1147
+1149 and 8 1148 1146
+1150 and 8 1149 1029
+1151 and 8 1024 767
+1152 add 4 625 326
+1153 eq 8 210 1152
+1154 mul 4 629 326
+1155 read 4 262 325
+1156 add 4 1155 1154
+1157 write 5 264 1156 628
+1158 eq 8 148 1157
+1159 add 4 635 1156
+1160 add 4 637 1156
+1161 add 4 639 1156
+1162 add 4 625 1156
+1163 write 6 261 1162 634
+1164 write 6 1163 1161 634
+1165 write 6 1164 1160 634
+1166 write 6 1165 1159 634
+1167 eq 8 145 1166
+1168 and 8 417 1167
+1169 and 8 419 1168
+1170 and 8 421 1169
+1171 and 8 1170 1158
+1172 and 8 425 1171
+1173 and 8 427 1172
+1174 and 8 429 1173
+1175 and 8 431 1174
+1176 and 8 433 1175
+1177 and 8 435 1176
+1178 and 8 437 1177
+1179 and 8 439 1178
+1180 and 8 441 1179
+1181 and 8 443 1180
+1182 and 8 445 1181
+1183 and 8 415 1182
+1184 and 8 448 1183
+1185 and 8 414 1184
+1186 and 8 413 1185
+1187 and 8 452 1186
+1188 and 8 412 1187
+1189 and 8 411 1188
+1190 and 8 410 1189
+1191 and 8 409 1190
+1192 and 8 458 1191
+1193 and 8 408 1192
+1194 and 8 407 1193
+1195 and 8 406 1194
+1196 and 8 463 1195
+1197 and 8 465 1196
+1198 and 8 467 1197
+1199 and 8 469 1198
+1200 and 8 471 1199
+1201 and 8 473 1200
+1202 and 8 475 1201
+1203 and 8 477 1202
+1204 and 8 479 1203
+1205 and 8 481 1204
+1206 and 8 483 1205
+1207 and 8 485 1206
+1208 and 8 487 1207
+1209 and 8 489 1208
+1210 and 8 405 1209
+1211 and 8 404 1210
+1212 and 8 403 1211
+1213 and 8 494 1212
+1214 and 8 402 1213
+1215 and 8 401 1214
+1216 and 8 400 1215
+1217 and 8 499 1216
+1218 and 8 501 1217
+1219 and 8 503 1218
+1220 and 8 505 1219
+1221 and 8 507 1220
+1222 and 8 509 1221
+1223 and 8 511 1222
+1224 and 8 513 1223
+1225 and 8 515 1224
+1226 and 8 517 1225
+1227 and 8 519 1226
+1228 and 8 399 1227
+1229 and 8 398 1228
+1230 and 8 709 1229
+1231 and 8 711 1230
+1232 and 8 525 1231
+1233 and 8 1232 1153
+1234 and 8 529 1233
+1235 and 8 531 1234
+1236 and 8 533 1235
+1237 and 8 535 1236
+1238 and 8 537 1237
+1239 and 8 539 1238
+1240 and 8 541 1239
+1241 and 8 543 1240
+1242 and 8 545 1241
+1243 and 8 547 1242
+1244 and 8 549 1243
+1245 and 8 551 1244
+1246 and 8 553 1245
+1247 and 8 555 1246
+1248 and 8 557 1247
+1249 and 8 559 1248
+1250 and 8 561 1249
+1251 and 8 563 1250
+1252 and 8 565 1251
+1253 and 8 567 1252
+1254 and 8 569 1253
+1255 and 8 571 1254
+1256 and 8 573 1255
+1257 and 8 575 1256
+1258 and 8 577 1257
+1259 and 8 579 1258
+1260 and 8 581 1259
+1261 and 8 583 1260
+1262 and 8 585 1261
+1263 and 8 587 1262
+1264 and 8 589 1263
+1265 and 8 591 1264
+1266 and 8 593 1265
+1267 and 8 595 1266
+1268 and 8 597 1267
+1269 and 8 599 1268
+1270 and 8 601 1269
+1271 and 8 603 1270
+1272 and 8 605 1271
+1273 and 8 607 1272
+1274 and 8 609 1273
+1275 and 8 611 1274
+1276 and 8 613 1275
+1277 and 8 615 1276
+1278 and 8 1147 1277
+1279 and 8 1278 1151
+1280 or 8 1279 1150
+1281 and 8 371 372
+1282 and 8 373 1281
+1283 and 8 374 1282
+1284 and 8 385 1283
+1285 and 8 256 763
+1286 and 8 257 1285
+1287 and 8 258 1286
+1288 and 8 622 1287
+1289 and 8 1288 1284
+1290 eq 8 218 395
+1291 eq 8 307 216
+1292 add 4 639 327
+1293 add 4 625 327
+1294 write 6 261 1293 634
+1295 write 6 1294 1292 634
+1296 eq 8 145 1295
+1297 and 8 417 1296
+1298 and 8 419 1297
+1299 and 8 421 1298
+1300 and 8 423 1299
+1301 and 8 425 1300
+1302 and 8 427 1301
+1303 and 8 429 1302
+1304 and 8 431 1303
+1305 and 8 433 1304
+1306 and 8 435 1305
+1307 and 8 437 1306
+1308 and 8 439 1307
+1309 and 8 441 1308
+1310 and 8 443 1309
+1311 and 8 445 1310
+1312 and 8 415 1311
+1313 and 8 448 1312
+1314 and 8 414 1313
+1315 and 8 413 1314
+1316 and 8 452 1315
+1317 and 8 412 1316
+1318 and 8 411 1317
+1319 and 8 410 1318
+1320 and 8 409 1319
+1321 and 8 458 1320
+1322 and 8 408 1321
+1323 and 8 407 1322
+1324 and 8 406 1323
+1325 and 8 463 1324
+1326 and 8 465 1325
+1327 and 8 467 1326
+1328 and 8 469 1327
+1329 and 8 471 1328
+1330 and 8 473 1329
+1331 and 8 475 1330
+1332 and 8 477 1331
+1333 and 8 479 1332
+1334 and 8 481 1333
+1335 and 8 483 1334
+1336 and 8 485 1335
+1337 and 8 487 1336
+1338 and 8 489 1337
+1339 and 8 405 1338
+1340 and 8 404 1339
+1341 and 8 403 1340
+1342 and 8 494 1341
+1343 and 8 402 1342
+1344 and 8 401 1343
+1345 and 8 400 1344
+1346 and 8 499 1345
+1347 and 8 501 1346
+1348 and 8 503 1347
+1349 and 8 505 1348
+1350 and 8 507 1349
+1351 and 8 509 1350
+1352 and 8 511 1351
+1353 and 8 513 1352
+1354 and 8 515 1353
+1355 and 8 517 1354
+1356 and 8 519 1355
+1357 and 8 399 1356
+1358 and 8 398 1357
+1359 and 8 709 1358
+1360 and 8 711 1359
+1361 and 8 525 1360
+1362 and 8 527 1361
+1363 and 8 529 1362
+1364 and 8 531 1363
+1365 and 8 533 1364
+1366 and 8 535 1365
+1367 and 8 537 1366
+1368 and 8 1367 1291
+1369 and 8 541 1368
+1370 and 8 1369 1290
+1371 and 8 545 1370
+1372 and 8 547 1371
+1373 and 8 549 1372
+1374 and 8 551 1373
+1375 and 8 553 1374
+1376 and 8 555 1375
+1377 and 8 557 1376
+1378 and 8 559 1377
+1379 and 8 561 1378
+1380 and 8 563 1379
+1381 and 8 565 1380
+1382 and 8 567 1381
+1383 and 8 569 1382
+1384 and 8 571 1383
+1385 and 8 573 1384
+1386 and 8 575 1385
+1387 and 8 577 1386
+1388 and 8 579 1387
+1389 and 8 581 1388
+1390 and 8 583 1389
+1391 and 8 585 1390
+1392 and 8 587 1391
+1393 and 8 589 1392
+1394 and 8 591 1393
+1395 and 8 593 1394
+1396 and 8 595 1395
+1397 and 8 597 1396
+1398 and 8 599 1397
+1399 and 8 601 1398
+1400 and 8 603 1399
+1401 and 8 605 1400
+1402 and 8 607 1401
+1403 and 8 609 1402
+1404 and 8 611 1403
+1405 and 8 613 1404
+1406 and 8 615 1405
+1407 slt 8 328 639
+1408 not 8 1407
+1409 and 8 1408 1406
+1410 and 8 1409 1289
+1411 and 8 1284 1028
+1412 add 4 625 328
+1413 eq 8 212 1412
+1414 mul 4 629 328
+1415 read 4 262 327
+1416 add 4 1415 1414
+1417 write 5 264 1416 628
+1418 eq 8 148 1417
+1419 add 4 635 1416
+1420 add 4 637 1416
+1421 add 4 639 1416
+1422 add 4 625 1416
+1423 write 6 261 1422 634
+1424 write 6 1423 1421 634
+1425 write 6 1424 1420 634
+1426 write 6 1425 1419 634
+1427 eq 8 145 1426
+1428 and 8 417 1427
+1429 and 8 419 1428
+1430 and 8 421 1429
+1431 and 8 1430 1418
+1432 and 8 425 1431
+1433 and 8 427 1432
+1434 and 8 429 1433
+1435 and 8 431 1434
+1436 and 8 433 1435
+1437 and 8 435 1436
+1438 and 8 437 1437
+1439 and 8 439 1438
+1440 and 8 441 1439
+1441 and 8 443 1440
+1442 and 8 445 1441
+1443 and 8 415 1442
+1444 and 8 448 1443
+1445 and 8 414 1444
+1446 and 8 413 1445
+1447 and 8 452 1446
+1448 and 8 412 1447
+1449 and 8 411 1448
+1450 and 8 410 1449
+1451 and 8 409 1450
+1452 and 8 458 1451
+1453 and 8 408 1452
+1454 and 8 407 1453
+1455 and 8 406 1454
+1456 and 8 463 1455
+1457 and 8 465 1456
+1458 and 8 467 1457
+1459 and 8 469 1458
+1460 and 8 471 1459
+1461 and 8 473 1460
+1462 and 8 475 1461
+1463 and 8 477 1462
+1464 and 8 479 1463
+1465 and 8 481 1464
+1466 and 8 483 1465
+1467 and 8 485 1466
+1468 and 8 487 1467
+1469 and 8 489 1468
+1470 and 8 405 1469
+1471 and 8 404 1470
+1472 and 8 403 1471
+1473 and 8 494 1472
+1474 and 8 402 1473
+1475 and 8 401 1474
+1476 and 8 400 1475
+1477 and 8 499 1476
+1478 and 8 501 1477
+1479 and 8 503 1478
+1480 and 8 505 1479
+1481 and 8 507 1480
+1482 and 8 509 1481
+1483 and 8 511 1482
+1484 and 8 513 1483
+1485 and 8 515 1484
+1486 and 8 517 1485
+1487 and 8 519 1486
+1488 and 8 399 1487
+1489 and 8 398 1488
+1490 and 8 709 1489
+1491 and 8 711 1490
+1492 and 8 525 1491
+1493 and 8 527 1492
+1494 and 8 529 1493
+1495 and 8 1494 1413
+1496 and 8 533 1495
+1497 and 8 535 1496
+1498 and 8 537 1497
+1499 and 8 539 1498
+1500 and 8 541 1499
+1501 and 8 543 1500
+1502 and 8 545 1501
+1503 and 8 547 1502
+1504 and 8 549 1503
+1505 and 8 551 1504
+1506 and 8 553 1505
+1507 and 8 555 1506
+1508 and 8 557 1507
+1509 and 8 559 1508
+1510 and 8 561 1509
+1511 and 8 563 1510
+1512 and 8 565 1511
+1513 and 8 567 1512
+1514 and 8 569 1513
+1515 and 8 571 1514
+1516 and 8 573 1515
+1517 and 8 575 1516
+1518 and 8 577 1517
+1519 and 8 579 1518
+1520 and 8 581 1519
+1521 and 8 583 1520
+1522 and 8 585 1521
+1523 and 8 587 1522
+1524 and 8 589 1523
+1525 and 8 591 1524
+1526 and 8 593 1525
+1527 and 8 595 1526
+1528 and 8 597 1527
+1529 and 8 599 1528
+1530 and 8 601 1529
+1531 and 8 603 1530
+1532 and 8 605 1531
+1533 and 8 607 1532
+1534 and 8 609 1533
+1535 and 8 611 1534
+1536 and 8 613 1535
+1537 and 8 615 1536
+1538 and 8 1407 1537
+1539 and 8 1538 1411
+1540 or 8 1539 1410
+1541 and 8 372 1020
+1542 and 8 373 1541
+1543 and 8 374 1542
+1544 and 8 385 1543
+1545 and 8 257 390
+1546 and 8 258 1545
+1547 and 8 622 1546
+1548 and 8 1547 1544
+1549 eq 8 228 639
+1550 eq 8 308 227
+1551 eq 8 308 219
+1552 constd 2 3
+1553 constd 4 12
+1554 add 4 1553 308
+1555 read 4 262 1554
+1556 add 4 629 1555
+1557 constd 2 1
+1558 constd 4 8
+1559 add 4 1558 308
+1560 read 4 262 1559
+1561 add 4 629 1560
+1562 add 4 635 308
+1563 read 4 262 1562
+1564 add 4 629 1563
+1565 read 4 262 308
+1566 add 4 629 1565
+1567 write 5 264 1565 1557
+1568 write 5 1567 1566 1552
+1569 write 5 1568 1563 1557
+1570 write 5 1569 1564 1552
+1571 write 5 1570 1560 1557
+1572 write 5 1571 1561 1552
+1573 write 5 1572 1555 1557
+1574 write 5 1573 1556 1552
+1575 eq 8 148 1574
+1576 constd 4 15
+1577 add 4 1576 308
+1578 add 4 617 308
+1579 constd 4 11
+1580 add 4 1579 308
+1581 constd 4 10
+1582 add 4 1581 308
+1583 constd 4 7
+1584 add 4 1583 308
+1585 constd 4 6
+1586 add 4 1585 308
+1587 add 4 637 308
+1588 add 4 639 308
+1589 constd 4 13
+1590 add 4 1589 308
+1591 constd 4 9
+1592 add 4 1591 308
+1593 add 4 629 308
+1594 add 4 625 308
+1595 write 7 263 1594 395
+1596 write 7 1595 1593 395
+1597 write 7 1596 1592 395
+1598 write 7 1597 1590 395
+1599 write 7 1598 1588 625
+1600 write 7 1599 1587 625
+1601 write 7 1600 1586 625
+1602 write 7 1601 1584 625
+1603 write 7 1602 1582 625
+1604 write 7 1603 1580 625
+1605 write 7 1604 1578 625
+1606 write 7 1605 1577 625
+1607 eq 8 147 1606
+1608 constd 3 3
+1609 add 4 1585 1555
+1610 constd 3 7
+1611 add 4 1591 1555
+1612 add 4 1583 1555
+1613 add 4 625 1555
+1614 constd 3 1
+1615 add 4 637 1555
+1616 constd 3 6
+1617 add 4 635 1555
+1618 add 4 639 1555
+1619 constd 3 2
+1620 add 4 1585 1560
+1621 constd 3 5
+1622 add 4 1591 1560
+1623 add 4 1583 1560
+1624 add 4 625 1560
+1625 add 4 637 1560
+1626 constd 3 4
+1627 add 4 635 1560
+1628 add 4 639 1560
+1629 add 4 1585 1563
+1630 add 4 1591 1563
+1631 add 4 1583 1563
+1632 add 4 625 1563
+1633 add 4 637 1563
+1634 add 4 635 1563
+1635 add 4 639 1563
+1636 add 4 1585 1565
+1637 add 4 1591 1565
+1638 add 4 1583 1565
+1639 add 4 625 1565
+1640 add 4 637 1565
+1641 add 4 635 1565
+1642 add 4 639 1565
+1643 add 4 639 332
+1644 add 4 625 332
+1645 write 6 261 1644 634
+1646 write 6 1645 1643 634
+1647 write 6 1646 1642 634
+1648 write 6 1647 1641 634
+1649 write 6 1648 1640 1614
+1650 write 6 1649 1639 634
+1651 write 6 1650 1638 1614
+1652 write 6 1651 1637 1614
+1653 write 6 1652 1636 634
+1654 write 6 1653 1635 1614
+1655 write 6 1654 1634 1619
+1656 write 6 1655 1633 1614
+1657 write 6 1656 1632 1614
+1658 write 6 1657 1631 1619
+1659 write 6 1658 1630 1608
+1660 write 6 1659 1629 1614
+1661 write 6 1660 1628 1619
+1662 write 6 1661 1627 1626
+1663 write 6 1662 1625 1614
+1664 write 6 1663 1624 1619
+1665 write 6 1664 1623 1608
+1666 write 6 1665 1622 1621
+1667 write 6 1666 1620 1619
+1668 write 6 1667 1618 1608
+1669 write 6 1668 1617 1616
+1670 write 6 1669 1615 1614
+1671 write 6 1670 1613 1608
+1672 write 6 1671 1612 634
+1673 write 6 1672 1611 1610
+1674 write 6 1673 1609 1608
+1675 eq 8 145 1674
+1676 and 8 417 1675
+1677 and 8 419 1676
+1678 and 8 1677 1607
+1679 and 8 1678 1575
+1680 and 8 425 1679
+1681 and 8 427 1680
+1682 and 8 429 1681
+1683 and 8 431 1682
+1684 and 8 433 1683
+1685 and 8 435 1684
+1686 and 8 437 1685
+1687 and 8 439 1686
+1688 and 8 441 1687
+1689 and 8 443 1688
+1690 and 8 445 1689
+1691 and 8 415 1690
+1692 and 8 448 1691
+1693 and 8 414 1692
+1694 and 8 413 1693
+1695 and 8 452 1694
+1696 and 8 412 1695
+1697 and 8 411 1696
+1698 and 8 410 1697
+1699 and 8 409 1698
+1700 and 8 458 1699
+1701 and 8 408 1700
+1702 and 8 407 1701
+1703 and 8 406 1702
+1704 and 8 463 1703
+1705 and 8 465 1704
+1706 and 8 467 1705
+1707 and 8 469 1706
+1708 and 8 471 1707
+1709 and 8 473 1708
+1710 and 8 475 1709
+1711 and 8 477 1710
+1712 and 8 479 1711
+1713 and 8 481 1712
+1714 and 8 483 1713
+1715 and 8 485 1714
+1716 and 8 487 1715
+1717 and 8 489 1716
+1718 and 8 405 1717
+1719 and 8 404 1718
+1720 and 8 403 1719
+1721 and 8 494 1720
+1722 and 8 402 1721
+1723 and 8 401 1722
+1724 and 8 400 1723
+1725 and 8 499 1724
+1726 and 8 501 1725
+1727 and 8 503 1726
+1728 and 8 505 1727
+1729 and 8 507 1728
+1730 and 8 509 1729
+1731 and 8 511 1730
+1732 and 8 513 1731
+1733 and 8 515 1732
+1734 and 8 517 1733
+1735 and 8 519 1734
+1736 and 8 399 1735
+1737 and 8 398 1736
+1738 and 8 709 1737
+1739 and 8 711 1738
+1740 and 8 525 1739
+1741 and 8 527 1740
+1742 and 8 529 1741
+1743 and 8 531 1742
+1744 and 8 533 1743
+1745 and 8 535 1744
+1746 and 8 537 1745
+1747 and 8 539 1746
+1748 and 8 541 1747
+1749 and 8 543 1748
+1750 and 8 1749 1551
+1751 and 8 547 1750
+1752 and 8 549 1751
+1753 and 8 551 1752
+1754 and 8 553 1753
+1755 and 8 555 1754
+1756 and 8 557 1755
+1757 and 8 559 1756
+1758 and 8 1757 1550
+1759 and 8 1758 1549
+1760 and 8 565 1759
+1761 eq 8 230 639
+1762 and 8 1761 1760
+1763 and 8 569 1762
+1764 eq 8 232 639
+1765 and 8 1764 1763
+1766 and 8 573 1765
+1767 eq 8 234 639
+1768 and 8 1767 1766
+1769 eq 8 235 395
+1770 and 8 1769 1768
+1771 eq 8 236 141
+1772 and 8 1771 1770
+1773 eq 8 237 142
+1774 and 8 1773 1772
+1775 and 8 583 1774
+1776 eq 8 239 143
+1777 and 8 1776 1775
+1778 and 8 587 1777
+1779 and 8 589 1778
+1780 and 8 591 1779
+1781 and 8 593 1780
+1782 and 8 595 1781
+1783 and 8 597 1782
+1784 and 8 599 1783
+1785 and 8 601 1784
+1786 and 8 603 1785
+1787 and 8 605 1786
+1788 and 8 607 1787
+1789 and 8 609 1788
+1790 and 8 611 1789
+1791 and 8 613 1790
+1792 and 8 615 1791
+1793 slt 8 334 639
+1794 not 8 1793
+1795 and 8 1794 1792
+1796 and 8 1795 1548
+1797 and 8 1544 1288
+1798 add 4 625 334
+1799 eq 8 218 1798
+1800 mul 4 629 334
+1801 read 4 262 332
+1802 add 4 1801 1800
+1803 write 5 264 1802 628
+1804 eq 8 148 1803
+1805 add 4 635 1802
+1806 add 4 637 1802
+1807 add 4 639 1802
+1808 add 4 625 1802
+1809 write 6 261 1808 634
+1810 write 6 1809 1807 634
+1811 write 6 1810 1806 634
+1812 write 6 1811 1805 634
+1813 eq 8 145 1812
+1814 and 8 417 1813
+1815 and 8 419 1814
+1816 and 8 421 1815
+1817 and 8 1816 1804
+1818 and 8 425 1817
+1819 and 8 427 1818
+1820 and 8 429 1819
+1821 and 8 431 1820
+1822 and 8 433 1821
+1823 and 8 435 1822
+1824 and 8 437 1823
+1825 and 8 439 1824
+1826 and 8 441 1825
+1827 and 8 443 1826
+1828 and 8 445 1827
+1829 and 8 415 1828
+1830 and 8 448 1829
+1831 and 8 414 1830
+1832 and 8 413 1831
+1833 and 8 452 1832
+1834 and 8 412 1833
+1835 and 8 411 1834
+1836 and 8 410 1835
+1837 and 8 409 1836
+1838 and 8 458 1837
+1839 and 8 408 1838
+1840 and 8 407 1839
+1841 and 8 406 1840
+1842 and 8 463 1841
+1843 and 8 465 1842
+1844 and 8 467 1843
+1845 and 8 469 1844
+1846 and 8 471 1845
+1847 and 8 473 1846
+1848 and 8 475 1847
+1849 and 8 477 1848
+1850 and 8 479 1849
+1851 and 8 481 1850
+1852 and 8 483 1851
+1853 and 8 485 1852
+1854 and 8 487 1853
+1855 and 8 489 1854
+1856 and 8 405 1855
+1857 and 8 404 1856
+1858 and 8 403 1857
+1859 and 8 494 1858
+1860 and 8 402 1859
+1861 and 8 401 1860
+1862 and 8 400 1861
+1863 and 8 499 1862
+1864 and 8 501 1863
+1865 and 8 503 1864
+1866 and 8 505 1865
+1867 and 8 507 1866
+1868 and 8 509 1867
+1869 and 8 511 1868
+1870 and 8 513 1869
+1871 and 8 515 1870
+1872 and 8 517 1871
+1873 and 8 519 1872
+1874 and 8 399 1873
+1875 and 8 398 1874
+1876 and 8 709 1875
+1877 and 8 711 1876
+1878 and 8 525 1877
+1879 and 8 527 1878
+1880 and 8 529 1879
+1881 and 8 531 1880
+1882 and 8 533 1881
+1883 and 8 535 1882
+1884 and 8 537 1883
+1885 and 8 539 1884
+1886 and 8 541 1885
+1887 and 8 1886 1799
+1888 and 8 545 1887
+1889 and 8 547 1888
+1890 and 8 549 1889
+1891 and 8 551 1890
+1892 and 8 553 1891
+1893 and 8 555 1892
+1894 and 8 557 1893
+1895 and 8 559 1894
+1896 and 8 561 1895
+1897 and 8 563 1896
+1898 and 8 565 1897
+1899 and 8 567 1898
+1900 and 8 569 1899
+1901 and 8 571 1900
+1902 and 8 573 1901
+1903 and 8 575 1902
+1904 and 8 577 1903
+1905 and 8 579 1904
+1906 and 8 581 1905
+1907 and 8 583 1906
+1908 and 8 585 1907
+1909 and 8 587 1908
+1910 and 8 589 1909
+1911 and 8 591 1910
+1912 and 8 593 1911
+1913 and 8 595 1912
+1914 and 8 597 1913
+1915 and 8 599 1914
+1916 and 8 601 1915
+1917 and 8 603 1916
+1918 and 8 605 1917
+1919 and 8 607 1918
+1920 and 8 609 1919
+1921 and 8 611 1920
+1922 and 8 613 1921
+1923 and 8 615 1922
+1924 and 8 1793 1923
+1925 and 8 1924 1797
+1926 or 8 1925 1796
+1927 and 8 373 380
+1928 and 8 374 1927
+1929 and 8 385 1928
+1930 and 8 257 764
+1931 and 8 258 1930
+1932 and 8 622 1931
+1933 and 8 1932 1929
+1934 eq 8 236 395
+1935 and 8 709 522
+1936 and 8 711 1935
+1937 and 8 525 1936
+1938 and 8 527 1937
+1939 and 8 529 1938
+1940 and 8 531 1939
+1941 and 8 533 1940
+1942 and 8 535 1941
+1943 and 8 537 1942
+1944 and 8 539 1943
+1945 and 8 541 1944
+1946 and 8 543 1945
+1947 and 8 545 1946
+1948 and 8 547 1947
+1949 and 8 549 1948
+1950 and 8 551 1949
+1951 and 8 553 1950
+1952 and 8 555 1951
+1953 and 8 557 1952
+1954 and 8 559 1953
+1955 and 8 561 1954
+1956 and 8 563 1955
+1957 and 8 565 1956
+1958 and 8 567 1957
+1959 and 8 569 1958
+1960 and 8 571 1959
+1961 and 8 573 1960
+1962 and 8 575 1961
+1963 and 8 577 1962
+1964 and 8 1963 1934
+1965 and 8 581 1964
+1966 and 8 583 1965
+1967 and 8 585 1966
+1968 and 8 587 1967
+1969 and 8 589 1968
+1970 and 8 591 1969
+1971 and 8 593 1970
+1972 and 8 595 1971
+1973 and 8 597 1972
+1974 and 8 599 1973
+1975 and 8 601 1974
+1976 and 8 603 1975
+1977 and 8 605 1976
+1978 and 8 607 1977
+1979 and 8 609 1978
+1980 and 8 611 1979
+1981 and 8 613 1980
+1982 and 8 615 1981
+1983 slt 8 351 617
+1984 not 8 1983
+1985 and 8 1984 1982
+1986 and 8 1985 1933
+1987 and 8 1929 1547
+1988 add 4 625 351
+1989 eq 8 235 1988
+1990 eq 8 148 47
+1991 eq 8 145 140
+1992 and 8 417 1991
+1993 and 8 419 1992
+1994 and 8 421 1993
+1995 and 8 1994 1990
+1996 and 8 425 1995
+1997 and 8 427 1996
+1998 and 8 429 1997
+1999 and 8 431 1998
+2000 and 8 433 1999
+2001 and 8 435 2000
+2002 and 8 437 2001
+2003 and 8 439 2002
+2004 and 8 441 2003
+2005 and 8 443 2004
+2006 and 8 445 2005
+2007 and 8 415 2006
+2008 and 8 448 2007
+2009 and 8 414 2008
+2010 and 8 413 2009
+2011 and 8 452 2010
+2012 and 8 412 2011
+2013 and 8 411 2012
+2014 and 8 410 2013
+2015 and 8 409 2014
+2016 and 8 458 2015
+2017 and 8 408 2016
+2018 and 8 407 2017
+2019 and 8 406 2018
+2020 and 8 463 2019
+2021 and 8 465 2020
+2022 and 8 467 2021
+2023 and 8 469 2022
+2024 and 8 471 2023
+2025 and 8 473 2024
+2026 and 8 475 2025
+2027 and 8 477 2026
+2028 and 8 479 2027
+2029 and 8 481 2028
+2030 and 8 483 2029
+2031 and 8 485 2030
+2032 and 8 487 2031
+2033 and 8 489 2032
+2034 and 8 405 2033
+2035 and 8 404 2034
+2036 and 8 403 2035
+2037 and 8 494 2036
+2038 and 8 402 2037
+2039 and 8 401 2038
+2040 and 8 400 2039
+2041 and 8 499 2040
+2042 and 8 501 2041
+2043 and 8 503 2042
+2044 and 8 505 2043
+2045 and 8 507 2044
+2046 and 8 509 2045
+2047 and 8 511 2046
+2048 and 8 513 2047
+2049 and 8 515 2048
+2050 and 8 517 2049
+2051 and 8 519 2050
+2052 and 8 399 2051
+2053 and 8 398 2052
+2054 and 8 709 2053
+2055 and 8 711 2054
+2056 and 8 525 2055
+2057 and 8 527 2056
+2058 and 8 529 2057
+2059 and 8 531 2058
+2060 and 8 533 2059
+2061 and 8 535 2060
+2062 and 8 537 2061
+2063 and 8 539 2062
+2064 and 8 541 2063
+2065 and 8 543 2064
+2066 and 8 545 2065
+2067 and 8 547 2066
+2068 and 8 549 2067
+2069 and 8 551 2068
+2070 and 8 553 2069
+2071 and 8 555 2070
+2072 and 8 557 2071
+2073 and 8 559 2072
+2074 and 8 561 2073
+2075 and 8 563 2074
+2076 and 8 565 2075
+2077 and 8 567 2076
+2078 and 8 569 2077
+2079 and 8 571 2078
+2080 and 8 573 2079
+2081 and 8 575 2080
+2082 and 8 2081 1989
+2083 and 8 579 2082
+2084 and 8 581 2083
+2085 and 8 583 2084
+2086 and 8 585 2085
+2087 and 8 587 2086
+2088 and 8 589 2087
+2089 and 8 591 2088
+2090 and 8 593 2089
+2091 and 8 595 2090
+2092 and 8 597 2091
+2093 and 8 599 2092
+2094 and 8 601 2093
+2095 and 8 603 2094
+2096 and 8 605 2095
+2097 and 8 607 2096
+2098 and 8 609 2097
+2099 and 8 611 2098
+2100 and 8 613 2099
+2101 and 8 615 2100
+2102 mul 4 629 351
+2103 read 4 262 343
+2104 add 4 2103 2102
+2105 add 4 635 2104
+2106 add 4 637 2104
+2107 add 4 639 2104
+2108 add 4 625 2104
+2109 write 6 261 2108 634
+2110 write 6 2109 2107 14
+2111 write 6 2110 2106 15
+2112 write 6 2111 2105 634
+2113 eq 8 140 2112
+2114 write 5 264 2104 13
+2115 eq 8 47 2114
+2116 uext 4 14 24
+2117 slt 8 2116 1581
+2118 slt 8 351 344
+2119 and 8 2118 2117
+2120 and 8 2119 2115
+2121 and 8 2120 2113
+2122 not 8 2118
+2123 eq 8 264 47
+2124 and 8 2123 2122
+2125 eq 8 261 140
+2126 and 8 2125 2124
+2127 or 8 2126 2121
+2128 and 8 2127 2101
+2129 and 8 1983 2128
+2130 and 8 2129 1987
+2131 or 8 2130 1986
+2132 and 8 373 1021
+2133 and 8 374 2132
+2134 and 8 385 2133
+2135 and 8 388 1025
+2136 and 8 258 2135
+2137 and 8 622 2136
+2138 and 8 2137 2134
+2139 eq 8 237 395
+2140 and 8 579 1963
+2141 and 8 2140 2139
+2142 and 8 583 2141
+2143 and 8 585 2142
+2144 and 8 587 2143
+2145 and 8 589 2144
+2146 and 8 591 2145
+2147 and 8 593 2146
+2148 and 8 595 2147
+2149 and 8 597 2148
+2150 and 8 599 2149
+2151 and 8 601 2150
+2152 and 8 603 2151
+2153 and 8 605 2152
+2154 and 8 607 2153
+2155 and 8 609 2154
+2156 and 8 611 2155
+2157 and 8 613 2156
+2158 and 8 615 2157
+2159 slt 8 352 617
+2160 not 8 2159
+2161 and 8 2160 2158
+2162 and 8 2161 2138
+2163 and 8 2134 1932
+2164 add 4 625 352
+2165 eq 8 236 2164
+2166 and 8 577 2081
+2167 and 8 2166 2165
+2168 and 8 581 2167
+2169 and 8 583 2168
+2170 and 8 585 2169
+2171 and 8 587 2170
+2172 and 8 589 2171
+2173 and 8 591 2172
+2174 and 8 593 2173
+2175 and 8 595 2174
+2176 and 8 597 2175
+2177 and 8 599 2176
+2178 and 8 601 2177
+2179 and 8 603 2178
+2180 and 8 605 2179
+2181 and 8 607 2180
+2182 and 8 609 2181
+2183 and 8 611 2182
+2184 and 8 613 2183
+2185 and 8 615 2184
+2186 mul 4 629 352
+2187 add 4 635 343
+2188 read 4 262 2187
+2189 add 4 2188 2186
+2190 add 4 635 2189
+2191 add 4 637 2189
+2192 add 4 639 2189
+2193 add 4 625 2189
+2194 write 6 261 2193 1614
+2195 write 6 2194 2192 17
+2196 write 6 2195 2191 18
+2197 write 6 2196 2190 634
+2198 eq 8 140 2197
+2199 write 5 264 2189 16
+2200 eq 8 47 2199
+2201 uext 4 17 24
+2202 slt 8 2201 1581
+2203 slt 8 352 346
+2204 and 8 2203 2202
+2205 and 8 2204 2200
+2206 and 8 2205 2198
+2207 not 8 2203
+2208 and 8 2123 2207
+2209 and 8 2125 2208
+2210 or 8 2209 2206
+2211 and 8 2210 2185
+2212 and 8 2159 2211
+2213 and 8 2212 2163
+2214 or 8 2213 2162
+2215 and 8 381 1281
+2216 and 8 374 2215
+2217 and 8 385 2216
+2218 and 8 388 1285
+2219 and 8 258 2218
+2220 and 8 622 2219
+2221 and 8 2220 2217
+2222 eq 8 239 395
+2223 and 8 581 2140
+2224 and 8 583 2223
+2225 and 8 2224 2222
+2226 and 8 587 2225
+2227 and 8 589 2226
+2228 and 8 591 2227
+2229 and 8 593 2228
+2230 and 8 595 2229
+2231 and 8 597 2230
+2232 and 8 599 2231
+2233 and 8 601 2232
+2234 and 8 603 2233
+2235 and 8 605 2234
+2236 and 8 607 2235
+2237 and 8 609 2236
+2238 and 8 611 2237
+2239 and 8 613 2238
+2240 and 8 615 2239
+2241 slt 8 353 617
+2242 not 8 2241
+2243 and 8 2242 2240
+2244 and 8 2243 2221
+2245 and 8 2217 2137
+2246 add 4 625 353
+2247 eq 8 237 2246
+2248 and 8 579 2166
+2249 and 8 2248 2247
+2250 and 8 583 2249
+2251 and 8 585 2250
+2252 and 8 587 2251
+2253 and 8 589 2252
+2254 and 8 591 2253
+2255 and 8 593 2254
+2256 and 8 595 2255
+2257 and 8 597 2256
+2258 and 8 599 2257
+2259 and 8 601 2258
+2260 and 8 603 2259
+2261 and 8 605 2260
+2262 and 8 607 2261
+2263 and 8 609 2262
+2264 and 8 611 2263
+2265 and 8 613 2264
+2266 and 8 615 2265
+2267 mul 4 629 353
+2268 add 4 1558 343
+2269 read 4 262 2268
+2270 add 4 2269 2267
+2271 add 4 635 2270
+2272 add 4 637 2270
+2273 add 4 639 2270
+2274 add 4 625 2270
+2275 write 6 261 2274 1619
+2276 write 6 2275 2273 20
+2277 write 6 2276 2272 21
+2278 write 6 2277 2271 634
+2279 eq 8 140 2278
+2280 write 5 264 2270 19
+2281 eq 8 47 2280
+2282 uext 4 20 24
+2283 slt 8 2282 1581
+2284 slt 8 353 348
+2285 and 8 2284 2283
+2286 and 8 2285 2281
+2287 and 8 2286 2279
+2288 not 8 2284
+2289 and 8 2123 2288
+2290 and 8 2125 2289
+2291 or 8 2290 2287
+2292 and 8 2291 2266
+2293 and 8 2241 2292
+2294 and 8 2293 2245
+2295 or 8 2294 2244
+2296 and 8 381 1541
+2297 and 8 374 2296
+2298 and 8 385 2297
+2299 and 8 387 1545
+2300 and 8 622 2299
+2301 and 8 2300 2298
+2302 eq 8 170 395
+2303 eq 8 168 395
+2304 eq 8 167 395
+2305 eq 8 166 395
+2306 eq 8 165 395
+2307 eq 8 163 395
+2308 eq 8 162 395
+2309 eq 8 160 395
+2310 add 4 1553 335
+2311 read 4 262 2310
+2312 add 4 629 2311
+2313 add 4 1558 335
+2314 read 4 262 2313
+2315 add 4 629 2314
+2316 add 4 635 335
+2317 read 4 262 2316
+2318 add 4 629 2317
+2319 read 4 262 335
+2320 add 4 629 2319
+2321 write 5 264 2319 1557
+2322 write 5 2321 2320 1552
+2323 write 5 2322 2317 1557
+2324 write 5 2323 2318 1552
+2325 write 5 2324 2314 1557
+2326 write 5 2325 2315 1552
+2327 write 5 2326 2311 1557
+2328 write 5 2327 2312 1552
+2329 eq 8 148 2328
+2330 add 4 1576 335
+2331 add 4 617 335
+2332 add 4 1579 335
+2333 add 4 1581 335
+2334 add 4 1583 335
+2335 add 4 1585 335
+2336 add 4 637 335
+2337 add 4 639 335
+2338 add 4 1589 335
+2339 add 4 1591 335
+2340 add 4 629 335
+2341 add 4 625 335
+2342 write 7 263 2341 395
+2343 write 7 2342 2340 395
+2344 write 7 2343 2339 395
+2345 write 7 2344 2338 395
+2346 write 7 2345 2337 625
+2347 write 7 2346 2336 625
+2348 write 7 2347 2335 625
+2349 write 7 2348 2334 625
+2350 write 7 2349 2333 625
+2351 write 7 2350 2332 625
+2352 write 7 2351 2331 625
+2353 write 7 2352 2330 625
+2354 eq 8 147 2353
+2355 add 4 1585 2311
+2356 add 4 1591 2311
+2357 add 4 1583 2311
+2358 add 4 625 2311
+2359 add 4 637 2311
+2360 add 4 635 2311
+2361 add 4 639 2311
+2362 add 4 1585 2314
+2363 add 4 1591 2314
+2364 add 4 1583 2314
+2365 add 4 625 2314
+2366 add 4 637 2314
+2367 add 4 635 2314
+2368 add 4 639 2314
+2369 add 4 1585 2317
+2370 add 4 1591 2317
+2371 add 4 1583 2317
+2372 add 4 625 2317
+2373 add 4 637 2317
+2374 add 4 635 2317
+2375 add 4 639 2317
+2376 add 4 1585 2319
+2377 add 4 1591 2319
+2378 add 4 1583 2319
+2379 add 4 625 2319
+2380 add 4 637 2319
+2381 add 4 635 2319
+2382 add 4 639 2319
+2383 write 6 261 2382 634
+2384 write 6 2383 2381 634
+2385 write 6 2384 2380 1614
+2386 write 6 2385 2379 634
+2387 write 6 2386 2378 1614
+2388 write 6 2387 2377 1614
+2389 write 6 2388 2376 634
+2390 write 6 2389 2375 1614
+2391 write 6 2390 2374 1619
+2392 write 6 2391 2373 1614
+2393 write 6 2392 2372 1614
+2394 write 6 2393 2371 1619
+2395 write 6 2394 2370 1608
+2396 write 6 2395 2369 1614
+2397 write 6 2396 2368 1619
+2398 write 6 2397 2367 1626
+2399 write 6 2398 2366 1614
+2400 write 6 2399 2365 1619
+2401 write 6 2400 2364 1608
+2402 write 6 2401 2363 1621
+2403 write 6 2402 2362 1619
+2404 write 6 2403 2361 1608
+2405 write 6 2404 2360 1616
+2406 write 6 2405 2359 1614
+2407 write 6 2406 2358 1608
+2408 write 6 2407 2357 634
+2409 write 6 2408 2356 1610
+2410 write 6 2409 2355 1608
+2411 eq 8 145 2410
+2412 and 8 417 2411
+2413 and 8 419 2412
+2414 and 8 2413 2354
+2415 and 8 2414 2329
+2416 and 8 425 2415
+2417 and 8 427 2416
+2418 and 8 429 2417
+2419 and 8 431 2418
+2420 and 8 433 2419
+2421 and 8 435 2420
+2422 and 8 437 2421
+2423 and 8 439 2422
+2424 and 8 441 2423
+2425 and 8 443 2424
+2426 and 8 445 2425
+2427 and 8 2426 2309
+2428 and 8 448 2427
+2429 and 8 2428 2308
+2430 and 8 2429 2307
+2431 and 8 452 2430
+2432 and 8 2431 2306
+2433 and 8 2432 2305
+2434 and 8 2433 2304
+2435 and 8 2434 2303
+2436 and 8 458 2435
+2437 and 8 2436 2302
+2438 and 8 407 2437
+2439 and 8 406 2438
+2440 and 8 463 2439
+2441 and 8 465 2440
+2442 and 8 467 2441
+2443 and 8 469 2442
+2444 and 8 471 2443
+2445 and 8 473 2444
+2446 and 8 475 2445
+2447 and 8 477 2446
+2448 and 8 479 2447
+2449 and 8 481 2448
+2450 and 8 483 2449
+2451 and 8 485 2450
+2452 and 8 487 2451
+2453 and 8 489 2452
+2454 and 8 405 2453
+2455 and 8 404 2454
+2456 and 8 403 2455
+2457 and 8 494 2456
+2458 and 8 402 2457
+2459 and 8 401 2458
+2460 and 8 400 2459
+2461 and 8 499 2460
+2462 and 8 501 2461
+2463 and 8 503 2462
+2464 and 8 505 2463
+2465 and 8 507 2464
+2466 and 8 509 2465
+2467 and 8 511 2466
+2468 and 8 513 2467
+2469 and 8 515 2468
+2470 and 8 517 2469
+2471 and 8 519 2470
+2472 and 8 399 2471
+2473 and 8 398 2472
+2474 and 8 709 2473
+2475 and 8 711 2474
+2476 and 8 525 2475
+2477 and 8 527 2476
+2478 and 8 529 2477
+2479 and 8 531 2478
+2480 and 8 533 2479
+2481 and 8 535 2480
+2482 and 8 537 2481
+2483 and 8 539 2482
+2484 and 8 541 2483
+2485 and 8 543 2484
+2486 and 8 545 2485
+2487 and 8 547 2486
+2488 and 8 549 2487
+2489 and 8 551 2488
+2490 and 8 553 2489
+2491 and 8 555 2490
+2492 and 8 557 2491
+2493 and 8 559 2492
+2494 and 8 561 2493
+2495 and 8 563 2494
+2496 and 8 565 2495
+2497 and 8 567 2496
+2498 and 8 569 2497
+2499 and 8 571 2498
+2500 and 8 573 2499
+2501 and 8 575 2500
+2502 and 8 577 2501
+2503 and 8 579 2502
+2504 and 8 581 2503
+2505 and 8 583 2504
+2506 and 8 585 2505
+2507 and 8 587 2506
+2508 and 8 589 2507
+2509 and 8 591 2508
+2510 and 8 593 2509
+2511 and 8 595 2510
+2512 and 8 597 2511
+2513 and 8 599 2512
+2514 and 8 601 2513
+2515 and 8 603 2514
+2516 and 8 605 2515
+2517 and 8 607 2516
+2518 and 8 609 2517
+2519 and 8 611 2518
+2520 and 8 613 2519
+2521 and 8 615 2520
+2522 slt 8 355 617
+2523 not 8 2522
+2524 and 8 2523 2521
+2525 and 8 2524 2301
+2526 and 8 2298 2220
+2527 add 4 625 355
+2528 eq 8 239 2527
+2529 and 8 581 2248
+2530 and 8 583 2529
+2531 and 8 2530 2528
+2532 and 8 587 2531
+2533 and 8 589 2532
+2534 and 8 591 2533
+2535 and 8 593 2534
+2536 and 8 595 2535
+2537 and 8 597 2536
+2538 and 8 599 2537
+2539 and 8 601 2538
+2540 and 8 603 2539
+2541 and 8 605 2540
+2542 and 8 607 2541
+2543 and 8 609 2542
+2544 and 8 611 2543
+2545 and 8 613 2544
+2546 and 8 615 2545
+2547 mul 4 629 355
+2548 add 4 1553 343
+2549 read 4 262 2548
+2550 add 4 2549 2547
+2551 add 4 635 2550
+2552 add 4 637 2550
+2553 add 4 639 2550
+2554 add 4 625 2550
+2555 write 6 261 2554 1608
+2556 write 6 2555 2553 23
+2557 write 6 2556 2552 24
+2558 write 6 2557 2551 634
+2559 eq 8 2558 140
+2560 write 5 264 2550 22
+2561 eq 8 47 2560
+2562 uext 4 23 24
+2563 slt 8 2562 1581
+2564 slt 8 355 350
+2565 and 8 2564 2563
+2566 and 8 2565 2561
+2567 and 8 2566 2559
+2568 not 8 2564
+2569 and 8 2568 2123
+2570 and 8 2569 2125
+2571 or 8 2570 2567
+2572 and 8 2571 2546
+2573 and 8 2522 2572
+2574 and 8 2573 2526
+2575 or 8 2574 2525
+2576 and 8 383 1542
+2577 and 8 385 2576
+2578 and 8 2300 2577
+2579 eq 8 238 139
+2580 eq 8 231 137
+2581 eq 8 229 136
+2582 add 4 625 284
+2583 eq 8 168 2582
+2584 read 3 261 330
+2585 uext 4 2584 24
+2586 mul 4 629 2585
+2587 add 4 329 2586
+2588 write 5 264 2587 1552
+2589 eq 8 148 2588
+2590 read 4 263 1590
+2591 add 4 625 2590
+2592 write 7 263 1590 2591
+2593 eq 8 147 2592
+2594 uext 4 333 24
+2595 add 4 331 2594
+2596 read 3 261 2595
+2597 constd 4 4294967295
+2598 eq 8 138 2597
+2599 not 8 2598
+2600 ite 3 2599 139 2596
+2601 add 4 625 2587
+2602 write 6 261 2601 337
+2603 read 3 2602 330
+2604 uext 4 2603 24
+2605 mul 4 629 2604
+2606 add 4 329 2605
+2607 add 4 639 2606
+2608 write 6 2602 2607 338
+2609 read 3 2608 330
+2610 uext 4 2609 24
+2611 mul 4 629 2610
+2612 add 4 329 2611
+2613 add 4 637 2612
+2614 write 6 2608 2613 2600
+2615 read 3 2614 330
+2616 uext 4 2615 24
+2617 mul 4 629 2616
+2618 add 4 329 2617
+2619 add 4 635 2618
+2620 write 6 2614 2619 340
+2621 read 3 2620 330
+2622 add 3 1614 2621
+2623 write 6 2620 330 2622
+2624 eq 8 145 2623
+2625 and 8 417 2624
+2626 and 8 419 2625
+2627 and 8 2626 2593
+2628 and 8 2627 2589
+2629 and 8 425 2628
+2630 and 8 427 2629
+2631 and 8 429 2630
+2632 and 8 431 2631
+2633 and 8 433 2632
+2634 and 8 435 2633
+2635 and 8 437 2634
+2636 and 8 439 2635
+2637 and 8 441 2636
+2638 and 8 443 2637
+2639 and 8 445 2638
+2640 and 8 415 2639
+2641 and 8 448 2640
+2642 and 8 414 2641
+2643 and 8 413 2642
+2644 and 8 452 2643
+2645 and 8 412 2644
+2646 and 8 411 2645
+2647 and 8 410 2646
+2648 and 8 2647 2583
+2649 and 8 458 2648
+2650 and 8 408 2649
+2651 and 8 407 2650
+2652 and 8 406 2651
+2653 and 8 463 2652
+2654 and 8 465 2653
+2655 and 8 467 2654
+2656 and 8 469 2655
+2657 and 8 471 2656
+2658 and 8 473 2657
+2659 and 8 475 2658
+2660 and 8 477 2659
+2661 and 8 479 2660
+2662 and 8 481 2661
+2663 and 8 483 2662
+2664 and 8 485 2663
+2665 and 8 487 2664
+2666 and 8 489 2665
+2667 and 8 405 2666
+2668 and 8 404 2667
+2669 and 8 403 2668
+2670 and 8 494 2669
+2671 and 8 402 2670
+2672 and 8 401 2671
+2673 and 8 400 2672
+2674 and 8 499 2673
+2675 and 8 501 2674
+2676 and 8 503 2675
+2677 and 8 505 2676
+2678 and 8 507 2677
+2679 and 8 509 2678
+2680 and 8 511 2679
+2681 and 8 513 2680
+2682 and 8 515 2681
+2683 and 8 517 2682
+2684 and 8 519 2683
+2685 and 8 399 2684
+2686 and 8 398 2685
+2687 and 8 709 2686
+2688 and 8 711 2687
+2689 and 8 525 2688
+2690 and 8 527 2689
+2691 and 8 529 2690
+2692 and 8 531 2691
+2693 and 8 533 2692
+2694 and 8 535 2693
+2695 and 8 537 2694
+2696 and 8 539 2695
+2697 and 8 541 2696
+2698 and 8 543 2697
+2699 and 8 545 2698
+2700 and 8 547 2699
+2701 and 8 549 2700
+2702 and 8 551 2701
+2703 and 8 553 2702
+2704 and 8 555 2703
+2705 and 8 557 2704
+2706 and 8 559 2705
+2707 and 8 561 2706
+2708 and 8 563 2707
+2709 and 8 2708 2581
+2710 and 8 567 2709
+2711 and 8 2710 2580
+2712 and 8 571 2711
+2713 and 8 573 2712
+2714 and 8 575 2713
+2715 and 8 577 2714
+2716 and 8 579 2715
+2717 and 8 581 2716
+2718 and 8 2717 2579
+2719 and 8 585 2718
+2720 and 8 587 2719
+2721 and 8 589 2720
+2722 and 8 591 2721
+2723 and 8 593 2722
+2724 and 8 595 2723
+2725 and 8 597 2724
+2726 and 8 599 2725
+2727 and 8 601 2726
+2728 and 8 603 2727
+2729 and 8 605 2728
+2730 and 8 607 2729
+2731 and 8 609 2730
+2732 and 8 611 2731
+2733 and 8 613 2732
+2734 and 8 615 2733
+2735 eq 8 354 139
+2736 add 4 2597 347
+2737 eq 8 2736 137
+2738 uext 4 345 24
+2739 add 4 2597 2738
+2740 srem 4 2739 639
+2741 slice 3 2740 7 0
+2742 eq 8 345 634
+2743 ite 3 2742 1614 2741
+2744 eq 8 2743 136
+2745 eq 8 347 625
+2746 uext 4 342 24
+2747 mul 4 629 2738
+2748 read 4 262 341
+2749 add 4 2748 2747
+2750 add 4 639 2749
+2751 read 3 261 2750
+2752 uext 4 2751 24
+2753 eq 8 2752 2746
+2754 not 8 2753
+2755 and 8 2754 2745
+2756 slt 8 349 639
+2757 and 8 2756 2755
+2758 and 8 2757 2744
+2759 and 8 2758 2737
+2760 eq 8 347 137
+2761 eq 8 345 136
+2762 not 8 2756
+2763 and 8 2762 2761
+2764 and 8 2763 2760
+2765 or 8 2764 2759
+2766 and 8 2765 2598
+2767 and 8 2766 2735
+2768 add 4 637 2749
+2769 read 3 261 2768
+2770 eq 8 2769 139
+2771 eq 8 138 625
+2772 and 8 2756 2753
+2773 and 8 2761 2772
+2774 and 8 2760 2773
+2775 and 8 2774 2771
+2776 and 8 2775 2770
+2777 or 8 2776 2767
+2778 and 8 2777 2734
+2779 and 8 2778 2578
+2780 and 8 387 1286
+2781 and 8 622 2780
+2782 and 8 2781 2577
+2783 add 4 625 349
+2784 eq 8 233 2783
+2785 eq 8 231 2736
+2786 eq 8 229 2743
+2787 and 8 1956 2786
+2788 and 8 567 2787
+2789 and 8 2788 2785
+2790 and 8 571 2789
+2791 and 8 2790 2784
+2792 and 8 575 2791
+2793 and 8 577 2792
+2794 and 8 579 2793
+2795 and 8 581 2794
+2796 and 8 583 2795
+2797 and 8 585 2796
+2798 and 8 587 2797
+2799 and 8 589 2798
+2800 and 8 591 2799
+2801 and 8 593 2800
+2802 and 8 595 2801
+2803 and 8 597 2802
+2804 and 8 599 2803
+2805 and 8 601 2804
+2806 and 8 603 2805
+2807 and 8 605 2806
+2808 and 8 607 2807
+2809 and 8 609 2808
+2810 and 8 611 2809
+2811 and 8 613 2810
+2812 and 8 615 2811
+2813 not 8 2745
+2814 and 8 2813 2812
+2815 and 8 2754 2814
+2816 and 8 2756 2815
+2817 and 8 2816 2782
+2818 or 8 2817 2779
+2819 and 8 383 1282
+2820 and 8 385 2819
+2821 and 8 2300 2820
+2822 eq 8 183 135
+2823 eq 8 181 133
+2824 eq 8 180 132
+2825 add 4 625 282
+2826 eq 8 166 2825
+2827 read 3 261 277
+2828 uext 4 2827 24
+2829 mul 4 629 2828
+2830 add 4 275 2829
+2831 write 5 264 2830 1552
+2832 eq 8 148 2831
+2833 read 4 263 1592
+2834 add 4 625 2833
+2835 write 7 263 1592 2834
+2836 eq 8 147 2835
+2837 uext 4 285 24
+2838 add 4 280 2837
+2839 read 3 261 2838
+2840 eq 8 134 2597
+2841 not 8 2840
+2842 ite 3 2841 135 2839
+2843 add 4 625 2830
+2844 write 6 261 2843 290
+2845 read 3 2844 277
+2846 uext 4 2845 24
+2847 mul 4 629 2846
+2848 add 4 275 2847
+2849 add 4 639 2848
+2850 write 6 2844 2849 291
+2851 read 3 2850 277
+2852 uext 4 2851 24
+2853 mul 4 629 2852
+2854 add 4 275 2853
+2855 add 4 637 2854
+2856 write 6 2850 2855 2842
+2857 read 3 2856 277
+2858 uext 4 2857 24
+2859 mul 4 629 2858
+2860 add 4 275 2859
+2861 add 4 635 2860
+2862 write 6 2856 2861 293
+2863 read 3 2862 277
+2864 add 3 1614 2863
+2865 write 6 2862 277 2864
+2866 eq 8 145 2865
+2867 and 8 417 2866
+2868 and 8 419 2867
+2869 and 8 2868 2836
+2870 and 8 2869 2832
+2871 and 8 425 2870
+2872 and 8 427 2871
+2873 and 8 429 2872
+2874 and 8 431 2873
+2875 and 8 433 2874
+2876 and 8 435 2875
+2877 and 8 437 2876
+2878 and 8 439 2877
+2879 and 8 441 2878
+2880 and 8 443 2879
+2881 and 8 445 2880
+2882 and 8 415 2881
+2883 and 8 448 2882
+2884 and 8 414 2883
+2885 and 8 413 2884
+2886 and 8 452 2885
+2887 and 8 412 2886
+2888 and 8 2887 2826
+2889 and 8 410 2888
+2890 and 8 409 2889
+2891 and 8 458 2890
+2892 and 8 408 2891
+2893 and 8 407 2892
+2894 and 8 406 2893
+2895 and 8 463 2894
+2896 and 8 465 2895
+2897 and 8 467 2896
+2898 and 8 469 2897
+2899 and 8 471 2898
+2900 and 8 473 2899
+2901 and 8 475 2900
+2902 and 8 2901 2824
+2903 and 8 2902 2823
+2904 and 8 481 2903
+2905 and 8 2904 2822
+2906 and 8 485 2905
+2907 and 8 487 2906
+2908 and 8 489 2907
+2909 and 8 405 2908
+2910 and 8 404 2909
+2911 and 8 403 2910
+2912 and 8 494 2911
+2913 and 8 402 2912
+2914 and 8 401 2913
+2915 and 8 400 2914
+2916 and 8 499 2915
+2917 and 8 501 2916
+2918 and 8 503 2917
+2919 and 8 505 2918
+2920 and 8 507 2919
+2921 and 8 509 2920
+2922 and 8 511 2921
+2923 and 8 513 2922
+2924 and 8 515 2923
+2925 and 8 517 2924
+2926 and 8 519 2925
+2927 and 8 399 2926
+2928 and 8 398 2927
+2929 and 8 709 2928
+2930 and 8 711 2929
+2931 and 8 525 2930
+2932 and 8 527 2931
+2933 and 8 529 2932
+2934 and 8 531 2933
+2935 and 8 533 2934
+2936 and 8 535 2935
+2937 and 8 537 2936
+2938 and 8 539 2937
+2939 and 8 541 2938
+2940 and 8 543 2939
+2941 and 8 545 2940
+2942 and 8 547 2941
+2943 and 8 549 2942
+2944 and 8 551 2943
+2945 and 8 553 2944
+2946 and 8 555 2945
+2947 and 8 557 2946
+2948 and 8 559 2947
+2949 and 8 561 2948
+2950 and 8 563 2949
+2951 and 8 565 2950
+2952 and 8 567 2951
+2953 and 8 569 2952
+2954 and 8 571 2953
+2955 and 8 573 2954
+2956 and 8 575 2955
+2957 and 8 577 2956
+2958 and 8 579 2957
+2959 and 8 581 2958
+2960 and 8 583 2959
+2961 and 8 585 2960
+2962 and 8 587 2961
+2963 and 8 589 2962
+2964 and 8 591 2963
+2965 and 8 593 2964
+2966 and 8 595 2965
+2967 and 8 597 2966
+2968 and 8 599 2967
+2969 and 8 601 2968
+2970 and 8 603 2969
+2971 and 8 605 2970
+2972 and 8 607 2971
+2973 and 8 609 2972
+2974 and 8 611 2973
+2975 and 8 613 2974
+2976 and 8 615 2975
+2977 eq 8 299 135
+2978 add 4 2597 297
+2979 eq 8 2978 133
+2980 uext 4 296 24
+2981 add 4 2597 2980
+2982 srem 4 2981 639
+2983 slice 3 2982 7 0
+2984 eq 8 296 634
+2985 ite 3 2984 1614 2983
+2986 eq 8 2985 132
+2987 eq 8 297 625
+2988 uext 4 295 24
+2989 mul 4 629 2980
+2990 read 4 262 294
+2991 add 4 2990 2989
+2992 add 4 639 2991
+2993 read 3 261 2992
+2994 uext 4 2993 24
+2995 eq 8 2994 2988
+2996 not 8 2995
+2997 and 8 2996 2987
+2998 slt 8 298 639
+2999 and 8 2998 2997
+3000 and 8 2999 2986
+3001 and 8 3000 2979
+3002 eq 8 297 133
+3003 eq 8 296 132
+3004 not 8 2998
+3005 and 8 3004 3003
+3006 and 8 3005 3002
+3007 or 8 3006 3001
+3008 and 8 3007 2840
+3009 and 8 3008 2977
+3010 add 4 637 2991
+3011 read 3 261 3010
+3012 eq 8 3011 135
+3013 eq 8 134 625
+3014 and 8 2998 2995
+3015 and 8 3003 3014
+3016 and 8 3002 3015
+3017 and 8 3016 3013
+3018 and 8 3017 3012
+3019 or 8 3018 3009
+3020 and 8 3019 2976
+3021 and 8 3020 2821
+3022 and 8 387 1026
+3023 and 8 622 3022
+3024 and 8 3023 2820
+3025 add 4 625 298
+3026 eq 8 182 3025
+3027 eq 8 181 2978
+3028 eq 8 180 2985
+3029 and 8 476 3028
+3030 and 8 3029 3027
+3031 and 8 3030 3026
+3032 and 8 483 3031
+3033 and 8 485 3032
+3034 and 8 487 3033
+3035 and 8 489 3034
+3036 and 8 405 3035
+3037 and 8 404 3036
+3038 and 8 403 3037
+3039 and 8 494 3038
+3040 and 8 402 3039
+3041 and 8 401 3040
+3042 and 8 400 3041
+3043 and 8 499 3042
+3044 and 8 501 3043
+3045 and 8 503 3044
+3046 and 8 505 3045
+3047 and 8 507 3046
+3048 and 8 509 3047
+3049 and 8 511 3048
+3050 and 8 513 3049
+3051 and 8 515 3050
+3052 and 8 517 3051
+3053 and 8 519 3052
+3054 and 8 399 3053
+3055 and 8 398 3054
+3056 and 8 709 3055
+3057 and 8 711 3056
+3058 and 8 525 3057
+3059 and 8 527 3058
+3060 and 8 529 3059
+3061 and 8 531 3060
+3062 and 8 533 3061
+3063 and 8 535 3062
+3064 and 8 537 3063
+3065 and 8 539 3064
+3066 and 8 541 3065
+3067 and 8 543 3066
+3068 and 8 545 3067
+3069 and 8 547 3068
+3070 and 8 549 3069
+3071 and 8 551 3070
+3072 and 8 553 3071
+3073 and 8 555 3072
+3074 and 8 557 3073
+3075 and 8 559 3074
+3076 and 8 561 3075
+3077 and 8 563 3076
+3078 and 8 565 3077
+3079 and 8 567 3078
+3080 and 8 569 3079
+3081 and 8 571 3080
+3082 and 8 573 3081
+3083 and 8 575 3082
+3084 and 8 577 3083
+3085 and 8 579 3084
+3086 and 8 581 3085
+3087 and 8 583 3086
+3088 and 8 585 3087
+3089 and 8 587 3088
+3090 and 8 589 3089
+3091 and 8 591 3090
+3092 and 8 593 3091
+3093 and 8 595 3092
+3094 and 8 597 3093
+3095 and 8 599 3094
+3096 and 8 601 3095
+3097 and 8 603 3096
+3098 and 8 605 3097
+3099 and 8 607 3098
+3100 and 8 609 3099
+3101 and 8 611 3100
+3102 and 8 613 3101
+3103 and 8 615 3102
+3104 not 8 2987
+3105 and 8 3104 3103
+3106 and 8 2996 3105
+3107 and 8 2998 3106
+3108 and 8 3107 3024
+3109 or 8 3108 3021
+3110 and 8 374 1022
+3111 and 8 385 3110
+3112 and 8 2300 3111
+3113 eq 8 254 131
+3114 eq 8 252 129
+3115 eq 8 251 128
+3116 add 4 625 279
+3117 eq 8 163 3116
+3118 read 3 261 357
+3119 uext 4 3118 24
+3120 mul 4 629 3119
+3121 add 4 356 3120
+3122 write 5 264 3121 1552
+3123 eq 8 148 3122
+3124 read 4 263 1593
+3125 add 4 625 3124
+3126 write 7 263 1593 3125
+3127 eq 8 147 3126
+3128 uext 4 359 24
+3129 add 4 358 3128
+3130 read 3 261 3129
+3131 eq 8 130 2597
+3132 not 8 3131
+3133 ite 3 3132 131 3130
+3134 add 4 625 3121
+3135 write 6 261 3134 361
+3136 read 3 3135 357
+3137 uext 4 3136 24
+3138 mul 4 629 3137
+3139 add 4 356 3138
+3140 add 4 639 3139
+3141 write 6 3135 3140 362
+3142 read 3 3141 357
+3143 uext 4 3142 24
+3144 mul 4 629 3143
+3145 add 4 356 3144
+3146 add 4 637 3145
+3147 write 6 3141 3146 3133
+3148 read 3 3147 357
+3149 uext 4 3148 24
+3150 mul 4 629 3149
+3151 add 4 356 3150
+3152 add 4 635 3151
+3153 write 6 3147 3152 364
+3154 read 3 3153 357
+3155 add 3 1614 3154
+3156 write 6 3153 357 3155
+3157 eq 8 145 3156
+3158 and 8 417 3157
+3159 and 8 419 3158
+3160 and 8 3159 3127
+3161 and 8 3160 3123
+3162 and 8 425 3161
+3163 and 8 427 3162
+3164 and 8 429 3163
+3165 and 8 431 3164
+3166 and 8 433 3165
+3167 and 8 435 3166
+3168 and 8 437 3167
+3169 and 8 439 3168
+3170 and 8 441 3169
+3171 and 8 443 3170
+3172 and 8 445 3171
+3173 and 8 415 3172
+3174 and 8 448 3173
+3175 and 8 414 3174
+3176 and 8 3175 3117
+3177 and 8 452 3176
+3178 and 8 412 3177
+3179 and 8 411 3178
+3180 and 8 410 3179
+3181 and 8 409 3180
+3182 and 8 458 3181
+3183 and 8 408 3182
+3184 and 8 407 3183
+3185 and 8 406 3184
+3186 and 8 463 3185
+3187 and 8 465 3186
+3188 and 8 467 3187
+3189 and 8 469 3188
+3190 and 8 471 3189
+3191 and 8 473 3190
+3192 and 8 475 3191
+3193 and 8 477 3192
+3194 and 8 479 3193
+3195 and 8 481 3194
+3196 and 8 483 3195
+3197 and 8 485 3196
+3198 and 8 487 3197
+3199 and 8 489 3198
+3200 and 8 405 3199
+3201 and 8 404 3200
+3202 and 8 403 3201
+3203 and 8 494 3202
+3204 and 8 402 3203
+3205 and 8 401 3204
+3206 and 8 400 3205
+3207 and 8 499 3206
+3208 and 8 501 3207
+3209 and 8 503 3208
+3210 and 8 505 3209
+3211 and 8 507 3210
+3212 and 8 509 3211
+3213 and 8 511 3212
+3214 and 8 513 3213
+3215 and 8 515 3214
+3216 and 8 517 3215
+3217 and 8 519 3216
+3218 and 8 399 3217
+3219 and 8 398 3218
+3220 and 8 709 3219
+3221 and 8 711 3220
+3222 and 8 525 3221
+3223 and 8 527 3222
+3224 and 8 529 3223
+3225 and 8 531 3224
+3226 and 8 533 3225
+3227 and 8 535 3226
+3228 and 8 537 3227
+3229 and 8 539 3228
+3230 and 8 541 3229
+3231 and 8 543 3230
+3232 and 8 545 3231
+3233 and 8 547 3232
+3234 and 8 549 3233
+3235 and 8 551 3234
+3236 and 8 553 3235
+3237 and 8 555 3236
+3238 and 8 557 3237
+3239 and 8 559 3238
+3240 and 8 561 3239
+3241 and 8 563 3240
+3242 and 8 565 3241
+3243 and 8 567 3242
+3244 and 8 569 3243
+3245 and 8 571 3244
+3246 and 8 573 3245
+3247 and 8 575 3246
+3248 and 8 577 3247
+3249 and 8 579 3248
+3250 and 8 581 3249
+3251 and 8 583 3250
+3252 and 8 585 3251
+3253 and 8 587 3252
+3254 and 8 589 3253
+3255 and 8 591 3254
+3256 and 8 593 3255
+3257 and 8 595 3256
+3258 and 8 597 3257
+3259 and 8 599 3258
+3260 and 8 601 3259
+3261 and 8 603 3260
+3262 and 8 605 3261
+3263 and 8 607 3262
+3264 and 8 3263 3115
+3265 and 8 3264 3114
+3266 and 8 613 3265
+3267 and 8 3266 3113
+3268 eq 8 370 131
+3269 add 4 2597 368
+3270 eq 8 3269 129
+3271 uext 4 367 24
+3272 add 4 2597 3271
+3273 srem 4 3272 639
+3274 slice 3 3273 7 0
+3275 eq 8 367 634
+3276 ite 3 3275 1614 3274
+3277 eq 8 3276 128
+3278 eq 8 368 625
+3279 uext 4 366 24
+3280 mul 4 629 3271
+3281 read 4 262 365
+3282 add 4 3281 3280
+3283 add 4 639 3282
+3284 read 3 261 3283
+3285 uext 4 3284 24
+3286 eq 8 3285 3279
+3287 not 8 3286
+3288 and 8 3287 3278
+3289 slt 8 369 639
+3290 and 8 3289 3288
+3291 and 8 3290 3277
+3292 and 8 3291 3270
+3293 eq 8 368 129
+3294 eq 8 367 128
+3295 not 8 3289
+3296 and 8 3295 3294
+3297 and 8 3296 3293
+3298 or 8 3297 3292
+3299 and 8 3298 3131
+3300 and 8 3299 3268
+3301 add 4 637 3282
+3302 read 3 261 3301
+3303 eq 8 3302 131
+3304 eq 8 130 625
+3305 and 8 3289 3286
+3306 and 8 3294 3305
+3307 and 8 3293 3306
+3308 and 8 3307 3304
+3309 and 8 3308 3303
+3310 or 8 3309 3300
+3311 and 8 3310 3267
+3312 and 8 3311 3112
+3313 and 8 258 765
+3314 and 8 622 3313
+3315 and 8 3314 3111
+3316 add 4 625 369
+3317 eq 8 253 3316
+3318 eq 8 252 3269
+3319 eq 8 251 3276
+3320 and 8 585 2224
+3321 and 8 587 3320
+3322 and 8 589 3321
+3323 and 8 591 3322
+3324 and 8 593 3323
+3325 and 8 595 3324
+3326 and 8 597 3325
+3327 and 8 599 3326
+3328 and 8 601 3327
+3329 and 8 603 3328
+3330 and 8 605 3329
+3331 and 8 607 3330
+3332 and 8 3331 3319
+3333 and 8 3332 3318
+3334 and 8 3333 3317
+3335 and 8 615 3334
+3336 not 8 3278
+3337 and 8 3336 3335
+3338 and 8 3287 3337
+3339 and 8 3289 3338
+3340 and 8 3339 3315
+3341 or 8 3340 3312
+3342 and 8 374 382
+3343 and 8 385 3342
+3344 and 8 2300 3343
+3345 eq 8 204 127
+3346 eq 8 202 125
+3347 eq 8 201 124
+3348 add 4 625 276
+3349 eq 8 160 3348
+3350 read 3 261 301
+3351 uext 4 3350 24
+3352 mul 4 629 3351
+3353 add 4 300 3352
+3354 write 5 264 3353 1552
+3355 eq 8 148 3354
+3356 read 4 263 1594
+3357 add 4 625 3356
+3358 write 7 263 1594 3357
+3359 eq 8 147 3358
+3360 uext 4 306 24
+3361 add 4 302 3360
+3362 read 3 261 3361
+3363 eq 8 126 2597
+3364 not 8 3363
+3365 ite 3 3364 127 3362
+3366 add 4 625 3353
+3367 write 6 261 3366 311
+3368 read 3 3367 301
+3369 uext 4 3368 24
+3370 mul 4 629 3369
+3371 add 4 300 3370
+3372 add 4 639 3371
+3373 write 6 3367 3372 312
+3374 read 3 3373 301
+3375 uext 4 3374 24
+3376 mul 4 629 3375
+3377 add 4 300 3376
+3378 add 4 637 3377
+3379 write 6 3373 3378 3365
+3380 read 3 3379 301
+3381 uext 4 3380 24
+3382 mul 4 629 3381
+3383 add 4 300 3382
+3384 add 4 635 3383
+3385 write 6 3379 3384 314
+3386 read 3 3385 301
+3387 add 3 1614 3386
+3388 write 6 3385 301 3387
+3389 eq 8 145 3388
+3390 and 8 417 3389
+3391 and 8 419 3390
+3392 and 8 3391 3359
+3393 and 8 3392 3355
+3394 and 8 425 3393
+3395 and 8 427 3394
+3396 and 8 429 3395
+3397 and 8 431 3396
+3398 and 8 433 3397
+3399 and 8 435 3398
+3400 and 8 437 3399
+3401 and 8 439 3400
+3402 and 8 441 3401
+3403 and 8 443 3402
+3404 and 8 445 3403
+3405 and 8 3404 3349
+3406 and 8 448 3405
+3407 and 8 414 3406
+3408 and 8 413 3407
+3409 and 8 452 3408
+3410 and 8 412 3409
+3411 and 8 411 3410
+3412 and 8 410 3411
+3413 and 8 409 3412
+3414 and 8 458 3413
+3415 and 8 408 3414
+3416 and 8 407 3415
+3417 and 8 406 3416
+3418 and 8 463 3417
+3419 and 8 465 3418
+3420 and 8 467 3419
+3421 and 8 469 3420
+3422 and 8 471 3421
+3423 and 8 473 3422
+3424 and 8 475 3423
+3425 and 8 477 3424
+3426 and 8 479 3425
+3427 and 8 481 3426
+3428 and 8 483 3427
+3429 and 8 485 3428
+3430 and 8 487 3429
+3431 and 8 489 3430
+3432 and 8 405 3431
+3433 and 8 404 3432
+3434 and 8 403 3433
+3435 and 8 494 3434
+3436 and 8 402 3435
+3437 and 8 401 3436
+3438 and 8 400 3437
+3439 and 8 499 3438
+3440 and 8 501 3439
+3441 and 8 503 3440
+3442 and 8 505 3441
+3443 and 8 507 3442
+3444 and 8 509 3443
+3445 and 8 511 3444
+3446 and 8 3445 3347
+3447 and 8 3446 3346
+3448 and 8 517 3447
+3449 and 8 3448 3345
+3450 and 8 399 3449
+3451 and 8 398 3450
+3452 and 8 709 3451
+3453 and 8 711 3452
+3454 and 8 525 3453
+3455 and 8 527 3454
+3456 and 8 529 3455
+3457 and 8 531 3456
+3458 and 8 533 3457
+3459 and 8 535 3458
+3460 and 8 537 3459
+3461 and 8 539 3460
+3462 and 8 541 3461
+3463 and 8 543 3462
+3464 and 8 545 3463
+3465 and 8 547 3464
+3466 and 8 549 3465
+3467 and 8 551 3466
+3468 and 8 553 3467
+3469 and 8 555 3468
+3470 and 8 557 3469
+3471 and 8 559 3470
+3472 and 8 561 3471
+3473 and 8 563 3472
+3474 and 8 565 3473
+3475 and 8 567 3474
+3476 and 8 569 3475
+3477 and 8 571 3476
+3478 and 8 573 3477
+3479 and 8 575 3478
+3480 and 8 577 3479
+3481 and 8 579 3480
+3482 and 8 581 3481
+3483 and 8 583 3482
+3484 and 8 585 3483
+3485 and 8 587 3484
+3486 and 8 589 3485
+3487 and 8 591 3486
+3488 and 8 593 3487
+3489 and 8 595 3488
+3490 and 8 597 3489
+3491 and 8 599 3490
+3492 and 8 601 3491
+3493 and 8 603 3492
+3494 and 8 605 3493
+3495 and 8 607 3494
+3496 and 8 609 3495
+3497 and 8 611 3496
+3498 and 8 613 3497
+3499 and 8 615 3498
+3500 eq 8 320 127
+3501 add 4 2597 318
+3502 eq 8 3501 125
+3503 uext 4 317 24
+3504 add 4 2597 3503
+3505 srem 4 3504 639
+3506 slice 3 3505 7 0
+3507 eq 8 317 634
+3508 ite 3 3507 1614 3506
+3509 eq 8 3508 124
+3510 eq 8 318 625
+3511 uext 4 316 24
+3512 mul 4 629 3503
+3513 read 4 262 315
+3514 add 4 3513 3512
+3515 add 4 639 3514
+3516 read 3 261 3515
+3517 uext 4 3516 24
+3518 eq 8 3517 3511
+3519 not 8 3518
+3520 and 8 3519 3510
+3521 slt 8 319 639
+3522 and 8 3521 3520
+3523 and 8 3522 3509
+3524 and 8 3523 3502
+3525 eq 8 318 125
+3526 eq 8 317 124
+3527 not 8 3521
+3528 and 8 3527 3526
+3529 and 8 3528 3525
+3530 or 8 3529 3524
+3531 and 8 3530 3363
+3532 and 8 3531 3500
+3533 add 4 637 3514
+3534 read 3 261 3533
+3535 eq 8 3534 127
+3536 eq 8 126 625
+3537 and 8 3521 3518
+3538 and 8 3526 3537
+3539 and 8 3525 3538
+3540 and 8 3539 3536
+3541 and 8 3540 3535
+3542 or 8 3541 3532
+3543 and 8 3542 3499
+3544 and 8 3543 3344
+3545 and 8 258 391
+3546 and 8 622 3545
+3547 and 8 3546 3343
+3548 add 4 625 319
+3549 eq 8 203 3548
+3550 eq 8 202 3501
+3551 eq 8 201 3508
+3552 and 8 512 3551
+3553 and 8 3552 3550
+3554 and 8 3553 3549
+3555 and 8 519 3554
+3556 and 8 399 3555
+3557 and 8 398 3556
+3558 and 8 709 3557
+3559 and 8 711 3558
+3560 and 8 525 3559
+3561 and 8 527 3560
+3562 and 8 529 3561
+3563 and 8 531 3562
+3564 and 8 533 3563
+3565 and 8 535 3564
+3566 and 8 537 3565
+3567 and 8 539 3566
+3568 and 8 541 3567
+3569 and 8 543 3568
+3570 and 8 545 3569
+3571 and 8 547 3570
+3572 and 8 549 3571
+3573 and 8 551 3572
+3574 and 8 553 3573
+3575 and 8 555 3574
+3576 and 8 557 3575
+3577 and 8 559 3576
+3578 and 8 561 3577
+3579 and 8 563 3578
+3580 and 8 565 3579
+3581 and 8 567 3580
+3582 and 8 569 3581
+3583 and 8 571 3582
+3584 and 8 573 3583
+3585 and 8 575 3584
+3586 and 8 577 3585
+3587 and 8 579 3586
+3588 and 8 581 3587
+3589 and 8 583 3588
+3590 and 8 585 3589
+3591 and 8 587 3590
+3592 and 8 589 3591
+3593 and 8 591 3592
+3594 and 8 593 3593
+3595 and 8 595 3594
+3596 and 8 597 3595
+3597 and 8 599 3596
+3598 and 8 601 3597
+3599 and 8 603 3598
+3600 and 8 605 3599
+3601 and 8 607 3600
+3602 and 8 609 3601
+3603 and 8 611 3602
+3604 and 8 613 3603
+3605 and 8 615 3604
+3606 not 8 3510
+3607 and 8 3606 3605
+3608 and 8 3519 3607
+3609 and 8 3521 3608
+3610 and 8 3609 3547
+3611 or 8 3610 3544
+3612 and 8 383 1927
+3613 and 8 385 3612
+3614 and 8 387 1930
+3615 and 8 622 3614
+3616 and 8 3615 3613
+3617 eq 8 158 395
+3618 eq 8 157 2597
+3619 eq 8 156 2597
+3620 eq 8 155 2597
+3621 eq 8 154 2597
+3622 eq 8 153 2597
+3623 eq 8 152 2597
+3624 eq 8 151 2597
+3625 eq 8 150 2597
+3626 eq 8 149 287
+3627 and 8 424 3626
+3628 and 8 3627 3625
+3629 and 8 3628 3624
+3630 and 8 3629 3623
+3631 and 8 3630 3622
+3632 and 8 3631 3621
+3633 and 8 3632 3620
+3634 and 8 3633 3619
+3635 and 8 3634 3618
+3636 and 8 3635 3617
+3637 and 8 445 3636
+3638 and 8 415 3637
+3639 and 8 448 3638
+3640 and 8 414 3639
+3641 and 8 413 3640
+3642 and 8 452 3641
+3643 and 8 412 3642
+3644 and 8 411 3643
+3645 and 8 410 3644
+3646 and 8 409 3645
+3647 and 8 458 3646
+3648 and 8 408 3647
+3649 and 8 407 3648
+3650 and 8 406 3649
+3651 and 8 463 3650
+3652 and 8 465 3651
+3653 and 8 467 3652
+3654 and 8 469 3653
+3655 and 8 471 3654
+3656 and 8 473 3655
+3657 and 8 475 3656
+3658 and 8 477 3657
+3659 and 8 479 3658
+3660 and 8 481 3659
+3661 and 8 483 3660
+3662 and 8 485 3661
+3663 and 8 487 3662
+3664 and 8 489 3663
+3665 and 8 405 3664
+3666 and 8 404 3665
+3667 and 8 403 3666
+3668 and 8 494 3667
+3669 and 8 402 3668
+3670 and 8 401 3669
+3671 and 8 400 3670
+3672 and 8 499 3671
+3673 and 8 501 3672
+3674 and 8 503 3673
+3675 and 8 505 3674
+3676 and 8 507 3675
+3677 and 8 509 3676
+3678 and 8 511 3677
+3679 and 8 513 3678
+3680 and 8 515 3679
+3681 and 8 517 3680
+3682 and 8 519 3681
+3683 and 8 399 3682
+3684 and 8 398 3683
+3685 and 8 709 3684
+3686 and 8 711 3685
+3687 and 8 525 3686
+3688 and 8 527 3687
+3689 and 8 529 3688
+3690 and 8 531 3689
+3691 and 8 533 3690
+3692 and 8 535 3691
+3693 and 8 537 3692
+3694 and 8 539 3693
+3695 and 8 541 3694
+3696 and 8 543 3695
+3697 and 8 545 3696
+3698 and 8 547 3697
+3699 and 8 549 3698
+3700 and 8 551 3699
+3701 and 8 553 3700
+3702 and 8 555 3701
+3703 and 8 557 3702
+3704 and 8 559 3703
+3705 and 8 561 3704
+3706 and 8 563 3705
+3707 and 8 565 3706
+3708 and 8 567 3707
+3709 and 8 569 3708
+3710 and 8 571 3709
+3711 and 8 573 3710
+3712 and 8 575 3711
+3713 and 8 577 3712
+3714 and 8 579 3713
+3715 and 8 581 3714
+3716 and 8 583 3715
+3717 and 8 585 3716
+3718 and 8 587 3717
+3719 and 8 589 3718
+3720 and 8 591 3719
+3721 and 8 593 3720
+3722 and 8 595 3721
+3723 and 8 597 3722
+3724 and 8 599 3723
+3725 and 8 601 3724
+3726 and 8 603 3725
+3727 and 8 605 3726
+3728 and 8 607 3727
+3729 and 8 609 3728
+3730 and 8 611 3729
+3731 and 8 613 3730
+3732 and 8 615 3731
+3733 add 4 625 307
+3734 read 3 261 3733
+3735 eq 8 3734 634
+3736 and 8 3735 3732
+3737 add 4 625 305
+3738 read 3 261 3737
+3739 eq 8 3738 634
+3740 and 8 3739 3736
+3741 add 4 625 304
+3742 read 3 261 3741
+3743 eq 8 3742 634
+3744 and 8 3743 3740
+3745 add 4 625 303
+3746 read 3 261 3745
+3747 eq 8 3746 634
+3748 and 8 3747 3744
+3749 read 4 263 1577
+3750 eq 8 284 3749
+3751 and 8 3750 3748
+3752 read 4 263 1578
+3753 eq 8 286 3752
+3754 and 8 3753 3751
+3755 read 4 263 1580
+3756 eq 8 282 3755
+3757 and 8 3756 3754
+3758 read 4 263 1582
+3759 eq 8 283 3758
+3760 and 8 3759 3757
+3761 read 4 263 1584
+3762 eq 8 279 3761
+3763 and 8 3762 3760
+3764 read 4 263 1586
+3765 eq 8 281 3764
+3766 and 8 3765 3763
+3767 read 4 263 1587
+3768 eq 8 276 3767
+3769 and 8 3768 3766
+3770 read 4 263 1588
+3771 eq 8 278 3770
+3772 and 8 3771 3769
+3773 eq 8 25 395
+3774 and 8 3773 3772
+3775 and 8 3774 3616
+3776 and 8 3613 2300
+3777 add 4 639 307
+3778 read 3 261 3777
+3779 uext 4 3778 24
+3780 mul 4 629 3779
+3781 read 4 262 307
+3782 add 4 3781 3780
+3783 add 4 637 3782
+3784 read 3 261 3783
+3785 add 4 639 3782
+3786 read 3 261 3785
+3787 uext 4 3786 24
+3788 add 4 288 3787
+3789 write 6 261 3788 3784
+3790 read 3 3789 3733
+3791 constd 3 255
+3792 add 3 3791 3790
+3793 read 3 3789 3777
+3794 uext 4 3793 24
+3795 add 4 625 3794
+3796 srem 4 3795 639
+3797 slice 3 3796 7 0
+3798 write 6 3789 3777 3797
+3799 write 6 3798 3733 3792
+3800 eq 8 64 3799
+3801 eq 8 25 60
+3802 uext 4 3734 24
+3803 slt 8 395 3802
+3804 constd 1 7
+3805 eq 8 27 3804
+3806 and 8 3805 3803
+3807 constd 1 3
+3808 eq 8 27 3807
+3809 not 8 3808
+3810 and 8 3809 3806
+3811 and 8 3810 3801
+3812 eq 8 284 61
+3813 and 8 3812 3811
+3814 eq 8 286 63
+3815 and 8 3814 3813
+3816 eq 8 329 48
+3817 and 8 3816 3815
+3818 eq 8 330 49
+3819 and 8 3818 3817
+3820 eq 8 331 50
+3821 and 8 3820 3819
+3822 eq 8 333 51
+3823 and 8 3822 3821
+3824 eq 8 336 52
+3825 and 8 3824 3823
+3826 eq 8 337 53
+3827 and 8 3826 3825
+3828 eq 8 338 54
+3829 and 8 3828 3827
+3830 eq 8 339 55
+3831 and 8 3830 3829
+3832 eq 8 340 56
+3833 and 8 3832 3831
+3834 eq 8 341 57
+3835 and 8 3834 3833
+3836 eq 8 342 58
+3837 and 8 3836 3835
+3838 eq 8 345 44
+3839 and 8 3838 3837
+3840 eq 8 347 59
+3841 and 8 3840 3839
+3842 eq 8 349 45
+3843 and 8 3842 3841
+3844 eq 8 354 46
+3845 and 8 3844 3843
+3846 and 8 3845 3800
+3847 eq 8 263 66
+3848 and 8 3847 3846
+3849 eq 8 264 65
+3850 and 8 3849 3848
+3851 eq 8 2592 66
+3852 eq 8 47 65
+3853 eq 8 62 64
+3854 mul 4 629 2590
+3855 add 4 1555 3854
+3856 add 4 635 3855
+3857 read 3 261 3856
+3858 add 4 639 3855
+3859 read 3 261 3858
+3860 uext 4 3859 24
+3861 add 4 288 3860
+3862 read 3 261 3861
+3863 add 4 625 3855
+3864 read 3 261 3863
+3865 read 3 261 309
+3866 uext 4 3865 24
+3867 mul 4 629 3866
+3868 add 4 287 3867
+3869 add 4 625 3868
+3870 write 6 261 3869 3864
+3871 read 3 3870 309
+3872 uext 4 3871 24
+3873 mul 4 629 3872
+3874 add 4 287 3873
+3875 add 4 639 3874
+3876 write 6 3870 3875 3859
+3877 read 3 3876 309
+3878 uext 4 3877 24
+3879 mul 4 629 3878
+3880 add 4 287 3879
+3881 add 4 637 3880
+3882 write 6 3876 3881 3862
+3883 read 3 3882 309
+3884 uext 4 3883 24
+3885 mul 4 629 3884
+3886 add 4 287 3885
+3887 add 4 635 3886
+3888 write 6 3882 3887 3857
+3889 read 3 3888 309
+3890 add 3 1614 3889
+3891 write 6 3888 309 3890
+3892 eq 8 3891 62
+3893 eq 8 2582 61
+3894 eq 8 284 60
+3895 eq 8 3802 59
+3896 eq 8 3859 58
+3897 eq 8 307 57
+3898 eq 8 3857 56
+3899 add 4 637 3855
+3900 read 3 261 3899
+3901 eq 8 3900 55
+3902 eq 8 3859 54
+3903 eq 8 3864 53
+3904 read 2 264 3855
+3905 eq 8 3904 52
+3906 eq 8 3859 51
+3907 eq 8 288 50
+3908 eq 8 309 49
+3909 eq 8 287 48
+3910 write 5 264 3868 1552
+3911 eq 8 3910 47
+3912 slt 8 284 3749
+3913 and 8 3735 3912
+3914 eq 8 3904 1552
+3915 and 8 3914 3913
+3916 constd 2 2
+3917 eq 8 3904 3916
+3918 not 8 3917
+3919 and 8 3918 3915
+3920 and 8 3919 3911
+3921 and 8 3920 3909
+3922 and 8 3921 3908
+3923 and 8 3922 3907
+3924 and 8 3923 3906
+3925 and 8 3924 3905
+3926 and 8 3925 3903
+3927 and 8 3926 3902
+3928 and 8 3927 3901
+3929 and 8 3928 3898
+3930 and 8 3929 3897
+3931 and 8 3930 3896
+3932 and 8 3931 3895
+3933 and 8 3932 3894
+3934 and 8 3933 3893
+3935 and 8 3934 3892
+3936 and 8 3935 3814
+3937 add 4 625 286
+3938 eq 8 3937 63
+3939 write 6 3876 3881 3900
+3940 read 3 3939 309
+3941 uext 4 3940 24
+3942 mul 4 629 3941
+3943 add 4 287 3942
+3944 add 4 635 3943
+3945 write 6 3939 3944 3857
+3946 read 3 3945 309
+3947 add 3 1614 3946
+3948 write 6 3945 309 3947
+3949 eq 8 3948 62
+3950 eq 8 286 60
+3951 write 5 264 3868 3904
+3952 eq 8 3951 47
+3953 slt 8 286 3752
+3954 and 8 3953 3735
+3955 and 8 3917 3954
+3956 and 8 3955 3952
+3957 and 8 3956 3816
+3958 and 8 3957 3818
+3959 and 8 3958 3820
+3960 and 8 3959 3822
+3961 and 8 3960 3824
+3962 and 8 3961 3826
+3963 and 8 3962 3828
+3964 and 8 3963 3830
+3965 and 8 3964 3832
+3966 and 8 3965 3834
+3967 and 8 3966 3836
+3968 and 8 3967 3838
+3969 and 8 3968 3840
+3970 and 8 3969 3842
+3971 and 8 3970 3844
+3972 and 8 3971 3950
+3973 and 8 3972 3812
+3974 and 8 3973 3949
+3975 and 8 3974 3938
+3976 or 8 3975 3936
+3977 eq 8 3904 1557
+3978 not 8 3977
+3979 and 8 3978 3976
+3980 and 8 3979 3853
+3981 and 8 3980 3852
+3982 add 4 3802 3779
+3983 srem 4 3982 639
+3984 mul 4 629 3983
+3985 add 4 3781 3984
+3986 add 4 635 3985
+3987 add 4 637 3985
+3988 add 4 639 3985
+3989 add 4 625 3985
+3990 write 6 261 3989 3864
+3991 write 6 3990 3988 3859
+3992 write 6 3991 3987 3900
+3993 write 6 3992 3986 3857
+3994 read 3 3993 3733
+3995 add 3 1614 3994
+3996 write 6 3993 3733 3995
+3997 read 3 3996 309
+3998 uext 4 3997 24
+3999 mul 4 629 3998
+4000 add 4 287 3999
+4001 write 5 264 3985 3904
+4002 write 5 4001 4000 3904
+4003 eq 8 4002 65
+4004 add 4 625 4000
+4005 write 6 3996 4004 3864
+4006 read 3 4005 309
+4007 uext 4 4006 24
+4008 mul 4 629 4007
+4009 add 4 287 4008
+4010 add 4 639 4009
+4011 write 6 4005 4010 3859
+4012 read 3 4011 309
+4013 uext 4 4012 24
+4014 mul 4 629 4013
+4015 add 4 287 4014
+4016 add 4 637 4015
+4017 write 6 4011 4016 3900
+4018 read 3 4017 309
+4019 uext 4 4018 24
+4020 mul 4 629 4019
+4021 add 4 287 4020
+4022 add 4 635 4021
+4023 write 6 4017 4022 3857
+4024 read 3 4023 309
+4025 add 3 1614 4024
+4026 write 6 4023 309 4025
+4027 eq 8 4026 64
+4028 slt 8 3802 639
+4029 and 8 3953 4028
+4030 and 8 3977 4029
+4031 and 8 4030 3950
+4032 and 8 3812 4031
+4033 and 8 3938 4032
+4034 and 8 3816 4033
+4035 and 8 3818 4034
+4036 and 8 3820 4035
+4037 and 8 3822 4036
+4038 and 8 3824 4037
+4039 and 8 3826 4038
+4040 and 8 3828 4039
+4041 and 8 3830 4040
+4042 and 8 3832 4041
+4043 and 8 3834 4042
+4044 and 8 3836 4043
+4045 and 8 3838 4044
+4046 and 8 3840 4045
+4047 and 8 3842 4046
+4048 and 8 3844 4047
+4049 and 8 4048 4027
+4050 and 8 4049 4003
+4051 or 8 4050 3981
+4052 uext 4 3864 24
+4053 eq 8 4052 637
+4054 and 8 4053 4051
+4055 and 8 3808 4054
+4056 and 8 4055 3851
+4057 or 8 4056 3850
+4058 constd 1 6
+4059 eq 8 27 4058
+4060 not 8 4059
+4061 and 8 4060 4057
+4062 add 4 639 305
+4063 read 3 261 4062
+4064 uext 4 4063 24
+4065 mul 4 629 4064
+4066 read 4 262 305
+4067 add 4 4066 4065
+4068 add 4 637 4067
+4069 read 3 261 4068
+4070 add 4 639 4067
+4071 read 3 261 4070
+4072 uext 4 4071 24
+4073 add 4 288 4072
+4074 write 6 261 4073 4069
+4075 read 3 4074 3737
+4076 add 3 3791 4075
+4077 read 3 4074 4062
+4078 uext 4 4077 24
+4079 add 4 625 4078
+4080 srem 4 4079 639
+4081 slice 3 4080 7 0
+4082 write 6 4074 4062 4081
+4083 write 6 4082 3737 4076
+4084 eq 8 64 4083
+4085 uext 4 3738 24
+4086 slt 8 395 4085
+4087 and 8 4059 4086
+4088 and 8 3801 4087
+4089 and 8 3812 4088
+4090 and 8 3814 4089
+4091 and 8 3816 4090
+4092 and 8 3818 4091
+4093 and 8 3820 4092
+4094 and 8 3822 4093
+4095 and 8 3824 4094
+4096 and 8 3826 4095
+4097 and 8 3828 4096
+4098 and 8 3830 4097
+4099 and 8 3832 4098
+4100 and 8 3834 4099
+4101 and 8 3836 4100
+4102 and 8 3838 4101
+4103 and 8 3840 4102
+4104 and 8 3842 4103
+4105 and 8 3844 4104
+4106 and 8 4105 4084
+4107 and 8 3847 4106
+4108 and 8 3849 4107
+4109 or 8 4108 4061
+4110 constd 1 2
+4111 eq 8 27 4110
+4112 not 8 4111
+4113 and 8 4112 4109
+4114 eq 8 3855 84
+4115 and 8 4114 4113
+4116 eq 8 3904 85
+4117 and 8 4116 4115
+4118 eq 8 3864 86
+4119 and 8 4118 4117
+4120 eq 8 3859 87
+4121 and 8 4120 4119
+4122 eq 8 3900 88
+4123 and 8 4122 4121
+4124 eq 8 3857 89
+4125 and 8 4124 4123
+4126 eq 8 282 82
+4127 and 8 4126 4125
+4128 eq 8 283 83
+4129 and 8 4128 4127
+4130 eq 8 275 70
+4131 and 8 4130 4129
+4132 eq 8 277 71
+4133 and 8 4132 4131
+4134 eq 8 280 72
+4135 and 8 4134 4133
+4136 eq 8 285 73
+4137 and 8 4136 4135
+4138 eq 8 289 74
+4139 and 8 4138 4137
+4140 eq 8 290 75
+4141 and 8 4140 4139
+4142 eq 8 291 76
+4143 and 8 4142 4141
+4144 eq 8 292 77
+4145 and 8 4144 4143
+4146 eq 8 293 78
+4147 and 8 4146 4145
+4148 eq 8 294 79
+4149 and 8 4148 4147
+4150 eq 8 295 80
+4151 and 8 4150 4149
+4152 eq 8 296 67
+4153 and 8 4152 4151
+4154 eq 8 297 81
+4155 and 8 4154 4153
+4156 eq 8 298 68
+4157 and 8 4156 4155
+4158 eq 8 299 69
+4159 and 8 4158 4157
+4160 eq 8 66 2835
+4161 mul 4 629 2833
+4162 add 4 1560 4161
+4163 add 4 635 4162
+4164 read 3 261 4163
+4165 eq 8 4164 89
+4166 add 4 637 4162
+4167 read 3 261 4166
+4168 eq 8 4167 88
+4169 add 4 639 4162
+4170 read 3 261 4169
+4171 eq 8 4170 87
+4172 add 4 625 4162
+4173 read 3 261 4172
+4174 eq 8 4173 86
+4175 read 2 264 4162
+4176 eq 8 4175 85
+4177 eq 8 4162 84
+4178 uext 4 4170 24
+4179 add 4 288 4178
+4180 read 3 261 4179
+4181 write 6 261 3869 4173
+4182 read 3 4181 309
+4183 uext 4 4182 24
+4184 mul 4 629 4183
+4185 add 4 287 4184
+4186 add 4 639 4185
+4187 write 6 4181 4186 4170
+4188 read 3 4187 309
+4189 uext 4 4188 24
+4190 mul 4 629 4189
+4191 add 4 287 4190
+4192 add 4 637 4191
+4193 write 6 4187 4192 4180
+4194 read 3 4193 309
+4195 uext 4 4194 24
+4196 mul 4 629 4195
+4197 add 4 287 4196
+4198 add 4 635 4197
+4199 write 6 4193 4198 4164
+4200 read 3 4199 309
+4201 add 3 1614 4200
+4202 write 6 4199 309 4201
+4203 eq 8 62 4202
+4204 eq 8 2825 82
+4205 eq 8 282 60
+4206 eq 8 4085 81
+4207 eq 8 4170 80
+4208 eq 8 305 79
+4209 eq 8 4164 78
+4210 eq 8 4167 77
+4211 eq 8 4170 76
+4212 eq 8 4173 75
+4213 eq 8 4175 74
+4214 eq 8 4170 73
+4215 eq 8 288 72
+4216 eq 8 309 71
+4217 eq 8 287 70
+4218 slt 8 282 3755
+4219 and 8 3739 4218
+4220 eq 8 4175 1552
+4221 and 8 4220 4219
+4222 eq 8 4175 3916
+4223 not 8 4222
+4224 and 8 4223 4221
+4225 and 8 3911 4224
+4226 and 8 4225 4217
+4227 and 8 4226 4216
+4228 and 8 4227 4215
+4229 and 8 4228 4214
+4230 and 8 4229 4213
+4231 and 8 4230 4212
+4232 and 8 4231 4211
+4233 and 8 4232 4210
+4234 and 8 4233 4209
+4235 and 8 4234 4208
+4236 and 8 4235 4207
+4237 and 8 4236 4206
+4238 and 8 4237 4205
+4239 and 8 4238 4204
+4240 and 8 4239 4203
+4241 and 8 4240 4128
+4242 add 4 625 283
+4243 eq 8 4242 83
+4244 write 6 4187 4192 4167
+4245 read 3 4244 309
+4246 uext 4 4245 24
+4247 mul 4 629 4246
+4248 add 4 287 4247
+4249 add 4 635 4248
+4250 write 6 4244 4249 4164
+4251 read 3 4250 309
+4252 add 3 1614 4251
+4253 write 6 4250 309 4252
+4254 eq 8 62 4253
+4255 eq 8 283 60
+4256 write 5 264 3868 4175
+4257 eq 8 47 4256
+4258 slt 8 283 3758
+4259 and 8 4258 3739
+4260 and 8 4222 4259
+4261 and 8 4260 4257
+4262 and 8 4261 4130
+4263 and 8 4262 4132
+4264 and 8 4263 4134
+4265 and 8 4264 4136
+4266 and 8 4265 4138
+4267 and 8 4266 4140
+4268 and 8 4267 4142
+4269 and 8 4268 4144
+4270 and 8 4269 4146
+4271 and 8 4270 4148
+4272 and 8 4271 4150
+4273 and 8 4272 4152
+4274 and 8 4273 4154
+4275 and 8 4274 4156
+4276 and 8 4275 4255
+4277 and 8 4276 4158
+4278 and 8 4277 4126
+4279 and 8 4278 4254
+4280 and 8 4279 4243
+4281 or 8 4280 4241
+4282 eq 8 4175 1557
+4283 not 8 4282
+4284 and 8 4283 4281
+4285 and 8 3853 4284
+4286 and 8 3852 4285
+4287 add 4 4085 4064
+4288 srem 4 4287 639
+4289 mul 4 629 4288
+4290 add 4 4066 4289
+4291 add 4 635 4290
+4292 add 4 637 4290
+4293 add 4 639 4290
+4294 add 4 625 4290
+4295 write 6 261 4294 4173
+4296 write 6 4295 4293 4170
+4297 write 6 4296 4292 4167
+4298 write 6 4297 4291 4164
+4299 read 3 4298 3737
+4300 add 3 1614 4299
+4301 write 6 4298 3737 4300
+4302 read 3 4301 309
+4303 uext 4 4302 24
+4304 mul 4 629 4303
+4305 add 4 287 4304
+4306 write 5 264 4290 4175
+4307 write 5 4306 4305 4175
+4308 eq 8 65 4307
+4309 add 4 625 4305
+4310 write 6 4301 4309 4173
+4311 read 3 4310 309
+4312 uext 4 4311 24
+4313 mul 4 629 4312
+4314 add 4 287 4313
+4315 add 4 639 4314
+4316 write 6 4310 4315 4170
+4317 read 3 4316 309
+4318 uext 4 4317 24
+4319 mul 4 629 4318
+4320 add 4 287 4319
+4321 add 4 637 4320
+4322 write 6 4316 4321 4167
+4323 read 3 4322 309
+4324 uext 4 4323 24
+4325 mul 4 629 4324
+4326 add 4 287 4325
+4327 add 4 635 4326
+4328 write 6 4322 4327 4164
+4329 read 3 4328 309
+4330 add 3 1614 4329
+4331 write 6 4328 309 4330
+4332 eq 8 64 4331
+4333 slt 8 4085 639
+4334 and 8 4258 4333
+4335 and 8 4282 4334
+4336 and 8 4335 4255
+4337 and 8 4126 4336
+4338 and 8 4243 4337
+4339 and 8 4130 4338
+4340 and 8 4132 4339
+4341 and 8 4134 4340
+4342 and 8 4136 4341
+4343 and 8 4138 4342
+4344 and 8 4140 4343
+4345 and 8 4142 4344
+4346 and 8 4144 4345
+4347 and 8 4146 4346
+4348 and 8 4148 4347
+4349 and 8 4150 4348
+4350 and 8 4152 4349
+4351 and 8 4154 4350
+4352 and 8 4156 4351
+4353 and 8 4158 4352
+4354 and 8 4353 4332
+4355 and 8 4354 4308
+4356 or 8 4355 4286
+4357 uext 4 4173 24
+4358 eq 8 4357 639
+4359 and 8 4358 4356
+4360 and 8 4111 4359
+4361 and 8 3812 4360
+4362 and 8 3814 4361
+4363 and 8 3816 4362
+4364 and 8 3818 4363
+4365 and 8 3820 4364
+4366 and 8 3822 4365
+4367 and 8 3824 4366
+4368 and 8 3826 4367
+4369 and 8 3828 4368
+4370 and 8 3830 4369
+4371 and 8 3832 4370
+4372 and 8 3834 4371
+4373 and 8 3836 4372
+4374 and 8 3838 4373
+4375 and 8 3840 4374
+4376 and 8 4375 4177
+4377 and 8 3842 4376
+4378 and 8 3844 4377
+4379 and 8 4378 4176
+4380 and 8 4379 4174
+4381 and 8 4380 4171
+4382 and 8 4381 4168
+4383 and 8 4382 4165
+4384 and 8 4383 4160
+4385 or 8 4384 4159
+4386 constd 1 5
+4387 eq 8 27 4386
+4388 not 8 4387
+4389 and 8 4388 4385
+4390 add 4 639 304
+4391 read 3 261 4390
+4392 uext 4 4391 24
+4393 mul 4 629 4392
+4394 read 4 262 304
+4395 add 4 4394 4393
+4396 add 4 637 4395
+4397 read 3 261 4396
+4398 add 4 639 4395
+4399 read 3 261 4398
+4400 uext 4 4399 24
+4401 add 4 288 4400
+4402 write 6 261 4401 4397
+4403 read 3 4402 3741
+4404 add 3 3791 4403
+4405 read 3 4402 4390
+4406 uext 4 4405 24
+4407 add 4 625 4406
+4408 srem 4 4407 639
+4409 slice 3 4408 7 0
+4410 write 6 4402 4390 4409
+4411 write 6 4410 3741 4404
+4412 eq 8 64 4411
+4413 uext 4 3742 24
+4414 slt 8 395 4413
+4415 and 8 4387 4414
+4416 and 8 4415 4412
+4417 and 8 3847 4416
+4418 and 8 3849 4417
+4419 and 8 3801 4418
+4420 and 8 4130 4419
+4421 and 8 4132 4420
+4422 and 8 4134 4421
+4423 and 8 4126 4422
+4424 and 8 4128 4423
+4425 and 8 3812 4424
+4426 and 8 4136 4425
+4427 and 8 3814 4426
+4428 and 8 4138 4427
+4429 and 8 4140 4428
+4430 and 8 4142 4429
+4431 and 8 4144 4430
+4432 and 8 4146 4431
+4433 and 8 4148 4432
+4434 and 8 4150 4433
+4435 and 8 4152 4434
+4436 and 8 4154 4435
+4437 and 8 4156 4436
+4438 and 8 4158 4437
+4439 and 8 3816 4438
+4440 and 8 3818 4439
+4441 and 8 3820 4440
+4442 and 8 3822 4441
+4443 and 8 3824 4442
+4444 and 8 3826 4443
+4445 and 8 3828 4444
+4446 and 8 3830 4445
+4447 and 8 3832 4446
+4448 and 8 3834 4447
+4449 and 8 3836 4448
+4450 and 8 3838 4449
+4451 and 8 3840 4450
+4452 and 8 3842 4451
+4453 and 8 3844 4452
+4454 or 8 4453 4389
+4455 constd 1 1
+4456 eq 8 27 4455
+4457 not 8 4456
+4458 and 8 4457 4454
+4459 eq 8 279 104
+4460 and 8 4459 4458
+4461 eq 8 281 106
+4462 and 8 4461 4460
+4463 eq 8 356 93
+4464 and 8 4463 4462
+4465 eq 8 357 94
+4466 and 8 4465 4464
+4467 eq 8 358 95
+4468 and 8 4467 4466
+4469 eq 8 359 96
+4470 and 8 4469 4468
+4471 eq 8 360 97
+4472 and 8 4471 4470
+4473 eq 8 361 98
+4474 and 8 4473 4472
+4475 eq 8 362 99
+4476 and 8 4475 4474
+4477 eq 8 363 100
+4478 and 8 4477 4476
+4479 eq 8 364 101
+4480 and 8 4479 4478
+4481 eq 8 365 102
+4482 and 8 4481 4480
+4483 eq 8 366 103
+4484 and 8 4483 4482
+4485 eq 8 367 90
+4486 and 8 4485 4484
+4487 eq 8 368 105
+4488 and 8 4487 4486
+4489 eq 8 369 91
+4490 and 8 4489 4488
+4491 eq 8 370 92
+4492 and 8 4491 4490
+4493 mul 4 629 3124
+4494 add 4 1563 4493
+4495 add 4 635 4494
+4496 read 3 261 4495
+4497 eq 8 89 4496
+4498 add 4 637 4494
+4499 read 3 261 4498
+4500 eq 8 88 4499
+4501 add 4 639 4494
+4502 read 3 261 4501
+4503 eq 8 87 4502
+4504 add 4 625 4494
+4505 read 3 261 4504
+4506 eq 8 86 4505
+4507 read 2 264 4494
+4508 eq 8 85 4507
+4509 eq 8 84 4494
+4510 eq 8 66 3126
+4511 uext 4 4502 24
+4512 add 4 288 4511
+4513 read 3 261 4512
+4514 write 6 261 3869 4505
+4515 read 3 4514 309
+4516 uext 4 4515 24
+4517 mul 4 629 4516
+4518 add 4 287 4517
+4519 add 4 639 4518
+4520 write 6 4514 4519 4502
+4521 read 3 4520 309
+4522 uext 4 4521 24
+4523 mul 4 629 4522
+4524 add 4 287 4523
+4525 add 4 637 4524
+4526 write 6 4520 4525 4513
+4527 read 3 4526 309
+4528 uext 4 4527 24
+4529 mul 4 629 4528
+4530 add 4 287 4529
+4531 add 4 635 4530
+4532 write 6 4526 4531 4496
+4533 read 3 4532 309
+4534 add 3 1614 4533
+4535 write 6 4532 309 4534
+4536 eq 8 62 4535
+4537 eq 8 4413 105
+4538 eq 8 3116 104
+4539 eq 8 4502 103
+4540 eq 8 304 102
+4541 eq 8 279 60
+4542 eq 8 4496 101
+4543 eq 8 4499 100
+4544 eq 8 4502 99
+4545 eq 8 4505 98
+4546 eq 8 4507 97
+4547 eq 8 4502 96
+4548 eq 8 288 95
+4549 eq 8 309 94
+4550 eq 8 287 93
+4551 slt 8 279 3761
+4552 and 8 3743 4551
+4553 eq 8 4507 1552
+4554 and 8 4553 4552
+4555 eq 8 4507 3916
+4556 not 8 4555
+4557 and 8 4556 4554
+4558 and 8 3911 4557
+4559 and 8 4558 4550
+4560 and 8 4559 4549
+4561 and 8 4560 4548
+4562 and 8 4561 4547
+4563 and 8 4562 4546
+4564 and 8 4563 4545
+4565 and 8 4564 4544
+4566 and 8 4565 4543
+4567 and 8 4566 4542
+4568 and 8 4567 4541
+4569 and 8 4568 4540
+4570 and 8 4569 4539
+4571 and 8 4570 4538
+4572 and 8 4571 4537
+4573 and 8 4572 4536
+4574 and 8 4573 4461
+4575 add 4 625 281
+4576 eq 8 4575 106
+4577 write 6 4520 4525 4499
+4578 read 3 4577 309
+4579 uext 4 4578 24
+4580 mul 4 629 4579
+4581 add 4 287 4580
+4582 add 4 635 4581
+4583 write 6 4577 4582 4496
+4584 read 3 4583 309
+4585 add 3 1614 4584
+4586 write 6 4583 309 4585
+4587 eq 8 62 4586
+4588 eq 8 281 60
+4589 write 5 264 3868 4507
+4590 eq 8 47 4589
+4591 slt 8 281 3764
+4592 and 8 4591 3743
+4593 and 8 4555 4592
+4594 and 8 4593 4590
+4595 and 8 4594 4463
+4596 and 8 4595 4465
+4597 and 8 4596 4467
+4598 and 8 4597 4469
+4599 and 8 4598 4471
+4600 and 8 4599 4473
+4601 and 8 4600 4475
+4602 and 8 4601 4477
+4603 and 8 4602 4479
+4604 and 8 4603 4588
+4605 and 8 4604 4481
+4606 and 8 4605 4483
+4607 and 8 4606 4485
+4608 and 8 4607 4459
+4609 and 8 4608 4487
+4610 and 8 4609 4489
+4611 and 8 4610 4491
+4612 and 8 4611 4587
+4613 and 8 4612 4576
+4614 or 8 4613 4574
+4615 eq 8 4507 1557
+4616 not 8 4615
+4617 and 8 4616 4614
+4618 and 8 3853 4617
+4619 and 8 3852 4618
+4620 add 4 4413 4392
+4621 srem 4 4620 639
+4622 mul 4 629 4621
+4623 add 4 4394 4622
+4624 add 4 635 4623
+4625 add 4 637 4623
+4626 add 4 639 4623
+4627 add 4 625 4623
+4628 write 6 261 4627 4505
+4629 write 6 4628 4626 4502
+4630 write 6 4629 4625 4499
+4631 write 6 4630 4624 4496
+4632 read 3 4631 3741
+4633 add 3 1614 4632
+4634 write 6 4631 3741 4633
+4635 read 3 4634 309
+4636 uext 4 4635 24
+4637 mul 4 629 4636
+4638 add 4 287 4637
+4639 write 5 264 4623 4507
+4640 write 5 4639 4638 4507
+4641 eq 8 65 4640
+4642 add 4 625 4638
+4643 write 6 4634 4642 4505
+4644 read 3 4643 309
+4645 uext 4 4644 24
+4646 mul 4 629 4645
+4647 add 4 287 4646
+4648 add 4 639 4647
+4649 write 6 4643 4648 4502
+4650 read 3 4649 309
+4651 uext 4 4650 24
+4652 mul 4 629 4651
+4653 add 4 287 4652
+4654 add 4 637 4653
+4655 write 6 4649 4654 4499
+4656 read 3 4655 309
+4657 uext 4 4656 24
+4658 mul 4 629 4657
+4659 add 4 287 4658
+4660 add 4 635 4659
+4661 write 6 4655 4660 4496
+4662 read 3 4661 309
+4663 add 3 1614 4662
+4664 write 6 4661 309 4663
+4665 eq 8 64 4664
+4666 slt 8 4413 639
+4667 and 8 4591 4666
+4668 and 8 4615 4667
+4669 and 8 4668 4588
+4670 and 8 4459 4669
+4671 and 8 4576 4670
+4672 and 8 4463 4671
+4673 and 8 4465 4672
+4674 and 8 4467 4673
+4675 and 8 4469 4674
+4676 and 8 4471 4675
+4677 and 8 4473 4676
+4678 and 8 4475 4677
+4679 and 8 4477 4678
+4680 and 8 4479 4679
+4681 and 8 4481 4680
+4682 and 8 4483 4681
+4683 and 8 4485 4682
+4684 and 8 4487 4683
+4685 and 8 4489 4684
+4686 and 8 4685 4665
+4687 and 8 4491 4686
+4688 and 8 4687 4641
+4689 or 8 4688 4619
+4690 uext 4 4505 24
+4691 eq 8 4690 625
+4692 and 8 4691 4689
+4693 and 8 4456 4692
+4694 and 8 4693 4510
+4695 and 8 4130 4694
+4696 and 8 4132 4695
+4697 and 8 4134 4696
+4698 and 8 4126 4697
+4699 and 8 4128 4698
+4700 and 8 3812 4699
+4701 and 8 4136 4700
+4702 and 8 3814 4701
+4703 and 8 4138 4702
+4704 and 8 4140 4703
+4705 and 8 4142 4704
+4706 and 8 4144 4705
+4707 and 8 4146 4706
+4708 and 8 4148 4707
+4709 and 8 4150 4708
+4710 and 8 4152 4709
+4711 and 8 4154 4710
+4712 and 8 4156 4711
+4713 and 8 4158 4712
+4714 and 8 4713 4509
+4715 and 8 4714 4508
+4716 and 8 4715 4506
+4717 and 8 4716 4503
+4718 and 8 4717 4500
+4719 and 8 4718 4497
+4720 and 8 3816 4719
+4721 and 8 3818 4720
+4722 and 8 3820 4721
+4723 and 8 3822 4722
+4724 and 8 3824 4723
+4725 and 8 3826 4724
+4726 and 8 3828 4725
+4727 and 8 3830 4726
+4728 and 8 3832 4727
+4729 and 8 3834 4728
+4730 and 8 3836 4729
+4731 and 8 3838 4730
+4732 and 8 3840 4731
+4733 and 8 3842 4732
+4734 and 8 3844 4733
+4735 or 8 4734 4492
+4736 constd 1 4
+4737 eq 8 27 4736
+4738 not 8 4737
+4739 and 8 4738 4735
+4740 add 4 639 303
+4741 read 3 261 4740
+4742 uext 4 4741 24
+4743 mul 4 629 4742
+4744 read 4 262 303
+4745 add 4 4744 4743
+4746 add 4 637 4745
+4747 read 3 261 4746
+4748 add 4 639 4745
+4749 read 3 261 4748
+4750 uext 4 4749 24
+4751 add 4 288 4750
+4752 write 6 261 4751 4747
+4753 read 3 4752 3745
+4754 add 3 3791 4753
+4755 read 3 4752 4740
+4756 uext 4 4755 24
+4757 add 4 625 4756
+4758 srem 4 4757 639
+4759 slice 3 4758 7 0
+4760 write 6 4752 4740 4759
+4761 write 6 4760 3745 4754
+4762 eq 8 64 4761
+4763 uext 4 3746 24
+4764 slt 8 395 4763
+4765 and 8 4737 4764
+4766 and 8 4765 4762
+4767 and 8 3847 4766
+4768 and 8 3849 4767
+4769 and 8 4463 4768
+4770 and 8 4465 4769
+4771 and 8 4467 4770
+4772 and 8 4469 4771
+4773 and 8 4471 4772
+4774 and 8 4473 4773
+4775 and 8 4475 4774
+4776 and 8 4477 4775
+4777 and 8 4479 4776
+4778 and 8 4481 4777
+4779 and 8 4483 4778
+4780 and 8 4485 4779
+4781 and 8 4487 4780
+4782 and 8 4489 4781
+4783 and 8 4491 4782
+4784 and 8 4130 4783
+4785 and 8 4132 4784
+4786 and 8 4134 4785
+4787 and 8 4136 4786
+4788 and 8 3801 4787
+4789 and 8 4138 4788
+4790 and 8 4140 4789
+4791 and 8 4142 4790
+4792 and 8 4459 4791
+4793 and 8 4144 4792
+4794 and 8 4461 4793
+4795 and 8 4146 4794
+4796 and 8 4126 4795
+4797 and 8 4148 4796
+4798 and 8 4128 4797
+4799 and 8 4150 4798
+4800 and 8 3812 4799
+4801 and 8 3814 4800
+4802 and 8 4152 4801
+4803 and 8 4154 4802
+4804 and 8 4156 4803
+4805 and 8 4158 4804
+4806 and 8 3816 4805
+4807 and 8 3818 4806
+4808 and 8 3820 4807
+4809 and 8 3822 4808
+4810 and 8 3824 4809
+4811 and 8 3826 4810
+4812 and 8 3828 4811
+4813 and 8 3830 4812
+4814 and 8 3832 4813
+4815 and 8 3834 4814
+4816 and 8 3836 4815
+4817 and 8 3838 4816
+4818 and 8 3840 4817
+4819 and 8 3842 4818
+4820 and 8 3844 4819
+4821 or 8 4820 4739
+4822 constd 1 0
+4823 eq 8 27 4822
+4824 not 8 4823
+4825 and 8 4824 4821
+4826 eq 8 300 110
+4827 and 8 4826 4825
+4828 eq 8 301 111
+4829 and 8 4828 4827
+4830 eq 8 302 112
+4831 and 8 4830 4829
+4832 eq 8 306 113
+4833 and 8 4832 4831
+4834 eq 8 310 114
+4835 and 8 4834 4833
+4836 eq 8 311 115
+4837 and 8 4836 4835
+4838 eq 8 312 117
+4839 and 8 4838 4837
+4840 eq 8 313 118
+4841 and 8 4840 4839
+4842 eq 8 314 119
+4843 and 8 4842 4841
+4844 eq 8 315 120
+4845 and 8 4844 4843
+4846 eq 8 316 121
+4847 and 8 4846 4845
+4848 eq 8 317 107
+4849 and 8 4848 4847
+4850 eq 8 318 122
+4851 and 8 4850 4849
+4852 eq 8 319 108
+4853 and 8 4852 4851
+4854 eq 8 320 109
+4855 and 8 4854 4853
+4856 eq 8 276 116
+4857 and 8 4856 4855
+4858 eq 8 278 123
+4859 and 8 4858 4857
+4860 mul 4 629 3356
+4861 add 4 1565 4860
+4862 add 4 635 4861
+4863 read 3 261 4862
+4864 eq 8 89 4863
+4865 add 4 637 4861
+4866 read 3 261 4865
+4867 eq 8 88 4866
+4868 add 4 639 4861
+4869 read 3 261 4868
+4870 eq 8 87 4869
+4871 add 4 625 4861
+4872 read 3 261 4871
+4873 eq 8 86 4872
+4874 read 2 264 4861
+4875 eq 8 85 4874
+4876 eq 8 84 4861
+4877 eq 8 66 3358
+4878 add 4 4763 4742
+4879 srem 4 4878 639
+4880 mul 4 629 4879
+4881 add 4 4744 4880
+4882 add 4 635 4881
+4883 add 4 637 4881
+4884 add 4 639 4881
+4885 add 4 625 4881
+4886 write 6 261 4885 4872
+4887 write 6 4886 4884 4869
+4888 write 6 4887 4883 4866
+4889 write 6 4888 4882 4863
+4890 read 3 4889 3745
+4891 add 3 1614 4890
+4892 write 6 4889 3745 4891
+4893 read 3 4892 309
+4894 uext 4 4893 24
+4895 mul 4 629 4894
+4896 add 4 287 4895
+4897 write 5 264 4881 4874
+4898 write 5 4897 4896 4874
+4899 eq 8 65 4898
+4900 add 4 625 4896
+4901 write 6 4892 4900 4872
+4902 read 3 4901 309
+4903 uext 4 4902 24
+4904 mul 4 629 4903
+4905 add 4 287 4904
+4906 add 4 639 4905
+4907 write 6 4901 4906 4869
+4908 read 3 4907 309
+4909 uext 4 4908 24
+4910 mul 4 629 4909
+4911 add 4 287 4910
+4912 add 4 637 4911
+4913 write 6 4907 4912 4866
+4914 read 3 4913 309
+4915 uext 4 4914 24
+4916 mul 4 629 4915
+4917 add 4 287 4916
+4918 add 4 635 4917
+4919 write 6 4913 4918 4863
+4920 read 3 4919 309
+4921 add 3 1614 4920
+4922 write 6 4919 309 4921
+4923 eq 8 64 4922
+4924 eq 8 278 60
+4925 slt 8 4763 639
+4926 slt 8 278 3770
+4927 and 8 4926 4925
+4928 eq 8 4874 1557
+4929 and 8 4928 4927
+4930 and 8 4929 4924
+4931 and 8 4856 4930
+4932 add 4 625 278
+4933 eq 8 4932 123
+4934 and 8 4933 4931
+4935 and 8 4826 4934
+4936 and 8 4828 4935
+4937 and 8 4830 4936
+4938 and 8 4832 4937
+4939 and 8 4834 4938
+4940 and 8 4836 4939
+4941 and 8 4838 4940
+4942 and 8 4941 4923
+4943 and 8 4840 4942
+4944 and 8 4842 4943
+4945 and 8 4844 4944
+4946 and 8 4846 4945
+4947 and 8 4848 4946
+4948 and 8 4947 4899
+4949 and 8 4850 4948
+4950 and 8 4852 4949
+4951 and 8 4854 4950
+4952 uext 4 4869 24
+4953 add 4 288 4952
+4954 read 3 261 4953
+4955 write 6 261 3869 4872
+4956 read 3 4955 309
+4957 uext 4 4956 24
+4958 mul 4 629 4957
+4959 add 4 287 4958
+4960 add 4 639 4959
+4961 write 6 4955 4960 4869
+4962 read 3 4961 309
+4963 uext 4 4962 24
+4964 mul 4 629 4963
+4965 add 4 287 4964
+4966 add 4 637 4965
+4967 write 6 4961 4966 4954
+4968 read 3 4967 309
+4969 uext 4 4968 24
+4970 mul 4 629 4969
+4971 add 4 287 4970
+4972 add 4 635 4971
+4973 write 6 4967 4972 4863
+4974 read 3 4973 309
+4975 add 3 1614 4974
+4976 write 6 4973 309 4975
+4977 eq 8 62 4976
+4978 eq 8 4763 122
+4979 eq 8 4869 121
+4980 eq 8 303 120
+4981 eq 8 4863 119
+4982 eq 8 4866 118
+4983 eq 8 4869 117
+4984 eq 8 3348 116
+4985 eq 8 4872 115
+4986 eq 8 4874 114
+4987 eq 8 276 60
+4988 eq 8 4869 113
+4989 eq 8 288 112
+4990 eq 8 309 111
+4991 eq 8 287 110
+4992 slt 8 276 3767
+4993 and 8 3747 4992
+4994 eq 8 4874 1552
+4995 and 8 4994 4993
+4996 eq 8 4874 3916
+4997 not 8 4996
+4998 and 8 4997 4995
+4999 and 8 3911 4998
+5000 and 8 4999 4991
+5001 and 8 5000 4990
+5002 and 8 5001 4989
+5003 and 8 5002 4988
+5004 and 8 5003 4987
+5005 and 8 5004 4986
+5006 and 8 5005 4985
+5007 and 8 5006 4984
+5008 and 8 5007 4983
+5009 and 8 5008 4982
+5010 and 8 5009 4981
+5011 and 8 5010 4980
+5012 and 8 5011 4979
+5013 and 8 5012 4978
+5014 and 8 5013 4977
+5015 and 8 5014 4858
+5016 write 6 4961 4966 4866
+5017 read 3 5016 309
+5018 uext 4 5017 24
+5019 mul 4 629 5018
+5020 add 4 287 5019
+5021 add 4 635 5020
+5022 write 6 5016 5021 4863
+5023 read 3 5022 309
+5024 add 3 1614 5023
+5025 write 6 5022 309 5024
+5026 eq 8 62 5025
+5027 write 5 264 3868 4874
+5028 eq 8 47 5027
+5029 and 8 4926 3747
+5030 and 8 4996 5029
+5031 and 8 5030 4854
+5032 and 8 5031 5028
+5033 and 8 5032 4826
+5034 and 8 5033 4828
+5035 and 8 5034 4830
+5036 and 8 5035 4832
+5037 and 8 5036 4924
+5038 and 8 5037 4834
+5039 and 8 5038 4836
+5040 and 8 5039 4856
+5041 and 8 5040 4838
+5042 and 8 5041 4840
+5043 and 8 5042 4842
+5044 and 8 5043 4844
+5045 and 8 5044 4846
+5046 and 8 5045 4848
+5047 and 8 5046 4850
+5048 and 8 5047 4852
+5049 and 8 5048 5026
+5050 and 8 5049 4933
+5051 or 8 5050 5015
+5052 not 8 4928
+5053 and 8 5052 5051
+5054 and 8 3853 5053
+5055 and 8 3852 5054
+5056 or 8 5055 4951
+5057 eq 8 4872 634
+5058 and 8 5057 5056
+5059 and 8 4823 5058
+5060 and 8 5059 4877
+5061 and 8 4463 5060
+5062 and 8 4465 5061
+5063 and 8 4467 5062
+5064 and 8 4469 5063
+5065 and 8 4471 5064
+5066 and 8 4473 5065
+5067 and 8 4475 5066
+5068 and 8 4477 5067
+5069 and 8 4479 5068
+5070 and 8 4481 5069
+5071 and 8 4483 5070
+5072 and 8 4485 5071
+5073 and 8 4487 5072
+5074 and 8 4489 5073
+5075 and 8 4491 5074
+5076 and 8 4130 5075
+5077 and 8 4132 5076
+5078 and 8 4134 5077
+5079 and 8 4136 5078
+5080 and 8 4138 5079
+5081 and 8 4140 5080
+5082 and 8 4142 5081
+5083 and 8 4459 5082
+5084 and 8 4144 5083
+5085 and 8 4461 5084
+5086 and 8 4146 5085
+5087 and 8 4126 5086
+5088 and 8 4148 5087
+5089 and 8 4128 5088
+5090 and 8 4150 5089
+5091 and 8 3812 5090
+5092 and 8 3814 5091
+5093 and 8 4152 5092
+5094 and 8 4154 5093
+5095 and 8 4156 5094
+5096 and 8 4158 5095
+5097 and 8 5096 4876
+5098 and 8 5097 4875
+5099 and 8 5098 4873
+5100 and 8 5099 4870
+5101 and 8 5100 4867
+5102 and 8 5101 4864
+5103 and 8 3816 5102
+5104 and 8 3818 5103
+5105 and 8 3820 5104
+5106 and 8 3822 5105
+5107 and 8 3824 5106
+5108 and 8 3826 5107
+5109 and 8 3828 5108
+5110 and 8 3830 5109
+5111 and 8 3832 5110
+5112 and 8 3834 5111
+5113 and 8 3836 5112
+5114 and 8 3838 5113
+5115 and 8 3840 5114
+5116 and 8 3842 5115
+5117 and 8 3844 5116
+5118 or 8 5117 4859
+5119 eq 8 253 91
+5120 eq 8 252 105
+5121 eq 8 251 90
+5122 eq 8 250 103
+5123 eq 8 249 102
+5124 eq 8 248 101
+5125 eq 8 247 100
+5126 eq 8 246 99
+5127 eq 8 245 98
+5128 eq 8 244 97
+5129 eq 8 243 96
+5130 eq 8 242 95
+5131 eq 8 241 94
+5132 eq 8 240 93
+5133 eq 8 233 45
+5134 eq 8 231 59
+5135 eq 8 229 44
+5136 eq 8 226 58
+5137 eq 8 225 57
+5138 eq 8 224 56
+5139 eq 8 223 55
+5140 eq 8 222 54
+5141 eq 8 221 53
+5142 eq 8 220 52
+5143 eq 8 217 51
+5144 eq 8 215 50
+5145 eq 8 214 49
+5146 eq 8 213 48
+5147 eq 8 203 108
+5148 eq 8 202 122
+5149 eq 8 201 107
+5150 eq 8 200 121
+5151 eq 8 199 120
+5152 eq 8 198 119
+5153 eq 8 197 118
+5154 eq 8 196 117
+5155 eq 8 195 115
+5156 eq 8 194 114
+5157 eq 8 190 113
+5158 eq 8 186 112
+5159 eq 8 185 111
+5160 eq 8 184 110
+5161 eq 8 182 68
+5162 eq 8 181 81
+5163 eq 8 180 67
+5164 eq 8 179 80
+5165 eq 8 178 79
+5166 eq 8 177 78
+5167 eq 8 176 77
+5168 eq 8 175 76
+5169 eq 8 174 75
+5170 eq 8 173 74
+5171 eq 8 170 63
+5172 eq 8 169 73
+5173 eq 8 168 61
+5174 eq 8 167 83
+5175 eq 8 166 82
+5176 eq 8 165 106
+5177 eq 8 164 72
+5178 eq 8 163 104
+5179 eq 8 162 123
+5180 eq 8 161 71
+5181 eq 8 160 116
+5182 eq 8 159 70
+5183 eq 8 148 65
+5184 eq 8 147 66
+5185 eq 8 145 64
+5186 and 8 417 5185
+5187 and 8 419 5186
+5188 and 8 5187 5184
+5189 and 8 5188 5183
+5190 and 8 425 5189
+5191 and 8 427 5190
+5192 and 8 429 5191
+5193 and 8 431 5192
+5194 and 8 433 5193
+5195 and 8 435 5194
+5196 and 8 437 5195
+5197 and 8 439 5196
+5198 and 8 441 5197
+5199 and 8 443 5198
+5200 and 8 5199 5182
+5201 and 8 5200 5181
+5202 and 8 5201 5180
+5203 and 8 5202 5179
+5204 and 8 5203 5178
+5205 and 8 5204 5177
+5206 and 8 5205 5176
+5207 and 8 5206 5175
+5208 and 8 5207 5174
+5209 and 8 5208 5173
+5210 and 8 5209 5172
+5211 and 8 5210 5171
+5212 and 8 407 5211
+5213 and 8 406 5212
+5214 and 8 5213 5170
+5215 and 8 5214 5169
+5216 and 8 5215 5168
+5217 and 8 5216 5167
+5218 and 8 5217 5166
+5219 and 8 5218 5165
+5220 and 8 5219 5164
+5221 and 8 5220 5163
+5222 and 8 5221 5162
+5223 and 8 5222 5161
+5224 eq 8 183 69
+5225 and 8 5224 5223
+5226 and 8 5225 5160
+5227 and 8 5226 5159
+5228 and 8 5227 5158
+5229 and 8 405 5228
+5230 and 8 404 5229
+5231 and 8 403 5230
+5232 and 8 5231 5157
+5233 and 8 402 5232
+5234 and 8 401 5233
+5235 and 8 400 5234
+5236 and 8 5235 5156
+5237 and 8 5236 5155
+5238 and 8 5237 5154
+5239 and 8 5238 5153
+5240 and 8 5239 5152
+5241 and 8 5240 5151
+5242 and 8 5241 5150
+5243 and 8 5242 5149
+5244 and 8 5243 5148
+5245 and 8 5244 5147
+5246 eq 8 204 109
+5247 and 8 5246 5245
+5248 and 8 399 5247
+5249 and 8 398 5248
+5250 and 8 709 5249
+5251 and 8 711 5250
+5252 and 8 525 5251
+5253 and 8 527 5252
+5254 and 8 529 5253
+5255 and 8 531 5254
+5256 and 8 5255 5146
+5257 and 8 5256 5145
+5258 and 8 5257 5144
+5259 and 8 539 5258
+5260 and 8 5259 5143
+5261 and 8 543 5260
+5262 and 8 545 5261
+5263 and 8 5262 5142
+5264 and 8 5263 5141
+5265 and 8 5264 5140
+5266 and 8 5265 5139
+5267 and 8 5266 5138
+5268 and 8 5267 5137
+5269 and 8 5268 5136
+5270 and 8 561 5269
+5271 and 8 563 5270
+5272 and 8 5271 5135
+5273 and 8 567 5272
+5274 and 8 5273 5134
+5275 and 8 571 5274
+5276 and 8 5275 5133
+5277 and 8 575 5276
+5278 and 8 577 5277
+5279 and 8 579 5278
+5280 and 8 581 5279
+5281 eq 8 238 46
+5282 and 8 5281 5280
+5283 and 8 585 5282
+5284 and 8 5283 5132
+5285 and 8 5284 5131
+5286 and 8 5285 5130
+5287 and 8 5286 5129
+5288 and 8 5287 5128
+5289 and 8 5288 5127
+5290 and 8 5289 5126
+5291 and 8 5290 5125
+5292 and 8 5291 5124
+5293 and 8 5292 5123
+5294 and 8 5293 5122
+5295 and 8 5294 5121
+5296 and 8 5295 5120
+5297 and 8 5296 5119
+5298 eq 8 254 92
+5299 and 8 5298 5297
+5300 and 8 5299 5118
+5301 not 8 3773
+5302 and 8 5301 5300
+5303 and 8 5302 3776
+5304 and 8 3613 3546
+5305 eq 8 203 395
+5306 eq 8 202 4763
+5307 add 4 2597 4878
+5308 srem 4 5307 639
+5309 slice 3 5308 7 0
+5310 eq 8 201 5309
+5311 eq 8 200 4869
+5312 eq 8 303 199
+5313 eq 8 198 4863
+5314 eq 8 197 4866
+5315 eq 8 196 4869
+5316 eq 8 195 4872
+5317 eq 8 194 4874
+5318 eq 8 190 4869
+5319 eq 8 288 186
+5320 eq 8 185 309
+5321 eq 8 287 184
+5322 and 8 484 5321
+5323 and 8 5322 5320
+5324 and 8 5323 5319
+5325 and 8 405 5324
+5326 and 8 404 5325
+5327 and 8 403 5326
+5328 and 8 5327 5318
+5329 and 8 402 5328
+5330 and 8 401 5329
+5331 and 8 400 5330
+5332 and 8 5331 5317
+5333 and 8 5332 5316
+5334 and 8 5333 5315
+5335 and 8 5334 5314
+5336 and 8 5335 5313
+5337 and 8 5336 5312
+5338 and 8 5337 5311
+5339 and 8 5338 5310
+5340 and 8 5339 5306
+5341 and 8 5340 5305
+5342 and 8 5341 5246
+5343 and 8 399 5342
+5344 and 8 398 5343
+5345 and 8 709 5344
+5346 and 8 711 5345
+5347 and 8 525 5346
+5348 and 8 527 5347
+5349 and 8 529 5348
+5350 and 8 531 5349
+5351 and 8 533 5350
+5352 and 8 535 5351
+5353 and 8 537 5352
+5354 and 8 539 5353
+5355 and 8 541 5354
+5356 and 8 543 5355
+5357 and 8 545 5356
+5358 and 8 547 5357
+5359 and 8 549 5358
+5360 and 8 551 5359
+5361 and 8 553 5360
+5362 and 8 555 5361
+5363 and 8 557 5362
+5364 and 8 559 5363
+5365 and 8 561 5364
+5366 and 8 563 5365
+5367 and 8 565 5366
+5368 and 8 567 5367
+5369 and 8 569 5368
+5370 and 8 571 5369
+5371 and 8 573 5370
+5372 and 8 575 5371
+5373 and 8 577 5372
+5374 and 8 579 5373
+5375 and 8 581 5374
+5376 and 8 583 5375
+5377 and 8 585 5376
+5378 and 8 587 5377
+5379 and 8 589 5378
+5380 and 8 591 5379
+5381 and 8 593 5380
+5382 and 8 595 5381
+5383 and 8 597 5382
+5384 and 8 599 5383
+5385 and 8 601 5384
+5386 and 8 603 5385
+5387 and 8 605 5386
+5388 and 8 607 5387
+5389 and 8 609 5388
+5390 and 8 611 5389
+5391 and 8 613 5390
+5392 and 8 615 5391
+5393 not 8 3747
+5394 and 8 5393 5392
+5395 and 8 4992 5394
+5396 and 8 4994 5395
+5397 and 8 4997 5396
+5398 and 8 5052 5397
+5399 and 8 5057 5398
+5400 and 8 4823 5399
+5401 and 8 5301 5400
+5402 and 8 5401 5304
+5403 and 8 3613 3314
+5404 eq 8 253 395
+5405 eq 8 252 4413
+5406 add 4 2597 4620
+5407 srem 4 5406 639
+5408 slice 3 5407 7 0
+5409 eq 8 251 5408
+5410 eq 8 250 4502
+5411 eq 8 304 249
+5412 eq 8 248 4496
+5413 eq 8 247 4499
+5414 eq 8 246 4502
+5415 eq 8 245 4505
+5416 eq 8 244 4507
+5417 eq 8 243 4502
+5418 eq 8 288 242
+5419 eq 8 309 241
+5420 eq 8 287 240
+5421 and 8 3320 5420
+5422 and 8 5421 5419
+5423 and 8 5422 5418
+5424 and 8 5423 5417
+5425 and 8 5424 5416
+5426 and 8 5425 5415
+5427 and 8 5426 5414
+5428 and 8 5427 5413
+5429 and 8 5428 5412
+5430 and 8 5429 5411
+5431 and 8 5430 5410
+5432 and 8 5431 5409
+5433 and 8 5432 5405
+5434 and 8 5433 5404
+5435 and 8 5434 5298
+5436 not 8 3743
+5437 and 8 5436 5435
+5438 and 8 4551 5437
+5439 and 8 4553 5438
+5440 and 8 4556 5439
+5441 and 8 4616 5440
+5442 and 8 4691 5441
+5443 and 8 4456 5442
+5444 and 8 4738 5443
+5445 and 8 4824 5444
+5446 and 8 5301 5445
+5447 and 8 5446 5403
+5448 and 8 3613 3023
+5449 eq 8 182 395
+5450 eq 8 181 4085
+5451 add 4 2597 4287
+5452 srem 4 5451 639
+5453 slice 3 5452 7 0
+5454 eq 8 180 5453
+5455 eq 8 179 4170
+5456 eq 8 178 305
+5457 eq 8 177 4164
+5458 eq 8 176 4167
+5459 eq 8 175 4170
+5460 eq 8 174 4173
+5461 eq 8 173 4175
+5462 eq 8 169 4170
+5463 eq 8 164 288
+5464 eq 8 161 309
+5465 eq 8 159 287
+5466 and 8 444 5465
+5467 and 8 415 5466
+5468 and 8 5467 5464
+5469 and 8 414 5468
+5470 and 8 413 5469
+5471 and 8 5470 5463
+5472 and 8 412 5471
+5473 and 8 411 5472
+5474 and 8 410 5473
+5475 and 8 409 5474
+5476 and 8 5475 5462
+5477 and 8 408 5476
+5478 and 8 407 5477
+5479 and 8 406 5478
+5480 and 8 5479 5461
+5481 and 8 5480 5460
+5482 and 8 5481 5459
+5483 and 8 5482 5458
+5484 and 8 5483 5457
+5485 and 8 5484 5456
+5486 and 8 5485 5455
+5487 and 8 5486 5454
+5488 and 8 5487 5450
+5489 and 8 5488 5449
+5490 and 8 5489 5224
+5491 and 8 485 5490
+5492 and 8 487 5491
+5493 and 8 489 5492
+5494 and 8 405 5493
+5495 and 8 404 5494
+5496 and 8 403 5495
+5497 and 8 494 5496
+5498 and 8 402 5497
+5499 and 8 401 5498
+5500 and 8 400 5499
+5501 and 8 499 5500
+5502 and 8 501 5501
+5503 and 8 503 5502
+5504 and 8 505 5503
+5505 and 8 507 5504
+5506 and 8 509 5505
+5507 and 8 511 5506
+5508 and 8 513 5507
+5509 and 8 515 5508
+5510 and 8 517 5509
+5511 and 8 519 5510
+5512 and 8 399 5511
+5513 and 8 398 5512
+5514 and 8 709 5513
+5515 and 8 711 5514
+5516 and 8 525 5515
+5517 and 8 527 5516
+5518 and 8 529 5517
+5519 and 8 531 5518
+5520 and 8 533 5519
+5521 and 8 535 5520
+5522 and 8 537 5521
+5523 and 8 539 5522
+5524 and 8 541 5523
+5525 and 8 543 5524
+5526 and 8 545 5525
+5527 and 8 547 5526
+5528 and 8 549 5527
+5529 and 8 551 5528
+5530 and 8 553 5529
+5531 and 8 555 5530
+5532 and 8 557 5531
+5533 and 8 559 5532
+5534 and 8 561 5533
+5535 and 8 563 5534
+5536 and 8 565 5535
+5537 and 8 567 5536
+5538 and 8 569 5537
+5539 and 8 571 5538
+5540 and 8 573 5539
+5541 and 8 575 5540
+5542 and 8 577 5541
+5543 and 8 579 5542
+5544 and 8 581 5543
+5545 and 8 583 5544
+5546 and 8 585 5545
+5547 and 8 587 5546
+5548 and 8 589 5547
+5549 and 8 591 5548
+5550 and 8 593 5549
+5551 and 8 595 5550
+5552 and 8 597 5551
+5553 and 8 599 5552
+5554 and 8 601 5553
+5555 and 8 603 5554
+5556 and 8 605 5555
+5557 and 8 607 5556
+5558 and 8 609 5557
+5559 and 8 611 5558
+5560 and 8 613 5559
+5561 and 8 615 5560
+5562 not 8 3739
+5563 and 8 5562 5561
+5564 and 8 4218 5563
+5565 and 8 4220 5564
+5566 and 8 4223 5565
+5567 and 8 4283 5566
+5568 and 8 4358 5567
+5569 and 8 4111 5568
+5570 and 8 4388 5569
+5571 and 8 4457 5570
+5572 and 8 4738 5571
+5573 and 8 4824 5572
+5574 and 8 5301 5573
+5575 and 8 5574 5448
+5576 and 8 3613 2781
+5577 eq 8 233 395
+5578 eq 8 231 3802
+5579 add 4 2597 3982
+5580 srem 4 5579 639
+5581 slice 3 5580 7 0
+5582 eq 8 229 5581
+5583 eq 8 226 3859
+5584 eq 8 307 225
+5585 eq 8 224 3857
+5586 eq 8 223 3900
+5587 eq 8 222 3859
+5588 eq 8 221 3864
+5589 eq 8 220 3904
+5590 eq 8 217 3859
+5591 eq 8 288 215
+5592 eq 8 309 214
+5593 eq 8 287 213
+5594 and 8 1940 5593
+5595 and 8 5594 5592
+5596 and 8 5595 5591
+5597 and 8 539 5596
+5598 and 8 5597 5590
+5599 and 8 543 5598
+5600 and 8 545 5599
+5601 and 8 5600 5589
+5602 and 8 5601 5588
+5603 and 8 5602 5587
+5604 and 8 5603 5586
+5605 and 8 5604 5585
+5606 and 8 5605 5584
+5607 and 8 5606 5583
+5608 and 8 561 5607
+5609 and 8 563 5608
+5610 and 8 5609 5582
+5611 and 8 567 5610
+5612 and 8 5611 5578
+5613 and 8 571 5612
+5614 and 8 5613 5577
+5615 and 8 575 5614
+5616 and 8 577 5615
+5617 and 8 579 5616
+5618 and 8 581 5617
+5619 and 8 5618 5281
+5620 and 8 585 5619
+5621 and 8 587 5620
+5622 and 8 589 5621
+5623 and 8 591 5622
+5624 and 8 593 5623
+5625 and 8 595 5624
+5626 and 8 597 5625
+5627 and 8 599 5626
+5628 and 8 601 5627
+5629 and 8 603 5628
+5630 and 8 605 5629
+5631 and 8 607 5630
+5632 and 8 609 5631
+5633 and 8 611 5632
+5634 and 8 613 5633
+5635 and 8 615 5634
+5636 not 8 3735
+5637 and 8 5636 5635
+5638 and 8 3912 5637
+5639 and 8 3914 5638
+5640 and 8 3918 5639
+5641 and 8 3978 5640
+5642 and 8 4053 5641
+5643 and 8 3808 5642
+5644 and 8 4060 5643
+5645 and 8 4112 5644
+5646 and 8 4388 5645
+5647 and 8 4457 5646
+5648 and 8 4738 5647
+5649 and 8 4824 5648
+5650 and 8 5301 5649
+5651 and 8 5650 5576
+5652 or 8 5651 5575
+5653 or 8 5652 5447
+5654 or 8 5653 5402
+5655 or 8 5654 5303
+5656 or 8 5655 3775
+5657 and 8 383 2132
+5658 and 8 385 5657
+5659 and 8 387 2135
+5660 and 8 622 5659
+5661 and 8 5660 5658
+5662 mul 4 629 273
+5663 add 4 265 5662
+5664 add 4 637 5663
+5665 read 3 261 5664
+5666 eq 8 5665 634
+5667 not 8 5666
+5668 eq 8 273 2597
+5669 not 8 5668
+5670 eq 8 272 2597
+5671 not 8 5670
+5672 eq 8 271 2597
+5673 not 8 5672
+5674 eq 8 270 2597
+5675 not 8 5674
+5676 eq 8 269 2597
+5677 not 8 5676
+5678 eq 8 268 2597
+5679 not 8 5678
+5680 eq 8 267 2597
+5681 not 8 5680
+5682 eq 8 266 2597
+5683 not 8 5682
+5684 slt 8 272 273
+5685 slt 8 270 271
+5686 slt 8 268 269
+5687 slt 8 266 267
+5688 and 8 5687 5686
+5689 and 8 5688 5685
+5690 and 8 5689 5684
+5691 and 8 5690 5683
+5692 and 8 5691 5681
+5693 and 8 5692 5679
+5694 and 8 5693 5677
+5695 and 8 5694 5675
+5696 and 8 5695 5673
+5697 and 8 5696 5671
+5698 and 8 5697 5669
+5699 and 8 5698 5667
+5700 not 8 5698
+5701 or 8 5700 5699
+5702 and 8 609 3331
+5703 and 8 611 5702
+5704 and 8 613 5703
+5705 and 8 615 5704
+5706 and 8 5705 5701
+5707 slt 8 274 617
+5708 not 8 5707
+5709 and 8 5708 5706
+5710 and 8 5709 5661
+5711 and 8 387 2218
+5712 and 8 622 5711
+5713 and 8 5658 5712
+5714 and 8 417 5666
+5715 and 8 416 5714
+5716 and 8 419 5715
+5717 and 8 421 5716
+5718 and 8 423 5717
+5719 and 8 425 5718
+5720 and 8 427 5719
+5721 and 8 429 5720
+5722 and 8 431 5721
+5723 and 8 433 5722
+5724 and 8 435 5723
+5725 and 8 437 5724
+5726 and 8 439 5725
+5727 and 8 441 5726
+5728 and 8 443 5727
+5729 and 8 445 5728
+5730 and 8 415 5729
+5731 and 8 448 5730
+5732 and 8 414 5731
+5733 and 8 413 5732
+5734 and 8 452 5733
+5735 and 8 412 5734
+5736 and 8 411 5735
+5737 and 8 410 5736
+5738 and 8 409 5737
+5739 and 8 458 5738
+5740 and 8 408 5739
+5741 and 8 407 5740
+5742 and 8 406 5741
+5743 and 8 463 5742
+5744 and 8 465 5743
+5745 and 8 467 5744
+5746 and 8 469 5745
+5747 and 8 471 5746
+5748 and 8 473 5747
+5749 and 8 475 5748
+5750 and 8 477 5749
+5751 and 8 479 5750
+5752 and 8 481 5751
+5753 and 8 483 5752
+5754 and 8 485 5753
+5755 and 8 487 5754
+5756 and 8 489 5755
+5757 and 8 405 5756
+5758 and 8 404 5757
+5759 and 8 403 5758
+5760 and 8 494 5759
+5761 and 8 402 5760
+5762 and 8 401 5761
+5763 and 8 400 5762
+5764 and 8 499 5763
+5765 and 8 501 5764
+5766 and 8 503 5765
+5767 and 8 505 5766
+5768 and 8 507 5767
+5769 and 8 509 5768
+5770 and 8 511 5769
+5771 and 8 513 5770
+5772 and 8 515 5771
+5773 and 8 517 5772
+5774 and 8 519 5773
+5775 and 8 399 5774
+5776 and 8 398 5775
+5777 and 8 709 5776
+5778 and 8 711 5777
+5779 and 8 525 5778
+5780 and 8 527 5779
+5781 and 8 529 5780
+5782 and 8 531 5781
+5783 and 8 533 5782
+5784 and 8 535 5783
+5785 and 8 537 5784
+5786 and 8 539 5785
+5787 and 8 541 5786
+5788 and 8 543 5787
+5789 and 8 545 5788
+5790 and 8 547 5789
+5791 and 8 549 5790
+5792 and 8 551 5791
+5793 and 8 553 5792
+5794 and 8 555 5793
+5795 and 8 557 5794
+5796 and 8 559 5795
+5797 and 8 561 5796
+5798 and 8 563 5797
+5799 and 8 565 5798
+5800 and 8 567 5799
+5801 and 8 569 5800
+5802 and 8 571 5801
+5803 and 8 573 5802
+5804 and 8 575 5803
+5805 and 8 577 5804
+5806 and 8 579 5805
+5807 and 8 581 5806
+5808 and 8 583 5807
+5809 and 8 585 5808
+5810 and 8 587 5809
+5811 and 8 589 5810
+5812 and 8 591 5811
+5813 and 8 593 5812
+5814 and 8 595 5813
+5815 and 8 597 5814
+5816 and 8 599 5815
+5817 and 8 601 5816
+5818 and 8 603 5817
+5819 and 8 605 5818
+5820 and 8 607 5819
+5821 and 8 609 5820
+5822 and 8 611 5821
+5823 and 8 613 5822
+5824 and 8 615 5823
+5825 and 8 5698 5824
+5826 and 8 5708 5825
+5827 and 8 5826 5713
+5828 and 8 5658 3615
+5829 add 4 625 274
+5830 eq 8 158 5829
+5831 eq 8 157 43
+5832 eq 8 156 42
+5833 eq 8 155 41
+5834 eq 8 154 40
+5835 eq 8 153 39
+5836 eq 8 152 38
+5837 eq 8 151 36
+5838 eq 8 150 37
+5839 and 8 426 5838
+5840 and 8 5839 5837
+5841 and 8 5840 5836
+5842 and 8 5841 5835
+5843 and 8 5842 5834
+5844 and 8 5843 5833
+5845 and 8 5844 5832
+5846 and 8 5845 5831
+5847 and 8 5846 5830
+5848 and 8 445 5847
+5849 and 8 415 5848
+5850 and 8 448 5849
+5851 and 8 414 5850
+5852 and 8 413 5851
+5853 and 8 452 5852
+5854 and 8 412 5853
+5855 and 8 411 5854
+5856 and 8 410 5855
+5857 and 8 409 5856
+5858 and 8 458 5857
+5859 and 8 408 5858
+5860 and 8 407 5859
+5861 and 8 406 5860
+5862 and 8 463 5861
+5863 and 8 465 5862
+5864 and 8 467 5863
+5865 and 8 469 5864
+5866 and 8 471 5865
+5867 and 8 473 5866
+5868 and 8 475 5867
+5869 and 8 477 5868
+5870 and 8 479 5869
+5871 and 8 481 5870
+5872 and 8 483 5871
+5873 and 8 485 5872
+5874 and 8 487 5873
+5875 and 8 489 5874
+5876 and 8 405 5875
+5877 and 8 404 5876
+5878 and 8 403 5877
+5879 and 8 494 5878
+5880 and 8 402 5879
+5881 and 8 401 5880
+5882 and 8 400 5881
+5883 and 8 499 5882
+5884 and 8 501 5883
+5885 and 8 503 5884
+5886 and 8 505 5885
+5887 and 8 507 5886
+5888 and 8 509 5887
+5889 and 8 511 5888
+5890 and 8 513 5889
+5891 and 8 515 5890
+5892 and 8 517 5891
+5893 and 8 519 5892
+5894 and 8 399 5893
+5895 and 8 398 5894
+5896 and 8 709 5895
+5897 and 8 711 5896
+5898 and 8 525 5897
+5899 and 8 527 5898
+5900 and 8 529 5899
+5901 and 8 531 5900
+5902 and 8 533 5901
+5903 and 8 535 5902
+5904 and 8 537 5903
+5905 and 8 539 5904
+5906 and 8 541 5905
+5907 and 8 543 5906
+5908 and 8 545 5907
+5909 and 8 547 5908
+5910 and 8 549 5909
+5911 and 8 551 5910
+5912 and 8 553 5911
+5913 and 8 555 5912
+5914 and 8 557 5913
+5915 and 8 559 5914
+5916 and 8 561 5915
+5917 and 8 563 5916
+5918 and 8 565 5917
+5919 and 8 567 5918
+5920 and 8 569 5919
+5921 and 8 571 5920
+5922 and 8 573 5921
+5923 and 8 575 5922
+5924 and 8 577 5923
+5925 and 8 579 5924
+5926 and 8 581 5925
+5927 and 8 583 5926
+5928 and 8 585 5927
+5929 and 8 587 5928
+5930 and 8 589 5929
+5931 and 8 591 5930
+5932 and 8 593 5931
+5933 and 8 595 5932
+5934 and 8 597 5933
+5935 and 8 599 5934
+5936 and 8 601 5935
+5937 and 8 603 5936
+5938 and 8 605 5937
+5939 and 8 607 5938
+5940 and 8 609 5939
+5941 and 8 611 5940
+5942 and 8 613 5941
+5943 and 8 615 5942
+5944 mul 4 629 274
+5945 add 4 265 5944
+5946 add 4 635 5945
+5947 read 3 261 5946
+5948 uext 4 5947 24
+5949 eq 8 5948 1583
+5950 read 2 264 5945
+5951 eq 8 5950 1552
+5952 add 4 639 5945
+5953 read 3 261 5952
+5954 eq 8 5953 634
+5955 and 8 5954 5951
+5956 and 8 5955 5949
+5957 add 4 625 5945
+5958 read 3 261 5957
+5959 uext 4 5958 24
+5960 eq 8 5959 637
+5961 and 8 5960 5956
+5962 and 8 5961 5668
+5963 not 8 5962
+5964 eq 8 5948 1585
+5965 uext 4 5953 24
+5966 eq 8 5965 637
+5967 eq 8 5950 1557
+5968 and 8 5967 5966
+5969 and 8 5968 5964
+5970 add 4 637 5945
+5971 read 3 261 5970
+5972 uext 4 5971 24
+5973 eq 8 5972 625
+5974 and 8 5973 5969
+5975 and 8 5974 5960
+5976 and 8 5975 5670
+5977 not 8 5976
+5978 and 8 5977 5963
+5979 eq 8 5948 629
+5980 and 8 5951 5966
+5981 and 8 5980 5979
+5982 eq 8 5959 639
+5983 and 8 5982 5981
+5984 and 8 5983 5672
+5985 not 8 5984
+5986 and 8 5985 5978
+5987 eq 8 5948 635
+5988 eq 8 5965 639
+5989 and 8 5967 5988
+5990 and 8 5989 5987
+5991 and 8 5973 5990
+5992 and 8 5991 5982
+5993 and 8 5992 5674
+5994 not 8 5993
+5995 and 8 5994 5986
+5996 eq 8 5948 637
+5997 and 8 5951 5988
+5998 and 8 5997 5996
+5999 eq 8 5959 625
+6000 and 8 5999 5998
+6001 and 8 6000 5676
+6002 not 8 6001
+6003 and 8 6002 5995
+6004 eq 8 5948 639
+6005 eq 8 5965 625
+6006 and 8 5967 6005
+6007 and 8 6006 6004
+6008 and 8 5973 6007
+6009 and 8 6008 5999
+6010 and 8 6009 5678
+6011 not 8 6010
+6012 and 8 6011 6003
+6013 eq 8 5948 625
+6014 and 8 5951 6005
+6015 and 8 6014 6013
+6016 eq 8 5958 634
+6017 and 8 6016 6015
+6018 and 8 6017 5680
+6019 not 8 6018
+6020 and 8 6019 6012
+6021 eq 8 5947 634
+6022 and 8 5967 5954
+6023 and 8 6022 6021
+6024 and 8 6023 5973
+6025 and 8 6024 6016
+6026 and 8 6025 5682
+6027 not 8 6026
+6028 and 8 6027 6020
+6029 eq 8 266 37
+6030 and 8 6029 6028
+6031 eq 8 267 36
+6032 and 8 6031 6030
+6033 eq 8 268 38
+6034 and 8 6033 6032
+6035 eq 8 269 39
+6036 and 8 6035 6034
+6037 eq 8 270 40
+6038 and 8 6037 6036
+6039 eq 8 271 41
+6040 and 8 6039 6038
+6041 eq 8 272 42
+6042 and 8 6041 6040
+6043 eq 8 273 43
+6044 and 8 6043 6042
+6045 eq 8 274 43
+6046 and 8 5977 5962
+6047 and 8 5985 6046
+6048 and 8 5994 6047
+6049 and 8 6002 6048
+6050 and 8 6011 6049
+6051 and 8 6019 6050
+6052 and 8 6027 6051
+6053 and 8 6052 6045
+6054 and 8 6029 6053
+6055 and 8 6031 6054
+6056 and 8 6033 6055
+6057 and 8 6035 6056
+6058 and 8 6037 6057
+6059 and 8 6039 6058
+6060 and 8 6041 6059
+6061 eq 8 274 42
+6062 and 8 5985 5976
+6063 and 8 5994 6062
+6064 and 8 6002 6063
+6065 and 8 6011 6064
+6066 and 8 6019 6065
+6067 and 8 6027 6066
+6068 and 8 6067 6061
+6069 and 8 6029 6068
+6070 and 8 6031 6069
+6071 and 8 6033 6070
+6072 and 8 6035 6071
+6073 and 8 6037 6072
+6074 and 8 6039 6073
+6075 eq 8 274 41
+6076 and 8 5994 5984
+6077 and 8 6002 6076
+6078 and 8 6011 6077
+6079 and 8 6019 6078
+6080 and 8 6027 6079
+6081 and 8 6080 6075
+6082 and 8 6029 6081
+6083 and 8 6031 6082
+6084 and 8 6033 6083
+6085 and 8 6035 6084
+6086 and 8 6037 6085
+6087 eq 8 274 40
+6088 and 8 6002 5993
+6089 and 8 6011 6088
+6090 and 8 6019 6089
+6091 and 8 6027 6090
+6092 and 8 6091 6087
+6093 and 8 6029 6092
+6094 and 8 6031 6093
+6095 and 8 6033 6094
+6096 and 8 6035 6095
+6097 eq 8 274 39
+6098 and 8 6011 6001
+6099 and 8 6019 6098
+6100 and 8 6027 6099
+6101 and 8 6100 6097
+6102 and 8 6029 6101
+6103 and 8 6031 6102
+6104 and 8 6033 6103
+6105 eq 8 274 38
+6106 and 8 6019 6010
+6107 and 8 6027 6106
+6108 and 8 6107 6105
+6109 and 8 6029 6108
+6110 and 8 6031 6109
+6111 eq 8 274 36
+6112 and 8 6027 6018
+6113 and 8 6112 6111
+6114 and 8 6113 6029
+6115 eq 8 274 37
+6116 and 8 6026 6031
+6117 and 8 6116 6115
+6118 or 8 6117 6114
+6119 and 8 6118 6033
+6120 or 8 6119 6110
+6121 and 8 6120 6035
+6122 or 8 6121 6104
+6123 and 8 6122 6037
+6124 or 8 6123 6096
+6125 and 8 6124 6039
+6126 or 8 6125 6086
+6127 and 8 6126 6041
+6128 or 8 6127 6074
+6129 and 8 6128 6043
+6130 or 8 6129 6060
+6131 or 8 6130 6044
+6132 and 8 6131 5943
+6133 and 8 5707 6132
+6134 and 8 6133 5828
+6135 or 8 6134 5827
+6136 or 8 6135 5710
+6137 and 8 383 2296
+6138 and 8 385 6137
+6139 and 8 6138 5660
+6140 and 8 5705 6139
+6141 and 8 1023 385
+6142 and 8 6141 623
+6143 eq 8 206 395
+6144 eq 8 205 625
+6145 constd 4 421
+6146 eq 8 193 6145
+6147 constd 4 129
+6148 eq 8 192 6147
+6149 constd 4 117
+6150 eq 8 191 6149
+6151 constd 4 105
+6152 eq 8 189 6151
+6153 constd 4 93
+6154 eq 8 188 6153
+6155 constd 4 81
+6156 eq 8 187 6155
+6157 constd 4 71
+6158 eq 8 172 6157
+6159 eq 8 171 625
+6160 eq 8 170 35
+6161 eq 8 168 34
+6162 eq 8 167 33
+6163 eq 8 166 32
+6164 eq 8 165 31
+6165 eq 8 163 30
+6166 eq 8 162 29
+6167 eq 8 160 28
+6168 constd 4 80
+6169 constd 4 79
+6170 constd 4 78
+6171 constd 4 77
+6172 constd 4 76
+6173 constd 4 75
+6174 constd 4 74
+6175 constd 4 73
+6176 constd 4 72
+6177 write 6 261 6157 634
+6178 write 6 6177 6176 634
+6179 write 6 6178 6175 634
+6180 write 6 6179 6174 634
+6181 write 6 6180 6173 634
+6182 write 6 6181 6172 634
+6183 write 6 6182 6171 634
+6184 write 6 6183 6170 634
+6185 write 6 6184 6169 634
+6186 write 6 6185 6168 634
+6187 write 6 6186 6145 634
+6188 eq 8 145 6187
+6189 constd 4 702
+6190 eq 8 144 6189
+6191 and 8 6190 6188
+6192 and 8 6191 419
+6193 and 8 6192 421
+6194 and 8 6193 423
+6195 and 8 6194 425
+6196 and 8 6195 427
+6197 and 8 6196 429
+6198 and 8 6197 431
+6199 and 8 6198 433
+6200 and 8 6199 435
+6201 and 8 6200 437
+6202 and 8 6201 439
+6203 and 8 6202 441
+6204 and 8 6203 443
+6205 and 8 6204 445
+6206 and 8 6205 6167
+6207 and 8 6206 448
+6208 and 8 6207 6166
+6209 and 8 6208 6165
+6210 and 8 6209 452
+6211 and 8 6210 6164
+6212 and 8 6211 6163
+6213 and 8 6212 6162
+6214 and 8 6213 6161
+6215 and 8 6214 458
+6216 and 8 6215 6160
+6217 and 8 6216 6159
+6218 and 8 6217 6158
+6219 and 8 6218 463
+6220 and 8 6219 465
+6221 and 8 6220 467
+6222 and 8 6221 469
+6223 and 8 6222 471
+6224 and 8 6223 473
+6225 and 8 6224 475
+6226 and 8 6225 477
+6227 and 8 6226 479
+6228 and 8 6227 481
+6229 and 8 6228 483
+6230 and 8 6229 485
+6231 and 8 6230 487
+6232 and 8 6231 489
+6233 and 8 6232 6156
+6234 and 8 6233 6154
+6235 and 8 6234 6152
+6236 and 8 6235 494
+6237 and 8 6236 6150
+6238 and 8 6237 6148
+6239 and 8 6238 6146
+6240 and 8 6239 499
+6241 and 8 6240 501
+6242 and 8 6241 503
+6243 and 8 6242 505
+6244 and 8 6243 507
+6245 and 8 6244 509
+6246 and 8 6245 511
+6247 and 8 6246 513
+6248 and 8 6247 515
+6249 and 8 6248 517
+6250 and 8 6249 519
+6251 and 8 6250 6144
+6252 and 8 6251 6143
+6253 and 8 6252 709
+6254 and 8 6253 711
+6255 and 8 6254 525
+6256 and 8 6255 527
+6257 and 8 6256 529
+6258 and 8 6257 531
+6259 and 8 6258 533
+6260 and 8 6259 535
+6261 and 8 6260 537
+6262 and 8 6261 539
+6263 and 8 6262 541
+6264 and 8 6263 543
+6265 and 8 6264 545
+6266 and 8 6265 547
+6267 and 8 6266 549
+6268 and 8 6267 551
+6269 and 8 6268 553
+6270 and 8 6269 555
+6271 and 8 6270 557
+6272 and 8 6271 559
+6273 and 8 6272 561
+6274 and 8 6273 563
+6275 and 8 6274 565
+6276 and 8 6275 567
+6277 and 8 6276 569
+6278 and 8 6277 571
+6279 and 8 6278 573
+6280 and 8 6279 575
+6281 and 8 6280 577
+6282 and 8 6281 579
+6283 and 8 6282 581
+6284 and 8 6283 583
+6285 and 8 6284 585
+6286 and 8 6285 587
+6287 and 8 6286 589
+6288 and 8 6287 591
+6289 and 8 6288 593
+6290 and 8 6289 595
+6291 and 8 6290 597
+6292 and 8 6291 599
+6293 and 8 6292 601
+6294 and 8 6293 603
+6295 and 8 6294 605
+6296 and 8 6295 607
+6297 and 8 6296 609
+6298 and 8 6297 611
+6299 and 8 6298 613
+6300 and 8 6299 615
+6301 and 8 6300 6142
+6302 or 8 6301 6140
+6303 or 8 6302 6136
+6304 or 8 6303 5656
+6305 or 8 6304 3611
+6306 or 8 6305 3341
+6307 or 8 6306 3109
+6308 or 8 6307 2818
+6309 or 8 6308 2575
+6310 or 8 6309 2295
+6311 or 8 6310 2214
+6312 or 8 6311 2131
+6313 or 8 6312 1926
+6314 or 8 6313 1540
+6315 or 8 6314 1280
+6316 or 8 6315 1019
+6317 or 8 6316 761
+6318 ult 8 3804 27
+6319 not 8 6318
+6320 ult 8 3804 26
+6321 not 8 6320
+6322 ult 8 3804 12
+6323 not 8 6322
+6324 ult 8 3804 11
+6325 not 8 6324
+6326 and 8 6325 6323
+6327 and 8 6323 6326
+6328 and 8 6327 6321
+6329 and 8 6321 6328
+6330 and 8 6329 6319
+6331 and 8 6319 6330
+6332 and 8 6325 6331
+6333 and 8 6323 6332
+6334 and 8 6333 6317
+6335 and 8 6334 377
+6336 or 8 6335 378
+6337 and 8 622 766
+6338 or 8 376 6337
+6339 and 8 6338 6336
+6340 and 8 6138 377
+6341 next 4 260 144
+6342 next 6 261 145
+6343 next 7 262 146
+6344 next 7 263 147
+6345 next 5 264 148
+6346 next 4 265 149
+6347 next 4 266 150
+6348 next 4 267 151
+6349 next 4 268 152
+6350 next 4 269 153
+6351 next 4 270 154
+6352 next 4 271 155
+6353 next 4 272 156
+6354 next 4 273 157
+6355 next 4 274 158
+6356 next 4 275 159
+6357 next 4 276 160
+6358 next 4 277 161
+6359 next 4 278 162
+6360 next 4 279 163
+6361 next 4 280 164
+6362 next 4 281 165
+6363 next 4 282 166
+6364 next 4 283 167
+6365 next 4 284 168
+6366 next 3 285 169
+6367 next 4 286 170
+6368 next 4 287 171
+6369 next 4 288 172
+6370 next 2 289 173
+6371 next 3 290 174
+6372 next 3 291 175
+6373 next 3 292 176
+6374 next 3 293 177
+6375 next 4 294 178
+6376 next 3 295 179
+6377 next 3 296 180
+6378 next 4 297 181
+6379 next 4 298 182
+6380 next 3 299 183
+6381 next 4 300 184
+6382 next 4 301 185
+6383 next 4 302 186
+6384 next 4 303 187
+6385 next 4 304 188
+6386 next 4 305 189
+6387 next 3 306 190
+6388 next 4 307 191
+6389 next 4 308 192
+6390 next 4 309 193
+6391 next 2 310 194
+6392 next 3 311 195
+6393 next 3 312 196
+6394 next 3 313 197
+6395 next 3 314 198
+6396 next 4 315 199
+6397 next 3 316 200
+6398 next 3 317 201
+6399 next 4 318 202
+6400 next 4 319 203
+6401 next 3 320 204
+6402 next 4 321 205
+6403 next 4 322 206
+6404 next 4 323 207
+6405 next 4 324 208
+6406 next 4 325 209
+6407 next 4 326 210
+6408 next 4 327 211
+6409 next 4 328 212
+6410 next 4 329 213
+6411 next 4 330 214
+6412 next 4 331 215
+6413 next 4 332 216
+6414 next 3 333 217
+6415 next 4 334 218
+6416 next 4 335 219
+6417 next 2 336 220
+6418 next 3 337 221
+6419 next 3 338 222
+6420 next 3 339 223
+6421 next 3 340 224
+6422 next 4 341 225
+6423 next 3 342 226
+6424 next 4 343 227
+6425 next 4 344 228
+6426 next 3 345 229
+6427 next 4 346 230
+6428 next 4 347 231
+6429 next 4 348 232
+6430 next 4 349 233
+6431 next 4 350 234
+6432 next 4 351 235
+6433 next 4 352 236
+6434 next 4 353 237
+6435 next 3 354 238
+6436 next 4 355 239
+6437 next 4 356 240
+6438 next 4 357 241
+6439 next 4 358 242
+6440 next 3 359 243
+6441 next 2 360 244
+6442 next 3 361 245
+6443 next 3 362 246
+6444 next 3 363 247
+6445 next 3 364 248
+6446 next 4 365 249
+6447 next 3 366 250
+6448 next 3 367 251
+6449 next 4 368 252
+6450 next 4 369 253
+6451 next 3 370 254
+6452 next 8 371 255
+6453 next 8 372 256
+6454 next 8 373 257
+6455 next 8 374 258
+6456 next 8 375 259
+6457 init 8 376 9
+6458 next 8 376 10
+6459 init 8 377 9
+6460 next 8 377 6339
+6461 bad 6340

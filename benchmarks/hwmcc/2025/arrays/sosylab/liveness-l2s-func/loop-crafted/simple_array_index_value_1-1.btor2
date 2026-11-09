@@ -1,0 +1,206 @@
+1 sort bitvec 1
+2 sort bitvec 10
+3 sort bitvec 32
+4 sort array 3 3
+; Define PC variable and constraints
+6 const 2 0000000001
+7 const 2 0000000010 ; initial state
+8 const 2 0000000100 ; error state
+9 const 2 0000001000
+10 const 2 0000010000 ; error state
+11 const 2 0000100000
+12 const 2 0001000000 ; auxiliary sink state
+13 const 2 0010000000 ; error state
+14 const 2 0100000000 ; error state
+15 const 2 1000000000 ; error state
+16 state 2 !pc
+17 eq 1 16 6
+18 eq 1 16 7
+19 eq 1 16 8
+20 eq 1 16 9
+21 eq 1 16 10
+22 eq 1 16 11
+23 eq 1 16 12
+24 eq 1 16 13
+25 eq 1 16 14
+26 eq 1 16 15
+; Define constants
+28 const 1 1
+29 const 3 00000000000000000000000000000010
+30 const 3 00000000000000000000001111101000
+31 const 3 00000000000000000000000000000001
+32 const 3 00000000000000000000000000000000
+; Define state and input variables
+34 state 3 !{$(in___cpv_main#0)<$(in_main#0)<index>>}
+35 state 4 !{$(in___cpv_main#0)<$(in_main#0)<array.1>>}
+36 state 3 !{$(in___cpv_main#0)<$(in_main#0)<main.return>>}
+37 input 4 %{$(in___cpv_main#0)<$(in_main#0)<array.1>>}#1
+38 input 3 %{$(in___cpv_main#0)<$(in_main#0)<main.return>>}#1
+; Construct netlist
+40 urem 3 34 29
+41 ult 1 34 30
+42 add 3 31 34
+43 read 3 35 34
+44 write 4 35 34 40
+45 not 1 41
+46 eq 1 40 32
+47 eq 1 43 32
+48 and 1 28 41
+49 and 1 28 45
+50 ite 3 47 31 32
+51 not 1 46
+52 not 1 47
+53 and 1 28 46
+54 eq 1 50 32
+55 ite 3 52 31 32
+56 not 1 54
+57 eq 1 55 32
+58 and 1 53 54
+59 and 1 46 56
+60 not 1 57
+61 and 1 28 57
+62 and 1 58 41
+63 and 1 51 60
+64 and 1 61 51
+65 or 1 59 63
+66 and 1 64 41
+67 and 1 28 65
+68 and 1 67 41
+; Assign next states
+70 and 1 20 49
+71 ite 4 70 35 35
+72 and 1 22 49
+73 ite 4 72 35 71
+74 and 1 26 28
+75 ite 4 74 35 73
+76 and 1 18 28
+77 ite 4 76 37 75
+78 and 1 22 66
+79 ite 4 78 35 77
+80 and 1 20 48
+81 ite 4 80 44 79
+82 and 1 24 28
+83 ite 4 82 35 81
+84 and 1 19 28
+85 ite 4 84 35 83
+86 and 1 22 62
+87 ite 4 86 35 85
+88 and 1 22 68
+89 ite 4 88 35 87
+90 next 4 35 89
+91 and 1 20 49
+92 ite 3 91 32 34
+93 and 1 22 49
+94 ite 3 93 34 92
+95 and 1 26 28
+96 ite 3 95 34 94
+97 and 1 18 28
+98 ite 3 97 32 96
+99 and 1 22 66
+100 ite 3 99 34 98
+101 and 1 20 48
+102 ite 3 101 42 100
+103 and 1 24 28
+104 ite 3 103 34 102
+105 and 1 19 28
+106 ite 3 105 34 104
+107 and 1 22 62
+108 ite 3 107 34 106
+109 and 1 22 68
+110 ite 3 109 42 108
+111 next 3 34 110
+112 and 1 20 49
+113 ite 3 112 36 36
+114 and 1 22 49
+115 ite 3 114 36 113
+116 and 1 26 28
+117 ite 3 116 36 115
+118 and 1 18 28
+119 ite 3 118 38 117
+120 and 1 22 66
+121 ite 3 120 36 119
+122 and 1 20 48
+123 ite 3 122 36 121
+124 and 1 24 28
+125 ite 3 124 36 123
+126 and 1 19 28
+127 ite 3 126 36 125
+128 and 1 22 62
+129 ite 3 128 36 127
+130 and 1 22 68
+131 ite 3 130 36 129
+132 next 3 36 131
+; Assign next PC
+134 and 1 20 49
+135 ite 2 134 11 12
+136 and 1 22 49
+137 ite 2 136 15 135
+138 and 1 26 28
+139 ite 2 138 6 137
+140 and 1 18 28
+141 ite 2 140 9 139
+142 and 1 22 66
+143 ite 2 142 13 141
+144 and 1 20 48
+145 ite 2 144 9 143
+146 and 1 24 28
+147 ite 2 146 14 145
+148 and 1 19 28
+149 ite 2 148 10 147
+150 and 1 22 62
+151 ite 2 150 8 149
+152 and 1 22 68
+153 ite 2 152 11 151
+154 next 2 16 153
+; Initialize PC
+156 init 2 16 7
+; Initialize states
+158 init 3 34 32
+159 init 3 36 32
+; Constrain PC to not be the sink state
+161 constraint -23
+; Assert property
+163 or 1 19 21
+164 or 1 163 24
+165 or 1 164 25
+166 or 1 165 26
+; Relabel bad to justice
+; 167 bad 166
+168 not 1 166
+; 169 justice 1 168 ; removed by l2s
+170 constraint 168
+; Create state copies
+171 state 2 ; copy of 16
+172 init 2 171 7
+173 state 3 ; copy of 34
+174 init 3 173 32
+175 state 4 ; copy of 35
+176 state 3 ; copy of 36
+177 init 3 176 32
+; Record state nondeterministically
+178 sort bitvec 1
+179 const 178 0
+180 input 178 save
+181 state 178 saved
+182 init 178 181 179
+183 or 178 180 181
+184 next 178 181 183
+185 and 178 180 -181 ; save & !saved
+186 ite 2 185 16 171
+187 next 2 171 186
+188 ite 3 185 34 173
+189 next 3 173 188
+190 ite 4 185 35 175
+191 next 4 175 190
+192 ite 3 185 36 176
+193 next 3 176 192
+; Check if the saved state is visited again
+194 eq 178 16 171
+195 eq 178 34 173
+196 eq 178 35 175
+197 eq 178 36 176
+198 and 178 181 194
+199 and 178 198 195
+200 and 178 199 196
+201 and 178 200 197
+202 bad 201

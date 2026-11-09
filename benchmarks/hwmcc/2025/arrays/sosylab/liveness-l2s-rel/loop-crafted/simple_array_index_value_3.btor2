@@ -1,0 +1,210 @@
+1 sort bitvec 32
+2 sort array 1 1
+3 sort bitvec 1
+4 constd 3 0
+5 constd 3 1
+6 input 2 %{$(in___cpv_main#0)<$(in_main#0)<array.1>>}#1
+7 input 1 %{$(in___cpv_main#0)<$(in_main#0)<main.return>>}#1
+8 input 1 !{$(in___cpv_main#0)<$(in_main#0)<index>>}.next
+9 input 1 !{$(in___cpv_main#0)<$(in_main#0)<tmp>>}.next
+10 input 2 !{$(in___cpv_main#0)<$(in_main#0)<array.1>>}.next
+11 input 1 !{$(in___cpv_main#0)<$(in_main#0)<main.return>>}.next
+12 input 3 !pc[0].next
+13 input 3 !pc[1].next
+14 input 3 !pc[2].next
+15 state 1 !{$(in___cpv_main#0)<$(in_main#0)<index>>}
+16 state 1 !{$(in___cpv_main#0)<$(in_main#0)<tmp>>}
+17 state 2 !{$(in___cpv_main#0)<$(in_main#0)<array.1>>}
+18 state 1 !{$(in___cpv_main#0)<$(in_main#0)<main.return>>}
+19 state 3 !pc[0]
+20 state 3 !pc[1]
+21 state 3 !pc[2]
+22 state 3 reset0
+23 state 3 valid
+24 not 3 22
+25 not 3 20
+26 and 3 19 25
+27 not 3 21
+28 and 3 27 26
+29 not 3 12
+30 not 3 13
+31 and 3 30 29
+32 and 3 14 31
+33 and 3 32 28
+34 eq 3 16 9
+35 constd 1 0
+36 eq 3 8 35
+37 and 3 36 34
+38 eq 3 17 10
+39 and 3 38 37
+40 eq 3 18 11
+41 and 3 40 39
+42 constd 1 10000
+43 ult 3 15 42
+44 not 3 43
+45 and 3 44 41
+46 and 3 45 33
+47 not 3 14
+48 and 3 12 30
+49 and 3 48 47
+50 and 3 49 28
+51 write 2 17 15 16
+52 eq 3 10 51
+53 constd 1 2
+54 add 1 53 16
+55 eq 3 9 54
+56 constd 1 1
+57 add 1 56 15
+58 eq 3 8 57
+59 and 3 58 55
+60 and 3 59 52
+61 and 3 40 60
+62 and 3 43 61
+63 and 3 62 50
+64 or 3 63 46
+65 not 3 19
+66 and 3 20 65
+67 and 3 21 66
+68 and 3 14 48
+69 and 3 68 67
+70 eq 3 15 8
+71 and 3 70 34
+72 and 3 71 38
+73 and 3 72 40
+74 and 3 73 69
+75 and 3 13 29
+76 and 3 47 75
+77 and 3 65 25
+78 and 3 21 77
+79 and 3 78 76
+80 and 3 70 44
+81 and 3 34 80
+82 and 3 38 81
+83 and 3 40 82
+84 and 3 83 79
+85 and 3 78 32
+86 and 3 34 58
+87 and 3 38 86
+88 and 3 40 87
+89 read 1 17 15
+90 eq 3 89 35
+91 sll 1 15 56
+92 eq 3 89 91
+93 or 3 92 90
+94 ite 1 93 56 35
+95 eq 3 94 35
+96 not 3 95
+97 and 3 96 88
+98 and 3 43 97
+99 and 3 98 85
+100 and 3 14 75
+101 and 3 78 100
+102 and 3 73 95
+103 and 3 43 102
+104 and 3 103 101
+105 or 3 104 99
+106 or 3 105 84
+107 and 3 12 13
+108 and 3 47 107
+109 and 3 27 66
+110 and 3 109 108
+111 and 3 73 110
+112 and 3 77 27
+113 and 3 112 49
+114 eq 3 11 7
+115 eq 3 10 6
+116 eq 3 9 35
+117 and 3 36 116
+118 and 3 117 115
+119 and 3 118 114
+120 and 3 119 113
+121 or 3 120 111
+122 or 3 121 106
+123 or 3 122 74
+124 or 3 123 64
+125 and 3 124 23
+126 or 3 125 24
+127 and 3 47 31
+128 or 3 22 127
+129 and 3 128 126
+130 or 3 109 67
+131 and 3 21 26
+132 or 3 131 130
+133 and 3 132 23
+134 next 1 15 8
+135 next 1 16 9
+136 next 2 17 10
+137 next 1 18 11
+138 next 3 19 12
+139 next 3 20 13
+140 next 3 21 14
+141 init 3 22 4
+142 next 3 22 5
+143 init 3 23 4
+144 next 3 23 129
+; Relabel bad to justice
+; 145 bad 133
+146 not 3 132
+; 147 justice 1 146 ; removed by l2s
+148 constraint 146
+149 or 3 -22 23 ; reset0 => valid
+150 constraint 149
+; Create state copies
+151 state 1 ; copy of 15
+152 state 1 ; copy of 16
+153 state 2 ; copy of 17
+154 state 1 ; copy of 18
+155 state 3 ; copy of 19
+156 state 3 ; copy of 20
+157 state 3 ; copy of 21
+158 state 3 ; copy of 22
+159 init 3 158 4
+160 state 3 ; copy of 23
+161 init 3 160 4
+; Record state nondeterministically
+162 sort bitvec 1
+163 const 162 0
+164 input 162 save
+165 state 162 saved
+166 init 162 165 163
+167 or 162 164 165
+168 next 162 165 167
+169 and 162 164 -165 ; save & !saved
+170 ite 1 169 15 151
+171 next 1 151 170
+172 ite 1 169 16 152
+173 next 1 152 172
+174 ite 2 169 17 153
+175 next 2 153 174
+176 ite 1 169 18 154
+177 next 1 154 176
+178 ite 3 169 19 155
+179 next 3 155 178
+180 ite 3 169 20 156
+181 next 3 156 180
+182 ite 3 169 21 157
+183 next 3 157 182
+184 ite 3 169 22 158
+185 next 3 158 184
+186 ite 3 169 23 160
+187 next 3 160 186
+; Check if the saved state is visited again
+188 eq 162 15 151
+189 eq 162 16 152
+190 eq 162 17 153
+191 eq 162 18 154
+192 eq 162 19 155
+193 eq 162 20 156
+194 eq 162 21 157
+195 eq 162 22 158
+196 eq 162 23 160
+197 and 162 165 188
+198 and 162 197 189
+199 and 162 198 190
+200 and 162 199 191
+201 and 162 200 192
+202 and 162 201 193
+203 and 162 202 194
+204 and 162 203 195
+205 and 162 204 196
+206 bad 205

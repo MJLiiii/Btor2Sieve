@@ -1,6 +1,6 @@
 # Btor2Sieve
 
-Extract word-level bit-vector and array constraints from BTOR2 hardware models. Every candidate is independently checked with SMT. The product includes a CLI, searchable HTML reports, CSV/JSON results, standalone SMT-LIB obligations, cross-property revalidation, and a pinned public benchmark corpus.
+Extract word-level bit-vector and array constraints from BTOR2 hardware models. Every candidate is independently checked with SMT. The product includes a CLI, searchable HTML reports, CSV/JSON results, standalone SMT-LIB obligations, cross-property revalidation, and evaluation of local BTOR2 benchmark collections.
 
 Start with the installation and counter example below. The [method](docs/METHODS.md) explains what the results establish; the [research notes](docs/research/constraint-literature.md) and [historical measurements](docs/RESULTS.md) provide background. The supplied assignment and proposal are preserved unchanged in `docs/`. Original design decisions and the implementation plan are in [docs/superpowers](docs/superpowers).
 
@@ -43,11 +43,28 @@ btor2sieve extract examples/array.btor2 --out results/my-array \
 Process multiple models with a reproducible budget:
 
 ```sh
-btor2sieve batch benchmarks/public/*.btor2 --out results/my-suite \
+btor2sieve batch benchmarks/hwmcc/2025/bv/hkust/*.btor2 --out results/my-suite \
   --max-candidates 80 --max-terms 12 --max-queries 96 --timeout-ms 200 --reuse
 ```
 
 `--syntax-only` disables solver-guided range and known-bit discovery. `--property ID` selects a **bad directive ID**, not the ID of its Boolean expression. For example, the counter's properties are bad directives 11 and 14. `--max-reuse` limits reuse queries per target property. Timeouts are per solver call, not a total run deadline.
+
+## Project layout
+
+```text
+src/btor2sieve/          Python package
+tests/                  Automated tests
+scripts/                Evaluation entry point
+examples/               Small runnable BTOR2 examples
+benchmarks/             Input datasets, grouped by source/year/track
+  hwmcc/2025/
+    bv/                 Bit-vector benchmarks
+    arrays/             Array benchmarks
+docs/                   Methods, research, and historical results
+results/                Generated evaluation reports
+```
+
+Use lowercase names for collection directories and descriptive track names. Keep upstream family directories and model filenames unchanged so inputs remain traceable to their source. Store generated reports in `results/`.
 
 ## Find your way around the code
 
@@ -70,7 +87,7 @@ reports and SMT files ← pipeline ← independent Validator
 | [replay.py](src/btor2sieve/replay.py) | Read a report or SMT file, verify artifact paths/hashes, and replay its queries. |
 | [cli.py](src/btor2sieve/cli.py) | Parse command-line options, call the operation, and print its result. |
 
-Tests follow these boundaries in `tests/`. The two scripts in `scripts/` verify/fetch the pinned corpus and reproduce the evaluation.
+Tests follow these boundaries in `tests/`. `scripts/evaluate.py` runs the evaluation on local benchmark collections.
 
 ## Read the results correctly
 
@@ -104,11 +121,18 @@ CLI exit codes: 0 means the command completed, 1 means a batch input failed or r
 
 ```sh
 python -m pytest -q
-python scripts/fetch_benchmarks.py --check
 python scripts/evaluate.py --out results/my-evaluation
 ```
 
-The evaluation script runs syntax and semantic modes with the same configured budgets, then replays accepted implications and all hypotheses with both Z3 and cvc5. It requires the `crosscheck` extra (or `--skip-cvc5`). [The corpus manifest](benchmarks/manifest.json) pins original URLs, commits, licenses, hashes, model features, and verified HWMCC provenance. The 13 small public files are included, with their licenses; four are confirmed HWMCC19 entries, and the other files are explicitly identified as family or upstream regression examples.
+Organize downloaded BTOR2 collections under `benchmarks/<source>/<year>/<track>/`, preserving the upstream family folders and filenames. The HWMCC’25 collection uses `benchmarks/hwmcc/2025/bv/` and `benchmarks/hwmcc/2025/arrays/`. The evaluation script recursively selects **every `.btor2` file** under `benchmarks/`, including files added later. There is no fixed corpus list, fetch step, or automatic download. See [benchmark setup](benchmarks/README.md) for the source and supported categories.
+
+To evaluate a different directory:
+
+```sh
+python scripts/evaluate.py --benchmarks /path/to/extracted/models --out results/my-evaluation
+```
+
+Evaluation runs syntax and semantic modes with the same budgets, then replays accepted implications and all hypotheses with Z3 and cvc5. It requires the `crosscheck` extra (or `--skip-cvc5`). `evaluation.json` records the selected input paths; each mode’s `results.json` records model hashes. Budgets limit individual queries, not total runtime. Run the automated test suite locally with `python -m pytest -q`; it does not require a downloaded benchmark corpus.
 
 The suite covers strict parsing, bit-vector wraparound and signed operations, arrays, missing initialization/next, deep DAGs, finite safety/liveness separation, candidate budgets, invalid guesses, vacuity, solver UNKNOWN, exact property scopes, cross-property reuse, report counts, failed-model isolation, and tamper detection.
 

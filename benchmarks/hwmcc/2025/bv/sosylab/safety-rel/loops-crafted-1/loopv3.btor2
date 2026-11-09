@@ -1,0 +1,97 @@
+1 sort bitvec 32
+2 sort bitvec 1
+3 constd 2 0
+4 constd 2 1
+5 input 1 !{$(in_main#0)<$(in___VERIFIER_nondet_int#0)<h#<__VERIFIER_nondet_int.return>>>}
+6 input 1 !{SIZE}.next
+7 input 1 !{$(in_main#0)<i>}.next
+8 input 2 !pc[0].next
+9 input 2 !pc[1].next
+10 input 2 !pc[2].next
+11 state 1 !{SIZE}
+12 state 1 !{$(in_main#0)<i>}
+13 state 2 !pc[0]
+14 state 2 !pc[1]
+15 state 2 !pc[2]
+16 state 2 reset0
+17 state 2 valid
+18 not 2 16
+19 not 2 14
+20 and 2 13 19
+21 not 2 15
+22 and 2 21 20
+23 and 2 8 9
+24 not 2 10
+25 and 2 24 23
+26 and 2 25 22
+27 constd 1 0
+28 constd 1 1
+29 constd 1 2
+30 constd 1 4
+31 sdiv 1 12 30
+32 sll 1 31 29
+33 eq 2 12 32
+34 ite 1 33 28 27
+35 eq 2 34 27
+36 not 2 35
+37 eq 2 12 7
+38 eq 2 11 6
+39 and 2 38 37
+40 and 2 39 36
+41 slt 2 12 11
+42 not 2 41
+43 and 2 42 40
+44 and 2 43 26
+45 not 2 8
+46 and 2 9 45
+47 and 2 24 46
+48 and 2 22 47
+49 and 2 38 35
+50 and 2 37 49
+51 and 2 42 50
+52 and 2 51 48
+53 not 2 9
+54 and 2 8 53
+55 and 2 54 24
+56 and 2 55 22
+57 add 1 30 12
+58 constd 1 8
+59 add 1 58 12
+60 eq 2 5 27
+61 not 2 60
+62 ite 1 61 59 57
+63 eq 2 7 62
+64 and 2 38 63
+65 and 2 41 64
+66 and 2 65 56
+67 or 2 66 52
+68 or 2 67 44
+69 not 2 13
+70 and 2 69 19
+71 and 2 70 21
+72 and 2 71 55
+73 eq 2 7 27
+74 constd 1 50000001
+75 eq 2 6 74
+76 and 2 75 73
+77 and 2 76 72
+78 or 2 77 68
+79 and 2 78 17
+80 or 2 79 18
+81 and 2 53 45
+82 and 2 24 81
+83 or 2 16 82
+84 and 2 83 80
+85 and 2 14 69
+86 and 2 21 85
+87 and 2 86 17
+88 next 1 11 6
+89 next 1 12 7
+90 next 2 13 8
+91 next 2 14 9
+92 next 2 15 10
+93 init 2 16 3
+94 next 2 16 4
+95 init 2 17 3
+96 next 2 17 84
+97 bad 87

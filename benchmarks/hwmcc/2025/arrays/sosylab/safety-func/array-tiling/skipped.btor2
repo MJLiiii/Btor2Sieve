@@ -1,0 +1,242 @@
+1 sort bitvec 1
+2 sort bitvec 7
+3 sort bitvec 32
+4 sort array 3 3
+; Define PC variable and constraints
+6 const 2 0000001
+7 const 2 0000010 ; error state
+8 const 2 0000100
+9 const 2 0001000 ; initial state
+10 const 2 0010000 ; auxiliary sink state
+11 const 2 0100000
+12 const 2 1000000
+13 state 2 !pc
+14 eq 1 13 6
+15 eq 1 13 7
+16 eq 1 13 8
+17 eq 1 13 9
+18 eq 1 13 10
+19 eq 1 13 11
+20 eq 1 13 12
+; Define constants
+22 const 3 00000000000000011000011010100000
+23 const 3 00000000000000000000000000000001
+24 const 1 1
+25 const 3 00000000000000000000000000000010
+26 const 3 00000000000000000000000000000000
+27 const 3 11111111111111111111111111111111
+28 const 3 11111111111111111111111111111110
+; Define state and input variables
+30 state 4 !{%mem.0}
+31 state 3 !{$(in_main#0)<a>}
+32 state 3 !{$(in_main#0)<i>}
+33 state 3 !{%memaddr}
+34 state 3 !{MAX}
+35 state 3 !{SIZE}
+36 input 3 !{$(in_main#0)<$(in___VERIFIER_nondet_int#2)<h#<__VERIFIER_nondet_int.return>>>}
+37 input 3 %{$(in_main#0)<a>}#1
+38 input 3 %{$(in_main#0)<i>}#1
+39 input 3 !{$(in_main#0)<$(in___VERIFIER_nondet_int#0)<h#<__VERIFIER_nondet_int.return>>>}
+; Construct netlist
+41 slt 1 39 22
+42 slt 1 23 39
+43 sll 3 39 25
+44 sdiv 3 35 25
+45 add 3 31 32
+46 slt 1 32 35
+47 srem 3 35 25
+48 add 3 23 32
+49 sll 3 32 23
+50 and 1 24 41
+51 add 3 23 43
+52 slt 1 44 32
+53 read 3 30 45
+54 eq 1 47 26
+55 not 1 46
+56 and 1 42 41
+57 and 1 24 46
+58 write 4 30 45 36
+59 add 3 27 49
+60 add 3 28 49
+61 add 3 31 49
+62 and 1 50 42
+63 and 1 24 52
+64 slt 1 32 53
+65 not 1 52
+66 and 1 24 54
+67 ite 3 54 23 26
+68 and 1 24 55
+69 not 1 56
+70 add 3 28 61
+71 add 3 27 61
+72 not 1 64
+73 and 1 24 65
+74 eq 1 67 26
+75 and 1 24 69
+76 read 3 30 70
+77 write 4 30 70 60
+78 ite 3 72 23 26
+79 not 1 74
+80 slt 1 60 76
+81 eq 1 78 26
+82 and 1 66 79
+83 not 1 80
+84 and 1 24 81
+85 and 1 82 55
+86 not 1 81
+87 ite 4 83 30 77
+88 and 1 84 46
+89 and 1 24 86
+90 read 3 87 71
+91 write 4 87 71 59
+92 and 1 89 46
+93 slt 1 59 90
+94 not 1 93
+95 ite 4 94 87 91
+; Assign next states
+97 and 1 17 62
+98 ite 4 97 30 30
+99 and 1 17 75
+100 ite 4 99 30 98
+101 and 1 14 68
+102 ite 4 101 30 100
+103 and 1 20 63
+104 ite 4 103 30 102
+105 and 1 19 85
+106 ite 4 105 30 104
+107 and 1 19 57
+108 ite 4 107 58 106
+109 and 1 14 88
+110 ite 4 109 30 108
+111 and 1 14 92
+112 ite 4 111 30 110
+113 and 1 20 73
+114 ite 4 113 95 112
+115 next 4 30 114
+116 and 1 17 62
+117 ite 3 116 22 34
+118 and 1 17 75
+119 ite 3 118 22 117
+120 and 1 14 68
+121 ite 3 120 34 119
+122 and 1 20 63
+123 ite 3 122 34 121
+124 and 1 19 85
+125 ite 3 124 34 123
+126 and 1 19 57
+127 ite 3 126 34 125
+128 and 1 14 88
+129 ite 3 128 34 127
+130 and 1 14 92
+131 ite 3 130 34 129
+132 and 1 20 73
+133 ite 3 132 34 131
+134 next 3 34 133
+135 and 1 17 62
+136 ite 3 135 39 35
+137 and 1 17 75
+138 ite 3 137 39 136
+139 and 1 14 68
+140 ite 3 139 35 138
+141 and 1 20 63
+142 ite 3 141 35 140
+143 and 1 19 85
+144 ite 3 143 35 142
+145 and 1 19 57
+146 ite 3 145 35 144
+147 and 1 14 88
+148 ite 3 147 35 146
+149 and 1 14 92
+150 ite 3 149 35 148
+151 and 1 20 73
+152 ite 3 151 35 150
+153 next 3 35 152
+154 and 1 17 62
+155 ite 3 154 51 33
+156 and 1 17 75
+157 ite 3 156 23 155
+158 and 1 14 68
+159 ite 3 158 33 157
+160 and 1 20 63
+161 ite 3 160 33 159
+162 and 1 19 85
+163 ite 3 162 33 161
+164 and 1 19 57
+165 ite 3 164 33 163
+166 and 1 14 88
+167 ite 3 166 33 165
+168 and 1 14 92
+169 ite 3 168 33 167
+170 and 1 20 73
+171 ite 3 170 33 169
+172 next 3 33 171
+173 and 1 17 62
+174 ite 3 173 23 31
+175 and 1 17 75
+176 ite 3 175 37 174
+177 and 1 14 68
+178 ite 3 177 31 176
+179 and 1 20 63
+180 ite 3 179 31 178
+181 and 1 19 85
+182 ite 3 181 31 180
+183 and 1 19 57
+184 ite 3 183 31 182
+185 and 1 14 88
+186 ite 3 185 31 184
+187 and 1 14 92
+188 ite 3 187 31 186
+189 and 1 20 73
+190 ite 3 189 31 188
+191 next 3 31 190
+192 and 1 17 62
+193 ite 3 192 26 32
+194 and 1 17 75
+195 ite 3 194 38 193
+196 and 1 14 68
+197 ite 3 196 32 195
+198 and 1 20 63
+199 ite 3 198 26 197
+200 and 1 19 85
+201 ite 3 200 23 199
+202 and 1 19 57
+203 ite 3 202 48 201
+204 and 1 14 88
+205 ite 3 204 32 203
+206 and 1 14 92
+207 ite 3 206 48 205
+208 and 1 20 73
+209 ite 3 208 48 207
+210 next 3 32 209
+; Assign next PC
+212 and 1 17 62
+213 ite 2 212 11 10
+214 and 1 17 75
+215 ite 2 214 8 213
+216 and 1 14 68
+217 ite 2 216 8 215
+218 and 1 20 63
+219 ite 2 218 6 217
+220 and 1 19 85
+221 ite 2 220 12 219
+222 and 1 19 57
+223 ite 2 222 11 221
+224 and 1 14 88
+225 ite 2 224 7 223
+226 and 1 14 92
+227 ite 2 226 6 225
+228 and 1 20 73
+229 ite 2 228 12 227
+230 next 2 13 229
+; Initialize PC
+232 init 2 13 9
+; Initialize states
+234 init 3 31 26
+235 init 3 32 26
+236 init 3 33 26
+237 init 3 34 26
+238 init 3 35 26
+; Constrain PC to not be the sink state
+240 constraint -18
+; Assert property
+242 bad 15

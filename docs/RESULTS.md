@@ -6,10 +6,8 @@ The delivered product completes the core C14 workflow: typed BTOR2 extraction, s
 
 This page records the original 2026-11-08 experiment. Its generated reports and receipts are no longer present in this checkout; the measurements below remain historical results. The original files were under `results/final-evaluation/` and `results/demo/`.
 
-The [pinned source manifest](../benchmarks/manifest.json), [methods](METHODS.md), and [literature review](research/constraint-literature.md) remain available. Regenerate reports in a new output directory:
-
+The original corpus and its manifest have been removed. The [methods](METHODS.md) and [literature review](research/constraint-literature.md) remain available. The commands below evaluate your current [local benchmark collections](../benchmarks/README.md); they do not reproduce the historical corpus or measurements:
 ```sh
-python scripts/fetch_benchmarks.py --check
 python scripts/evaluate.py --out results/my-evaluation
 python -m btor2sieve batch examples/*.btor2 --out results/my-demo \
   --scopes property,model,initial,transition --reuse
@@ -19,7 +17,7 @@ The evaluation writes `evaluation.json` and `syntax/` and `semantic/` directorie
 
 ## Corpus and configuration
 
-The public corpus has 13 unmodified upstream models, 23 bad-state properties and four models with arrays. Two models have multiple bad nodes: the factorial example has two and the rotation regression has ten. Four files are verified byte-for-byte against HWMCC19 mirror entries, two are from the same published hardware benchmark family, and seven are upstream BTOR2Tools/Pono regression examples. They are not 13 independently selected competition tasks. Original labels such as “safe” and “unsafe” come from upstream directories, not from this extractor.
+The original public corpus had 13 unmodified upstream models, 23 bad-state properties and four models with arrays. Two models have multiple bad nodes: the factorial example has two and the rotation regression has ten. Four files are verified byte-for-byte against HWMCC19 mirror entries, two are from the same published hardware benchmark family, and seven are upstream BTOR2Tools/Pono regression examples. They are not 13 independently selected competition tasks. Original labels such as “safe” and “unsafe” come from upstream directories, not from this extractor.
 
 Both modes used 80 candidates per scope, 12 selected terms, maximum scalar width 64, at most 96 discovery queries per scope, and a 200 ms timeout per SMT call. Scopes were each individual property plus model assumptions: 36 total. Reuse allowed 30 attempts per target property. The semantic mode shares the same candidate limit with syntax templates, so its candidate set need not contain every baseline candidate.
 

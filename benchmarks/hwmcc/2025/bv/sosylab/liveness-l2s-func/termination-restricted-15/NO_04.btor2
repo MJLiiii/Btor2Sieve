@@ -1,0 +1,362 @@
+1 sort bitvec 1
+2 sort bitvec 9
+3 sort bitvec 32
+; Define PC variable and constraints
+5 const 2 000000001
+6 const 2 000000010 ; error state
+7 const 2 000000100 ; auxiliary sink state
+8 const 2 000001000
+9 const 2 000010000
+10 const 2 000100000 ; initial state
+11 const 2 001000000
+12 const 2 010000000
+13 const 2 100000000
+14 state 2 !pc
+15 eq 1 14 5
+16 eq 1 14 6
+17 eq 1 14 7
+18 eq 1 14 8
+19 eq 1 14 9
+20 eq 1 14 10
+21 eq 1 14 11
+22 eq 1 14 12
+23 eq 1 14 13
+; Define constants
+25 const 1 1
+26 const 3 00000000000000000000000000000011
+27 const 3 00000000000000000000000000000010
+28 const 3 00000000000000000000000000000001
+29 const 3 11111111111111111111111111111111
+30 const 1 1
+31 const 3 00000000000000000000000001100100
+32 const 3 00000000000000000000001111101000
+33 const 3 00000000000000000000000000000000
+34 const 3 00000000000000000000000000000100
+; Define state and input variables
+36 state 3 !{$(in___cpv_main#0)<$(in_main#0)<m>>}
+37 state 3 !{$(in___cpv_main#0)<$(in_main#0)<a>>}
+38 state 3 !{$(in___cpv_main#0)<$(in_main#0)<b>>}
+39 state 3 !{$(in___cpv_main#0)<$(in_main#0)<i>>}
+40 state 3 !{$(in___cpv_main#0)<$(in_main#0)<j>>}
+41 state 3 !{$(in___cpv_main#0)<$(in_main#0)<k>>}
+42 state 3 !{$(in___cpv_main#0)<$(in_main#0)<l>>}
+43 input 3 %{$(in___cpv_main#0)<$(in_main#0)<a>>}#1
+44 input 3 %{$(in___cpv_main#0)<$(in_main#0)<b>>}#1
+45 input 3 %{$(in___cpv_main#0)<$(in_main#0)<j>>}#1
+46 input 3 %{$(in___cpv_main#0)<$(in_main#0)<k>>}#1
+47 input 3 %{$(in___cpv_main#0)<$(in_main#0)<l>>}#1
+48 input 3 %{$(in___cpv_main#0)<$(in_main#0)<m>>}#1
+; Construct netlist
+50 add 3 39 40
+51 add 3 27 39
+52 add 3 28 42
+53 add 3 29 41
+54 slice 1 36 31 31
+55 slt 1 39 31
+56 slice 1 41 31 31
+57 slt 1 42 38
+58 slt 1 40 37
+59 add 3 28 40
+60 add 3 28 39
+61 add 3 26 50
+62 eq 1 54 30
+63 not 1 55
+64 eq 1 56 30
+65 not 1 57
+66 and 1 25 55
+67 not 1 58
+68 and 1 25 57
+69 add 3 41 50
+70 and 1 25 58
+71 not 1 62
+72 and 1 25 63
+73 not 1 64
+74 and 1 25 65
+75 and 1 25 67
+76 add 3 42 69
+77 and 1 25 62
+78 and 1 25 64
+79 add 3 34 69
+80 and 1 25 71
+81 and 1 25 73
+82 add 3 32 76
+; Assign next states
+84 and 1 18 74
+85 ite 3 84 53 41
+86 and 1 18 68
+87 ite 3 86 41 85
+88 and 1 19 72
+89 ite 3 88 41 87
+90 and 1 23 78
+91 ite 3 90 41 89
+92 and 1 20 25
+93 ite 3 92 46 91
+94 and 1 22 80
+95 ite 3 94 41 93
+96 and 1 16 25
+97 ite 3 96 41 95
+98 and 1 22 77
+99 ite 3 98 41 97
+100 and 1 21 75
+101 ite 3 100 41 99
+102 and 1 19 66
+103 ite 3 102 41 101
+104 and 1 23 81
+105 ite 3 104 41 103
+106 and 1 21 70
+107 ite 3 106 61 105
+108 next 3 41 107
+109 and 1 18 74
+110 ite 3 109 40 40
+111 and 1 18 68
+112 ite 3 111 40 110
+113 and 1 19 72
+114 ite 3 113 40 112
+115 and 1 23 78
+116 ite 3 115 59 114
+117 and 1 20 25
+118 ite 3 117 45 116
+119 and 1 22 80
+120 ite 3 119 40 118
+121 and 1 16 25
+122 ite 3 121 40 120
+123 and 1 22 77
+124 ite 3 123 40 122
+125 and 1 21 75
+126 ite 3 125 40 124
+127 and 1 19 66
+128 ite 3 127 33 126
+129 and 1 23 81
+130 ite 3 129 40 128
+131 and 1 21 70
+132 ite 3 131 40 130
+133 next 3 40 132
+134 and 1 18 74
+135 ite 3 134 39 39
+136 and 1 18 68
+137 ite 3 136 39 135
+138 and 1 19 72
+139 ite 3 138 39 137
+140 and 1 23 78
+141 ite 3 140 39 139
+142 and 1 20 25
+143 ite 3 142 33 141
+144 and 1 22 80
+145 ite 3 144 39 143
+146 and 1 16 25
+147 ite 3 146 39 145
+148 and 1 22 77
+149 ite 3 148 39 147
+150 and 1 21 75
+151 ite 3 150 60 149
+152 and 1 19 66
+153 ite 3 152 39 151
+154 and 1 23 81
+155 ite 3 154 39 153
+156 and 1 21 70
+157 ite 3 156 39 155
+158 next 3 39 157
+159 and 1 18 74
+160 ite 3 159 38 38
+161 and 1 18 68
+162 ite 3 161 38 160
+163 and 1 19 72
+164 ite 3 163 38 162
+165 and 1 23 78
+166 ite 3 165 38 164
+167 and 1 20 25
+168 ite 3 167 44 166
+169 and 1 22 80
+170 ite 3 169 38 168
+171 and 1 16 25
+172 ite 3 171 38 170
+173 and 1 22 77
+174 ite 3 173 38 172
+175 and 1 21 75
+176 ite 3 175 38 174
+177 and 1 19 66
+178 ite 3 177 38 176
+179 and 1 23 81
+180 ite 3 179 79 178
+181 and 1 21 70
+182 ite 3 181 38 180
+183 next 3 38 182
+184 and 1 18 74
+185 ite 3 184 37 37
+186 and 1 18 68
+187 ite 3 186 37 185
+188 and 1 19 72
+189 ite 3 188 37 187
+190 and 1 23 78
+191 ite 3 190 37 189
+192 and 1 20 25
+193 ite 3 192 43 191
+194 and 1 22 80
+195 ite 3 194 37 193
+196 and 1 16 25
+197 ite 3 196 37 195
+198 and 1 22 77
+199 ite 3 198 37 197
+200 and 1 21 75
+201 ite 3 200 37 199
+202 and 1 19 66
+203 ite 3 202 51 201
+204 and 1 23 81
+205 ite 3 204 37 203
+206 and 1 21 70
+207 ite 3 206 37 205
+208 next 3 37 207
+209 and 1 18 74
+210 ite 3 209 36 36
+211 and 1 18 68
+212 ite 3 211 82 210
+213 and 1 19 72
+214 ite 3 213 36 212
+215 and 1 23 78
+216 ite 3 215 36 214
+217 and 1 20 25
+218 ite 3 217 48 216
+219 and 1 22 80
+220 ite 3 219 36 218
+221 and 1 16 25
+222 ite 3 221 36 220
+223 and 1 22 77
+224 ite 3 223 36 222
+225 and 1 21 75
+226 ite 3 225 36 224
+227 and 1 19 66
+228 ite 3 227 36 226
+229 and 1 23 81
+230 ite 3 229 36 228
+231 and 1 21 70
+232 ite 3 231 36 230
+233 next 3 36 232
+234 and 1 18 74
+235 ite 3 234 42 42
+236 and 1 18 68
+237 ite 3 236 42 235
+238 and 1 19 72
+239 ite 3 238 42 237
+240 and 1 23 78
+241 ite 3 240 42 239
+242 and 1 20 25
+243 ite 3 242 47 241
+244 and 1 22 80
+245 ite 3 244 42 243
+246 and 1 16 25
+247 ite 3 246 42 245
+248 and 1 22 77
+249 ite 3 248 52 247
+250 and 1 21 75
+251 ite 3 250 42 249
+252 and 1 19 66
+253 ite 3 252 42 251
+254 and 1 23 81
+255 ite 3 254 33 253
+256 and 1 21 70
+257 ite 3 256 42 255
+258 next 3 42 257
+; Assign next PC
+260 and 1 18 74
+261 ite 2 260 13 7
+262 and 1 18 68
+263 ite 2 262 12 261
+264 and 1 19 72
+265 ite 2 264 6 263
+266 and 1 23 78
+267 ite 2 266 11 265
+268 and 1 20 25
+269 ite 2 268 9 267
+270 and 1 22 80
+271 ite 2 270 12 269
+272 and 1 16 25
+273 ite 2 272 5 271
+274 and 1 22 77
+275 ite 2 274 8 273
+276 and 1 21 75
+277 ite 2 276 9 275
+278 and 1 19 66
+279 ite 2 278 11 277
+280 and 1 23 81
+281 ite 2 280 8 279
+282 and 1 21 70
+283 ite 2 282 13 281
+284 next 2 14 283
+; Initialize PC
+286 init 2 14 10
+; Initialize states
+288 init 3 36 33
+289 init 3 37 33
+290 init 3 38 33
+291 init 3 39 33
+292 init 3 40 33
+293 init 3 41 33
+294 init 3 42 33
+; Constrain PC to not be the sink state
+296 constraint -17
+; Assert property
+; Relabel bad to justice
+; 298 bad 16
+299 not 1 16
+; 300 justice 1 299 ; removed by l2s
+301 constraint 299
+; Create state copies
+302 state 2 ; copy of 14
+303 init 2 302 10
+304 state 3 ; copy of 36
+305 init 3 304 33
+306 state 3 ; copy of 37
+307 init 3 306 33
+308 state 3 ; copy of 38
+309 init 3 308 33
+310 state 3 ; copy of 39
+311 init 3 310 33
+312 state 3 ; copy of 40
+313 init 3 312 33
+314 state 3 ; copy of 41
+315 init 3 314 33
+316 state 3 ; copy of 42
+317 init 3 316 33
+; Record state nondeterministically
+318 sort bitvec 1
+319 const 318 0
+320 input 318 save
+321 state 318 saved
+322 init 318 321 319
+323 or 318 320 321
+324 next 318 321 323
+325 and 318 320 -321 ; save & !saved
+326 ite 2 325 14 302
+327 next 2 302 326
+328 ite 3 325 36 304
+329 next 3 304 328
+330 ite 3 325 37 306
+331 next 3 306 330
+332 ite 3 325 38 308
+333 next 3 308 332
+334 ite 3 325 39 310
+335 next 3 310 334
+336 ite 3 325 40 312
+337 next 3 312 336
+338 ite 3 325 41 314
+339 next 3 314 338
+340 ite 3 325 42 316
+341 next 3 316 340
+; Check if the saved state is visited again
+342 eq 318 14 302
+343 eq 318 36 304
+344 eq 318 37 306
+345 eq 318 38 308
+346 eq 318 39 310
+347 eq 318 40 312
+348 eq 318 41 314
+349 eq 318 42 316
+350 and 318 321 342
+351 and 318 350 343
+352 and 318 351 344
+353 and 318 352 345
+354 and 318 353 346
+355 and 318 354 347
+356 and 318 355 348
+357 and 318 356 349
+358 bad 357
