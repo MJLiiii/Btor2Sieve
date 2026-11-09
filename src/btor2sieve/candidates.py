@@ -133,15 +133,17 @@ def _syntax_candidates(
             atoms.setdefault(abs(guard), encoder.bool_expr(guard))
         yield from _structural_candidates(encoder, node_id, max_width)
 
-    implications = (
-        Candidate(z3.Implies(left, right), "implication", "syntax:local", (left_id, right_id))
-        for pair in combinations(atoms.items(), 2)
-        for (left_id, left), (right_id, right) in (pair, pair[::-1])
-    )
+    implications = _implication_candidates(atoms)
     # Keep quadratic pair templates from taking all slots before word bounds.
     for group in zip_longest(implications, _pair_candidates(encoder, words),
                              _constant_candidates(encoder, words, literals)):
         yield from (candidate for candidate in group if candidate is not None)
+
+
+def _implication_candidates(atoms: dict[int, z3.BoolRef]) -> Iterator[Candidate]:
+    for (left_id, left), (right_id, right) in combinations(atoms.items(), 2):
+        yield Candidate(z3.Implies(left, right), "implication", "syntax:local", (left_id, right_id))
+        yield Candidate(z3.Implies(right, left), "implication", "syntax:local", (right_id, left_id))
 
 
 def _array_related(encoder: Encoder, node_id: int) -> bool:
@@ -256,10 +258,16 @@ class _Discovery:
             result = self.check(query)
             if result != z3.sat and result != z3.unsat:
                 break
-            if (result == z3.sat) == minimum:
-                high = middle
+            if minimum:
+                if result == z3.sat:
+                    high = middle
+                else:
+                    low = middle + 1
             else:
-                low = middle + 1
+                if result == z3.unsat:
+                    high = middle
+                else:
+                    low = middle + 1
         # Only an UNSAT check moves the endpoint that represents the guarantee.
         return (low if minimum else high), low == high
 
@@ -356,3 +364,54 @@ def generate_candidates(
             if len(found) == options.max_candidates:
                 return found
     return found
+
+
+def _transition_candidates(encoder: Encoder, options: GenerationOptions) -> list[Candidate]:
+    """Include primed terms: total functional T alone cannot constrain current s."""
+    pool = []
+    for node in encoder.model.nexts[:options.max_terms]:
+        state, update = node.args
+        nxt, current, rhs = encoder.next_states[state], encoder.expr(state), encoder.expr(update)
+        pool.append(Candidate(nxt == rhs, "transition", "next-equation", (node.id,)))
+        pool.append(Candidate(nxt == current, "equality", "transition-stability-guess", (node.id,)))
+        if z3.is_bv(nxt) and nxt.size() <= options.max_width:
+            pool.extend([
+                Candidate(nxt == 0, "equality", "next-value-guess", (node.id,)),
+                Candidate(z3.ULE(nxt, rhs), "unsigned_bound", "next-bound", (node.id,)),
+            ])
+        elif z3.is_array(nxt) and z3.is_store(rhs):
+            index, value = rhs.arg(1), rhs.arg(2)
+            pool.append(Candidate(z3.Select(nxt, index) == value, "array", "next-read-over-write", (node.id,)))
+    return pool
+
+
+def _deduplicate(candidates: list[Candidate], limit: int) -> list[Candidate]:
+    if limit <= 0:
+        return []
+    result, seen = [], set()
+    for candidate in candidates:
+        key = z3.simplify(candidate.expr).sexpr()
+        if key in seen or key == "true":
+            continue
+        seen.add(key)
+        result.append(candidate)
+        if len(result) >= limit:
+            break
+    return result
+
+
+def select_scope_candidates(
+    encoder: Encoder, candidates: list[Candidate], options: GenerationOptions,
+    *, transition: bool = False,
+) -> list[Candidate]:
+    """Apply the pipeline's final filtering and optional transition prefix.
+
+    Raw generation keeps array rewrite identities for direct callers to inspect
+    and deduplicates symmetric equalities against the hypothesis. Pipeline
+    evidence omits tautologies, so final filtering uses simplified SMT text and
+    removes identities, including those array rewrites. Filtering never refills
+    the already truncated raw pool.
+    """
+    if transition:
+        candidates = _transition_candidates(encoder, options) + candidates
+    return _deduplicate(candidates, options.max_candidates)

@@ -2,6 +2,12 @@
 
 Btor2Sieve implements a bounded, word-level generate-and-validate pipeline. It is a constraint extractor, not a reachability model checker. The project decision is to make the core C14 deliverable easy to install, inspect, and reproduce, then leave model-checker integration as a separately measurable extension.
 
+## Code boundaries
+
+The package follows the data flow described in the [source walkthrough](../README.md#find-your-way-around-the-code). The parser owns the typed model; the encoder owns its Z3 translation. `make_scopes` in `validation.py` chooses the exact hypothesis. The pipeline calls `generate_candidates` and then `select_scope_candidates`, both in `candidates.py`, to produce and select the ordered candidates to validate, including transition templates when requested. `Validator` checks each proposal independently. The pipeline records obligations and results, and the reporting module renders those plain dictionaries.
+
+Report replay is a separate operation: `replay(path, *, backend="z3", timeout_ms=5000, accepted_only=False)` in `replay.py` returns a result dictionary and an exit code. It verifies report artifacts and calls `validation.replay_smt2` for each query. The CLI supplies arguments and presents the result. This separation keeps argument parsing and report loading out of the proof checks.
+
 ## Research basis and alternatives
 
 The selected architecture combines finite templates, solver-guided abstraction of a fixed predicate, and independent implication checks. [Cabodi et al. (DATE 2009)](https://past.date-conference.com/proceedings-archive/2009/DATE09/PDFFILES/12.6_3.PDF) supplies the property-constraint motivation; [Froleyks et al. (FM 2026)](https://link.springer.com/chapter/10.1007/978-3-032-26204-2_9) makes the different constraint classes and their safe use explicit. Their work is not evidence that this implementation speeds up a model checker.
@@ -47,7 +53,9 @@ Semantic discovery additionally queries the original hypothesis in a separate in
 
 Complete binary searches use at most `w` queries per endpoint. Partial search may return a weaker bound already justified by completed UNSAT checks. Discovery stops on UNKNOWN or query exhaustion. A finite candidate/query/term/width budget makes extraction incomplete by design. Syntax and semantic candidates share the candidate budget; therefore semantic mode is not necessarily a superset of the baseline.
 
-Deduplication uses normalized expressions; obvious tautologies and the normalized hypothesis itself are suppressed. This is not an expensive logical independence or minimality test. Accepted constraints can overlap or be semantically equivalent; counts measure validated formulas, not independent information or novelty. Structural array identities retained by the generator are suppressed by the pipeline when they simplify to true.
+Deduplication uses normalized expressions; obvious tautologies and the normalized hypothesis itself are suppressed. This is not an expensive logical independence or minimality test. Accepted constraints can overlap or be semantically equivalent; counts measure validated formulas, not independent information or novelty.
+
+Candidate generation has two deliberately different selection steps. `generate_candidates` retains structural array identities as useful rewrite proposals, including identities that simplify to true. `select_scope_candidates` prepends transition templates when requested, then removes tautologies and duplicate normalized expressions before applying the final candidate limit. It does not refill slots vacated by filtering. Both steps live in `candidates.py`; keeping their policies distinct preserves candidate order and resource budgets.
 
 ## Independent validation and replay
 

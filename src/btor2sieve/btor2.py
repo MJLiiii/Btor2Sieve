@@ -78,11 +78,11 @@ _REDUCTIONS = {"redand", "redor", "redxor"}
 _INDEXED = {"uext": 1, "sext": 1, "slice": 2}
 _BINARY = set("and nand or nor xor xnor add sub mul sdiv udiv smod srem urem sll sra srl rol ror".split())
 _COMPARISONS = set("sgt sgte slt slte ugt ugte ult ulte".split())
-_OVERFLOWS = set("saddo ssubo smulo sdivo uaddo usubo umulo".split())
+OVERFLOW_OPS = set("saddo ssubo smulo sdivo uaddo usubo umulo".split())
 _ARITY = {
     **dict.fromkeys(_DECLARATIONS | _LITERALS, 0),
     **dict.fromkeys(_UNARY | _REDUCTIONS | _INDEXED.keys() | _UNSORTED, 1),
-    **dict.fromkeys(_BINARY | _COMPARISONS | _OVERFLOWS, 2),
+    **dict.fromkeys(_BINARY | _COMPARISONS | OVERFLOW_OPS, 2),
     **dict.fromkeys({"init", "next", "read", "concat", "eq", "neq", "iff", "implies"}, 2),
     "ite": 3,
     "write": 3,
@@ -190,7 +190,12 @@ class _Parser:
                 raise Btor2Error(f"invalid arity for {op}, expected a sort reference")
             sort_id, operands = self._sort_ref(operands[0]), operands[1:]
 
-        param_count = _INDEXED.get(op, int(op in _DIGITS))
+        if op in _INDEXED:
+            param_count = _INDEXED[op]
+        elif op in _DIGITS:
+            param_count = 1
+        else:
+            param_count = 0
         required = arity + param_count
         _check_arity(op, operands, required)
         args = tuple(map(self._term_ref, operands[:arity]))
@@ -265,7 +270,7 @@ class _Parser:
                 require(all(width == result.width for width in widths))
             elif op in _REDUCTIONS:
                 require(result.width == 1)
-            elif op in _COMPARISONS or op in _OVERFLOWS:
+            elif op in _COMPARISONS or op in OVERFLOW_OPS:
                 require(result.width == 1 and widths[0] == widths[1])
             elif op in {"iff", "implies"}:
                 require(result.width == 1 and widths == [1, 1])

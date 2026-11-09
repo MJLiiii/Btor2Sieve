@@ -7,7 +7,7 @@ from decimal import Decimal
 
 import z3
 
-from .btor2 import DIRECTIVES, Btor2Error, Model, Node, _OVERFLOWS
+from .btor2 import DIRECTIVES, OVERFLOW_OPS, Btor2Error, Model, Node
 
 
 _WORD_OPS = {
@@ -52,6 +52,13 @@ _BOOL_OPS = {
     "redand": lambda a: a == -1,
     "redor": lambda a: a != 0,
 }
+_OVERFLOW_ARITHMETIC = {
+    "saddo": operator.add,
+    "ssubo": operator.sub,
+    "smulo": operator.mul,
+    "uaddo": operator.add,
+    "umulo": operator.mul,
+}
 
 
 def _bit(predicate: z3.BoolRef) -> z3.BitVecRef:
@@ -89,7 +96,7 @@ def _overflow(op: str, a: z3.BitVecRef, b: z3.BitVecRef) -> z3.BitVecRef:
     # need one extra bit. A result fits iff truncating preserves its value.
     extra = width if op in {"smulo", "umulo"} else 1
     wide_a, wide_b = extend(extra, a), extend(extra, b)
-    wide = _WORD_OPS[op[1:-1]](wide_a, wide_b)
+    wide = _OVERFLOW_ARITHMETIC[op](wide_a, wide_b)
     return _bit(wide != extend(extra, z3.Extract(width - 1, 0, wide)))
 
 
@@ -127,7 +134,10 @@ class Encoder:
 
         assumptions = [self.bool_expr(node.args[0]) for node in model.constraints]
         inits = [self._init_equation(node) for node in model.inits]
-        nexts = [self.next_states[state] == self.expr(rhs) for state, rhs in (n.args for n in model.nexts)]
+        nexts = []
+        for node in model.nexts:
+            state, rhs = node.args
+            nexts.append(self.next_states[state] == self.expr(rhs))
         self.assumptions: z3.BoolRef = z3.And(assumptions) if assumptions else z3.BoolVal(True)
         self.initial: z3.BoolRef = z3.And(inits) if inits else z3.BoolVal(True)
         self.transition: z3.BoolRef = z3.And(nexts) if nexts else z3.BoolVal(True)
@@ -177,7 +187,7 @@ class Encoder:
             return _bit(_BOOL_OPS[op](*args))
         if op in {"rol", "ror"}:
             return _rotate(op, *args)
-        if op in _OVERFLOWS:
+        if op in OVERFLOW_OPS:
             return _overflow(op, *args)
         if op == "redxor":
             return _xor_reduce(args[0])
