@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce a bounded syntax/semantic comparison on the pinned public corpus."""
+"""Compare syntax/semantic extraction on all local BTOR2 benchmark collections."""
 
 from __future__ import annotations
 
@@ -17,6 +17,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, required=True, help="new evaluation directory")
+    parser.add_argument("--benchmarks", type=Path, default=ROOT / "benchmarks",
+                        help="recursively scan this directory for .btor2 files (default: benchmarks)")
     parser.add_argument("--timeout-ms", type=int, default=200)
     parser.add_argument("--max-candidates", type=int, default=80)
     parser.add_argument("--max-terms", type=int, default=12)
@@ -25,13 +27,16 @@ def main() -> int:
     args = parser.parse_args()
     if min(args.timeout_ms, args.max_candidates, args.max_terms, args.max_queries) <= 0:
         parser.error("all budgets must be positive")
-    subprocess.run([sys.executable, "scripts/fetch_benchmarks.py", "--check"], cwd=ROOT, check=True)
+    args.benchmarks = args.benchmarks.resolve()
+    files = [str(p) for p in sorted(args.benchmarks.rglob("*.btor2")) if p.is_file()]
+    if not files:
+        parser.error(f"No .btor2 files found under {args.benchmarks}; extract your benchmarks there first")
     destination = args.out.resolve()
     destination.mkdir(parents=True, exist_ok=False)
-    manifest = json.loads((ROOT / "benchmarks/manifest.json").read_text())
-    files = [str(Path("benchmarks") / e["path"]) for e in manifest["benchmarks"]]
     evaluation = {"configuration": {k: str(v) if isinstance(v, Path) else v for k, v in vars(args).items()},
-                  "benchmarks": len(files), "runs": {}}
+                  "benchmarks": len(files), "input_files": files, "runs": {}}
+    (destination / "evaluation.json").write_text(json.dumps(evaluation, indent=2) + "\n")
+    print(f"Evaluating all {len(files)} BTOR2 files under {args.benchmarks}", flush=True)
     for mode in ("syntax", "semantic"):
         out = destination / mode
         command = [sys.executable, "-m", "btor2sieve", "batch", *files, "--out", str(out),

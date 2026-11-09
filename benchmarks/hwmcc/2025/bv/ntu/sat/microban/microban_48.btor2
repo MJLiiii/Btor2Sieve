@@ -1,0 +1,1068 @@
+1 sort bitvec 1
+2 zero 1
+3 one 1
+4 state 1 P_1_1
+5 not 1 4
+6 state 1 P_1_2
+7 not 1 6
+8 state 1 P_1_3
+9 not 1 8
+10 state 1 P_1_4
+11 not 1 10
+12 state 1 P_2_1
+13 not 1 12
+14 state 1 P_2_2
+15 not 1 14
+16 state 1 P_2_4
+17 not 1 16
+18 state 1 P_3_1
+19 not 1 18
+20 state 1 P_3_2
+21 not 1 20
+22 state 1 P_3_4
+23 not 1 22
+24 state 1 P_3_5
+25 not 1 24
+26 state 1 P_4_1
+27 not 1 26
+28 state 1 P_4_2
+29 not 1 28
+30 state 1 P_4_3
+31 not 1 30
+32 state 1 P_4_4
+33 not 1 32
+34 state 1 P_4_5
+35 not 1 34
+36 state 1 P_4_6
+37 not 1 36
+38 state 1 P_5_1
+39 not 1 38
+40 state 1 P_5_2
+41 not 1 40
+42 state 1 P_5_4
+43 not 1 42
+44 state 1 P_5_5
+45 not 1 44
+46 state 1 P_5_6
+47 not 1 46
+48 state 1 P_6_4
+49 not 1 48
+50 state 1 P_6_5
+51 not 1 50
+52 state 1 P_6_6
+53 not 1 52
+54 state 1 B_2_2
+55 not 1 54
+56 state 1 B_2_4
+57 not 1 56
+58 state 1 B_3_2
+59 not 1 58
+60 state 1 B_3_4
+61 not 1 60
+62 state 1 B_4_2
+63 not 1 62
+64 state 1 B_4_3
+65 not 1 64
+66 state 1 B_4_4
+67 not 1 66
+68 state 1 B_4_5
+69 not 1 68
+70 state 1 B_5_2
+71 not 1 70
+72 state 1 B_5_4
+73 not 1 72
+74 state 1 B_5_5
+75 not 1 74
+76 input 1 next_P_1_1
+77 not 1 76
+78 input 1 next_P_1_2
+79 not 1 78
+80 input 1 next_P_1_3
+81 not 1 80
+82 input 1 next_P_1_4
+83 not 1 82
+84 input 1 next_P_2_1
+85 not 1 84
+86 input 1 next_P_2_2
+87 not 1 86
+88 input 1 next_P_2_4
+89 not 1 88
+90 input 1 next_P_3_1
+91 not 1 90
+92 input 1 next_P_3_2
+93 not 1 92
+94 input 1 next_P_3_4
+95 not 1 94
+96 input 1 next_P_3_5
+97 not 1 96
+98 input 1 next_P_4_1
+99 not 1 98
+100 input 1 next_P_4_2
+101 not 1 100
+102 input 1 next_P_4_3
+103 not 1 102
+104 input 1 next_P_4_4
+105 not 1 104
+106 input 1 next_P_4_5
+107 not 1 106
+108 input 1 next_P_4_6
+109 not 1 108
+110 input 1 next_P_5_1
+111 not 1 110
+112 input 1 next_P_5_2
+113 not 1 112
+114 input 1 next_P_5_4
+115 not 1 114
+116 input 1 next_P_5_5
+117 not 1 116
+118 input 1 next_P_5_6
+119 not 1 118
+120 input 1 next_P_6_4
+121 not 1 120
+122 input 1 next_P_6_5
+123 not 1 122
+124 input 1 next_P_6_6
+125 not 1 124
+126 input 1 next_B_2_2
+127 not 1 126
+128 input 1 next_B_2_4
+129 not 1 128
+130 input 1 next_B_3_2
+131 not 1 130
+132 input 1 next_B_3_4
+133 not 1 132
+134 input 1 next_B_4_2
+135 not 1 134
+136 input 1 next_B_4_3
+137 not 1 136
+138 input 1 next_B_4_4
+139 not 1 138
+140 input 1 next_B_4_5
+141 not 1 140
+142 input 1 next_B_5_2
+143 not 1 142
+144 input 1 next_B_5_4
+145 not 1 144
+146 input 1 next_B_5_5
+147 not 1 146
+148 init 1 4 2
+149 init 1 6 2
+150 init 1 8 3
+151 init 1 10 2
+152 init 1 12 2
+153 init 1 14 2
+154 init 1 16 2
+155 init 1 18 2
+156 init 1 20 2
+157 init 1 22 2
+158 init 1 24 2
+159 init 1 26 2
+160 init 1 28 2
+161 init 1 30 2
+162 init 1 32 2
+163 init 1 34 2
+164 init 1 36 2
+165 init 1 38 2
+166 init 1 40 2
+167 init 1 42 2
+168 init 1 44 2
+169 init 1 46 2
+170 init 1 48 2
+171 init 1 50 2
+172 init 1 52 2
+173 init 1 54 2
+174 init 1 56 2
+175 init 1 58 2
+176 init 1 60 2
+177 init 1 62 2
+178 init 1 64 3
+179 init 1 66 3
+180 init 1 68 3
+181 init 1 70 2
+182 init 1 72 2
+183 init 1 74 2
+184 next 1 4 76
+185 next 1 6 78
+186 next 1 8 80
+187 next 1 10 82
+188 next 1 12 84
+189 next 1 14 86
+190 next 1 16 88
+191 next 1 18 90
+192 next 1 20 92
+193 next 1 22 94
+194 next 1 24 96
+195 next 1 26 98
+196 next 1 28 100
+197 next 1 30 102
+198 next 1 32 104
+199 next 1 34 106
+200 next 1 36 108
+201 next 1 38 110
+202 next 1 40 112
+203 next 1 42 114
+204 next 1 44 116
+205 next 1 46 118
+206 next 1 48 120
+207 next 1 50 122
+208 next 1 52 124
+209 next 1 54 126
+210 next 1 56 128
+211 next 1 58 130
+212 next 1 60 132
+213 next 1 62 134
+214 next 1 64 136
+215 next 1 66 138
+216 next 1 68 140
+217 next 1 70 142
+218 next 1 72 144
+219 next 1 74 146
+220 or 1 14 30
+221 and 1 58 62
+222 and 1 221 70
+223 and 1 222 220
+224 bad 223
+225 or 1 5 84
+226 or 1 225 78
+227 constraint 226
+228 or 1 7 86
+229 or 1 228 76
+230 or 1 229 80
+231 constraint 230
+232 or 1 9 78
+233 or 1 232 82
+234 constraint 233
+235 or 1 11 88
+236 or 1 235 80
+237 constraint 236
+238 or 1 13 76
+239 or 1 238 90
+240 or 1 239 86
+241 constraint 240
+242 or 1 15 78
+243 or 1 242 92
+244 or 1 243 84
+245 constraint 244
+246 or 1 17 82
+247 or 1 246 94
+248 constraint 247
+249 or 1 19 84
+250 or 1 249 98
+251 or 1 250 92
+252 constraint 251
+253 or 1 21 86
+254 or 1 253 100
+255 or 1 254 90
+256 constraint 255
+257 or 1 23 88
+258 or 1 257 104
+259 or 1 258 96
+260 constraint 259
+261 or 1 25 106
+262 or 1 261 94
+263 constraint 262
+264 or 1 27 90
+265 or 1 264 110
+266 or 1 265 100
+267 constraint 266
+268 or 1 29 92
+269 or 1 268 112
+270 or 1 269 98
+271 or 1 270 102
+272 constraint 271
+273 or 1 31 100
+274 or 1 273 104
+275 constraint 274
+276 or 1 33 94
+277 or 1 276 114
+278 or 1 277 102
+279 or 1 278 106
+280 constraint 279
+281 or 1 35 96
+282 or 1 281 116
+283 or 1 282 104
+284 or 1 283 108
+285 constraint 284
+286 or 1 37 118
+287 or 1 286 106
+288 constraint 287
+289 or 1 39 98
+290 or 1 289 112
+291 constraint 290
+292 or 1 41 100
+293 or 1 292 110
+294 constraint 293
+295 or 1 43 104
+296 or 1 295 120
+297 or 1 296 116
+298 constraint 297
+299 or 1 45 106
+300 or 1 299 122
+301 or 1 300 114
+302 or 1 301 118
+303 constraint 302
+304 or 1 47 108
+305 or 1 304 124
+306 or 1 305 116
+307 constraint 306
+308 or 1 49 114
+309 or 1 308 122
+310 constraint 309
+311 or 1 51 116
+312 or 1 311 120
+313 or 1 312 124
+314 constraint 313
+315 or 1 53 118
+316 or 1 315 122
+317 constraint 316
+318 and 1 58 28
+319 and 1 318 131
+320 and 1 319 92
+321 or 1 127 54
+322 or 1 321 320
+323 constraint 322
+324 and 1 60 32
+325 and 1 324 133
+326 and 1 325 94
+327 or 1 129 56
+328 or 1 327 326
+329 constraint 328
+330 and 1 54 6
+331 and 1 330 127
+332 and 1 331 86
+333 and 1 62 40
+334 and 1 333 135
+335 and 1 334 100
+336 or 1 131 58
+337 or 1 336 332
+338 or 1 337 335
+339 constraint 338
+340 and 1 56 10
+341 and 1 340 129
+342 and 1 341 88
+343 and 1 66 42
+344 and 1 343 139
+345 and 1 344 104
+346 or 1 133 60
+347 or 1 346 342
+348 or 1 347 345
+349 constraint 348
+350 and 1 58 14
+351 and 1 350 131
+352 and 1 351 92
+353 and 1 64 32
+354 and 1 353 137
+355 and 1 354 102
+356 or 1 135 62
+357 or 1 356 352
+358 or 1 357 355
+359 constraint 358
+360 and 1 62 26
+361 and 1 360 135
+362 and 1 361 100
+363 and 1 66 34
+364 and 1 363 139
+365 and 1 364 104
+366 or 1 137 64
+367 or 1 366 362
+368 or 1 367 365
+369 constraint 368
+370 and 1 60 16
+371 and 1 370 133
+372 and 1 371 94
+373 and 1 72 48
+374 and 1 373 145
+375 and 1 374 114
+376 and 1 64 28
+377 and 1 376 137
+378 and 1 377 102
+379 and 1 68 36
+380 and 1 379 141
+381 and 1 380 106
+382 or 1 139 66
+383 or 1 382 372
+384 or 1 383 375
+385 or 1 384 378
+386 or 1 385 381
+387 constraint 386
+388 and 1 74 50
+389 and 1 388 147
+390 and 1 389 116
+391 and 1 66 30
+392 and 1 391 139
+393 and 1 392 104
+394 or 1 141 68
+395 or 1 394 390
+396 or 1 395 393
+397 constraint 396
+398 and 1 62 20
+399 and 1 398 135
+400 and 1 399 100
+401 or 1 143 70
+402 or 1 401 400
+403 constraint 402
+404 and 1 66 22
+405 and 1 404 139
+406 and 1 405 104
+407 and 1 74 46
+408 and 1 407 147
+409 and 1 408 116
+410 or 1 145 72
+411 or 1 410 406
+412 or 1 411 409
+413 constraint 412
+414 and 1 68 24
+415 and 1 414 141
+416 and 1 415 106
+417 or 1 147 74
+418 or 1 417 416
+419 constraint 418
+420 or 1 5 7
+421 constraint 420
+422 or 1 5 9
+423 constraint 422
+424 or 1 5 11
+425 constraint 424
+426 or 1 5 13
+427 constraint 426
+428 or 1 5 15
+429 constraint 428
+430 or 1 5 17
+431 constraint 430
+432 or 1 5 19
+433 constraint 432
+434 or 1 5 21
+435 constraint 434
+436 or 1 5 23
+437 constraint 436
+438 or 1 5 25
+439 constraint 438
+440 or 1 5 27
+441 constraint 440
+442 or 1 5 29
+443 constraint 442
+444 or 1 5 31
+445 constraint 444
+446 or 1 5 33
+447 constraint 446
+448 or 1 5 35
+449 constraint 448
+450 or 1 5 37
+451 constraint 450
+452 or 1 5 39
+453 constraint 452
+454 or 1 5 41
+455 constraint 454
+456 or 1 5 43
+457 constraint 456
+458 or 1 5 45
+459 constraint 458
+460 or 1 5 47
+461 constraint 460
+462 or 1 5 49
+463 constraint 462
+464 or 1 5 51
+465 constraint 464
+466 or 1 5 53
+467 constraint 466
+468 or 1 7 9
+469 constraint 468
+470 or 1 7 11
+471 constraint 470
+472 or 1 7 13
+473 constraint 472
+474 or 1 7 15
+475 constraint 474
+476 or 1 7 17
+477 constraint 476
+478 or 1 7 19
+479 constraint 478
+480 or 1 7 21
+481 constraint 480
+482 or 1 7 23
+483 constraint 482
+484 or 1 7 25
+485 constraint 484
+486 or 1 7 27
+487 constraint 486
+488 or 1 7 29
+489 constraint 488
+490 or 1 7 31
+491 constraint 490
+492 or 1 7 33
+493 constraint 492
+494 or 1 7 35
+495 constraint 494
+496 or 1 7 37
+497 constraint 496
+498 or 1 7 39
+499 constraint 498
+500 or 1 7 41
+501 constraint 500
+502 or 1 7 43
+503 constraint 502
+504 or 1 7 45
+505 constraint 504
+506 or 1 7 47
+507 constraint 506
+508 or 1 7 49
+509 constraint 508
+510 or 1 7 51
+511 constraint 510
+512 or 1 7 53
+513 constraint 512
+514 or 1 9 11
+515 constraint 514
+516 or 1 9 13
+517 constraint 516
+518 or 1 9 15
+519 constraint 518
+520 or 1 9 17
+521 constraint 520
+522 or 1 9 19
+523 constraint 522
+524 or 1 9 21
+525 constraint 524
+526 or 1 9 23
+527 constraint 526
+528 or 1 9 25
+529 constraint 528
+530 or 1 9 27
+531 constraint 530
+532 or 1 9 29
+533 constraint 532
+534 or 1 9 31
+535 constraint 534
+536 or 1 9 33
+537 constraint 536
+538 or 1 9 35
+539 constraint 538
+540 or 1 9 37
+541 constraint 540
+542 or 1 9 39
+543 constraint 542
+544 or 1 9 41
+545 constraint 544
+546 or 1 9 43
+547 constraint 546
+548 or 1 9 45
+549 constraint 548
+550 or 1 9 47
+551 constraint 550
+552 or 1 9 49
+553 constraint 552
+554 or 1 9 51
+555 constraint 554
+556 or 1 9 53
+557 constraint 556
+558 or 1 11 13
+559 constraint 558
+560 or 1 11 15
+561 constraint 560
+562 or 1 11 17
+563 constraint 562
+564 or 1 11 19
+565 constraint 564
+566 or 1 11 21
+567 constraint 566
+568 or 1 11 23
+569 constraint 568
+570 or 1 11 25
+571 constraint 570
+572 or 1 11 27
+573 constraint 572
+574 or 1 11 29
+575 constraint 574
+576 or 1 11 31
+577 constraint 576
+578 or 1 11 33
+579 constraint 578
+580 or 1 11 35
+581 constraint 580
+582 or 1 11 37
+583 constraint 582
+584 or 1 11 39
+585 constraint 584
+586 or 1 11 41
+587 constraint 586
+588 or 1 11 43
+589 constraint 588
+590 or 1 11 45
+591 constraint 590
+592 or 1 11 47
+593 constraint 592
+594 or 1 11 49
+595 constraint 594
+596 or 1 11 51
+597 constraint 596
+598 or 1 11 53
+599 constraint 598
+600 or 1 13 15
+601 constraint 600
+602 or 1 13 17
+603 constraint 602
+604 or 1 13 19
+605 constraint 604
+606 or 1 13 21
+607 constraint 606
+608 or 1 13 23
+609 constraint 608
+610 or 1 13 25
+611 constraint 610
+612 or 1 13 27
+613 constraint 612
+614 or 1 13 29
+615 constraint 614
+616 or 1 13 31
+617 constraint 616
+618 or 1 13 33
+619 constraint 618
+620 or 1 13 35
+621 constraint 620
+622 or 1 13 37
+623 constraint 622
+624 or 1 13 39
+625 constraint 624
+626 or 1 13 41
+627 constraint 626
+628 or 1 13 43
+629 constraint 628
+630 or 1 13 45
+631 constraint 630
+632 or 1 13 47
+633 constraint 632
+634 or 1 13 49
+635 constraint 634
+636 or 1 13 51
+637 constraint 636
+638 or 1 13 53
+639 constraint 638
+640 or 1 15 17
+641 constraint 640
+642 or 1 15 19
+643 constraint 642
+644 or 1 15 21
+645 constraint 644
+646 or 1 15 23
+647 constraint 646
+648 or 1 15 25
+649 constraint 648
+650 or 1 15 27
+651 constraint 650
+652 or 1 15 29
+653 constraint 652
+654 or 1 15 31
+655 constraint 654
+656 or 1 15 33
+657 constraint 656
+658 or 1 15 35
+659 constraint 658
+660 or 1 15 37
+661 constraint 660
+662 or 1 15 39
+663 constraint 662
+664 or 1 15 41
+665 constraint 664
+666 or 1 15 43
+667 constraint 666
+668 or 1 15 45
+669 constraint 668
+670 or 1 15 47
+671 constraint 670
+672 or 1 15 49
+673 constraint 672
+674 or 1 15 51
+675 constraint 674
+676 or 1 15 53
+677 constraint 676
+678 or 1 17 19
+679 constraint 678
+680 or 1 17 21
+681 constraint 680
+682 or 1 17 23
+683 constraint 682
+684 or 1 17 25
+685 constraint 684
+686 or 1 17 27
+687 constraint 686
+688 or 1 17 29
+689 constraint 688
+690 or 1 17 31
+691 constraint 690
+692 or 1 17 33
+693 constraint 692
+694 or 1 17 35
+695 constraint 694
+696 or 1 17 37
+697 constraint 696
+698 or 1 17 39
+699 constraint 698
+700 or 1 17 41
+701 constraint 700
+702 or 1 17 43
+703 constraint 702
+704 or 1 17 45
+705 constraint 704
+706 or 1 17 47
+707 constraint 706
+708 or 1 17 49
+709 constraint 708
+710 or 1 17 51
+711 constraint 710
+712 or 1 17 53
+713 constraint 712
+714 or 1 19 21
+715 constraint 714
+716 or 1 19 23
+717 constraint 716
+718 or 1 19 25
+719 constraint 718
+720 or 1 19 27
+721 constraint 720
+722 or 1 19 29
+723 constraint 722
+724 or 1 19 31
+725 constraint 724
+726 or 1 19 33
+727 constraint 726
+728 or 1 19 35
+729 constraint 728
+730 or 1 19 37
+731 constraint 730
+732 or 1 19 39
+733 constraint 732
+734 or 1 19 41
+735 constraint 734
+736 or 1 19 43
+737 constraint 736
+738 or 1 19 45
+739 constraint 738
+740 or 1 19 47
+741 constraint 740
+742 or 1 19 49
+743 constraint 742
+744 or 1 19 51
+745 constraint 744
+746 or 1 19 53
+747 constraint 746
+748 or 1 21 23
+749 constraint 748
+750 or 1 21 25
+751 constraint 750
+752 or 1 21 27
+753 constraint 752
+754 or 1 21 29
+755 constraint 754
+756 or 1 21 31
+757 constraint 756
+758 or 1 21 33
+759 constraint 758
+760 or 1 21 35
+761 constraint 760
+762 or 1 21 37
+763 constraint 762
+764 or 1 21 39
+765 constraint 764
+766 or 1 21 41
+767 constraint 766
+768 or 1 21 43
+769 constraint 768
+770 or 1 21 45
+771 constraint 770
+772 or 1 21 47
+773 constraint 772
+774 or 1 21 49
+775 constraint 774
+776 or 1 21 51
+777 constraint 776
+778 or 1 21 53
+779 constraint 778
+780 or 1 23 25
+781 constraint 780
+782 or 1 23 27
+783 constraint 782
+784 or 1 23 29
+785 constraint 784
+786 or 1 23 31
+787 constraint 786
+788 or 1 23 33
+789 constraint 788
+790 or 1 23 35
+791 constraint 790
+792 or 1 23 37
+793 constraint 792
+794 or 1 23 39
+795 constraint 794
+796 or 1 23 41
+797 constraint 796
+798 or 1 23 43
+799 constraint 798
+800 or 1 23 45
+801 constraint 800
+802 or 1 23 47
+803 constraint 802
+804 or 1 23 49
+805 constraint 804
+806 or 1 23 51
+807 constraint 806
+808 or 1 23 53
+809 constraint 808
+810 or 1 25 27
+811 constraint 810
+812 or 1 25 29
+813 constraint 812
+814 or 1 25 31
+815 constraint 814
+816 or 1 25 33
+817 constraint 816
+818 or 1 25 35
+819 constraint 818
+820 or 1 25 37
+821 constraint 820
+822 or 1 25 39
+823 constraint 822
+824 or 1 25 41
+825 constraint 824
+826 or 1 25 43
+827 constraint 826
+828 or 1 25 45
+829 constraint 828
+830 or 1 25 47
+831 constraint 830
+832 or 1 25 49
+833 constraint 832
+834 or 1 25 51
+835 constraint 834
+836 or 1 25 53
+837 constraint 836
+838 or 1 27 29
+839 constraint 838
+840 or 1 27 31
+841 constraint 840
+842 or 1 27 33
+843 constraint 842
+844 or 1 27 35
+845 constraint 844
+846 or 1 27 37
+847 constraint 846
+848 or 1 27 39
+849 constraint 848
+850 or 1 27 41
+851 constraint 850
+852 or 1 27 43
+853 constraint 852
+854 or 1 27 45
+855 constraint 854
+856 or 1 27 47
+857 constraint 856
+858 or 1 27 49
+859 constraint 858
+860 or 1 27 51
+861 constraint 860
+862 or 1 27 53
+863 constraint 862
+864 or 1 29 31
+865 constraint 864
+866 or 1 29 33
+867 constraint 866
+868 or 1 29 35
+869 constraint 868
+870 or 1 29 37
+871 constraint 870
+872 or 1 29 39
+873 constraint 872
+874 or 1 29 41
+875 constraint 874
+876 or 1 29 43
+877 constraint 876
+878 or 1 29 45
+879 constraint 878
+880 or 1 29 47
+881 constraint 880
+882 or 1 29 49
+883 constraint 882
+884 or 1 29 51
+885 constraint 884
+886 or 1 29 53
+887 constraint 886
+888 or 1 31 33
+889 constraint 888
+890 or 1 31 35
+891 constraint 890
+892 or 1 31 37
+893 constraint 892
+894 or 1 31 39
+895 constraint 894
+896 or 1 31 41
+897 constraint 896
+898 or 1 31 43
+899 constraint 898
+900 or 1 31 45
+901 constraint 900
+902 or 1 31 47
+903 constraint 902
+904 or 1 31 49
+905 constraint 904
+906 or 1 31 51
+907 constraint 906
+908 or 1 31 53
+909 constraint 908
+910 or 1 33 35
+911 constraint 910
+912 or 1 33 37
+913 constraint 912
+914 or 1 33 39
+915 constraint 914
+916 or 1 33 41
+917 constraint 916
+918 or 1 33 43
+919 constraint 918
+920 or 1 33 45
+921 constraint 920
+922 or 1 33 47
+923 constraint 922
+924 or 1 33 49
+925 constraint 924
+926 or 1 33 51
+927 constraint 926
+928 or 1 33 53
+929 constraint 928
+930 or 1 35 37
+931 constraint 930
+932 or 1 35 39
+933 constraint 932
+934 or 1 35 41
+935 constraint 934
+936 or 1 35 43
+937 constraint 936
+938 or 1 35 45
+939 constraint 938
+940 or 1 35 47
+941 constraint 940
+942 or 1 35 49
+943 constraint 942
+944 or 1 35 51
+945 constraint 944
+946 or 1 35 53
+947 constraint 946
+948 or 1 37 39
+949 constraint 948
+950 or 1 37 41
+951 constraint 950
+952 or 1 37 43
+953 constraint 952
+954 or 1 37 45
+955 constraint 954
+956 or 1 37 47
+957 constraint 956
+958 or 1 37 49
+959 constraint 958
+960 or 1 37 51
+961 constraint 960
+962 or 1 37 53
+963 constraint 962
+964 or 1 39 41
+965 constraint 964
+966 or 1 39 43
+967 constraint 966
+968 or 1 39 45
+969 constraint 968
+970 or 1 39 47
+971 constraint 970
+972 or 1 39 49
+973 constraint 972
+974 or 1 39 51
+975 constraint 974
+976 or 1 39 53
+977 constraint 976
+978 or 1 41 43
+979 constraint 978
+980 or 1 41 45
+981 constraint 980
+982 or 1 41 47
+983 constraint 982
+984 or 1 41 49
+985 constraint 984
+986 or 1 41 51
+987 constraint 986
+988 or 1 41 53
+989 constraint 988
+990 or 1 43 45
+991 constraint 990
+992 or 1 43 47
+993 constraint 992
+994 or 1 43 49
+995 constraint 994
+996 or 1 43 51
+997 constraint 996
+998 or 1 43 53
+999 constraint 998
+1000 or 1 45 47
+1001 constraint 1000
+1002 or 1 45 49
+1003 constraint 1002
+1004 or 1 45 51
+1005 constraint 1004
+1006 or 1 45 53
+1007 constraint 1006
+1008 or 1 47 49
+1009 constraint 1008
+1010 or 1 47 51
+1011 constraint 1010
+1012 or 1 47 53
+1013 constraint 1012
+1014 or 1 49 51
+1015 constraint 1014
+1016 or 1 49 53
+1017 constraint 1016
+1018 or 1 51 53
+1019 constraint 1018
+1020 sort bitvec 5
+1021 zero 1020
+1022 constd 1020 3
+1023 uext 1020 54 4
+1024 add 1020 1021 1023
+1025 uext 1020 56 4
+1026 add 1020 1024 1025
+1027 uext 1020 58 4
+1028 add 1020 1026 1027
+1029 uext 1020 60 4
+1030 add 1020 1028 1029
+1031 uext 1020 62 4
+1032 add 1020 1030 1031
+1033 uext 1020 64 4
+1034 add 1020 1032 1033
+1035 uext 1020 66 4
+1036 add 1020 1034 1035
+1037 uext 1020 68 4
+1038 add 1020 1036 1037
+1039 uext 1020 70 4
+1040 add 1020 1038 1039
+1041 uext 1020 72 4
+1042 add 1020 1040 1041
+1043 uext 1020 74 4
+1044 add 1020 1042 1043
+1045 eq 1 1044 1022
+1046 constraint 1045
+1047 or 1 55 15
+1048 constraint 1047
+1049 or 1 57 17
+1050 constraint 1049
+1051 or 1 59 21
+1052 constraint 1051
+1053 or 1 61 23
+1054 constraint 1053
+1055 or 1 63 29
+1056 constraint 1055
+1057 or 1 65 31
+1058 constraint 1057
+1059 or 1 67 33
+1060 constraint 1059
+1061 or 1 69 35
+1062 constraint 1061
+1063 or 1 71 41
+1064 constraint 1063
+1065 or 1 73 43
+1066 constraint 1065
+1067 or 1 75 45
+1068 constraint 1067

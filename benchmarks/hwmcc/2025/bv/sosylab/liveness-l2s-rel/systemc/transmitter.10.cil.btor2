@@ -1,0 +1,5214 @@
+1 sort bitvec 32
+2 sort bitvec 1
+3 constd 2 0
+4 constd 2 1
+5 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in___VERIFIER_nondet_int#1)<h#<__VERIFIER_nondet_int.return>>>>>>}
+6 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in___VERIFIER_nondet_int#3)<h#<__VERIFIER_nondet_int.return>>>>>>}
+7 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in___VERIFIER_nondet_int#5)<h#<__VERIFIER_nondet_int.return>>>>>>}
+8 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in___VERIFIER_nondet_int#7)<h#<__VERIFIER_nondet_int.return>>>>>>}
+9 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in___VERIFIER_nondet_int#9)<h#<__VERIFIER_nondet_int.return>>>>>>}
+10 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in___VERIFIER_nondet_int#11)<h#<__VERIFIER_nondet_int.return>>>>>>}
+11 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in___VERIFIER_nondet_int#13)<h#<__VERIFIER_nondet_int.return>>>>>>}
+12 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in___VERIFIER_nondet_int#15)<h#<__VERIFIER_nondet_int.return>>>>>>}
+13 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in___VERIFIER_nondet_int#17)<h#<__VERIFIER_nondet_int.return>>>>>>}
+14 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in___VERIFIER_nondet_int#19)<h#<__VERIFIER_nondet_int.return>>>>>>}
+15 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in___VERIFIER_nondet_int#21)<h#<__VERIFIER_nondet_int.return>>>>>>}
+16 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_exists_runnable_thread#0)<__retres1>>>>>}#3
+17 input 1 %{m_pc}#2
+18 input 1 %{m_st}#3
+19 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$temp.1>>>>}#3
+20 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit1#4)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_master_triggered#0)<__retres1>>>>>>>>}#3
+21 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit1#4)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit1_triggered#1)<__retres1>>>>>>>>}#3
+22 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit1#4)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit3_triggered#3)<__retres1>>>>>>>>}#3
+23 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit1#4)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit4_triggered#4)<__retres1>>>>>>>>}#3
+24 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit1#4)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit5_triggered#5)<__retres1>>>>>>>>}#3
+25 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit1#4)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit6_triggered#6)<__retres1>>>>>>>>}#3
+26 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit1#4)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit7_triggered#7)<__retres1>>>>>>>>}#3
+27 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit1#4)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit8_triggered#8)<__retres1>>>>>>>>}#3
+28 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit1#4)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit9_triggered#9)<__retres1>>>>>>>>}#3
+29 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit1#4)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit10_triggered#10)<__retres1>>>>>>>>}#3
+30 input 1 %{E_2}#3
+31 input 1 %{m_st}#5
+32 input 1 %{t10_st}#2
+33 input 1 %{t1_st}#3
+34 input 1 %{t2_st}#2
+35 input 1 %{t3_st}#2
+36 input 1 %{t4_st}#2
+37 input 1 %{t5_st}#2
+38 input 1 %{t6_st}#2
+39 input 1 %{t7_st}#2
+40 input 1 %{t8_st}#2
+41 input 1 %{t9_st}#2
+42 input 1 %{t1_pc}#2
+43 input 1 %{t1_st}#5
+44 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$temp.1>>>>}#5
+45 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit2#6)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_master_triggered#0)<__retres1>>>>>>>>}#3
+46 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit2#6)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit1_triggered#1)<__retres1>>>>>>>>}#3
+47 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit2#6)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit2_triggered#2)<__retres1>>>>>>>>}#3
+48 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit2#6)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit4_triggered#4)<__retres1>>>>>>>>}#3
+49 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit2#6)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit5_triggered#5)<__retres1>>>>>>>>}#3
+50 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit2#6)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit6_triggered#6)<__retres1>>>>>>>>}#3
+51 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit2#6)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit7_triggered#7)<__retres1>>>>>>>>}#3
+52 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit2#6)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit8_triggered#8)<__retres1>>>>>>>>}#3
+53 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit2#6)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit9_triggered#9)<__retres1>>>>>>>>}#3
+54 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit2#6)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit10_triggered#10)<__retres1>>>>>>>>}#3
+55 input 1 %{E_3}#3
+56 input 1 %{m_st}#7
+57 input 1 %{t10_st}#4
+58 input 1 %{t1_st}#7
+59 input 1 %{t2_st}#5
+60 input 1 %{t3_st}#4
+61 input 1 %{t4_st}#4
+62 input 1 %{t5_st}#4
+63 input 1 %{t6_st}#4
+64 input 1 %{t7_st}#4
+65 input 1 %{t8_st}#4
+66 input 1 %{t9_st}#4
+67 input 1 %{t2_pc}#2
+68 input 1 %{t2_st}#7
+69 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$temp.1>>>>}#7
+70 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit3#8)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_master_triggered#0)<__retres1>>>>>>>>}#3
+71 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit3#8)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit1_triggered#1)<__retres1>>>>>>>>}#3
+72 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit3#8)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit2_triggered#2)<__retres1>>>>>>>>}#3
+73 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit3#8)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit3_triggered#3)<__retres1>>>>>>>>}#3
+74 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit3#8)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit5_triggered#5)<__retres1>>>>>>>>}#3
+75 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit3#8)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit6_triggered#6)<__retres1>>>>>>>>}#3
+76 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit3#8)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit7_triggered#7)<__retres1>>>>>>>>}#3
+77 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit3#8)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit8_triggered#8)<__retres1>>>>>>>>}#3
+78 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit3#8)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit9_triggered#9)<__retres1>>>>>>>>}#3
+79 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit3#8)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit10_triggered#10)<__retres1>>>>>>>>}#3
+80 input 1 %{E_4}#3
+81 input 1 %{m_st}#9
+82 input 1 %{t10_st}#6
+83 input 1 %{t1_st}#9
+84 input 1 %{t2_st}#9
+85 input 1 %{t3_st}#7
+86 input 1 %{t4_st}#6
+87 input 1 %{t5_st}#6
+88 input 1 %{t6_st}#6
+89 input 1 %{t7_st}#6
+90 input 1 %{t8_st}#6
+91 input 1 %{t9_st}#6
+92 input 1 %{t3_pc}#2
+93 input 1 %{t3_st}#9
+94 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$temp.1>>>>}#9
+95 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit4#10)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_master_triggered#0)<__retres1>>>>>>>>}#3
+96 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit4#10)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit1_triggered#1)<__retres1>>>>>>>>}#3
+97 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit4#10)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit2_triggered#2)<__retres1>>>>>>>>}#3
+98 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit4#10)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit3_triggered#3)<__retres1>>>>>>>>}#3
+99 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit4#10)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit4_triggered#4)<__retres1>>>>>>>>}#3
+100 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit4#10)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit6_triggered#6)<__retres1>>>>>>>>}#3
+101 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit4#10)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit7_triggered#7)<__retres1>>>>>>>>}#3
+102 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit4#10)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit8_triggered#8)<__retres1>>>>>>>>}#3
+103 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit4#10)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit9_triggered#9)<__retres1>>>>>>>>}#3
+104 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit4#10)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit10_triggered#10)<__retres1>>>>>>>>}#3
+105 input 1 %{E_5}#3
+106 input 1 %{m_st}#11
+107 input 1 %{t10_st}#8
+108 input 1 %{t1_st}#11
+109 input 1 %{t2_st}#11
+110 input 1 %{t3_st}#11
+111 input 1 %{t4_st}#9
+112 input 1 %{t5_st}#8
+113 input 1 %{t6_st}#8
+114 input 1 %{t7_st}#8
+115 input 1 %{t8_st}#8
+116 input 1 %{t9_st}#8
+117 input 1 %{t4_pc}#2
+118 input 1 %{t4_st}#11
+119 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$temp.1>>>>}#11
+120 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit5#12)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_master_triggered#0)<__retres1>>>>>>>>}#3
+121 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit5#12)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit1_triggered#1)<__retres1>>>>>>>>}#3
+122 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit5#12)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit2_triggered#2)<__retres1>>>>>>>>}#3
+123 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit5#12)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit3_triggered#3)<__retres1>>>>>>>>}#3
+124 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit5#12)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit4_triggered#4)<__retres1>>>>>>>>}#3
+125 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit5#12)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit5_triggered#5)<__retres1>>>>>>>>}#3
+126 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit5#12)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit7_triggered#7)<__retres1>>>>>>>>}#3
+127 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit5#12)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit8_triggered#8)<__retres1>>>>>>>>}#3
+128 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit5#12)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit9_triggered#9)<__retres1>>>>>>>>}#3
+129 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit5#12)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit10_triggered#10)<__retres1>>>>>>>>}#3
+130 input 1 %{E_6}#3
+131 input 1 %{m_st}#13
+132 input 1 %{t10_st}#10
+133 input 1 %{t1_st}#13
+134 input 1 %{t2_st}#13
+135 input 1 %{t3_st}#13
+136 input 1 %{t4_st}#13
+137 input 1 %{t5_st}#11
+138 input 1 %{t6_st}#10
+139 input 1 %{t7_st}#10
+140 input 1 %{t8_st}#10
+141 input 1 %{t9_st}#10
+142 input 1 %{t5_pc}#2
+143 input 1 %{t5_st}#13
+144 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$temp.1>>>>}#13
+145 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit6#14)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_master_triggered#0)<__retres1>>>>>>>>}#3
+146 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit6#14)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit1_triggered#1)<__retres1>>>>>>>>}#3
+147 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit6#14)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit2_triggered#2)<__retres1>>>>>>>>}#3
+148 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit6#14)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit3_triggered#3)<__retres1>>>>>>>>}#3
+149 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit6#14)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit4_triggered#4)<__retres1>>>>>>>>}#3
+150 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit6#14)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit5_triggered#5)<__retres1>>>>>>>>}#3
+151 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit6#14)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit6_triggered#6)<__retres1>>>>>>>>}#3
+152 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit6#14)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit8_triggered#8)<__retres1>>>>>>>>}#3
+153 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit6#14)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit9_triggered#9)<__retres1>>>>>>>>}#3
+154 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit6#14)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit10_triggered#10)<__retres1>>>>>>>>}#3
+155 input 1 %{E_7}#3
+156 input 1 %{m_st}#15
+157 input 1 %{t10_st}#12
+158 input 1 %{t1_st}#15
+159 input 1 %{t2_st}#15
+160 input 1 %{t3_st}#15
+161 input 1 %{t4_st}#15
+162 input 1 %{t5_st}#15
+163 input 1 %{t6_st}#13
+164 input 1 %{t7_st}#12
+165 input 1 %{t8_st}#12
+166 input 1 %{t9_st}#12
+167 input 1 %{t6_pc}#2
+168 input 1 %{t6_st}#15
+169 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$temp.1>>>>}#15
+170 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit7#16)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_master_triggered#0)<__retres1>>>>>>>>}#3
+171 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit7#16)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit1_triggered#1)<__retres1>>>>>>>>}#3
+172 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit7#16)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit2_triggered#2)<__retres1>>>>>>>>}#3
+173 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit7#16)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit3_triggered#3)<__retres1>>>>>>>>}#3
+174 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit7#16)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit4_triggered#4)<__retres1>>>>>>>>}#3
+175 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit7#16)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit5_triggered#5)<__retres1>>>>>>>>}#3
+176 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit7#16)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit6_triggered#6)<__retres1>>>>>>>>}#3
+177 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit7#16)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit7_triggered#7)<__retres1>>>>>>>>}#3
+178 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit7#16)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit9_triggered#9)<__retres1>>>>>>>>}#3
+179 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit7#16)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit10_triggered#10)<__retres1>>>>>>>>}#3
+180 input 1 %{E_8}#3
+181 input 1 %{m_st}#17
+182 input 1 %{t10_st}#14
+183 input 1 %{t1_st}#17
+184 input 1 %{t2_st}#17
+185 input 1 %{t3_st}#17
+186 input 1 %{t4_st}#17
+187 input 1 %{t5_st}#17
+188 input 1 %{t6_st}#17
+189 input 1 %{t7_st}#15
+190 input 1 %{t8_st}#14
+191 input 1 %{t9_st}#14
+192 input 1 %{t7_pc}#2
+193 input 1 %{t7_st}#17
+194 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$temp.1>>>>}#17
+195 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit8#18)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_master_triggered#0)<__retres1>>>>>>>>}#3
+196 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit8#18)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit1_triggered#1)<__retres1>>>>>>>>}#3
+197 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit8#18)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit2_triggered#2)<__retres1>>>>>>>>}#3
+198 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit8#18)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit3_triggered#3)<__retres1>>>>>>>>}#3
+199 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit8#18)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit4_triggered#4)<__retres1>>>>>>>>}#3
+200 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit8#18)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit5_triggered#5)<__retres1>>>>>>>>}#3
+201 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit8#18)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit6_triggered#6)<__retres1>>>>>>>>}#3
+202 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit8#18)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit7_triggered#7)<__retres1>>>>>>>>}#3
+203 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit8#18)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit8_triggered#8)<__retres1>>>>>>>>}#3
+204 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit8#18)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit10_triggered#10)<__retres1>>>>>>>>}#3
+205 input 1 %{E_9}#3
+206 input 1 %{m_st}#19
+207 input 1 %{t10_st}#16
+208 input 1 %{t1_st}#19
+209 input 1 %{t2_st}#19
+210 input 1 %{t3_st}#19
+211 input 1 %{t4_st}#19
+212 input 1 %{t5_st}#19
+213 input 1 %{t6_st}#19
+214 input 1 %{t7_st}#19
+215 input 1 %{t8_st}#17
+216 input 1 %{t9_st}#16
+217 input 1 %{t8_pc}#2
+218 input 1 %{t8_st}#19
+219 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$temp.1>>>>}#19
+220 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit9#20)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_master_triggered#0)<__retres1>>>>>>>>}#3
+221 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit9#20)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit1_triggered#1)<__retres1>>>>>>>>}#3
+222 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit9#20)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit2_triggered#2)<__retres1>>>>>>>>}#3
+223 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit9#20)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit3_triggered#3)<__retres1>>>>>>>>}#3
+224 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit9#20)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit4_triggered#4)<__retres1>>>>>>>>}#3
+225 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit9#20)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit5_triggered#5)<__retres1>>>>>>>>}#3
+226 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit9#20)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit6_triggered#6)<__retres1>>>>>>>>}#3
+227 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit9#20)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit7_triggered#7)<__retres1>>>>>>>>}#3
+228 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit9#20)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit8_triggered#8)<__retres1>>>>>>>>}#3
+229 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_transmit9#20)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit9_triggered#9)<__retres1>>>>>>>>}#3
+230 input 1 %{E_10}#3
+231 input 1 %{m_st}#21
+232 input 1 %{t10_st}#18
+233 input 1 %{t1_st}#21
+234 input 1 %{t2_st}#21
+235 input 1 %{t3_st}#21
+236 input 1 %{t4_st}#21
+237 input 1 %{t5_st}#21
+238 input 1 %{t6_st}#21
+239 input 1 %{t7_st}#21
+240 input 1 %{t8_st}#21
+241 input 1 %{t9_st}#19
+242 input 1 %{t9_pc}#2
+243 input 1 %{t9_st}#21
+244 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$temp.1>>>>}#21
+245 input 1 %{t10_pc}#2
+246 input 1 %{t10_st}#21
+247 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$temp.1>>>>}#23
+248 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#8)<$(in_is_master_triggered#0)<__retres1>>>>>}#3
+249 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#8)<$(in_is_transmit1_triggered#1)<__retres1>>>>>}#3
+250 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#8)<$(in_is_transmit2_triggered#2)<__retres1>>>>>}#3
+251 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#8)<$(in_is_transmit3_triggered#3)<__retres1>>>>>}#3
+252 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#8)<$(in_is_transmit4_triggered#4)<__retres1>>>>>}#3
+253 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#8)<$(in_is_transmit5_triggered#5)<__retres1>>>>>}#3
+254 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#8)<$(in_is_transmit6_triggered#6)<__retres1>>>>>}#3
+255 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#8)<$(in_is_transmit7_triggered#7)<__retres1>>>>>}#3
+256 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#8)<$(in_is_transmit8_triggered#8)<__retres1>>>>>}#3
+257 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#8)<$(in_is_transmit9_triggered#9)<__retres1>>>>>}#3
+258 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#8)<$(in_is_transmit10_triggered#10)<__retres1>>>>>}#3
+259 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_exists_runnable_thread#10)<__retres1>>>>}#3
+260 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#12)<$(in_is_transmit1_triggered#1)<__retres1>>>>>}#3
+261 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#12)<$(in_is_transmit2_triggered#2)<__retres1>>>>>}#3
+262 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#12)<$(in_is_transmit3_triggered#3)<__retres1>>>>>}#3
+263 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#12)<$(in_is_transmit4_triggered#4)<__retres1>>>>>}#3
+264 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#12)<$(in_is_transmit5_triggered#5)<__retres1>>>>>}#3
+265 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#12)<$(in_is_transmit6_triggered#6)<__retres1>>>>>}#3
+266 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#12)<$(in_is_transmit7_triggered#7)<__retres1>>>>>}#3
+267 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#12)<$(in_is_transmit8_triggered#8)<__retres1>>>>>}#3
+268 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#12)<$(in_is_transmit9_triggered#9)<__retres1>>>>>}#3
+269 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_activate_threads#12)<$(in_is_transmit10_triggered#10)<__retres1>>>>>}#3
+270 input 1 %{E_1}#4
+271 input 1 %{E_10}#4
+272 input 1 %{E_2}#4
+273 input 1 %{E_3}#4
+274 input 1 %{E_4}#4
+275 input 1 %{E_5}#4
+276 input 1 %{E_6}#4
+277 input 1 %{E_7}#4
+278 input 1 %{E_8}#4
+279 input 1 %{E_9}#4
+280 input 1 %{M_E}#5
+281 input 1 %{T10_E}#4
+282 input 1 %{T1_E}#4
+283 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<kernel_st>>>}#4
+284 input 1 %{T2_E}#4
+285 input 1 %{T3_E}#4
+286 input 1 %{T4_E}#4
+287 input 1 %{T5_E}#4
+288 input 1 %{T6_E}#4
+289 input 1 %{T7_E}#4
+290 input 1 %{T8_E}#4
+291 input 1 %{T9_E}#4
+292 input 1 %{t10_st}#3
+293 input 1 %{t2_st}#3
+294 input 1 %{t3_st}#3
+295 input 1 %{t4_st}#3
+296 input 1 %{t5_st}#3
+297 input 1 %{t6_st}#3
+298 input 1 %{t7_st}#3
+299 input 1 %{t8_st}#3
+300 input 1 %{t9_st}#3
+301 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_stop_simulation#14)<$(in_exists_runnable_thread#0)<__retres1>>>>>}#3
+302 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_master#2)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_master_triggered#0)<__retres1>>>>>>>>}#3
+303 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_master#2)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit2_triggered#2)<__retres1>>>>>>>>}#3
+304 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_master#2)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit3_triggered#3)<__retres1>>>>>>>>}#3
+305 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_master#2)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit4_triggered#4)<__retres1>>>>>>>>}#3
+306 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_master#2)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit5_triggered#5)<__retres1>>>>>>>>}#3
+307 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_master#2)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit6_triggered#6)<__retres1>>>>>>>>}#3
+308 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_master#2)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit7_triggered#7)<__retres1>>>>>>>>}#3
+309 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_master#2)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit8_triggered#8)<__retres1>>>>>>>>}#3
+310 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_master#2)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit9_triggered#9)<__retres1>>>>>>>>}#3
+311 input 1 %{$(in___cpv_main#0)<$(in_main#0)<$(in_start_simulation#1)<$(in_eval#5)<$(in_master#2)<$(in_immediate_notify#0)<$(in_activate_threads#0)<$(in_is_transmit10_triggered#10)<__retres1>>>>>>>>}#3
+312 input 1 %{m_st}#4
+313 input 1 %{m_st}#6
+314 input 1 %{t10_st}#5
+315 input 1 %{t2_st}#6
+316 input 1 %{t3_st}#5
+317 input 1 %{t4_st}#5
+318 input 1 %{t5_st}#5
+319 input 1 %{t6_st}#5
+320 input 1 %{t7_st}#5
+321 input 1 %{t8_st}#5
+322 input 1 %{t9_st}#5
+323 input 1 %{t2_st}#8
+324 input 1 %{m_st}#8
+325 input 1 %{t10_st}#7
+326 input 1 %{t2_st}#10
+327 input 1 %{t3_st}#8
+328 input 1 %{t4_st}#7
+329 input 1 %{t5_st}#7
+330 input 1 %{t6_st}#7
+331 input 1 %{t7_st}#7
+332 input 1 %{t8_st}#7
+333 input 1 %{t9_st}#7
+334 input 1 %{t3_st}#10
+335 input 1 %{m_st}#10
+336 input 1 %{t10_st}#9
+337 input 1 %{t2_st}#12
+338 input 1 %{t3_st}#12
+339 input 1 %{t4_st}#10
+340 input 1 %{t5_st}#9
+341 input 1 %{t6_st}#9
+342 input 1 %{t7_st}#9
+343 input 1 %{t8_st}#9
+344 input 1 %{t9_st}#9
+345 input 1 %{t4_st}#12
+346 input 1 %{m_st}#12
+347 input 1 %{t10_st}#11
+348 input 1 %{t2_st}#14
+349 input 1 %{t3_st}#14
+350 input 1 %{t4_st}#14
+351 input 1 %{t5_st}#12
+352 input 1 %{t6_st}#11
+353 input 1 %{t7_st}#11
+354 input 1 %{t8_st}#11
+355 input 1 %{t9_st}#11
+356 input 1 %{t5_st}#14
+357 input 1 %{m_st}#14
+358 input 1 %{t10_st}#13
+359 input 1 %{t2_st}#16
+360 input 1 %{t3_st}#16
+361 input 1 %{t4_st}#16
+362 input 1 %{t5_st}#16
+363 input 1 %{t6_st}#14
+364 input 1 %{t7_st}#13
+365 input 1 %{t8_st}#13
+366 input 1 %{t9_st}#13
+367 input 1 %{t6_st}#16
+368 input 1 %{m_st}#16
+369 input 1 %{t10_st}#15
+370 input 1 %{t2_st}#18
+371 input 1 %{t3_st}#18
+372 input 1 %{t4_st}#18
+373 input 1 %{t5_st}#18
+374 input 1 %{t6_st}#18
+375 input 1 %{t7_st}#16
+376 input 1 %{t8_st}#15
+377 input 1 %{t9_st}#15
+378 input 1 %{t7_st}#18
+379 input 1 %{m_st}#18
+380 input 1 %{t10_st}#17
+381 input 1 %{t2_st}#20
+382 input 1 %{t3_st}#20
+383 input 1 %{t4_st}#20
+384 input 1 %{t5_st}#20
+385 input 1 %{t6_st}#20
+386 input 1 %{t7_st}#20
+387 input 1 %{t8_st}#18
+388 input 1 %{t9_st}#17
+389 input 1 %{t8_st}#20
+390 input 1 %{m_st}#20
+391 input 1 %{t10_st}#19
+392 input 1 %{t2_st}#22
+393 input 1 %{t3_st}#22
+394 input 1 %{t4_st}#22
+395 input 1 %{t5_st}#22
+396 input 1 %{t6_st}#22
+397 input 1 %{t7_st}#22
+398 input 1 %{t8_st}#22
+399 input 1 %{t9_st}#20
+400 input 1 %{t9_st}#22
+401 input 1 %{t10_st}#22
+402 input 1 !{E_1}.next
+403 input 1 !{E_10}.next
+404 input 1 !{E_2}.next
+405 input 1 !{E_3}.next
+406 input 1 !{E_4}.next
+407 input 1 !{E_5}.next
+408 input 1 !{E_6}.next
+409 input 1 !{E_7}.next
+410 input 1 !{E_8}.next
+411 input 1 !{E_9}.next
+412 input 1 !{M_E}.next
+413 input 1 !{T10_E}.next
+414 input 1 !{T1_E}.next
+415 input 1 !{T2_E}.next
+416 input 1 !{T3_E}.next
+417 input 1 !{T4_E}.next
+418 input 1 !{T5_E}.next
+419 input 1 !{T6_E}.next
+420 input 1 !{T7_E}.next
+421 input 1 !{T8_E}.next
+422 input 1 !{T9_E}.next
+423 input 1 !{m_i}.next
+424 input 1 !{m_pc}.next
+425 input 1 !{m_st}.next
+426 input 1 !{t10_i}.next
+427 input 1 !{t10_pc}.next
+428 input 1 !{t10_st}.next
+429 input 1 !{t1_i}.next
+430 input 1 !{t1_pc}.next
+431 input 1 !{t1_st}.next
+432 input 1 !{t2_i}.next
+433 input 1 !{t2_pc}.next
+434 input 1 !{t2_st}.next
+435 input 1 !{t3_i}.next
+436 input 1 !{t3_pc}.next
+437 input 1 !{t3_st}.next
+438 input 1 !{t4_i}.next
+439 input 1 !{t4_pc}.next
+440 input 1 !{t4_st}.next
+441 input 1 !{t5_i}.next
+442 input 1 !{t5_pc}.next
+443 input 1 !{t5_st}.next
+444 input 1 !{t6_i}.next
+445 input 1 !{t6_pc}.next
+446 input 1 !{t6_st}.next
+447 input 1 !{t7_i}.next
+448 input 1 !{t7_pc}.next
+449 input 1 !{t7_st}.next
+450 input 1 !{t8_i}.next
+451 input 1 !{t8_pc}.next
+452 input 1 !{t8_st}.next
+453 input 1 !{t9_i}.next
+454 input 1 !{t9_pc}.next
+455 input 1 !{t9_st}.next
+456 input 2 !pc[0].next
+457 input 2 !pc[1].next
+458 input 2 !pc[2].next
+459 input 2 !pc[3].next
+460 state 1 !{E_1}
+461 state 1 !{E_10}
+462 state 1 !{E_2}
+463 state 1 !{E_3}
+464 state 1 !{E_4}
+465 state 1 !{E_5}
+466 state 1 !{E_6}
+467 state 1 !{E_7}
+468 state 1 !{E_8}
+469 state 1 !{E_9}
+470 state 1 !{M_E}
+471 state 1 !{T10_E}
+472 state 1 !{T1_E}
+473 state 1 !{T2_E}
+474 state 1 !{T3_E}
+475 state 1 !{T4_E}
+476 state 1 !{T5_E}
+477 state 1 !{T6_E}
+478 state 1 !{T7_E}
+479 state 1 !{T8_E}
+480 state 1 !{T9_E}
+481 state 1 !{m_i}
+482 state 1 !{m_pc}
+483 state 1 !{m_st}
+484 state 1 !{t10_i}
+485 state 1 !{t10_pc}
+486 state 1 !{t10_st}
+487 state 1 !{t1_i}
+488 state 1 !{t1_pc}
+489 state 1 !{t1_st}
+490 state 1 !{t2_i}
+491 state 1 !{t2_pc}
+492 state 1 !{t2_st}
+493 state 1 !{t3_i}
+494 state 1 !{t3_pc}
+495 state 1 !{t3_st}
+496 state 1 !{t4_i}
+497 state 1 !{t4_pc}
+498 state 1 !{t4_st}
+499 state 1 !{t5_i}
+500 state 1 !{t5_pc}
+501 state 1 !{t5_st}
+502 state 1 !{t6_i}
+503 state 1 !{t6_pc}
+504 state 1 !{t6_st}
+505 state 1 !{t7_i}
+506 state 1 !{t7_pc}
+507 state 1 !{t7_st}
+508 state 1 !{t8_i}
+509 state 1 !{t8_pc}
+510 state 1 !{t8_st}
+511 state 1 !{t9_i}
+512 state 1 !{t9_pc}
+513 state 1 !{t9_st}
+514 state 2 !pc[0]
+515 state 2 !pc[1]
+516 state 2 !pc[2]
+517 state 2 !pc[3]
+518 state 2 reset0
+519 state 2 valid
+520 not 2 518
+521 not 2 515
+522 and 2 514 521
+523 and 2 516 522
+524 not 2 517
+525 and 2 524 523
+526 not 2 456
+527 not 2 457
+528 and 2 527 526
+529 and 2 458 528
+530 not 2 459
+531 and 2 530 529
+532 and 2 531 525
+533 eq 2 428 401
+534 eq 2 403 230
+535 constd 1 2
+536 eq 2 402 535
+537 and 2 536 534
+538 eq 2 404 30
+539 and 2 538 537
+540 eq 2 405 55
+541 and 2 540 539
+542 eq 2 406 80
+543 and 2 542 541
+544 eq 2 407 105
+545 and 2 544 543
+546 eq 2 408 130
+547 and 2 546 545
+548 eq 2 409 155
+549 and 2 548 547
+550 eq 2 410 180
+551 and 2 550 549
+552 eq 2 411 205
+553 and 2 552 551
+554 eq 2 470 412
+555 and 2 554 553
+556 eq 2 471 413
+557 and 2 556 555
+558 eq 2 472 414
+559 and 2 558 557
+560 eq 2 473 415
+561 and 2 560 559
+562 eq 2 474 416
+563 and 2 562 561
+564 eq 2 475 417
+565 and 2 564 563
+566 eq 2 476 418
+567 and 2 566 565
+568 eq 2 477 419
+569 and 2 568 567
+570 eq 2 478 420
+571 and 2 570 569
+572 eq 2 479 421
+573 and 2 572 571
+574 eq 2 480 422
+575 and 2 574 573
+576 eq 2 481 423
+577 and 2 576 575
+578 constd 1 1
+579 eq 2 424 578
+580 and 2 579 577
+581 eq 2 425 390
+582 and 2 581 580
+583 eq 2 484 426
+584 and 2 583 582
+585 eq 2 427 245
+586 and 2 585 584
+587 and 2 586 533
+588 eq 2 487 429
+589 and 2 588 587
+590 eq 2 430 42
+591 and 2 590 589
+592 eq 2 431 43
+593 and 2 592 591
+594 eq 2 490 432
+595 and 2 594 593
+596 eq 2 433 67
+597 and 2 596 595
+598 eq 2 434 392
+599 and 2 598 597
+600 eq 2 493 435
+601 and 2 600 599
+602 eq 2 436 92
+603 and 2 602 601
+604 eq 2 437 393
+605 and 2 604 603
+606 eq 2 496 438
+607 and 2 606 605
+608 eq 2 439 117
+609 and 2 608 607
+610 eq 2 440 394
+611 and 2 610 609
+612 eq 2 499 441
+613 and 2 612 611
+614 eq 2 442 142
+615 and 2 614 613
+616 eq 2 443 395
+617 and 2 616 615
+618 eq 2 502 444
+619 and 2 618 617
+620 eq 2 445 167
+621 and 2 620 619
+622 eq 2 446 396
+623 and 2 622 621
+624 eq 2 505 447
+625 and 2 624 623
+626 eq 2 448 192
+627 and 2 626 625
+628 eq 2 449 397
+629 and 2 628 627
+630 eq 2 508 450
+631 and 2 630 629
+632 eq 2 451 217
+633 and 2 632 631
+634 eq 2 452 398
+635 and 2 634 633
+636 eq 2 511 453
+637 and 2 636 635
+638 eq 2 454 242
+639 and 2 638 637
+640 eq 2 455 400
+641 and 2 640 639
+642 constd 1 0
+643 eq 2 391 642
+644 not 2 643
+645 eq 2 194 219
+646 and 2 645 644
+647 eq 2 485 245
+648 and 2 647 646
+649 eq 2 391 401
+650 and 2 649 648
+651 eq 2 15 219
+652 eq 2 401 535
+653 eq 2 245 578
+654 eq 2 485 642
+655 not 2 654
+656 eq 2 485 578
+657 not 2 656
+658 and 2 657 655
+659 or 2 654 658
+660 eq 2 15 642
+661 not 2 660
+662 and 2 661 659
+663 and 2 662 653
+664 and 2 663 652
+665 and 2 660 647
+666 and 2 665 649
+667 or 2 666 664
+668 and 2 643 667
+669 and 2 668 651
+670 or 2 669 650
+671 and 2 670 641
+672 eq 2 388 642
+673 not 2 672
+674 eq 2 461 230
+675 and 2 674 673
+676 eq 2 379 390
+677 and 2 676 675
+678 eq 2 380 391
+679 and 2 678 677
+680 eq 2 381 392
+681 and 2 680 679
+682 eq 2 382 393
+683 and 2 682 681
+684 eq 2 383 394
+685 and 2 684 683
+686 eq 2 384 395
+687 and 2 686 685
+688 eq 2 385 396
+689 and 2 688 687
+690 eq 2 386 397
+691 and 2 690 689
+692 eq 2 169 194
+693 and 2 692 691
+694 eq 2 389 398
+695 and 2 694 693
+696 eq 2 512 242
+697 and 2 696 695
+698 eq 2 388 400
+699 and 2 698 697
+700 eq 2 14 194
+701 eq 2 400 535
+702 eq 2 229 642
+703 ite 1 702 578 642
+704 eq 2 703 399
+705 eq 2 228 642
+706 ite 1 705 389 642
+707 eq 2 706 398
+708 eq 2 227 642
+709 ite 1 708 386 642
+710 eq 2 709 397
+711 eq 2 226 642
+712 ite 1 711 385 642
+713 eq 2 712 396
+714 eq 2 225 642
+715 ite 1 714 384 642
+716 eq 2 715 395
+717 eq 2 224 642
+718 ite 1 717 383 642
+719 eq 2 718 394
+720 eq 2 223 642
+721 ite 1 720 382 642
+722 eq 2 721 393
+723 eq 2 222 642
+724 ite 1 723 381 642
+725 eq 2 724 392
+726 ite 1 656 578 642
+727 eq 2 726 642
+728 ite 1 727 380 642
+729 eq 2 728 391
+730 eq 2 470 578
+731 ite 1 730 578 642
+732 eq 2 731 642
+733 ite 1 732 379 642
+734 eq 2 733 390
+735 eq 2 205 578
+736 not 2 735
+737 eq 2 512 578
+738 and 2 737 736
+739 not 2 737
+740 or 2 739 738
+741 and 2 740 702
+742 eq 2 229 578
+743 and 2 737 735
+744 and 2 743 742
+745 or 2 744 741
+746 eq 2 217 578
+747 eq 2 180 578
+748 not 2 747
+749 and 2 748 746
+750 not 2 746
+751 or 2 750 749
+752 and 2 751 705
+753 eq 2 228 578
+754 and 2 747 746
+755 and 2 754 753
+756 or 2 755 752
+757 and 2 756 745
+758 eq 2 192 578
+759 eq 2 155 578
+760 not 2 759
+761 and 2 760 758
+762 not 2 758
+763 or 2 762 761
+764 and 2 763 708
+765 eq 2 227 578
+766 and 2 759 758
+767 and 2 766 765
+768 or 2 767 764
+769 and 2 768 757
+770 eq 2 167 578
+771 eq 2 130 578
+772 not 2 771
+773 and 2 772 770
+774 not 2 770
+775 or 2 774 773
+776 and 2 775 711
+777 eq 2 226 578
+778 and 2 771 770
+779 and 2 778 777
+780 or 2 779 776
+781 and 2 780 769
+782 eq 2 142 578
+783 eq 2 105 578
+784 not 2 783
+785 and 2 784 782
+786 not 2 782
+787 or 2 786 785
+788 and 2 787 714
+789 eq 2 225 578
+790 and 2 783 782
+791 and 2 790 789
+792 or 2 791 788
+793 and 2 792 781
+794 eq 2 117 578
+795 eq 2 80 578
+796 not 2 795
+797 and 2 796 794
+798 not 2 794
+799 or 2 798 797
+800 and 2 799 717
+801 eq 2 224 578
+802 and 2 795 794
+803 and 2 802 801
+804 or 2 803 800
+805 and 2 804 793
+806 eq 2 92 578
+807 eq 2 55 578
+808 not 2 807
+809 and 2 808 806
+810 not 2 806
+811 or 2 810 809
+812 and 2 811 720
+813 eq 2 223 578
+814 and 2 807 806
+815 and 2 814 813
+816 or 2 815 812
+817 and 2 816 805
+818 eq 2 67 578
+819 eq 2 30 578
+820 not 2 819
+821 and 2 820 818
+822 not 2 818
+823 or 2 822 821
+824 and 2 823 723
+825 eq 2 222 578
+826 and 2 819 818
+827 and 2 826 825
+828 or 2 827 824
+829 and 2 828 817
+830 and 2 737 829
+831 eq 2 512 642
+832 not 2 831
+833 and 2 832 830
+834 eq 2 230 535
+835 and 2 834 833
+836 and 2 835 734
+837 and 2 836 729
+838 and 2 837 725
+839 and 2 838 722
+840 and 2 839 719
+841 and 2 840 716
+842 and 2 841 713
+843 and 2 842 710
+844 and 2 843 707
+845 and 2 844 704
+846 eq 2 399 578
+847 and 2 739 832
+848 or 2 831 847
+849 and 2 848 674
+850 and 2 849 676
+851 and 2 850 678
+852 and 2 851 680
+853 and 2 852 682
+854 and 2 853 684
+855 and 2 854 686
+856 and 2 855 688
+857 and 2 856 690
+858 and 2 857 694
+859 and 2 858 846
+860 or 2 859 845
+861 eq 2 14 642
+862 not 2 861
+863 and 2 862 860
+864 eq 2 242 578
+865 and 2 864 863
+866 and 2 865 701
+867 and 2 861 674
+868 and 2 867 676
+869 and 2 678 868
+870 and 2 680 869
+871 and 2 682 870
+872 and 2 684 871
+873 and 2 686 872
+874 and 2 688 873
+875 and 2 690 874
+876 and 2 694 875
+877 and 2 696 876
+878 and 2 877 698
+879 or 2 878 866
+880 and 2 672 879
+881 and 2 880 700
+882 or 2 881 699
+883 and 2 882 671
+884 eq 2 376 642
+885 not 2 884
+886 eq 2 469 205
+887 and 2 886 885
+888 eq 2 368 379
+889 and 2 888 887
+890 eq 2 369 380
+891 and 2 890 889
+892 eq 2 370 381
+893 and 2 892 891
+894 eq 2 371 382
+895 and 2 894 893
+896 eq 2 372 383
+897 and 2 896 895
+898 eq 2 373 384
+899 and 2 898 897
+900 eq 2 374 385
+901 and 2 900 899
+902 eq 2 378 386
+903 and 2 902 901
+904 eq 2 509 217
+905 and 2 904 903
+906 eq 2 144 169
+907 and 2 906 905
+908 eq 2 376 389
+909 and 2 908 907
+910 eq 2 377 388
+911 and 2 910 909
+912 eq 2 13 169
+913 eq 2 13 642
+914 and 2 913 886
+915 and 2 914 888
+916 and 2 890 915
+917 and 2 892 916
+918 and 2 894 917
+919 and 2 896 918
+920 and 2 898 919
+921 and 2 900 920
+922 and 2 902 921
+923 and 2 904 922
+924 and 2 923 908
+925 and 2 910 924
+926 eq 2 389 535
+927 ite 1 737 578 642
+928 eq 2 927 642
+929 ite 1 928 377 642
+930 eq 2 929 388
+931 eq 2 203 642
+932 ite 1 931 578 642
+933 eq 2 932 387
+934 eq 2 202 642
+935 ite 1 934 378 642
+936 eq 2 935 386
+937 eq 2 201 642
+938 ite 1 937 374 642
+939 eq 2 938 385
+940 eq 2 200 642
+941 ite 1 940 373 642
+942 eq 2 941 384
+943 eq 2 199 642
+944 ite 1 943 372 642
+945 eq 2 944 383
+946 eq 2 198 642
+947 ite 1 946 371 642
+948 eq 2 947 382
+949 eq 2 197 642
+950 ite 1 949 370 642
+951 eq 2 950 381
+952 eq 2 204 642
+953 ite 1 952 369 642
+954 eq 2 953 380
+955 ite 1 732 368 642
+956 eq 2 955 379
+957 eq 2 461 578
+958 not 2 957
+959 and 2 656 958
+960 or 2 657 959
+961 and 2 960 952
+962 eq 2 204 578
+963 and 2 656 957
+964 and 2 963 962
+965 or 2 964 961
+966 eq 2 509 578
+967 and 2 966 748
+968 not 2 966
+969 or 2 968 967
+970 and 2 969 931
+971 eq 2 203 578
+972 and 2 966 747
+973 and 2 972 971
+974 or 2 973 970
+975 and 2 974 965
+976 and 2 763 934
+977 eq 2 202 578
+978 and 2 766 977
+979 or 2 978 976
+980 and 2 979 975
+981 and 2 775 937
+982 eq 2 201 578
+983 and 2 778 982
+984 or 2 983 981
+985 and 2 984 980
+986 and 2 787 940
+987 eq 2 200 578
+988 and 2 790 987
+989 or 2 988 986
+990 and 2 989 985
+991 and 2 799 943
+992 eq 2 199 578
+993 and 2 802 992
+994 or 2 993 991
+995 and 2 994 990
+996 and 2 811 946
+997 eq 2 198 578
+998 and 2 814 997
+999 or 2 998 996
+1000 and 2 999 995
+1001 and 2 823 949
+1002 eq 2 197 578
+1003 and 2 826 1002
+1004 or 2 1003 1001
+1005 and 2 1004 1000
+1006 and 2 966 1005
+1007 eq 2 509 642
+1008 not 2 1007
+1009 and 2 1008 1006
+1010 eq 2 205 535
+1011 and 2 1010 1009
+1012 and 2 1011 956
+1013 and 2 1012 954
+1014 and 2 1013 951
+1015 and 2 1014 948
+1016 and 2 1015 945
+1017 and 2 1016 942
+1018 and 2 1017 939
+1019 and 2 1018 936
+1020 and 2 1019 933
+1021 and 2 1020 930
+1022 eq 2 387 578
+1023 and 2 968 1008
+1024 or 2 1007 1023
+1025 and 2 1024 886
+1026 and 2 1025 888
+1027 and 2 1026 890
+1028 and 2 1027 892
+1029 and 2 1028 894
+1030 and 2 1029 896
+1031 and 2 1030 898
+1032 and 2 1031 900
+1033 and 2 1032 902
+1034 and 2 1033 1022
+1035 and 2 1034 910
+1036 or 2 1035 1021
+1037 not 2 913
+1038 and 2 1037 1036
+1039 and 2 746 1038
+1040 and 2 1039 926
+1041 or 2 1040 925
+1042 and 2 884 1041
+1043 and 2 1042 912
+1044 or 2 1043 911
+1045 and 2 1044 883
+1046 eq 2 364 642
+1047 not 2 1046
+1048 eq 2 468 180
+1049 and 2 1048 1047
+1050 eq 2 357 368
+1051 and 2 1050 1049
+1052 eq 2 358 369
+1053 and 2 1052 1051
+1054 eq 2 359 370
+1055 and 2 1054 1053
+1056 eq 2 360 371
+1057 and 2 1056 1055
+1058 eq 2 361 372
+1059 and 2 1058 1057
+1060 eq 2 362 373
+1061 and 2 1060 1059
+1062 eq 2 367 374
+1063 and 2 1062 1061
+1064 eq 2 506 192
+1065 and 2 1064 1063
+1066 eq 2 364 378
+1067 and 2 1066 1065
+1068 eq 2 119 144
+1069 and 2 1068 1067
+1070 eq 2 365 376
+1071 and 2 1070 1069
+1072 eq 2 366 377
+1073 and 2 1072 1071
+1074 eq 2 12 144
+1075 eq 2 12 642
+1076 and 2 1075 1048
+1077 and 2 1076 1050
+1078 and 2 1052 1077
+1079 and 2 1054 1078
+1080 and 2 1056 1079
+1081 and 2 1058 1080
+1082 and 2 1060 1081
+1083 and 2 1062 1082
+1084 and 2 1064 1083
+1085 and 2 1084 1066
+1086 and 2 1070 1085
+1087 and 2 1072 1086
+1088 eq 2 378 535
+1089 eq 2 178 642
+1090 ite 1 1089 366 642
+1091 eq 2 1090 377
+1092 ite 1 966 578 642
+1093 eq 2 1092 642
+1094 ite 1 1093 365 642
+1095 eq 2 1094 376
+1096 eq 2 177 642
+1097 ite 1 1096 578 642
+1098 eq 2 1097 375
+1099 eq 2 176 642
+1100 ite 1 1099 367 642
+1101 eq 2 1100 374
+1102 eq 2 175 642
+1103 ite 1 1102 362 642
+1104 eq 2 1103 373
+1105 eq 2 174 642
+1106 ite 1 1105 361 642
+1107 eq 2 1106 372
+1108 eq 2 173 642
+1109 ite 1 1108 360 642
+1110 eq 2 1109 371
+1111 eq 2 172 642
+1112 ite 1 1111 359 642
+1113 eq 2 1112 370
+1114 eq 2 179 642
+1115 ite 1 1114 358 642
+1116 eq 2 1115 369
+1117 ite 1 732 357 642
+1118 eq 2 1117 368
+1119 and 2 960 1114
+1120 eq 2 179 578
+1121 and 2 963 1120
+1122 or 2 1121 1119
+1123 eq 2 469 578
+1124 not 2 1123
+1125 and 2 737 1124
+1126 or 2 739 1125
+1127 and 2 1126 1089
+1128 eq 2 178 578
+1129 and 2 737 1123
+1130 and 2 1129 1128
+1131 or 2 1130 1127
+1132 and 2 1131 1122
+1133 eq 2 506 578
+1134 and 2 1133 760
+1135 not 2 1133
+1136 or 2 1135 1134
+1137 and 2 1136 1096
+1138 eq 2 177 578
+1139 and 2 1133 759
+1140 and 2 1139 1138
+1141 or 2 1140 1137
+1142 and 2 1141 1132
+1143 and 2 775 1099
+1144 eq 2 176 578
+1145 and 2 778 1144
+1146 or 2 1145 1143
+1147 and 2 1146 1142
+1148 and 2 787 1102
+1149 eq 2 175 578
+1150 and 2 790 1149
+1151 or 2 1150 1148
+1152 and 2 1151 1147
+1153 and 2 799 1105
+1154 eq 2 174 578
+1155 and 2 802 1154
+1156 or 2 1155 1153
+1157 and 2 1156 1152
+1158 and 2 811 1108
+1159 eq 2 173 578
+1160 and 2 814 1159
+1161 or 2 1160 1158
+1162 and 2 1161 1157
+1163 and 2 823 1111
+1164 eq 2 172 578
+1165 and 2 826 1164
+1166 or 2 1165 1163
+1167 and 2 1166 1162
+1168 and 2 1133 1167
+1169 eq 2 506 642
+1170 not 2 1169
+1171 and 2 1170 1168
+1172 eq 2 180 535
+1173 and 2 1172 1171
+1174 and 2 1173 1118
+1175 and 2 1174 1116
+1176 and 2 1175 1113
+1177 and 2 1176 1110
+1178 and 2 1177 1107
+1179 and 2 1178 1104
+1180 and 2 1179 1101
+1181 and 2 1180 1098
+1182 and 2 1181 1095
+1183 and 2 1182 1091
+1184 eq 2 375 578
+1185 and 2 1135 1170
+1186 or 2 1169 1185
+1187 and 2 1186 1048
+1188 and 2 1187 1050
+1189 and 2 1188 1052
+1190 and 2 1189 1054
+1191 and 2 1190 1056
+1192 and 2 1191 1058
+1193 and 2 1192 1060
+1194 and 2 1193 1062
+1195 and 2 1194 1184
+1196 and 2 1195 1070
+1197 and 2 1196 1072
+1198 or 2 1197 1183
+1199 not 2 1075
+1200 and 2 1199 1198
+1201 and 2 758 1200
+1202 and 2 1201 1088
+1203 or 2 1202 1087
+1204 and 2 1046 1203
+1205 and 2 1204 1074
+1206 or 2 1205 1073
+1207 and 2 1206 1045
+1208 eq 2 352 642
+1209 not 2 1208
+1210 eq 2 467 155
+1211 and 2 1210 1209
+1212 eq 2 346 357
+1213 and 2 1212 1211
+1214 eq 2 347 358
+1215 and 2 1214 1213
+1216 eq 2 348 359
+1217 and 2 1216 1215
+1218 eq 2 349 360
+1219 and 2 1218 1217
+1220 eq 2 350 361
+1221 and 2 1220 1219
+1222 eq 2 356 362
+1223 and 2 1222 1221
+1224 eq 2 503 167
+1225 and 2 1224 1223
+1226 eq 2 352 367
+1227 and 2 1226 1225
+1228 eq 2 353 364
+1229 and 2 1228 1227
+1230 eq 2 94 119
+1231 and 2 1230 1229
+1232 eq 2 354 365
+1233 and 2 1232 1231
+1234 eq 2 355 366
+1235 and 2 1234 1233
+1236 eq 2 11 119
+1237 eq 2 11 642
+1238 and 2 1237 1210
+1239 and 2 1238 1212
+1240 and 2 1214 1239
+1241 and 2 1216 1240
+1242 and 2 1218 1241
+1243 and 2 1220 1242
+1244 and 2 1222 1243
+1245 and 2 1224 1244
+1246 and 2 1245 1226
+1247 and 2 1228 1246
+1248 and 2 1232 1247
+1249 and 2 1234 1248
+1250 eq 2 367 535
+1251 eq 2 153 642
+1252 ite 1 1251 355 642
+1253 eq 2 1252 366
+1254 eq 2 152 642
+1255 ite 1 1254 354 642
+1256 eq 2 1255 365
+1257 ite 1 1133 578 642
+1258 eq 2 1257 642
+1259 ite 1 1258 353 642
+1260 eq 2 1259 364
+1261 eq 2 151 642
+1262 ite 1 1261 578 642
+1263 eq 2 1262 363
+1264 eq 2 150 642
+1265 ite 1 1264 356 642
+1266 eq 2 1265 362
+1267 eq 2 149 642
+1268 ite 1 1267 350 642
+1269 eq 2 1268 361
+1270 eq 2 148 642
+1271 ite 1 1270 349 642
+1272 eq 2 1271 360
+1273 eq 2 147 642
+1274 ite 1 1273 348 642
+1275 eq 2 1274 359
+1276 eq 2 154 642
+1277 ite 1 1276 347 642
+1278 eq 2 1277 358
+1279 ite 1 732 346 642
+1280 eq 2 1279 357
+1281 and 2 960 1276
+1282 eq 2 154 578
+1283 and 2 963 1282
+1284 or 2 1283 1281
+1285 and 2 1126 1251
+1286 eq 2 153 578
+1287 and 2 1129 1286
+1288 or 2 1287 1285
+1289 and 2 1288 1284
+1290 eq 2 468 578
+1291 not 2 1290
+1292 and 2 966 1291
+1293 or 2 968 1292
+1294 and 2 1293 1254
+1295 eq 2 152 578
+1296 and 2 966 1290
+1297 and 2 1296 1295
+1298 or 2 1297 1294
+1299 and 2 1298 1289
+1300 eq 2 503 578
+1301 and 2 1300 772
+1302 not 2 1300
+1303 or 2 1302 1301
+1304 and 2 1303 1261
+1305 eq 2 151 578
+1306 and 2 1300 771
+1307 and 2 1306 1305
+1308 or 2 1307 1304
+1309 and 2 1308 1299
+1310 and 2 787 1264
+1311 eq 2 150 578
+1312 and 2 790 1311
+1313 or 2 1312 1310
+1314 and 2 1313 1309
+1315 and 2 799 1267
+1316 eq 2 149 578
+1317 and 2 802 1316
+1318 or 2 1317 1315
+1319 and 2 1318 1314
+1320 and 2 811 1270
+1321 eq 2 148 578
+1322 and 2 814 1321
+1323 or 2 1322 1320
+1324 and 2 1323 1319
+1325 and 2 823 1273
+1326 eq 2 147 578
+1327 and 2 826 1326
+1328 or 2 1327 1325
+1329 and 2 1328 1324
+1330 and 2 1300 1329
+1331 eq 2 503 642
+1332 not 2 1331
+1333 and 2 1332 1330
+1334 eq 2 155 535
+1335 and 2 1334 1333
+1336 and 2 1335 1280
+1337 and 2 1336 1278
+1338 and 2 1337 1275
+1339 and 2 1338 1272
+1340 and 2 1339 1269
+1341 and 2 1340 1266
+1342 and 2 1341 1263
+1343 and 2 1342 1260
+1344 and 2 1343 1256
+1345 and 2 1344 1253
+1346 eq 2 363 578
+1347 and 2 1302 1332
+1348 or 2 1331 1347
+1349 and 2 1348 1210
+1350 and 2 1349 1212
+1351 and 2 1350 1214
+1352 and 2 1351 1216
+1353 and 2 1352 1218
+1354 and 2 1353 1220
+1355 and 2 1354 1222
+1356 and 2 1355 1346
+1357 and 2 1356 1228
+1358 and 2 1357 1232
+1359 and 2 1358 1234
+1360 or 2 1359 1345
+1361 not 2 1237
+1362 and 2 1361 1360
+1363 and 2 770 1362
+1364 and 2 1363 1250
+1365 or 2 1364 1249
+1366 and 2 1208 1365
+1367 and 2 1366 1236
+1368 or 2 1367 1235
+1369 and 2 1368 1207
+1370 eq 2 340 642
+1371 not 2 1370
+1372 eq 2 466 130
+1373 and 2 1372 1371
+1374 eq 2 335 346
+1375 and 2 1374 1373
+1376 eq 2 336 347
+1377 and 2 1376 1375
+1378 eq 2 337 348
+1379 and 2 1378 1377
+1380 eq 2 338 349
+1381 and 2 1380 1379
+1382 eq 2 345 350
+1383 and 2 1382 1381
+1384 eq 2 500 142
+1385 and 2 1384 1383
+1386 eq 2 340 356
+1387 and 2 1386 1385
+1388 eq 2 341 352
+1389 and 2 1388 1387
+1390 eq 2 342 353
+1391 and 2 1390 1389
+1392 eq 2 69 94
+1393 and 2 1392 1391
+1394 eq 2 343 354
+1395 and 2 1394 1393
+1396 eq 2 344 355
+1397 and 2 1396 1395
+1398 eq 2 10 94
+1399 eq 2 10 642
+1400 and 2 1399 1372
+1401 and 2 1400 1374
+1402 and 2 1376 1401
+1403 and 2 1378 1402
+1404 and 2 1380 1403
+1405 and 2 1382 1404
+1406 and 2 1384 1405
+1407 and 2 1406 1386
+1408 and 2 1388 1407
+1409 and 2 1390 1408
+1410 and 2 1394 1409
+1411 and 2 1396 1410
+1412 eq 2 356 535
+1413 eq 2 128 642
+1414 ite 1 1413 344 642
+1415 eq 2 1414 355
+1416 eq 2 127 642
+1417 ite 1 1416 343 642
+1418 eq 2 1417 354
+1419 eq 2 126 642
+1420 ite 1 1419 342 642
+1421 eq 2 1420 353
+1422 ite 1 1300 578 642
+1423 eq 2 1422 642
+1424 ite 1 1423 341 642
+1425 eq 2 1424 352
+1426 eq 2 125 642
+1427 ite 1 1426 578 642
+1428 eq 2 1427 351
+1429 eq 2 124 642
+1430 ite 1 1429 345 642
+1431 eq 2 1430 350
+1432 eq 2 123 642
+1433 ite 1 1432 338 642
+1434 eq 2 1433 349
+1435 eq 2 122 642
+1436 ite 1 1435 337 642
+1437 eq 2 1436 348
+1438 eq 2 129 642
+1439 ite 1 1438 336 642
+1440 eq 2 1439 347
+1441 ite 1 732 335 642
+1442 eq 2 1441 346
+1443 and 2 960 1438
+1444 eq 2 129 578
+1445 and 2 963 1444
+1446 or 2 1445 1443
+1447 and 2 1126 1413
+1448 eq 2 128 578
+1449 and 2 1129 1448
+1450 or 2 1449 1447
+1451 and 2 1450 1446
+1452 and 2 1293 1416
+1453 eq 2 127 578
+1454 and 2 1296 1453
+1455 or 2 1454 1452
+1456 and 2 1455 1451
+1457 eq 2 467 578
+1458 not 2 1457
+1459 and 2 1133 1458
+1460 or 2 1135 1459
+1461 and 2 1460 1419
+1462 eq 2 126 578
+1463 and 2 1133 1457
+1464 and 2 1463 1462
+1465 or 2 1464 1461
+1466 and 2 1465 1456
+1467 eq 2 500 578
+1468 and 2 1467 784
+1469 not 2 1467
+1470 or 2 1469 1468
+1471 and 2 1470 1426
+1472 eq 2 125 578
+1473 and 2 1467 783
+1474 and 2 1473 1472
+1475 or 2 1474 1471
+1476 and 2 1475 1466
+1477 and 2 799 1429
+1478 eq 2 124 578
+1479 and 2 802 1478
+1480 or 2 1479 1477
+1481 and 2 1480 1476
+1482 and 2 811 1432
+1483 eq 2 123 578
+1484 and 2 814 1483
+1485 or 2 1484 1482
+1486 and 2 1485 1481
+1487 and 2 823 1435
+1488 eq 2 122 578
+1489 and 2 826 1488
+1490 or 2 1489 1487
+1491 and 2 1490 1486
+1492 and 2 1467 1491
+1493 eq 2 500 642
+1494 not 2 1493
+1495 and 2 1494 1492
+1496 eq 2 130 535
+1497 and 2 1496 1495
+1498 and 2 1497 1442
+1499 and 2 1498 1440
+1500 and 2 1499 1437
+1501 and 2 1500 1434
+1502 and 2 1501 1431
+1503 and 2 1502 1428
+1504 and 2 1503 1425
+1505 and 2 1504 1421
+1506 and 2 1505 1418
+1507 and 2 1506 1415
+1508 eq 2 351 578
+1509 and 2 1469 1494
+1510 or 2 1493 1509
+1511 and 2 1510 1372
+1512 and 2 1511 1374
+1513 and 2 1512 1376
+1514 and 2 1513 1378
+1515 and 2 1514 1380
+1516 and 2 1515 1382
+1517 and 2 1516 1508
+1518 and 2 1517 1388
+1519 and 2 1518 1390
+1520 and 2 1519 1394
+1521 and 2 1520 1396
+1522 or 2 1521 1507
+1523 not 2 1399
+1524 and 2 1523 1522
+1525 and 2 782 1524
+1526 and 2 1525 1412
+1527 or 2 1526 1411
+1528 and 2 1370 1527
+1529 and 2 1528 1398
+1530 or 2 1529 1397
+1531 and 2 1530 1369
+1532 eq 2 328 642
+1533 not 2 1532
+1534 eq 2 465 105
+1535 and 2 1534 1533
+1536 eq 2 324 335
+1537 and 2 1536 1535
+1538 eq 2 325 336
+1539 and 2 1538 1537
+1540 eq 2 326 337
+1541 and 2 1540 1539
+1542 eq 2 334 338
+1543 and 2 1542 1541
+1544 eq 2 497 117
+1545 and 2 1544 1543
+1546 eq 2 328 345
+1547 and 2 1546 1545
+1548 eq 2 329 340
+1549 and 2 1548 1547
+1550 eq 2 330 341
+1551 and 2 1550 1549
+1552 eq 2 331 342
+1553 and 2 1552 1551
+1554 eq 2 44 69
+1555 and 2 1554 1553
+1556 eq 2 332 343
+1557 and 2 1556 1555
+1558 eq 2 333 344
+1559 and 2 1558 1557
+1560 eq 2 9 69
+1561 eq 2 9 642
+1562 and 2 1561 1534
+1563 and 2 1562 1536
+1564 and 2 1538 1563
+1565 and 2 1540 1564
+1566 and 2 1542 1565
+1567 and 2 1544 1566
+1568 and 2 1567 1546
+1569 and 2 1548 1568
+1570 and 2 1550 1569
+1571 and 2 1552 1570
+1572 and 2 1556 1571
+1573 and 2 1558 1572
+1574 eq 2 345 535
+1575 eq 2 103 642
+1576 ite 1 1575 333 642
+1577 eq 2 1576 344
+1578 eq 2 102 642
+1579 ite 1 1578 332 642
+1580 eq 2 1579 343
+1581 eq 2 101 642
+1582 ite 1 1581 331 642
+1583 eq 2 1582 342
+1584 eq 2 100 642
+1585 ite 1 1584 330 642
+1586 eq 2 1585 341
+1587 ite 1 1467 578 642
+1588 eq 2 1587 642
+1589 ite 1 1588 329 642
+1590 eq 2 1589 340
+1591 eq 2 99 642
+1592 ite 1 1591 578 642
+1593 eq 2 1592 339
+1594 eq 2 98 642
+1595 ite 1 1594 334 642
+1596 eq 2 1595 338
+1597 eq 2 97 642
+1598 ite 1 1597 326 642
+1599 eq 2 1598 337
+1600 eq 2 104 642
+1601 ite 1 1600 325 642
+1602 eq 2 1601 336
+1603 ite 1 732 324 642
+1604 eq 2 1603 335
+1605 and 2 960 1600
+1606 eq 2 104 578
+1607 and 2 963 1606
+1608 or 2 1607 1605
+1609 and 2 1126 1575
+1610 eq 2 103 578
+1611 and 2 1129 1610
+1612 or 2 1611 1609
+1613 and 2 1612 1608
+1614 and 2 1293 1578
+1615 eq 2 102 578
+1616 and 2 1296 1615
+1617 or 2 1616 1614
+1618 and 2 1617 1613
+1619 and 2 1460 1581
+1620 eq 2 101 578
+1621 and 2 1463 1620
+1622 or 2 1621 1619
+1623 and 2 1622 1618
+1624 eq 2 466 578
+1625 not 2 1624
+1626 and 2 1300 1625
+1627 or 2 1302 1626
+1628 and 2 1627 1584
+1629 eq 2 100 578
+1630 and 2 1300 1624
+1631 and 2 1630 1629
+1632 or 2 1631 1628
+1633 and 2 1632 1623
+1634 eq 2 497 578
+1635 and 2 1634 796
+1636 not 2 1634
+1637 or 2 1636 1635
+1638 and 2 1637 1591
+1639 eq 2 99 578
+1640 and 2 1634 795
+1641 and 2 1640 1639
+1642 or 2 1641 1638
+1643 and 2 1642 1633
+1644 and 2 811 1594
+1645 eq 2 98 578
+1646 and 2 814 1645
+1647 or 2 1646 1644
+1648 and 2 1647 1643
+1649 and 2 823 1597
+1650 eq 2 97 578
+1651 and 2 826 1650
+1652 or 2 1651 1649
+1653 and 2 1652 1648
+1654 and 2 1634 1653
+1655 eq 2 497 642
+1656 not 2 1655
+1657 and 2 1656 1654
+1658 eq 2 105 535
+1659 and 2 1658 1657
+1660 and 2 1659 1604
+1661 and 2 1660 1602
+1662 and 2 1661 1599
+1663 and 2 1662 1596
+1664 and 2 1663 1593
+1665 and 2 1664 1590
+1666 and 2 1665 1586
+1667 and 2 1666 1583
+1668 and 2 1667 1580
+1669 and 2 1668 1577
+1670 eq 2 339 578
+1671 and 2 1636 1656
+1672 or 2 1655 1671
+1673 and 2 1672 1534
+1674 and 2 1673 1536
+1675 and 2 1674 1538
+1676 and 2 1675 1540
+1677 and 2 1676 1542
+1678 and 2 1677 1670
+1679 and 2 1678 1548
+1680 and 2 1679 1550
+1681 and 2 1680 1552
+1682 and 2 1681 1556
+1683 and 2 1682 1558
+1684 or 2 1683 1669
+1685 not 2 1561
+1686 and 2 1685 1684
+1687 and 2 794 1686
+1688 and 2 1687 1574
+1689 or 2 1688 1573
+1690 and 2 1532 1689
+1691 and 2 1690 1560
+1692 or 2 1691 1559
+1693 and 2 1692 1531
+1694 eq 2 316 642
+1695 not 2 1694
+1696 eq 2 464 80
+1697 and 2 1696 1695
+1698 eq 2 313 324
+1699 and 2 1698 1697
+1700 eq 2 314 325
+1701 and 2 1700 1699
+1702 eq 2 323 326
+1703 and 2 1702 1701
+1704 eq 2 494 92
+1705 and 2 1704 1703
+1706 eq 2 316 334
+1707 and 2 1706 1705
+1708 eq 2 317 328
+1709 and 2 1708 1707
+1710 eq 2 318 329
+1711 and 2 1710 1709
+1712 eq 2 319 330
+1713 and 2 1712 1711
+1714 eq 2 320 331
+1715 and 2 1714 1713
+1716 eq 2 19 44
+1717 and 2 1716 1715
+1718 eq 2 321 332
+1719 and 2 1718 1717
+1720 eq 2 322 333
+1721 and 2 1720 1719
+1722 eq 2 8 44
+1723 eq 2 8 642
+1724 and 2 1723 1696
+1725 and 2 1724 1698
+1726 and 2 1700 1725
+1727 and 2 1702 1726
+1728 and 2 1704 1727
+1729 and 2 1728 1706
+1730 and 2 1708 1729
+1731 and 2 1710 1730
+1732 and 2 1712 1731
+1733 and 2 1714 1732
+1734 and 2 1718 1733
+1735 and 2 1720 1734
+1736 eq 2 334 535
+1737 eq 2 78 642
+1738 ite 1 1737 322 642
+1739 eq 2 1738 333
+1740 eq 2 77 642
+1741 ite 1 1740 321 642
+1742 eq 2 1741 332
+1743 eq 2 76 642
+1744 ite 1 1743 320 642
+1745 eq 2 1744 331
+1746 eq 2 75 642
+1747 ite 1 1746 319 642
+1748 eq 2 1747 330
+1749 eq 2 74 642
+1750 ite 1 1749 318 642
+1751 eq 2 1750 329
+1752 ite 1 1634 578 642
+1753 eq 2 1752 642
+1754 ite 1 1753 317 642
+1755 eq 2 1754 328
+1756 eq 2 73 642
+1757 ite 1 1756 578 642
+1758 eq 2 1757 327
+1759 eq 2 72 642
+1760 ite 1 1759 323 642
+1761 eq 2 1760 326
+1762 eq 2 79 642
+1763 ite 1 1762 314 642
+1764 eq 2 1763 325
+1765 ite 1 732 313 642
+1766 eq 2 1765 324
+1767 and 2 960 1762
+1768 eq 2 79 578
+1769 and 2 963 1768
+1770 or 2 1769 1767
+1771 and 2 1126 1737
+1772 eq 2 78 578
+1773 and 2 1129 1772
+1774 or 2 1773 1771
+1775 and 2 1774 1770
+1776 and 2 1293 1740
+1777 eq 2 77 578
+1778 and 2 1296 1777
+1779 or 2 1778 1776
+1780 and 2 1779 1775
+1781 and 2 1460 1743
+1782 eq 2 76 578
+1783 and 2 1463 1782
+1784 or 2 1783 1781
+1785 and 2 1784 1780
+1786 and 2 1627 1746
+1787 eq 2 75 578
+1788 and 2 1630 1787
+1789 or 2 1788 1786
+1790 and 2 1789 1785
+1791 eq 2 465 578
+1792 not 2 1791
+1793 and 2 1467 1792
+1794 or 2 1469 1793
+1795 and 2 1794 1749
+1796 eq 2 74 578
+1797 and 2 1467 1791
+1798 and 2 1797 1796
+1799 or 2 1798 1795
+1800 and 2 1799 1790
+1801 eq 2 494 578
+1802 and 2 1801 808
+1803 not 2 1801
+1804 or 2 1803 1802
+1805 and 2 1804 1756
+1806 eq 2 73 578
+1807 and 2 1801 807
+1808 and 2 1807 1806
+1809 or 2 1808 1805
+1810 and 2 1809 1800
+1811 and 2 823 1759
+1812 eq 2 72 578
+1813 and 2 826 1812
+1814 or 2 1813 1811
+1815 and 2 1814 1810
+1816 and 2 1801 1815
+1817 eq 2 494 642
+1818 not 2 1817
+1819 and 2 1818 1816
+1820 eq 2 80 535
+1821 and 2 1820 1819
+1822 and 2 1821 1766
+1823 and 2 1822 1764
+1824 and 2 1823 1761
+1825 and 2 1824 1758
+1826 and 2 1825 1755
+1827 and 2 1826 1751
+1828 and 2 1827 1748
+1829 and 2 1828 1745
+1830 and 2 1829 1742
+1831 and 2 1830 1739
+1832 eq 2 327 578
+1833 and 2 1803 1818
+1834 or 2 1817 1833
+1835 and 2 1834 1696
+1836 and 2 1835 1698
+1837 and 2 1836 1700
+1838 and 2 1837 1702
+1839 and 2 1838 1832
+1840 and 2 1839 1708
+1841 and 2 1840 1710
+1842 and 2 1841 1712
+1843 and 2 1842 1714
+1844 and 2 1843 1718
+1845 and 2 1844 1720
+1846 or 2 1845 1831
+1847 not 2 1723
+1848 and 2 1847 1846
+1849 and 2 806 1848
+1850 and 2 1849 1736
+1851 or 2 1850 1735
+1852 and 2 1694 1851
+1853 and 2 1852 1722
+1854 or 2 1853 1721
+1855 and 2 1854 1693
+1856 eq 2 293 642
+1857 not 2 1856
+1858 eq 2 463 55
+1859 and 2 1858 1857
+1860 eq 2 312 313
+1861 and 2 1860 1859
+1862 eq 2 292 314
+1863 and 2 1862 1861
+1864 eq 2 491 67
+1865 and 2 1864 1863
+1866 eq 2 293 323
+1867 and 2 1866 1865
+1868 eq 2 294 316
+1869 and 2 1868 1867
+1870 eq 2 295 317
+1871 and 2 1870 1869
+1872 eq 2 296 318
+1873 and 2 1872 1871
+1874 eq 2 297 319
+1875 and 2 1874 1873
+1876 eq 2 298 320
+1877 and 2 1876 1875
+1878 eq 2 6 19
+1879 and 2 1878 1877
+1880 eq 2 299 321
+1881 and 2 1880 1879
+1882 eq 2 300 322
+1883 and 2 1882 1881
+1884 eq 2 7 19
+1885 eq 2 7 642
+1886 and 2 1885 1858
+1887 and 2 1886 1860
+1888 and 2 1862 1887
+1889 and 2 1864 1888
+1890 and 2 1889 1866
+1891 and 2 1868 1890
+1892 and 2 1870 1891
+1893 and 2 1872 1892
+1894 and 2 1874 1893
+1895 and 2 1876 1894
+1896 and 2 1880 1895
+1897 and 2 1882 1896
+1898 eq 2 323 535
+1899 eq 2 53 642
+1900 ite 1 1899 300 642
+1901 eq 2 1900 322
+1902 eq 2 52 642
+1903 ite 1 1902 299 642
+1904 eq 2 1903 321
+1905 eq 2 51 642
+1906 ite 1 1905 298 642
+1907 eq 2 1906 320
+1908 eq 2 50 642
+1909 ite 1 1908 297 642
+1910 eq 2 1909 319
+1911 eq 2 49 642
+1912 ite 1 1911 296 642
+1913 eq 2 1912 318
+1914 eq 2 48 642
+1915 ite 1 1914 295 642
+1916 eq 2 1915 317
+1917 ite 1 1801 578 642
+1918 eq 2 1917 642
+1919 ite 1 1918 294 642
+1920 eq 2 1919 316
+1921 eq 2 47 642
+1922 ite 1 1921 578 642
+1923 eq 2 1922 315
+1924 eq 2 54 642
+1925 ite 1 1924 292 642
+1926 eq 2 1925 314
+1927 ite 1 732 312 642
+1928 eq 2 1927 313
+1929 and 2 960 1924
+1930 eq 2 54 578
+1931 and 2 963 1930
+1932 or 2 1931 1929
+1933 and 2 1126 1899
+1934 eq 2 53 578
+1935 and 2 1129 1934
+1936 or 2 1935 1933
+1937 and 2 1936 1932
+1938 and 2 1293 1902
+1939 eq 2 52 578
+1940 and 2 1296 1939
+1941 or 2 1940 1938
+1942 and 2 1941 1937
+1943 and 2 1460 1905
+1944 eq 2 51 578
+1945 and 2 1463 1944
+1946 or 2 1945 1943
+1947 and 2 1946 1942
+1948 and 2 1627 1908
+1949 eq 2 50 578
+1950 and 2 1630 1949
+1951 or 2 1950 1948
+1952 and 2 1951 1947
+1953 and 2 1794 1911
+1954 eq 2 49 578
+1955 and 2 1797 1954
+1956 or 2 1955 1953
+1957 and 2 1956 1952
+1958 eq 2 464 578
+1959 not 2 1958
+1960 and 2 1634 1959
+1961 or 2 1636 1960
+1962 and 2 1961 1914
+1963 eq 2 48 578
+1964 and 2 1634 1958
+1965 and 2 1964 1963
+1966 or 2 1965 1962
+1967 and 2 1966 1957
+1968 eq 2 491 578
+1969 and 2 1968 820
+1970 not 2 1968
+1971 or 2 1970 1969
+1972 and 2 1971 1921
+1973 eq 2 47 578
+1974 and 2 1968 819
+1975 and 2 1974 1973
+1976 or 2 1975 1972
+1977 and 2 1976 1967
+1978 and 2 1968 1977
+1979 eq 2 491 642
+1980 not 2 1979
+1981 and 2 1980 1978
+1982 eq 2 55 535
+1983 and 2 1982 1981
+1984 and 2 1983 1928
+1985 and 2 1984 1926
+1986 and 2 1985 1923
+1987 and 2 1986 1920
+1988 and 2 1987 1916
+1989 and 2 1988 1913
+1990 and 2 1989 1910
+1991 and 2 1990 1907
+1992 and 2 1991 1904
+1993 and 2 1992 1901
+1994 eq 2 315 578
+1995 and 2 1970 1980
+1996 or 2 1979 1995
+1997 and 2 1996 1858
+1998 and 2 1997 1860
+1999 and 2 1998 1862
+2000 and 2 1999 1994
+2001 and 2 2000 1868
+2002 and 2 2001 1870
+2003 and 2 2002 1872
+2004 and 2 2003 1874
+2005 and 2 2004 1876
+2006 and 2 2005 1880
+2007 and 2 2006 1882
+2008 or 2 2007 1993
+2009 not 2 1885
+2010 and 2 2009 2008
+2011 and 2 818 2010
+2012 and 2 2011 1898
+2013 or 2 2012 1897
+2014 and 2 1856 2013
+2015 and 2 2014 1884
+2016 or 2 2015 1883
+2017 and 2 2016 1855
+2018 eq 2 488 578
+2019 ite 1 2018 578 642
+2020 eq 2 2019 642
+2021 ite 1 2020 489 642
+2022 eq 2 2021 642
+2023 not 2 2022
+2024 eq 2 462 30
+2025 and 2 2024 2023
+2026 eq 2 312 535
+2027 and 2 2026 2025
+2028 eq 2 311 642
+2029 ite 1 2028 486 642
+2030 eq 2 292 2029
+2031 and 2 2030 2027
+2032 eq 2 488 42
+2033 and 2 2032 2031
+2034 eq 2 43 2021
+2035 and 2 2034 2033
+2036 eq 2 303 642
+2037 ite 1 2036 492 642
+2038 eq 2 293 2037
+2039 and 2 2038 2035
+2040 eq 2 304 642
+2041 ite 1 2040 495 642
+2042 eq 2 294 2041
+2043 and 2 2042 2039
+2044 eq 2 305 642
+2045 ite 1 2044 498 642
+2046 eq 2 295 2045
+2047 and 2 2046 2043
+2048 eq 2 306 642
+2049 ite 1 2048 501 642
+2050 eq 2 296 2049
+2051 and 2 2050 2047
+2052 eq 2 307 642
+2053 ite 1 2052 504 642
+2054 eq 2 297 2053
+2055 and 2 2054 2051
+2056 eq 2 308 642
+2057 ite 1 2056 507 642
+2058 eq 2 298 2057
+2059 and 2 2058 2055
+2060 eq 2 309 642
+2061 ite 1 2060 510 642
+2062 eq 2 299 2061
+2063 and 2 2062 2059
+2064 eq 2 310 642
+2065 ite 1 2064 513 642
+2066 eq 2 300 2065
+2067 and 2 2066 2063
+2068 eq 2 6 642
+2069 and 2 2068 2024
+2070 and 2 2069 2026
+2071 and 2 2030 2070
+2072 and 2 2032 2071
+2073 and 2 2072 2034
+2074 and 2 2038 2073
+2075 and 2 2042 2074
+2076 and 2 2046 2075
+2077 and 2 2050 2076
+2078 and 2 2054 2077
+2079 and 2 2058 2078
+2080 and 2 2062 2079
+2081 and 2 2066 2080
+2082 eq 2 28 642
+2083 ite 1 2082 2065 642
+2084 eq 2 300 2083
+2085 eq 2 27 642
+2086 ite 1 2085 2061 642
+2087 eq 2 299 2086
+2088 eq 2 26 642
+2089 ite 1 2088 2057 642
+2090 eq 2 298 2089
+2091 eq 2 25 642
+2092 ite 1 2091 2053 642
+2093 eq 2 297 2092
+2094 eq 2 24 642
+2095 ite 1 2094 2049 642
+2096 eq 2 296 2095
+2097 eq 2 23 642
+2098 ite 1 2097 2045 642
+2099 eq 2 295 2098
+2100 eq 2 22 642
+2101 ite 1 2100 2041 642
+2102 eq 2 294 2101
+2103 ite 1 1968 578 642
+2104 eq 2 2103 642
+2105 ite 1 2104 2037 642
+2106 eq 2 293 2105
+2107 eq 2 29 642
+2108 ite 1 2107 2029 642
+2109 eq 2 292 2108
+2110 ite 1 732 535 642
+2111 eq 2 2110 312
+2112 and 2 960 2107
+2113 eq 2 29 578
+2114 and 2 963 2113
+2115 or 2 2114 2112
+2116 and 2 1126 2082
+2117 eq 2 28 578
+2118 and 2 1129 2117
+2119 or 2 2118 2116
+2120 and 2 2119 2115
+2121 and 2 1293 2085
+2122 eq 2 27 578
+2123 and 2 1296 2122
+2124 or 2 2123 2121
+2125 and 2 2124 2120
+2126 and 2 1460 2088
+2127 eq 2 26 578
+2128 and 2 1463 2127
+2129 or 2 2128 2126
+2130 and 2 2129 2125
+2131 and 2 1627 2091
+2132 eq 2 25 578
+2133 and 2 1630 2132
+2134 or 2 2133 2131
+2135 and 2 2134 2130
+2136 and 2 1794 2094
+2137 eq 2 24 578
+2138 and 2 1797 2137
+2139 or 2 2138 2136
+2140 and 2 2139 2135
+2141 and 2 1961 2097
+2142 eq 2 23 578
+2143 and 2 1964 2142
+2144 or 2 2143 2141
+2145 and 2 2144 2140
+2146 eq 2 463 578
+2147 not 2 2146
+2148 and 2 1801 2147
+2149 or 2 1803 2148
+2150 and 2 2149 2100
+2151 eq 2 22 578
+2152 and 2 1801 2146
+2153 and 2 2152 2151
+2154 or 2 2153 2150
+2155 and 2 2154 2145
+2156 and 2 2018 2155
+2157 eq 2 488 642
+2158 not 2 2157
+2159 and 2 2158 2156
+2160 eq 2 30 535
+2161 and 2 2160 2159
+2162 and 2 2161 2111
+2163 and 2 2162 2109
+2164 and 2 2163 2106
+2165 and 2 2164 2102
+2166 and 2 2165 2099
+2167 and 2 2166 2096
+2168 and 2 2167 2093
+2169 and 2 2168 2090
+2170 and 2 2169 2087
+2171 and 2 2170 2084
+2172 not 2 2018
+2173 and 2 2158 2172
+2174 or 2 2157 2173
+2175 and 2 2174 2024
+2176 and 2 2175 2026
+2177 and 2 2176 2030
+2178 and 2 2177 2038
+2179 and 2 2178 2042
+2180 and 2 2179 2046
+2181 and 2 2180 2050
+2182 and 2 2181 2054
+2183 and 2 2182 2058
+2184 and 2 2183 2062
+2185 and 2 2184 2066
+2186 or 2 2185 2171
+2187 not 2 2068
+2188 and 2 2187 2186
+2189 eq 2 42 578
+2190 and 2 2189 2188
+2191 eq 2 43 535
+2192 and 2 2191 2190
+2193 or 2 2192 2081
+2194 and 2 2022 2193
+2195 or 2 2194 2067
+2196 and 2 2195 2017
+2197 and 2 960 2028
+2198 eq 2 311 578
+2199 and 2 963 2198
+2200 or 2 2199 2197
+2201 and 2 1126 2064
+2202 eq 2 310 578
+2203 and 2 1129 2202
+2204 or 2 2203 2201
+2205 and 2 2204 2200
+2206 and 2 1293 2060
+2207 eq 2 309 578
+2208 and 2 1296 2207
+2209 or 2 2208 2206
+2210 and 2 2209 2205
+2211 and 2 1460 2056
+2212 eq 2 308 578
+2213 and 2 1463 2212
+2214 or 2 2213 2211
+2215 and 2 2214 2210
+2216 and 2 1627 2052
+2217 eq 2 307 578
+2218 and 2 1630 2217
+2219 or 2 2218 2216
+2220 and 2 2219 2215
+2221 and 2 1794 2048
+2222 eq 2 306 578
+2223 and 2 1797 2222
+2224 or 2 2223 2221
+2225 and 2 2224 2220
+2226 and 2 1961 2044
+2227 eq 2 305 578
+2228 and 2 1964 2227
+2229 or 2 2228 2226
+2230 and 2 2229 2225
+2231 and 2 2149 2040
+2232 eq 2 304 578
+2233 and 2 2152 2232
+2234 or 2 2233 2231
+2235 and 2 2234 2230
+2236 eq 2 462 578
+2237 not 2 2236
+2238 and 2 1968 2237
+2239 or 2 1970 2238
+2240 and 2 2239 2036
+2241 eq 2 303 578
+2242 and 2 1968 2236
+2243 and 2 2242 2241
+2244 or 2 2243 2240
+2245 and 2 2244 2235
+2246 eq 2 302 642
+2247 not 2 730
+2248 eq 2 482 578
+2249 and 2 2248 2247
+2250 not 2 2248
+2251 or 2 2250 2249
+2252 and 2 2251 2246
+2253 eq 2 302 578
+2254 and 2 2248 730
+2255 and 2 2254 2253
+2256 or 2 2255 2252
+2257 and 2 2256 2245
+2258 and 2 2257 2196
+2259 and 2 2258 532
+2260 and 2 457 526
+2261 and 2 458 2260
+2262 and 2 530 2261
+2263 and 2 2262 525
+2264 and 2 536 656
+2265 and 2 534 2264
+2266 and 2 538 2265
+2267 and 2 540 2266
+2268 and 2 542 2267
+2269 and 2 544 2268
+2270 and 2 546 2269
+2271 and 2 548 2270
+2272 and 2 550 2271
+2273 and 2 552 2272
+2274 and 2 554 2273
+2275 and 2 556 2274
+2276 and 2 558 2275
+2277 and 2 560 2276
+2278 and 2 562 2277
+2279 and 2 564 2278
+2280 and 2 566 2279
+2281 and 2 568 2280
+2282 and 2 570 2281
+2283 and 2 572 2282
+2284 and 2 574 2283
+2285 and 2 576 2284
+2286 and 2 2285 579
+2287 and 2 2286 581
+2288 and 2 583 2287
+2289 eq 2 485 427
+2290 and 2 2289 2288
+2291 eq 2 428 578
+2292 and 2 2291 2290
+2293 and 2 588 2292
+2294 and 2 590 2293
+2295 and 2 2294 592
+2296 and 2 594 2295
+2297 and 2 596 2296
+2298 and 2 2297 598
+2299 and 2 600 2298
+2300 and 2 602 2299
+2301 and 2 2300 604
+2302 and 2 606 2301
+2303 and 2 608 2302
+2304 and 2 2303 610
+2305 and 2 612 2304
+2306 and 2 614 2305
+2307 and 2 2306 616
+2308 and 2 618 2307
+2309 and 2 620 2308
+2310 and 2 2309 622
+2311 and 2 624 2310
+2312 and 2 626 2311
+2313 and 2 2312 628
+2314 and 2 630 2313
+2315 and 2 632 2314
+2316 and 2 2315 634
+2317 and 2 636 2316
+2318 and 2 638 2317
+2319 and 2 2318 640
+2320 and 2 655 2319
+2321 and 2 661 2320
+2322 and 2 643 2321
+2323 and 2 882 2322
+2324 and 2 1044 2323
+2325 and 2 1206 2324
+2326 and 2 1368 2325
+2327 and 2 1530 2326
+2328 and 2 1692 2327
+2329 and 2 1854 2328
+2330 and 2 2016 2329
+2331 and 2 2195 2330
+2332 and 2 2257 2331
+2333 and 2 2332 2263
+2334 or 2 2333 2259
+2335 and 2 456 457
+2336 and 2 458 2335
+2337 and 2 530 2336
+2338 not 2 514
+2339 and 2 515 2338
+2340 and 2 516 2339
+2341 and 2 524 2340
+2342 and 2 2341 2337
+2343 eq 2 513 455
+2344 eq 2 512 454
+2345 eq 2 510 452
+2346 eq 2 509 451
+2347 eq 2 507 449
+2348 eq 2 506 448
+2349 eq 2 504 446
+2350 eq 2 503 445
+2351 eq 2 501 443
+2352 eq 2 500 442
+2353 eq 2 498 440
+2354 eq 2 497 439
+2355 eq 2 495 437
+2356 eq 2 494 436
+2357 eq 2 492 434
+2358 eq 2 491 433
+2359 eq 2 489 431
+2360 eq 2 488 430
+2361 eq 2 486 428
+2362 eq 2 483 425
+2363 eq 2 482 424
+2364 eq 2 469 411
+2365 eq 2 468 410
+2366 eq 2 467 409
+2367 eq 2 466 408
+2368 eq 2 465 407
+2369 eq 2 464 406
+2370 eq 2 463 405
+2371 eq 2 462 404
+2372 eq 2 461 403
+2373 eq 2 460 402
+2374 and 2 2373 2372
+2375 and 2 2374 2371
+2376 and 2 2375 2370
+2377 and 2 2376 2369
+2378 and 2 2377 2368
+2379 and 2 2378 2367
+2380 and 2 2379 2366
+2381 and 2 2380 2365
+2382 and 2 2381 2364
+2383 and 2 2382 554
+2384 and 2 2383 556
+2385 and 2 2384 558
+2386 and 2 2385 560
+2387 and 2 2386 562
+2388 and 2 2387 564
+2389 and 2 2388 566
+2390 and 2 2389 568
+2391 and 2 2390 570
+2392 and 2 2391 572
+2393 and 2 2392 574
+2394 and 2 2393 576
+2395 and 2 2394 2363
+2396 and 2 2395 2362
+2397 and 2 2396 583
+2398 and 2 2397 2289
+2399 and 2 2398 2361
+2400 and 2 2399 588
+2401 and 2 2400 2360
+2402 and 2 2401 2359
+2403 and 2 2402 594
+2404 and 2 2403 2358
+2405 and 2 2404 2357
+2406 and 2 2405 600
+2407 and 2 2406 2356
+2408 and 2 2407 2355
+2409 and 2 2408 606
+2410 and 2 2409 2354
+2411 and 2 2410 2353
+2412 and 2 2411 612
+2413 and 2 2412 2352
+2414 and 2 2413 2351
+2415 and 2 2414 618
+2416 and 2 2415 2350
+2417 and 2 2416 2349
+2418 and 2 2417 624
+2419 and 2 2418 2348
+2420 and 2 2419 2347
+2421 and 2 2420 630
+2422 and 2 2421 2346
+2423 and 2 2422 2345
+2424 and 2 2423 636
+2425 and 2 2424 2344
+2426 and 2 2425 2343
+2427 and 2 2426 2342
+2428 and 2 2338 521
+2429 and 2 516 2428
+2430 and 2 524 2429
+2431 not 2 458
+2432 and 2 456 527
+2433 and 2 2432 2431
+2434 and 2 2433 530
+2435 and 2 2434 2430
+2436 eq 2 455 300
+2437 eq 2 452 299
+2438 eq 2 449 298
+2439 eq 2 446 297
+2440 eq 2 443 296
+2441 eq 2 440 295
+2442 eq 2 437 294
+2443 eq 2 434 293
+2444 eq 2 431 33
+2445 eq 2 428 292
+2446 eq 2 425 18
+2447 eq 2 422 291
+2448 eq 2 421 290
+2449 eq 2 420 289
+2450 eq 2 419 288
+2451 eq 2 418 287
+2452 eq 2 417 286
+2453 eq 2 416 285
+2454 eq 2 415 284
+2455 eq 2 414 282
+2456 eq 2 413 281
+2457 eq 2 412 280
+2458 eq 2 411 279
+2459 eq 2 410 278
+2460 eq 2 409 277
+2461 eq 2 408 276
+2462 eq 2 407 275
+2463 eq 2 406 274
+2464 eq 2 405 273
+2465 eq 2 404 272
+2466 eq 2 403 271
+2467 eq 2 402 270
+2468 and 2 2467 2466
+2469 and 2 2468 2465
+2470 and 2 2469 2464
+2471 and 2 2470 2463
+2472 and 2 2471 2462
+2473 and 2 2472 2461
+2474 and 2 2473 2460
+2475 and 2 2474 2459
+2476 and 2 2475 2458
+2477 and 2 2476 2457
+2478 and 2 2477 2456
+2479 and 2 2478 2455
+2480 and 2 2479 2454
+2481 and 2 2480 2453
+2482 and 2 2481 2452
+2483 and 2 2482 2451
+2484 and 2 2483 2450
+2485 and 2 2484 2449
+2486 and 2 2485 2448
+2487 and 2 2486 2447
+2488 and 2 576 2487
+2489 and 2 2363 2488
+2490 and 2 2489 2446
+2491 and 2 583 2490
+2492 and 2 2289 2491
+2493 and 2 2492 2445
+2494 and 2 588 2493
+2495 and 2 2360 2494
+2496 and 2 2495 2444
+2497 and 2 594 2496
+2498 and 2 2358 2497
+2499 and 2 2498 2443
+2500 and 2 600 2499
+2501 and 2 2356 2500
+2502 and 2 2501 2442
+2503 and 2 606 2502
+2504 and 2 2354 2503
+2505 and 2 2504 2441
+2506 and 2 612 2505
+2507 and 2 2352 2506
+2508 and 2 2507 2440
+2509 and 2 618 2508
+2510 and 2 2350 2509
+2511 and 2 2510 2439
+2512 and 2 624 2511
+2513 and 2 2348 2512
+2514 and 2 2513 2438
+2515 and 2 630 2514
+2516 and 2 2346 2515
+2517 and 2 2516 2437
+2518 and 2 636 2517
+2519 and 2 2344 2518
+2520 and 2 2519 2436
+2521 eq 2 301 642
+2522 not 2 2521
+2523 ite 1 2522 642 578
+2524 eq 2 2523 642
+2525 and 2 2524 2520
+2526 eq 2 292 642
+2527 not 2 2526
+2528 eq 2 300 642
+2529 not 2 2528
+2530 and 2 2529 2527
+2531 eq 2 299 642
+2532 not 2 2531
+2533 and 2 2532 2530
+2534 eq 2 298 642
+2535 not 2 2534
+2536 and 2 2535 2533
+2537 eq 2 297 642
+2538 not 2 2537
+2539 and 2 2538 2536
+2540 eq 2 296 642
+2541 not 2 2540
+2542 and 2 2541 2539
+2543 eq 2 295 642
+2544 not 2 2543
+2545 and 2 2544 2542
+2546 eq 2 294 642
+2547 not 2 2546
+2548 and 2 2547 2545
+2549 and 2 1857 2548
+2550 eq 2 33 642
+2551 not 2 2550
+2552 and 2 2551 2549
+2553 eq 2 18 642
+2554 not 2 2553
+2555 and 2 2554 2552
+2556 and 2 2555 2521
+2557 eq 2 301 578
+2558 and 2 2529 2526
+2559 and 2 2532 2558
+2560 and 2 2535 2559
+2561 and 2 2538 2560
+2562 and 2 2541 2561
+2563 and 2 2544 2562
+2564 and 2 2547 2563
+2565 and 2 1857 2564
+2566 and 2 2551 2565
+2567 and 2 2554 2566
+2568 and 2 2532 2528
+2569 and 2 2535 2568
+2570 and 2 2538 2569
+2571 and 2 2541 2570
+2572 and 2 2544 2571
+2573 and 2 2547 2572
+2574 and 2 1857 2573
+2575 and 2 2551 2574
+2576 and 2 2554 2575
+2577 and 2 2535 2531
+2578 and 2 2538 2577
+2579 and 2 2541 2578
+2580 and 2 2544 2579
+2581 and 2 2547 2580
+2582 and 2 1857 2581
+2583 and 2 2551 2582
+2584 and 2 2554 2583
+2585 and 2 2538 2534
+2586 and 2 2541 2585
+2587 and 2 2544 2586
+2588 and 2 2547 2587
+2589 and 2 1857 2588
+2590 and 2 2551 2589
+2591 and 2 2554 2590
+2592 and 2 2541 2537
+2593 and 2 2544 2592
+2594 and 2 2547 2593
+2595 and 2 1857 2594
+2596 and 2 2551 2595
+2597 and 2 2554 2596
+2598 and 2 2544 2540
+2599 and 2 2547 2598
+2600 and 2 1857 2599
+2601 and 2 2551 2600
+2602 and 2 2554 2601
+2603 and 2 2547 2543
+2604 and 2 1857 2603
+2605 and 2 2551 2604
+2606 and 2 2554 2605
+2607 and 2 1857 2546
+2608 and 2 2551 2607
+2609 and 2 2554 2608
+2610 and 2 2551 1856
+2611 and 2 2554 2610
+2612 and 2 2554 2550
+2613 or 2 2553 2612
+2614 or 2 2613 2611
+2615 or 2 2614 2609
+2616 or 2 2615 2606
+2617 or 2 2616 2602
+2618 or 2 2617 2597
+2619 or 2 2618 2591
+2620 or 2 2619 2584
+2621 or 2 2620 2576
+2622 or 2 2621 2567
+2623 and 2 2622 2557
+2624 or 2 2623 2556
+2625 and 2 2624 2525
+2626 eq 2 257 642
+2627 ite 1 2626 513 642
+2628 eq 2 268 642
+2629 ite 1 2628 2627 642
+2630 eq 2 2629 300
+2631 eq 2 256 642
+2632 ite 1 2631 510 642
+2633 eq 2 267 642
+2634 ite 1 2633 2632 642
+2635 eq 2 2634 299
+2636 eq 2 255 642
+2637 ite 1 2636 507 642
+2638 eq 2 266 642
+2639 ite 1 2638 2637 642
+2640 eq 2 2639 298
+2641 eq 2 254 642
+2642 ite 1 2641 504 642
+2643 eq 2 265 642
+2644 ite 1 2643 2642 642
+2645 eq 2 2644 297
+2646 eq 2 253 642
+2647 ite 1 2646 501 642
+2648 eq 2 264 642
+2649 ite 1 2648 2647 642
+2650 eq 2 2649 296
+2651 eq 2 252 642
+2652 ite 1 2651 498 642
+2653 eq 2 263 642
+2654 ite 1 2653 2652 642
+2655 eq 2 2654 295
+2656 eq 2 251 642
+2657 ite 1 2656 495 642
+2658 eq 2 262 642
+2659 ite 1 2658 2657 642
+2660 eq 2 2659 294
+2661 eq 2 250 642
+2662 ite 1 2661 492 642
+2663 eq 2 261 642
+2664 ite 1 2663 2662 642
+2665 eq 2 2664 293
+2666 eq 2 249 642
+2667 ite 1 2666 489 642
+2668 eq 2 260 642
+2669 ite 1 2668 2667 642
+2670 eq 2 33 2669
+2671 eq 2 258 642
+2672 ite 1 2671 486 642
+2673 eq 2 269 642
+2674 ite 1 2673 2672 642
+2675 eq 2 2674 292
+2676 eq 2 248 642
+2677 ite 1 2676 483 642
+2678 ite 1 2248 578 642
+2679 eq 2 2678 642
+2680 ite 1 2679 2677 642
+2681 eq 2 18 2680
+2682 eq 2 480 642
+2683 not 2 2682
+2684 ite 1 2683 480 578
+2685 eq 2 2684 578
+2686 not 2 2685
+2687 ite 1 2686 2684 535
+2688 eq 2 2687 578
+2689 not 2 2688
+2690 ite 1 2689 2687 535
+2691 eq 2 2690 291
+2692 eq 2 479 642
+2693 not 2 2692
+2694 ite 1 2693 479 578
+2695 eq 2 2694 578
+2696 not 2 2695
+2697 ite 1 2696 2694 535
+2698 eq 2 2697 578
+2699 not 2 2698
+2700 ite 1 2699 2697 535
+2701 eq 2 2700 290
+2702 eq 2 478 642
+2703 not 2 2702
+2704 ite 1 2703 478 578
+2705 eq 2 2704 578
+2706 not 2 2705
+2707 ite 1 2706 2704 535
+2708 eq 2 2707 578
+2709 not 2 2708
+2710 ite 1 2709 2707 535
+2711 eq 2 2710 289
+2712 eq 2 477 642
+2713 not 2 2712
+2714 ite 1 2713 477 578
+2715 eq 2 2714 578
+2716 not 2 2715
+2717 ite 1 2716 2714 535
+2718 eq 2 2717 578
+2719 not 2 2718
+2720 ite 1 2719 2717 535
+2721 eq 2 2720 288
+2722 eq 2 476 642
+2723 not 2 2722
+2724 ite 1 2723 476 578
+2725 eq 2 2724 578
+2726 not 2 2725
+2727 ite 1 2726 2724 535
+2728 eq 2 2727 578
+2729 not 2 2728
+2730 ite 1 2729 2727 535
+2731 eq 2 2730 287
+2732 eq 2 475 642
+2733 not 2 2732
+2734 ite 1 2733 475 578
+2735 eq 2 2734 578
+2736 not 2 2735
+2737 ite 1 2736 2734 535
+2738 eq 2 2737 578
+2739 not 2 2738
+2740 ite 1 2739 2737 535
+2741 eq 2 2740 286
+2742 eq 2 474 642
+2743 not 2 2742
+2744 ite 1 2743 474 578
+2745 eq 2 2744 578
+2746 not 2 2745
+2747 ite 1 2746 2744 535
+2748 eq 2 2747 578
+2749 not 2 2748
+2750 ite 1 2749 2747 535
+2751 eq 2 2750 285
+2752 eq 2 473 642
+2753 not 2 2752
+2754 ite 1 2753 473 578
+2755 eq 2 2754 578
+2756 not 2 2755
+2757 ite 1 2756 2754 535
+2758 eq 2 2757 578
+2759 not 2 2758
+2760 ite 1 2759 2757 535
+2761 eq 2 2760 284
+2762 constd 1 4
+2763 eq 2 283 2762
+2764 eq 2 472 642
+2765 not 2 2764
+2766 ite 1 2765 472 578
+2767 eq 2 2766 578
+2768 not 2 2767
+2769 ite 1 2768 2766 535
+2770 eq 2 2769 578
+2771 not 2 2770
+2772 ite 1 2771 2769 535
+2773 eq 2 2772 282
+2774 eq 2 471 642
+2775 not 2 2774
+2776 ite 1 2775 471 578
+2777 eq 2 2776 578
+2778 not 2 2777
+2779 ite 1 2778 2776 535
+2780 eq 2 2779 578
+2781 not 2 2780
+2782 ite 1 2781 2779 535
+2783 eq 2 2782 281
+2784 eq 2 280 535
+2785 eq 2 469 642
+2786 not 2 2785
+2787 ite 1 2786 469 578
+2788 eq 2 2787 578
+2789 not 2 2788
+2790 ite 1 2789 2787 535
+2791 eq 2 2790 578
+2792 not 2 2791
+2793 ite 1 2792 2790 535
+2794 eq 2 2793 279
+2795 eq 2 468 642
+2796 not 2 2795
+2797 ite 1 2796 468 578
+2798 eq 2 2797 578
+2799 not 2 2798
+2800 ite 1 2799 2797 535
+2801 eq 2 2800 578
+2802 not 2 2801
+2803 ite 1 2802 2800 535
+2804 eq 2 2803 278
+2805 eq 2 467 642
+2806 not 2 2805
+2807 ite 1 2806 467 578
+2808 eq 2 2807 578
+2809 not 2 2808
+2810 ite 1 2809 2807 535
+2811 eq 2 2810 578
+2812 not 2 2811
+2813 ite 1 2812 2810 535
+2814 eq 2 2813 277
+2815 eq 2 466 642
+2816 not 2 2815
+2817 ite 1 2816 466 578
+2818 eq 2 2817 578
+2819 not 2 2818
+2820 ite 1 2819 2817 535
+2821 eq 2 2820 578
+2822 not 2 2821
+2823 ite 1 2822 2820 535
+2824 eq 2 2823 276
+2825 eq 2 465 642
+2826 not 2 2825
+2827 ite 1 2826 465 578
+2828 eq 2 2827 578
+2829 not 2 2828
+2830 ite 1 2829 2827 535
+2831 eq 2 2830 578
+2832 not 2 2831
+2833 ite 1 2832 2830 535
+2834 eq 2 2833 275
+2835 eq 2 464 642
+2836 not 2 2835
+2837 ite 1 2836 464 578
+2838 eq 2 2837 578
+2839 not 2 2838
+2840 ite 1 2839 2837 535
+2841 eq 2 2840 578
+2842 not 2 2841
+2843 ite 1 2842 2840 535
+2844 eq 2 2843 274
+2845 eq 2 463 642
+2846 not 2 2845
+2847 ite 1 2846 463 578
+2848 eq 2 2847 578
+2849 not 2 2848
+2850 ite 1 2849 2847 535
+2851 eq 2 2850 578
+2852 not 2 2851
+2853 ite 1 2852 2850 535
+2854 eq 2 2853 273
+2855 eq 2 462 642
+2856 not 2 2855
+2857 ite 1 2856 462 578
+2858 eq 2 2857 578
+2859 not 2 2858
+2860 ite 1 2859 2857 535
+2861 eq 2 2860 578
+2862 not 2 2861
+2863 ite 1 2862 2860 535
+2864 eq 2 2863 272
+2865 eq 2 461 642
+2866 not 2 2865
+2867 ite 1 2866 461 578
+2868 eq 2 2867 578
+2869 not 2 2868
+2870 ite 1 2869 2867 535
+2871 eq 2 2870 578
+2872 not 2 2871
+2873 ite 1 2872 2870 535
+2874 eq 2 2873 271
+2875 eq 2 460 642
+2876 not 2 2875
+2877 ite 1 2876 460 578
+2878 eq 2 2877 578
+2879 not 2 2878
+2880 ite 1 2879 2877 535
+2881 eq 2 2880 578
+2882 not 2 2881
+2883 ite 1 2882 2880 535
+2884 eq 2 2883 270
+2885 and 2 656 2872
+2886 or 2 657 2885
+2887 and 2 2886 2673
+2888 eq 2 269 578
+2889 and 2 656 2871
+2890 and 2 2889 2888
+2891 or 2 2890 2887
+2892 and 2 737 2792
+2893 or 2 739 2892
+2894 and 2 2893 2628
+2895 eq 2 268 578
+2896 and 2 737 2791
+2897 and 2 2896 2895
+2898 or 2 2897 2894
+2899 and 2 2898 2891
+2900 and 2 966 2802
+2901 or 2 968 2900
+2902 and 2 2901 2633
+2903 eq 2 267 578
+2904 and 2 966 2801
+2905 and 2 2904 2903
+2906 or 2 2905 2902
+2907 and 2 2906 2899
+2908 and 2 1133 2812
+2909 or 2 1135 2908
+2910 and 2 2909 2638
+2911 eq 2 266 578
+2912 and 2 1133 2811
+2913 and 2 2912 2911
+2914 or 2 2913 2910
+2915 and 2 2914 2907
+2916 and 2 1300 2822
+2917 or 2 1302 2916
+2918 and 2 2917 2643
+2919 eq 2 265 578
+2920 and 2 1300 2821
+2921 and 2 2920 2919
+2922 or 2 2921 2918
+2923 and 2 2922 2915
+2924 and 2 1467 2832
+2925 or 2 1469 2924
+2926 and 2 2925 2648
+2927 eq 2 264 578
+2928 and 2 1467 2831
+2929 and 2 2928 2927
+2930 or 2 2929 2926
+2931 and 2 2930 2923
+2932 and 2 1634 2842
+2933 or 2 1636 2932
+2934 and 2 2933 2653
+2935 eq 2 263 578
+2936 and 2 1634 2841
+2937 and 2 2936 2935
+2938 or 2 2937 2934
+2939 and 2 2938 2931
+2940 and 2 1801 2852
+2941 or 2 1803 2940
+2942 and 2 2941 2658
+2943 eq 2 262 578
+2944 and 2 1801 2851
+2945 and 2 2944 2943
+2946 or 2 2945 2942
+2947 and 2 2946 2939
+2948 and 2 1968 2862
+2949 or 2 1970 2948
+2950 and 2 2949 2663
+2951 eq 2 261 578
+2952 and 2 1968 2861
+2953 and 2 2952 2951
+2954 or 2 2953 2950
+2955 and 2 2954 2947
+2956 and 2 2018 2882
+2957 or 2 2172 2956
+2958 and 2 2957 2668
+2959 eq 2 260 578
+2960 and 2 2018 2881
+2961 and 2 2960 2959
+2962 or 2 2961 2958
+2963 and 2 2962 2955
+2964 eq 2 259 642
+2965 and 2 2964 2963
+2966 and 2 2965 2884
+2967 and 2 2966 2874
+2968 and 2 2967 2864
+2969 and 2 2968 2854
+2970 and 2 2969 2844
+2971 and 2 2970 2834
+2972 and 2 2971 2824
+2973 and 2 2972 2814
+2974 and 2 2973 2804
+2975 and 2 2974 2794
+2976 and 2 2975 2784
+2977 and 2 2976 2783
+2978 and 2 2977 2773
+2979 and 2 2978 2763
+2980 and 2 2979 2761
+2981 and 2 2980 2751
+2982 and 2 2981 2741
+2983 and 2 2982 2731
+2984 and 2 2983 2721
+2985 and 2 2984 2711
+2986 and 2 2985 2701
+2987 and 2 2986 2691
+2988 and 2 2987 2681
+2989 and 2 2988 2675
+2990 and 2 2989 2670
+2991 and 2 2990 2665
+2992 and 2 2991 2660
+2993 and 2 2992 2655
+2994 and 2 2993 2650
+2995 and 2 2994 2645
+2996 and 2 2995 2640
+2997 and 2 2996 2635
+2998 and 2 2997 2630
+2999 eq 2 2627 300
+3000 eq 2 2632 299
+3001 eq 2 2637 298
+3002 eq 2 2642 297
+3003 eq 2 2647 296
+3004 eq 2 2652 295
+3005 eq 2 2657 294
+3006 eq 2 2662 293
+3007 eq 2 33 2667
+3008 eq 2 2672 292
+3009 eq 2 18 2677
+3010 eq 2 2687 291
+3011 eq 2 2697 290
+3012 eq 2 2707 289
+3013 eq 2 2717 288
+3014 eq 2 2727 287
+3015 eq 2 2737 286
+3016 eq 2 2747 285
+3017 eq 2 2757 284
+3018 constd 1 3
+3019 eq 2 283 3018
+3020 eq 2 2769 282
+3021 eq 2 2779 281
+3022 eq 2 470 642
+3023 not 2 3022
+3024 ite 1 3023 470 578
+3025 eq 2 3024 578
+3026 not 2 3025
+3027 ite 1 3026 3024 535
+3028 eq 2 3027 280
+3029 eq 2 2790 279
+3030 eq 2 2800 278
+3031 eq 2 2810 277
+3032 eq 2 2820 276
+3033 eq 2 2830 275
+3034 eq 2 2840 274
+3035 eq 2 2850 273
+3036 eq 2 2860 272
+3037 eq 2 2870 271
+3038 eq 2 2880 270
+3039 not 2 2964
+3040 and 2 3039 3038
+3041 and 2 3040 3037
+3042 and 2 3041 3036
+3043 and 2 3042 3035
+3044 and 2 3043 3034
+3045 and 2 3044 3033
+3046 and 2 3045 3032
+3047 and 2 3046 3031
+3048 and 2 3047 3030
+3049 and 2 3048 3029
+3050 and 2 3049 3028
+3051 and 2 3050 3021
+3052 and 2 3051 3020
+3053 and 2 3052 3019
+3054 and 2 3053 3017
+3055 and 2 3054 3016
+3056 and 2 3055 3015
+3057 and 2 3056 3014
+3058 and 2 3057 3013
+3059 and 2 3058 3012
+3060 and 2 3059 3011
+3061 and 2 3060 3010
+3062 and 2 3061 3009
+3063 and 2 3062 3008
+3064 and 2 3063 3007
+3065 and 2 3064 3006
+3066 and 2 3065 3005
+3067 and 2 3066 3004
+3068 and 2 3067 3003
+3069 and 2 3068 3002
+3070 and 2 3069 3001
+3071 and 2 3070 3000
+3072 and 2 3071 2999
+3073 or 2 3072 2998
+3074 and 2 3073 2625
+3075 eq 2 2672 642
+3076 not 2 3075
+3077 eq 2 2627 642
+3078 not 2 3077
+3079 and 2 3078 3076
+3080 eq 2 2632 642
+3081 not 2 3080
+3082 and 2 3081 3079
+3083 eq 2 2637 642
+3084 not 2 3083
+3085 and 2 3084 3082
+3086 eq 2 2642 642
+3087 not 2 3086
+3088 and 2 3087 3085
+3089 eq 2 2647 642
+3090 not 2 3089
+3091 and 2 3090 3088
+3092 eq 2 2652 642
+3093 not 2 3092
+3094 and 2 3093 3091
+3095 eq 2 2657 642
+3096 not 2 3095
+3097 and 2 3096 3094
+3098 eq 2 2662 642
+3099 not 2 3098
+3100 and 2 3099 3097
+3101 eq 2 2667 642
+3102 not 2 3101
+3103 and 2 3102 3100
+3104 eq 2 2677 642
+3105 not 2 3104
+3106 and 2 3105 3103
+3107 and 2 3106 2964
+3108 eq 2 259 578
+3109 and 2 3078 3075
+3110 and 2 3081 3109
+3111 and 2 3084 3110
+3112 and 2 3087 3111
+3113 and 2 3090 3112
+3114 and 2 3093 3113
+3115 and 2 3096 3114
+3116 and 2 3099 3115
+3117 and 2 3102 3116
+3118 and 2 3105 3117
+3119 and 2 3081 3077
+3120 and 2 3084 3119
+3121 and 2 3087 3120
+3122 and 2 3090 3121
+3123 and 2 3093 3122
+3124 and 2 3096 3123
+3125 and 2 3099 3124
+3126 and 2 3102 3125
+3127 and 2 3105 3126
+3128 and 2 3084 3080
+3129 and 2 3087 3128
+3130 and 2 3090 3129
+3131 and 2 3093 3130
+3132 and 2 3096 3131
+3133 and 2 3099 3132
+3134 and 2 3102 3133
+3135 and 2 3105 3134
+3136 and 2 3087 3083
+3137 and 2 3090 3136
+3138 and 2 3093 3137
+3139 and 2 3096 3138
+3140 and 2 3099 3139
+3141 and 2 3102 3140
+3142 and 2 3105 3141
+3143 and 2 3090 3086
+3144 and 2 3093 3143
+3145 and 2 3096 3144
+3146 and 2 3099 3145
+3147 and 2 3102 3146
+3148 and 2 3105 3147
+3149 and 2 3093 3089
+3150 and 2 3096 3149
+3151 and 2 3099 3150
+3152 and 2 3102 3151
+3153 and 2 3105 3152
+3154 and 2 3096 3092
+3155 and 2 3099 3154
+3156 and 2 3102 3155
+3157 and 2 3105 3156
+3158 and 2 3099 3095
+3159 and 2 3102 3158
+3160 and 2 3105 3159
+3161 and 2 3102 3098
+3162 and 2 3105 3161
+3163 and 2 3105 3101
+3164 or 2 3104 3163
+3165 or 2 3164 3162
+3166 or 2 3165 3160
+3167 or 2 3166 3157
+3168 or 2 3167 3153
+3169 or 2 3168 3148
+3170 or 2 3169 3142
+3171 or 2 3170 3135
+3172 or 2 3171 3127
+3173 or 2 3172 3118
+3174 and 2 3173 3108
+3175 or 2 3174 3107
+3176 and 2 3175 3074
+3177 and 2 656 2869
+3178 or 2 657 3177
+3179 and 2 3178 2671
+3180 eq 2 258 578
+3181 and 2 656 2868
+3182 and 2 3181 3180
+3183 or 2 3182 3179
+3184 and 2 3183 3176
+3185 and 2 737 2789
+3186 or 2 739 3185
+3187 and 2 3186 2626
+3188 eq 2 257 578
+3189 and 2 737 2788
+3190 and 2 3189 3188
+3191 or 2 3190 3187
+3192 and 2 3191 3184
+3193 and 2 966 2799
+3194 or 2 968 3193
+3195 and 2 3194 2631
+3196 eq 2 256 578
+3197 and 2 966 2798
+3198 and 2 3197 3196
+3199 or 2 3198 3195
+3200 and 2 3199 3192
+3201 and 2 1133 2809
+3202 or 2 1135 3201
+3203 and 2 3202 2636
+3204 eq 2 255 578
+3205 and 2 1133 2808
+3206 and 2 3205 3204
+3207 or 2 3206 3203
+3208 and 2 3207 3200
+3209 and 2 1300 2819
+3210 or 2 1302 3209
+3211 and 2 3210 2641
+3212 eq 2 254 578
+3213 and 2 1300 2818
+3214 and 2 3213 3212
+3215 or 2 3214 3211
+3216 and 2 3215 3208
+3217 and 2 1467 2829
+3218 or 2 1469 3217
+3219 and 2 3218 2646
+3220 eq 2 253 578
+3221 and 2 1467 2828
+3222 and 2 3221 3220
+3223 or 2 3222 3219
+3224 and 2 3223 3216
+3225 and 2 1634 2839
+3226 or 2 1636 3225
+3227 and 2 3226 2651
+3228 eq 2 252 578
+3229 and 2 1634 2838
+3230 and 2 3229 3228
+3231 or 2 3230 3227
+3232 and 2 3231 3224
+3233 and 2 1801 2849
+3234 or 2 1803 3233
+3235 and 2 3234 2656
+3236 eq 2 251 578
+3237 and 2 1801 2848
+3238 and 2 3237 3236
+3239 or 2 3238 3235
+3240 and 2 3239 3232
+3241 and 2 1968 2859
+3242 or 2 1970 3241
+3243 and 2 3242 2661
+3244 eq 2 250 578
+3245 and 2 1968 2858
+3246 and 2 3245 3244
+3247 or 2 3246 3243
+3248 and 2 3247 3240
+3249 and 2 2018 2879
+3250 or 2 2172 3249
+3251 and 2 3250 2666
+3252 eq 2 249 578
+3253 and 2 2018 2878
+3254 and 2 3253 3252
+3255 or 2 3254 3251
+3256 and 2 3255 3248
+3257 and 2 2248 3026
+3258 or 2 2250 3257
+3259 and 2 3258 2676
+3260 eq 2 248 578
+3261 and 2 2248 3025
+3262 and 2 3261 3260
+3263 or 2 3262 3259
+3264 and 2 3263 3256
+3265 eq 2 16 642
+3266 eq 2 486 642
+3267 not 2 3266
+3268 eq 2 513 642
+3269 not 2 3268
+3270 and 2 3269 3267
+3271 eq 2 510 642
+3272 not 2 3271
+3273 and 2 3272 3270
+3274 eq 2 507 642
+3275 not 2 3274
+3276 and 2 3275 3273
+3277 eq 2 504 642
+3278 not 2 3277
+3279 and 2 3278 3276
+3280 eq 2 501 642
+3281 not 2 3280
+3282 and 2 3281 3279
+3283 eq 2 498 642
+3284 not 2 3283
+3285 and 2 3284 3282
+3286 eq 2 495 642
+3287 not 2 3286
+3288 and 2 3287 3285
+3289 eq 2 492 642
+3290 not 2 3289
+3291 and 2 3290 3288
+3292 eq 2 489 642
+3293 not 2 3292
+3294 and 2 3293 3291
+3295 eq 2 483 642
+3296 not 2 3295
+3297 and 2 3296 3294
+3298 and 2 3297 3265
+3299 eq 2 16 578
+3300 and 2 3269 3266
+3301 and 2 3272 3300
+3302 and 2 3275 3301
+3303 and 2 3278 3302
+3304 and 2 3281 3303
+3305 and 2 3284 3304
+3306 and 2 3287 3305
+3307 and 2 3290 3306
+3308 and 2 3293 3307
+3309 and 2 3296 3308
+3310 and 2 3272 3268
+3311 and 2 3275 3310
+3312 and 2 3278 3311
+3313 and 2 3281 3312
+3314 and 2 3284 3313
+3315 and 2 3287 3314
+3316 and 2 3290 3315
+3317 and 2 3293 3316
+3318 and 2 3296 3317
+3319 and 2 3275 3271
+3320 and 2 3278 3319
+3321 and 2 3281 3320
+3322 and 2 3284 3321
+3323 and 2 3287 3322
+3324 and 2 3290 3323
+3325 and 2 3293 3324
+3326 and 2 3296 3325
+3327 and 2 3278 3274
+3328 and 2 3281 3327
+3329 and 2 3284 3328
+3330 and 2 3287 3329
+3331 and 2 3290 3330
+3332 and 2 3293 3331
+3333 and 2 3296 3332
+3334 and 2 3281 3277
+3335 and 2 3284 3334
+3336 and 2 3287 3335
+3337 and 2 3290 3336
+3338 and 2 3293 3337
+3339 and 2 3296 3338
+3340 and 2 3284 3280
+3341 and 2 3287 3340
+3342 and 2 3290 3341
+3343 and 2 3293 3342
+3344 and 2 3296 3343
+3345 and 2 3287 3283
+3346 and 2 3290 3345
+3347 and 2 3293 3346
+3348 and 2 3296 3347
+3349 and 2 3290 3286
+3350 and 2 3293 3349
+3351 and 2 3296 3350
+3352 and 2 3293 3289
+3353 and 2 3296 3352
+3354 and 2 3296 3292
+3355 or 2 3295 3354
+3356 or 2 3355 3353
+3357 or 2 3356 3351
+3358 or 2 3357 3348
+3359 or 2 3358 3344
+3360 or 2 3359 3339
+3361 or 2 3360 3333
+3362 or 2 3361 3326
+3363 or 2 3362 3318
+3364 or 2 3363 3309
+3365 and 2 3364 3299
+3366 or 2 3365 3298
+3367 and 2 3265 3366
+3368 and 2 3367 3264
+3369 and 2 3368 2435
+3370 and 2 2431 2260
+3371 and 2 530 3370
+3372 and 2 3371 2430
+3373 not 2 2524
+3374 and 2 3373 2520
+3375 and 2 2624 3374
+3376 and 2 3073 3375
+3377 and 2 3175 3376
+3378 and 2 3183 3377
+3379 and 2 3191 3378
+3380 and 2 3199 3379
+3381 and 2 3207 3380
+3382 and 2 3215 3381
+3383 and 2 3223 3382
+3384 and 2 3231 3383
+3385 and 2 3239 3384
+3386 and 2 3247 3385
+3387 and 2 3255 3386
+3388 and 2 3263 3387
+3389 and 2 3367 3388
+3390 and 2 3389 3372
+3391 and 2 531 2430
+3392 eq 2 428 246
+3393 and 2 2373 534
+3394 and 2 538 3393
+3395 and 2 540 3394
+3396 and 2 542 3395
+3397 and 2 544 3396
+3398 and 2 546 3397
+3399 and 2 548 3398
+3400 and 2 550 3399
+3401 and 2 552 3400
+3402 and 2 554 3401
+3403 and 2 556 3402
+3404 and 2 558 3403
+3405 and 2 560 3404
+3406 and 2 562 3405
+3407 and 2 564 3406
+3408 and 2 566 3407
+3409 and 2 568 3408
+3410 and 2 570 3409
+3411 and 2 572 3410
+3412 and 2 574 3411
+3413 and 2 576 3412
+3414 eq 2 424 17
+3415 and 2 3414 3413
+3416 eq 2 425 231
+3417 and 2 3416 3415
+3418 and 2 583 3417
+3419 and 2 3418 585
+3420 and 2 3419 3392
+3421 and 2 588 3420
+3422 and 2 590 3421
+3423 eq 2 431 233
+3424 and 2 3423 3422
+3425 and 2 594 3424
+3426 and 2 596 3425
+3427 eq 2 434 234
+3428 and 2 3427 3426
+3429 and 2 600 3428
+3430 and 2 602 3429
+3431 eq 2 437 235
+3432 and 2 3431 3430
+3433 and 2 606 3432
+3434 and 2 608 3433
+3435 eq 2 440 236
+3436 and 2 3435 3434
+3437 and 2 612 3436
+3438 and 2 614 3437
+3439 eq 2 443 237
+3440 and 2 3439 3438
+3441 and 2 618 3440
+3442 and 2 620 3441
+3443 eq 2 446 238
+3444 and 2 3443 3442
+3445 and 2 624 3444
+3446 and 2 626 3445
+3447 eq 2 449 239
+3448 and 2 3447 3446
+3449 and 2 630 3448
+3450 and 2 632 3449
+3451 eq 2 452 240
+3452 and 2 3451 3450
+3453 and 2 636 3452
+3454 and 2 638 3453
+3455 eq 2 455 243
+3456 and 2 3455 3454
+3457 eq 2 244 247
+3458 eq 2 232 642
+3459 not 2 3458
+3460 and 2 3459 3457
+3461 and 2 647 3460
+3462 eq 2 232 246
+3463 and 2 3462 3461
+3464 eq 2 15 247
+3465 eq 2 246 535
+3466 and 2 663 3465
+3467 and 2 665 3462
+3468 or 2 3467 3466
+3469 and 2 3458 3468
+3470 and 2 3469 3464
+3471 or 2 3470 3463
+3472 and 2 3471 3456
+3473 eq 2 219 244
+3474 eq 2 216 642
+3475 not 2 3474
+3476 and 2 674 3475
+3477 eq 2 206 231
+3478 and 2 3477 3476
+3479 eq 2 207 232
+3480 and 2 3479 3478
+3481 eq 2 208 233
+3482 and 2 3481 3480
+3483 eq 2 209 234
+3484 and 2 3483 3482
+3485 eq 2 210 235
+3486 and 2 3485 3484
+3487 eq 2 211 236
+3488 and 2 3487 3486
+3489 eq 2 212 237
+3490 and 2 3489 3488
+3491 eq 2 213 238
+3492 and 2 3491 3490
+3493 eq 2 214 239
+3494 and 2 3493 3492
+3495 and 2 3494 3473
+3496 eq 2 218 240
+3497 and 2 3496 3495
+3498 and 2 696 3497
+3499 eq 2 216 243
+3500 and 2 3499 3498
+3501 eq 2 14 244
+3502 eq 2 243 535
+3503 eq 2 703 241
+3504 ite 1 705 218 642
+3505 eq 2 3504 240
+3506 ite 1 708 214 642
+3507 eq 2 3506 239
+3508 ite 1 711 213 642
+3509 eq 2 3508 238
+3510 ite 1 714 212 642
+3511 eq 2 3510 237
+3512 ite 1 717 211 642
+3513 eq 2 3512 236
+3514 ite 1 720 210 642
+3515 eq 2 3514 235
+3516 ite 1 723 209 642
+3517 eq 2 3516 234
+3518 eq 2 221 642
+3519 ite 1 3518 208 642
+3520 eq 2 3519 233
+3521 ite 1 727 207 642
+3522 eq 2 3521 232
+3523 eq 2 220 642
+3524 ite 1 3523 206 642
+3525 eq 2 3524 231
+3526 eq 2 460 578
+3527 not 2 3526
+3528 and 2 3527 2189
+3529 not 2 2189
+3530 or 2 3529 3528
+3531 and 2 3530 3518
+3532 eq 2 221 578
+3533 and 2 3526 2189
+3534 and 2 3533 3532
+3535 or 2 3534 3531
+3536 and 2 3535 829
+3537 eq 2 17 578
+3538 and 2 3537 2247
+3539 not 2 3537
+3540 or 2 3539 3538
+3541 and 2 3540 3523
+3542 eq 2 220 578
+3543 and 2 3537 730
+3544 and 2 3543 3542
+3545 or 2 3544 3541
+3546 and 2 3545 3536
+3547 and 2 737 3546
+3548 and 2 832 3547
+3549 and 2 3548 834
+3550 and 2 3549 3525
+3551 and 2 3550 3522
+3552 and 2 3551 3520
+3553 and 2 3552 3517
+3554 and 2 3553 3515
+3555 and 2 3554 3513
+3556 and 2 3555 3511
+3557 and 2 3556 3509
+3558 and 2 3557 3507
+3559 and 2 3558 3505
+3560 and 2 3559 3503
+3561 eq 2 241 578
+3562 and 2 849 3477
+3563 and 2 3562 3479
+3564 and 2 3563 3481
+3565 and 2 3564 3483
+3566 and 2 3565 3485
+3567 and 2 3566 3487
+3568 and 2 3567 3489
+3569 and 2 3568 3491
+3570 and 2 3569 3493
+3571 and 2 3570 3496
+3572 and 2 3571 3561
+3573 or 2 3572 3560
+3574 and 2 862 3573
+3575 and 2 3574 864
+3576 and 2 3575 3502
+3577 and 2 3477 867
+3578 and 2 3479 3577
+3579 and 2 3481 3578
+3580 and 2 3483 3579
+3581 and 2 3485 3580
+3582 and 2 3487 3581
+3583 and 2 3489 3582
+3584 and 2 3491 3583
+3585 and 2 3493 3584
+3586 and 2 3496 3585
+3587 and 2 3586 696
+3588 and 2 3587 3499
+3589 or 2 3588 3576
+3590 and 2 3474 3589
+3591 and 2 3590 3501
+3592 or 2 3591 3500
+3593 and 2 3592 3472
+3594 eq 2 190 642
+3595 not 2 3594
+3596 and 2 886 3595
+3597 eq 2 181 206
+3598 and 2 3597 3596
+3599 eq 2 182 207
+3600 and 2 3599 3598
+3601 eq 2 183 208
+3602 and 2 3601 3600
+3603 eq 2 184 209
+3604 and 2 3603 3602
+3605 eq 2 185 210
+3606 and 2 3605 3604
+3607 eq 2 186 211
+3608 and 2 3607 3606
+3609 eq 2 187 212
+3610 and 2 3609 3608
+3611 eq 2 188 213
+3612 and 2 3611 3610
+3613 eq 2 193 214
+3614 and 2 3613 3612
+3615 and 2 904 3614
+3616 and 2 3615 645
+3617 eq 2 190 218
+3618 and 2 3617 3616
+3619 eq 2 191 216
+3620 and 2 3619 3618
+3621 eq 2 13 219
+3622 and 2 3597 914
+3623 and 2 3599 3622
+3624 and 2 3601 3623
+3625 and 2 3603 3624
+3626 and 2 3605 3625
+3627 and 2 3607 3626
+3628 and 2 3609 3627
+3629 and 2 3611 3628
+3630 and 2 3613 3629
+3631 and 2 3630 904
+3632 and 2 3631 3617
+3633 and 2 3619 3632
+3634 eq 2 218 535
+3635 ite 1 928 191 642
+3636 eq 2 3635 216
+3637 eq 2 932 215
+3638 ite 1 934 193 642
+3639 eq 2 3638 214
+3640 ite 1 937 188 642
+3641 eq 2 3640 213
+3642 ite 1 940 187 642
+3643 eq 2 3642 212
+3644 ite 1 943 186 642
+3645 eq 2 3644 211
+3646 ite 1 946 185 642
+3647 eq 2 3646 210
+3648 ite 1 949 184 642
+3649 eq 2 3648 209
+3650 eq 2 196 642
+3651 ite 1 3650 183 642
+3652 eq 2 3651 208
+3653 ite 1 952 182 642
+3654 eq 2 3653 207
+3655 eq 2 195 642
+3656 ite 1 3655 181 642
+3657 eq 2 3656 206
+3658 and 2 3530 3650
+3659 eq 2 196 578
+3660 and 2 3533 3659
+3661 or 2 3660 3658
+3662 and 2 3661 1005
+3663 and 2 3540 3655
+3664 eq 2 195 578
+3665 and 2 3543 3664
+3666 or 2 3665 3663
+3667 and 2 3666 3662
+3668 and 2 966 3667
+3669 and 2 1008 3668
+3670 and 2 3669 1010
+3671 and 2 3670 3657
+3672 and 2 3671 3654
+3673 and 2 3672 3652
+3674 and 2 3673 3649
+3675 and 2 3674 3647
+3676 and 2 3675 3645
+3677 and 2 3676 3643
+3678 and 2 3677 3641
+3679 and 2 3678 3639
+3680 and 2 3679 3637
+3681 and 2 3680 3636
+3682 eq 2 215 578
+3683 and 2 1025 3597
+3684 and 2 3683 3599
+3685 and 2 3684 3601
+3686 and 2 3685 3603
+3687 and 2 3686 3605
+3688 and 2 3687 3607
+3689 and 2 3688 3609
+3690 and 2 3689 3611
+3691 and 2 3690 3613
+3692 and 2 3691 3682
+3693 and 2 3692 3619
+3694 or 2 3693 3681
+3695 and 2 1037 3694
+3696 and 2 3695 746
+3697 and 2 3696 3634
+3698 or 2 3697 3633
+3699 and 2 3594 3698
+3700 and 2 3699 3621
+3701 or 2 3700 3620
+3702 and 2 3701 3593
+3703 eq 2 164 642
+3704 not 2 3703
+3705 and 2 1048 3704
+3706 eq 2 156 181
+3707 and 2 3706 3705
+3708 eq 2 157 182
+3709 and 2 3708 3707
+3710 eq 2 158 183
+3711 and 2 3710 3709
+3712 eq 2 159 184
+3713 and 2 3712 3711
+3714 eq 2 160 185
+3715 and 2 3714 3713
+3716 eq 2 161 186
+3717 and 2 3716 3715
+3718 eq 2 162 187
+3719 and 2 3718 3717
+3720 eq 2 168 188
+3721 and 2 3720 3719
+3722 and 2 1064 3721
+3723 eq 2 164 193
+3724 and 2 3723 3722
+3725 and 2 3724 692
+3726 eq 2 165 190
+3727 and 2 3726 3725
+3728 eq 2 166 191
+3729 and 2 3728 3727
+3730 eq 2 12 194
+3731 and 2 3706 1076
+3732 and 2 3708 3731
+3733 and 2 3710 3732
+3734 and 2 3712 3733
+3735 and 2 3714 3734
+3736 and 2 3716 3735
+3737 and 2 3718 3736
+3738 and 2 3720 3737
+3739 and 2 3738 1064
+3740 and 2 3739 3723
+3741 and 2 3726 3740
+3742 and 2 3728 3741
+3743 eq 2 193 535
+3744 ite 1 1089 166 642
+3745 eq 2 3744 191
+3746 ite 1 1093 165 642
+3747 eq 2 3746 190
+3748 eq 2 1097 189
+3749 ite 1 1099 168 642
+3750 eq 2 3749 188
+3751 ite 1 1102 162 642
+3752 eq 2 3751 187
+3753 ite 1 1105 161 642
+3754 eq 2 3753 186
+3755 ite 1 1108 160 642
+3756 eq 2 3755 185
+3757 ite 1 1111 159 642
+3758 eq 2 3757 184
+3759 eq 2 171 642
+3760 ite 1 3759 158 642
+3761 eq 2 3760 183
+3762 ite 1 1114 157 642
+3763 eq 2 3762 182
+3764 eq 2 170 642
+3765 ite 1 3764 156 642
+3766 eq 2 3765 181
+3767 and 2 3530 3759
+3768 eq 2 171 578
+3769 and 2 3533 3768
+3770 or 2 3769 3767
+3771 and 2 3770 1167
+3772 and 2 3540 3764
+3773 eq 2 170 578
+3774 and 2 3543 3773
+3775 or 2 3774 3772
+3776 and 2 3775 3771
+3777 and 2 1133 3776
+3778 and 2 1170 3777
+3779 and 2 3778 1172
+3780 and 2 3779 3766
+3781 and 2 3780 3763
+3782 and 2 3781 3761
+3783 and 2 3782 3758
+3784 and 2 3783 3756
+3785 and 2 3784 3754
+3786 and 2 3785 3752
+3787 and 2 3786 3750
+3788 and 2 3787 3748
+3789 and 2 3788 3747
+3790 and 2 3789 3745
+3791 eq 2 189 578
+3792 and 2 1187 3706
+3793 and 2 3792 3708
+3794 and 2 3793 3710
+3795 and 2 3794 3712
+3796 and 2 3795 3714
+3797 and 2 3796 3716
+3798 and 2 3797 3718
+3799 and 2 3798 3720
+3800 and 2 3799 3791
+3801 and 2 3800 3726
+3802 and 2 3801 3728
+3803 or 2 3802 3790
+3804 and 2 1199 3803
+3805 and 2 3804 758
+3806 and 2 3805 3743
+3807 or 2 3806 3742
+3808 and 2 3703 3807
+3809 and 2 3808 3730
+3810 or 2 3809 3729
+3811 and 2 3810 3702
+3812 eq 2 138 642
+3813 not 2 3812
+3814 and 2 1210 3813
+3815 eq 2 131 156
+3816 and 2 3815 3814
+3817 eq 2 132 157
+3818 and 2 3817 3816
+3819 eq 2 133 158
+3820 and 2 3819 3818
+3821 eq 2 134 159
+3822 and 2 3821 3820
+3823 eq 2 135 160
+3824 and 2 3823 3822
+3825 eq 2 136 161
+3826 and 2 3825 3824
+3827 eq 2 143 162
+3828 and 2 3827 3826
+3829 and 2 1224 3828
+3830 eq 2 138 168
+3831 and 2 3830 3829
+3832 eq 2 139 164
+3833 and 2 3832 3831
+3834 and 2 3833 906
+3835 eq 2 140 165
+3836 and 2 3835 3834
+3837 eq 2 141 166
+3838 and 2 3837 3836
+3839 eq 2 11 169
+3840 and 2 3815 1238
+3841 and 2 3817 3840
+3842 and 2 3819 3841
+3843 and 2 3821 3842
+3844 and 2 3823 3843
+3845 and 2 3825 3844
+3846 and 2 3827 3845
+3847 and 2 3846 1224
+3848 and 2 3847 3830
+3849 and 2 3832 3848
+3850 and 2 3835 3849
+3851 and 2 3837 3850
+3852 eq 2 168 535
+3853 ite 1 1251 141 642
+3854 eq 2 3853 166
+3855 ite 1 1254 140 642
+3856 eq 2 3855 165
+3857 ite 1 1258 139 642
+3858 eq 2 3857 164
+3859 eq 2 1262 163
+3860 ite 1 1264 143 642
+3861 eq 2 3860 162
+3862 ite 1 1267 136 642
+3863 eq 2 3862 161
+3864 ite 1 1270 135 642
+3865 eq 2 3864 160
+3866 ite 1 1273 134 642
+3867 eq 2 3866 159
+3868 eq 2 146 642
+3869 ite 1 3868 133 642
+3870 eq 2 3869 158
+3871 ite 1 1276 132 642
+3872 eq 2 3871 157
+3873 eq 2 145 642
+3874 ite 1 3873 131 642
+3875 eq 2 3874 156
+3876 and 2 3530 3868
+3877 eq 2 146 578
+3878 and 2 3533 3877
+3879 or 2 3878 3876
+3880 and 2 3879 1329
+3881 and 2 3540 3873
+3882 eq 2 145 578
+3883 and 2 3543 3882
+3884 or 2 3883 3881
+3885 and 2 3884 3880
+3886 and 2 1300 3885
+3887 and 2 1332 3886
+3888 and 2 3887 1334
+3889 and 2 3888 3875
+3890 and 2 3889 3872
+3891 and 2 3890 3870
+3892 and 2 3891 3867
+3893 and 2 3892 3865
+3894 and 2 3893 3863
+3895 and 2 3894 3861
+3896 and 2 3895 3859
+3897 and 2 3896 3858
+3898 and 2 3897 3856
+3899 and 2 3898 3854
+3900 eq 2 163 578
+3901 and 2 1349 3815
+3902 and 2 3901 3817
+3903 and 2 3902 3819
+3904 and 2 3903 3821
+3905 and 2 3904 3823
+3906 and 2 3905 3825
+3907 and 2 3906 3827
+3908 and 2 3907 3900
+3909 and 2 3908 3832
+3910 and 2 3909 3835
+3911 and 2 3910 3837
+3912 or 2 3911 3899
+3913 and 2 1361 3912
+3914 and 2 3913 770
+3915 and 2 3914 3852
+3916 or 2 3915 3851
+3917 and 2 3812 3916
+3918 and 2 3917 3839
+3919 or 2 3918 3838
+3920 and 2 3919 3811
+3921 eq 2 112 642
+3922 not 2 3921
+3923 and 2 1372 3922
+3924 eq 2 106 131
+3925 and 2 3924 3923
+3926 eq 2 107 132
+3927 and 2 3926 3925
+3928 eq 2 108 133
+3929 and 2 3928 3927
+3930 eq 2 109 134
+3931 and 2 3930 3929
+3932 eq 2 110 135
+3933 and 2 3932 3931
+3934 eq 2 118 136
+3935 and 2 3934 3933
+3936 and 2 1384 3935
+3937 eq 2 112 143
+3938 and 2 3937 3936
+3939 eq 2 113 138
+3940 and 2 3939 3938
+3941 eq 2 114 139
+3942 and 2 3941 3940
+3943 and 2 3942 1068
+3944 eq 2 115 140
+3945 and 2 3944 3943
+3946 eq 2 116 141
+3947 and 2 3946 3945
+3948 eq 2 10 144
+3949 and 2 3924 1400
+3950 and 2 3926 3949
+3951 and 2 3928 3950
+3952 and 2 3930 3951
+3953 and 2 3932 3952
+3954 and 2 3934 3953
+3955 and 2 3954 1384
+3956 and 2 3955 3937
+3957 and 2 3939 3956
+3958 and 2 3941 3957
+3959 and 2 3944 3958
+3960 and 2 3946 3959
+3961 eq 2 143 535
+3962 ite 1 1413 116 642
+3963 eq 2 3962 141
+3964 ite 1 1416 115 642
+3965 eq 2 3964 140
+3966 ite 1 1419 114 642
+3967 eq 2 3966 139
+3968 ite 1 1423 113 642
+3969 eq 2 3968 138
+3970 eq 2 1427 137
+3971 ite 1 1429 118 642
+3972 eq 2 3971 136
+3973 ite 1 1432 110 642
+3974 eq 2 3973 135
+3975 ite 1 1435 109 642
+3976 eq 2 3975 134
+3977 eq 2 121 642
+3978 ite 1 3977 108 642
+3979 eq 2 3978 133
+3980 ite 1 1438 107 642
+3981 eq 2 3980 132
+3982 eq 2 120 642
+3983 ite 1 3982 106 642
+3984 eq 2 3983 131
+3985 and 2 3530 3977
+3986 eq 2 121 578
+3987 and 2 3533 3986
+3988 or 2 3987 3985
+3989 and 2 3988 1491
+3990 and 2 3540 3982
+3991 eq 2 120 578
+3992 and 2 3543 3991
+3993 or 2 3992 3990
+3994 and 2 3993 3989
+3995 and 2 1467 3994
+3996 and 2 1494 3995
+3997 and 2 3996 1496
+3998 and 2 3997 3984
+3999 and 2 3998 3981
+4000 and 2 3999 3979
+4001 and 2 4000 3976
+4002 and 2 4001 3974
+4003 and 2 4002 3972
+4004 and 2 4003 3970
+4005 and 2 4004 3969
+4006 and 2 4005 3967
+4007 and 2 4006 3965
+4008 and 2 4007 3963
+4009 eq 2 137 578
+4010 and 2 1511 3924
+4011 and 2 4010 3926
+4012 and 2 4011 3928
+4013 and 2 4012 3930
+4014 and 2 4013 3932
+4015 and 2 4014 3934
+4016 and 2 4015 4009
+4017 and 2 4016 3939
+4018 and 2 4017 3941
+4019 and 2 4018 3944
+4020 and 2 4019 3946
+4021 or 2 4020 4008
+4022 and 2 1523 4021
+4023 and 2 4022 782
+4024 and 2 4023 3961
+4025 or 2 4024 3960
+4026 and 2 3921 4025
+4027 and 2 4026 3948
+4028 or 2 4027 3947
+4029 and 2 4028 3920
+4030 eq 2 86 642
+4031 not 2 4030
+4032 and 2 1534 4031
+4033 eq 2 81 106
+4034 and 2 4033 4032
+4035 eq 2 82 107
+4036 and 2 4035 4034
+4037 eq 2 83 108
+4038 and 2 4037 4036
+4039 eq 2 84 109
+4040 and 2 4039 4038
+4041 eq 2 93 110
+4042 and 2 4041 4040
+4043 and 2 1544 4042
+4044 eq 2 86 118
+4045 and 2 4044 4043
+4046 eq 2 87 112
+4047 and 2 4046 4045
+4048 eq 2 88 113
+4049 and 2 4048 4047
+4050 eq 2 89 114
+4051 and 2 4050 4049
+4052 and 2 4051 1230
+4053 eq 2 90 115
+4054 and 2 4053 4052
+4055 eq 2 91 116
+4056 and 2 4055 4054
+4057 eq 2 9 119
+4058 and 2 4033 1562
+4059 and 2 4035 4058
+4060 and 2 4037 4059
+4061 and 2 4039 4060
+4062 and 2 4041 4061
+4063 and 2 4062 1544
+4064 and 2 4063 4044
+4065 and 2 4046 4064
+4066 and 2 4048 4065
+4067 and 2 4050 4066
+4068 and 2 4053 4067
+4069 and 2 4055 4068
+4070 eq 2 118 535
+4071 ite 1 1575 91 642
+4072 eq 2 4071 116
+4073 ite 1 1578 90 642
+4074 eq 2 4073 115
+4075 ite 1 1581 89 642
+4076 eq 2 4075 114
+4077 ite 1 1584 88 642
+4078 eq 2 4077 113
+4079 ite 1 1588 87 642
+4080 eq 2 4079 112
+4081 eq 2 1592 111
+4082 ite 1 1594 93 642
+4083 eq 2 4082 110
+4084 ite 1 1597 84 642
+4085 eq 2 4084 109
+4086 eq 2 96 642
+4087 ite 1 4086 83 642
+4088 eq 2 4087 108
+4089 ite 1 1600 82 642
+4090 eq 2 4089 107
+4091 eq 2 95 642
+4092 ite 1 4091 81 642
+4093 eq 2 4092 106
+4094 and 2 3530 4086
+4095 eq 2 96 578
+4096 and 2 3533 4095
+4097 or 2 4096 4094
+4098 and 2 4097 1653
+4099 and 2 3540 4091
+4100 eq 2 95 578
+4101 and 2 3543 4100
+4102 or 2 4101 4099
+4103 and 2 4102 4098
+4104 and 2 1634 4103
+4105 and 2 1656 4104
+4106 and 2 4105 1658
+4107 and 2 4106 4093
+4108 and 2 4107 4090
+4109 and 2 4108 4088
+4110 and 2 4109 4085
+4111 and 2 4110 4083
+4112 and 2 4111 4081
+4113 and 2 4112 4080
+4114 and 2 4113 4078
+4115 and 2 4114 4076
+4116 and 2 4115 4074
+4117 and 2 4116 4072
+4118 eq 2 111 578
+4119 and 2 1673 4033
+4120 and 2 4119 4035
+4121 and 2 4120 4037
+4122 and 2 4121 4039
+4123 and 2 4122 4041
+4124 and 2 4123 4118
+4125 and 2 4124 4046
+4126 and 2 4125 4048
+4127 and 2 4126 4050
+4128 and 2 4127 4053
+4129 and 2 4128 4055
+4130 or 2 4129 4117
+4131 and 2 1685 4130
+4132 and 2 4131 794
+4133 and 2 4132 4070
+4134 or 2 4133 4069
+4135 and 2 4030 4134
+4136 and 2 4135 4057
+4137 or 2 4136 4056
+4138 and 2 4137 4029
+4139 eq 2 60 642
+4140 not 2 4139
+4141 and 2 1696 4140
+4142 eq 2 56 81
+4143 and 2 4142 4141
+4144 eq 2 57 82
+4145 and 2 4144 4143
+4146 eq 2 58 83
+4147 and 2 4146 4145
+4148 eq 2 68 84
+4149 and 2 4148 4147
+4150 and 2 1704 4149
+4151 eq 2 60 93
+4152 and 2 4151 4150
+4153 eq 2 61 86
+4154 and 2 4153 4152
+4155 eq 2 62 87
+4156 and 2 4155 4154
+4157 eq 2 63 88
+4158 and 2 4157 4156
+4159 eq 2 64 89
+4160 and 2 4159 4158
+4161 and 2 4160 1392
+4162 eq 2 65 90
+4163 and 2 4162 4161
+4164 eq 2 66 91
+4165 and 2 4164 4163
+4166 eq 2 8 94
+4167 and 2 4142 1724
+4168 and 2 4144 4167
+4169 and 2 4146 4168
+4170 and 2 4148 4169
+4171 and 2 4170 1704
+4172 and 2 4171 4151
+4173 and 2 4153 4172
+4174 and 2 4155 4173
+4175 and 2 4157 4174
+4176 and 2 4159 4175
+4177 and 2 4162 4176
+4178 and 2 4164 4177
+4179 eq 2 93 535
+4180 ite 1 1737 66 642
+4181 eq 2 4180 91
+4182 ite 1 1740 65 642
+4183 eq 2 4182 90
+4184 ite 1 1743 64 642
+4185 eq 2 4184 89
+4186 ite 1 1746 63 642
+4187 eq 2 4186 88
+4188 ite 1 1749 62 642
+4189 eq 2 4188 87
+4190 ite 1 1753 61 642
+4191 eq 2 4190 86
+4192 eq 2 1757 85
+4193 ite 1 1759 68 642
+4194 eq 2 4193 84
+4195 eq 2 71 642
+4196 ite 1 4195 58 642
+4197 eq 2 4196 83
+4198 ite 1 1762 57 642
+4199 eq 2 4198 82
+4200 eq 2 70 642
+4201 ite 1 4200 56 642
+4202 eq 2 4201 81
+4203 and 2 3530 4195
+4204 eq 2 71 578
+4205 and 2 3533 4204
+4206 or 2 4205 4203
+4207 and 2 4206 1815
+4208 and 2 3540 4200
+4209 eq 2 70 578
+4210 and 2 3543 4209
+4211 or 2 4210 4208
+4212 and 2 4211 4207
+4213 and 2 1801 4212
+4214 and 2 1818 4213
+4215 and 2 4214 1820
+4216 and 2 4215 4202
+4217 and 2 4216 4199
+4218 and 2 4217 4197
+4219 and 2 4218 4194
+4220 and 2 4219 4192
+4221 and 2 4220 4191
+4222 and 2 4221 4189
+4223 and 2 4222 4187
+4224 and 2 4223 4185
+4225 and 2 4224 4183
+4226 and 2 4225 4181
+4227 eq 2 85 578
+4228 and 2 1835 4142
+4229 and 2 4228 4144
+4230 and 2 4229 4146
+4231 and 2 4230 4148
+4232 and 2 4231 4227
+4233 and 2 4232 4153
+4234 and 2 4233 4155
+4235 and 2 4234 4157
+4236 and 2 4235 4159
+4237 and 2 4236 4162
+4238 and 2 4237 4164
+4239 or 2 4238 4226
+4240 and 2 1847 4239
+4241 and 2 4240 806
+4242 and 2 4241 4179
+4243 or 2 4242 4178
+4244 and 2 4139 4243
+4245 and 2 4244 4166
+4246 or 2 4245 4165
+4247 and 2 4246 4138
+4248 eq 2 34 642
+4249 not 2 4248
+4250 and 2 1858 4249
+4251 eq 2 31 56
+4252 and 2 4251 4250
+4253 eq 2 32 57
+4254 and 2 4253 4252
+4255 eq 2 43 58
+4256 and 2 4255 4254
+4257 and 2 1864 4256
+4258 eq 2 34 68
+4259 and 2 4258 4257
+4260 eq 2 35 60
+4261 and 2 4260 4259
+4262 eq 2 36 61
+4263 and 2 4262 4261
+4264 eq 2 37 62
+4265 and 2 4264 4263
+4266 eq 2 38 63
+4267 and 2 4266 4265
+4268 eq 2 39 64
+4269 and 2 4268 4267
+4270 and 2 4269 1554
+4271 eq 2 40 65
+4272 and 2 4271 4270
+4273 eq 2 41 66
+4274 and 2 4273 4272
+4275 eq 2 7 69
+4276 and 2 4251 1886
+4277 and 2 4253 4276
+4278 and 2 4255 4277
+4279 and 2 4278 1864
+4280 and 2 4279 4258
+4281 and 2 4260 4280
+4282 and 2 4262 4281
+4283 and 2 4264 4282
+4284 and 2 4266 4283
+4285 and 2 4268 4284
+4286 and 2 4271 4285
+4287 and 2 4273 4286
+4288 eq 2 68 535
+4289 ite 1 1899 41 642
+4290 eq 2 4289 66
+4291 ite 1 1902 40 642
+4292 eq 2 4291 65
+4293 ite 1 1905 39 642
+4294 eq 2 4293 64
+4295 ite 1 1908 38 642
+4296 eq 2 4295 63
+4297 ite 1 1911 37 642
+4298 eq 2 4297 62
+4299 ite 1 1914 36 642
+4300 eq 2 4299 61
+4301 ite 1 1918 35 642
+4302 eq 2 4301 60
+4303 eq 2 1922 59
+4304 eq 2 46 642
+4305 ite 1 4304 43 642
+4306 eq 2 4305 58
+4307 ite 1 1924 32 642
+4308 eq 2 4307 57
+4309 eq 2 45 642
+4310 ite 1 4309 31 642
+4311 eq 2 4310 56
+4312 and 2 3530 4304
+4313 eq 2 46 578
+4314 and 2 3533 4313
+4315 or 2 4314 4312
+4316 and 2 4315 1977
+4317 and 2 3540 4309
+4318 eq 2 45 578
+4319 and 2 3543 4318
+4320 or 2 4319 4317
+4321 and 2 4320 4316
+4322 and 2 1968 4321
+4323 and 2 1980 4322
+4324 and 2 4323 1982
+4325 and 2 4324 4311
+4326 and 2 4325 4308
+4327 and 2 4326 4306
+4328 and 2 4327 4303
+4329 and 2 4328 4302
+4330 and 2 4329 4300
+4331 and 2 4330 4298
+4332 and 2 4331 4296
+4333 and 2 4332 4294
+4334 and 2 4333 4292
+4335 and 2 4334 4290
+4336 eq 2 59 578
+4337 and 2 1997 4251
+4338 and 2 4337 4253
+4339 and 2 4338 4255
+4340 and 2 4339 4336
+4341 and 2 4340 4260
+4342 and 2 4341 4262
+4343 and 2 4342 4264
+4344 and 2 4343 4266
+4345 and 2 4344 4268
+4346 and 2 4345 4271
+4347 and 2 4346 4273
+4348 or 2 4347 4335
+4349 and 2 2009 4348
+4350 and 2 4349 818
+4351 and 2 4350 4288
+4352 or 2 4351 4287
+4353 and 2 4248 4352
+4354 and 2 4353 4275
+4355 or 2 4354 4274
+4356 and 2 4355 4247
+4357 and 2 3293 2024
+4358 eq 2 18 31
+4359 and 2 4358 4357
+4360 eq 2 486 32
+4361 and 2 4360 4359
+4362 and 2 2032 4361
+4363 eq 2 489 43
+4364 and 2 4363 4362
+4365 eq 2 492 34
+4366 and 2 4365 4364
+4367 eq 2 495 35
+4368 and 2 4367 4366
+4369 eq 2 498 36
+4370 and 2 4369 4368
+4371 eq 2 501 37
+4372 and 2 4371 4370
+4373 eq 2 504 38
+4374 and 2 4373 4372
+4375 eq 2 507 39
+4376 and 2 4375 4374
+4377 and 2 4376 1716
+4378 eq 2 510 40
+4379 and 2 4378 4377
+4380 eq 2 513 41
+4381 and 2 4380 4379
+4382 eq 2 6 44
+4383 and 2 4358 2069
+4384 and 2 4360 4383
+4385 and 2 4384 2032
+4386 and 2 4385 4363
+4387 and 2 4365 4386
+4388 and 2 4367 4387
+4389 and 2 4369 4388
+4390 and 2 4371 4389
+4391 and 2 4373 4390
+4392 and 2 4375 4391
+4393 and 2 4378 4392
+4394 and 2 4380 4393
+4395 ite 1 2082 513 642
+4396 eq 2 4395 41
+4397 ite 1 2085 510 642
+4398 eq 2 4397 40
+4399 ite 1 2088 507 642
+4400 eq 2 4399 39
+4401 ite 1 2091 504 642
+4402 eq 2 4401 38
+4403 ite 1 2094 501 642
+4404 eq 2 4403 37
+4405 ite 1 2097 498 642
+4406 eq 2 4405 36
+4407 ite 1 2100 495 642
+4408 eq 2 4407 35
+4409 ite 1 2104 492 642
+4410 eq 2 4409 34
+4411 eq 2 21 642
+4412 ite 1 4411 578 642
+4413 eq 2 4412 33
+4414 ite 1 2107 486 642
+4415 eq 2 4414 32
+4416 eq 2 20 642
+4417 ite 1 4416 18 642
+4418 eq 2 4417 31
+4419 and 2 2018 3527
+4420 or 2 2172 4419
+4421 and 2 4420 4411
+4422 eq 2 21 578
+4423 and 2 2018 3526
+4424 and 2 4423 4422
+4425 or 2 4424 4421
+4426 and 2 4425 2155
+4427 and 2 3540 4416
+4428 eq 2 20 578
+4429 and 2 3543 4428
+4430 or 2 4429 4427
+4431 and 2 4430 4426
+4432 and 2 2018 4431
+4433 and 2 2158 4432
+4434 and 2 4433 2160
+4435 and 2 4434 4418
+4436 and 2 4435 4415
+4437 and 2 4436 4413
+4438 and 2 4437 4410
+4439 and 2 4438 4408
+4440 and 2 4439 4406
+4441 and 2 4440 4404
+4442 and 2 4441 4402
+4443 and 2 4442 4400
+4444 and 2 4443 4398
+4445 and 2 4444 4396
+4446 eq 2 33 578
+4447 and 2 2175 4358
+4448 and 2 4447 4360
+4449 and 2 4448 4446
+4450 and 2 4449 4365
+4451 and 2 4450 4367
+4452 and 2 4451 4369
+4453 and 2 4452 4371
+4454 and 2 4453 4373
+4455 and 2 4454 4375
+4456 and 2 4455 4378
+4457 and 2 4456 4380
+4458 or 2 4457 4445
+4459 and 2 2187 4458
+4460 and 2 4459 2189
+4461 and 2 4460 2191
+4462 or 2 4461 4394
+4463 and 2 3292 4462
+4464 and 2 4463 4382
+4465 or 2 4464 4381
+4466 and 2 4465 4356
+4467 eq 2 16 19
+4468 and 2 3296 4467
+4469 eq 2 482 17
+4470 and 2 4469 4468
+4471 eq 2 483 18
+4472 and 2 4471 4470
+4473 eq 2 5 19
+4474 eq 2 18 535
+4475 eq 2 482 642
+4476 not 2 4475
+4477 and 2 4476 2248
+4478 eq 2 5 642
+4479 not 2 4478
+4480 and 2 4479 4477
+4481 and 2 4480 3537
+4482 and 2 4481 4474
+4483 and 2 4478 4469
+4484 and 2 4483 4471
+4485 or 2 4484 4482
+4486 and 2 3295 4485
+4487 and 2 4486 4473
+4488 or 2 4487 4472
+4489 and 2 4488 4466
+4490 not 2 3265
+4491 and 2 4490 4489
+4492 and 2 3366 4491
+4493 and 2 4492 3391
+4494 and 2 2430 2262
+4495 and 2 2373 656
+4496 and 2 4495 534
+4497 and 2 4496 538
+4498 and 2 4497 540
+4499 and 2 4498 542
+4500 and 2 4499 544
+4501 and 2 4500 546
+4502 and 2 4501 548
+4503 and 2 4502 550
+4504 and 2 4503 552
+4505 and 2 554 4504
+4506 and 2 556 4505
+4507 and 2 558 4506
+4508 and 2 560 4507
+4509 and 2 562 4508
+4510 and 2 564 4509
+4511 and 2 566 4510
+4512 and 2 568 4511
+4513 and 2 570 4512
+4514 and 2 572 4513
+4515 and 2 574 4514
+4516 and 2 576 4515
+4517 and 2 4516 3414
+4518 and 2 4517 3416
+4519 and 2 583 4518
+4520 and 2 2289 4519
+4521 and 2 4520 2291
+4522 and 2 588 4521
+4523 and 2 4522 590
+4524 and 2 4523 3423
+4525 and 2 594 4524
+4526 and 2 4525 596
+4527 and 2 4526 3427
+4528 and 2 600 4527
+4529 and 2 4528 602
+4530 and 2 4529 3431
+4531 and 2 606 4530
+4532 and 2 4531 608
+4533 and 2 4532 3435
+4534 and 2 612 4533
+4535 and 2 4534 614
+4536 and 2 4535 3439
+4537 and 2 618 4536
+4538 and 2 4537 620
+4539 and 2 4538 3443
+4540 and 2 624 4539
+4541 and 2 4540 626
+4542 and 2 4541 3447
+4543 and 2 630 4542
+4544 and 2 4543 632
+4545 and 2 4544 3451
+4546 and 2 636 4545
+4547 and 2 4546 638
+4548 and 2 4547 3455
+4549 and 2 655 4548
+4550 and 2 661 4549
+4551 and 2 3458 4550
+4552 and 2 3592 4551
+4553 and 2 3701 4552
+4554 and 2 3810 4553
+4555 and 2 3919 4554
+4556 and 2 4028 4555
+4557 and 2 4137 4556
+4558 and 2 4246 4557
+4559 and 2 4355 4558
+4560 and 2 4465 4559
+4561 and 2 4488 4560
+4562 and 2 4490 4561
+4563 and 2 3366 4562
+4564 and 2 4563 4494
+4565 and 2 458 2432
+4566 and 2 530 4565
+4567 and 2 2430 4566
+4568 eq 2 425 578
+4569 and 2 4476 2250
+4570 or 2 4475 4569
+4571 and 2 2373 4570
+4572 and 2 2372 4571
+4573 and 2 2371 4572
+4574 and 2 2370 4573
+4575 and 2 2369 4574
+4576 and 2 2368 4575
+4577 and 2 2367 4576
+4578 and 2 2366 4577
+4579 and 2 2365 4578
+4580 and 2 2364 4579
+4581 and 2 554 4580
+4582 and 2 556 4581
+4583 and 2 558 4582
+4584 and 2 560 4583
+4585 and 2 562 4584
+4586 and 2 564 4585
+4587 and 2 566 4586
+4588 and 2 568 4587
+4589 and 2 570 4588
+4590 and 2 572 4589
+4591 and 2 574 4590
+4592 and 2 576 4591
+4593 and 2 2363 4592
+4594 and 2 4593 4568
+4595 and 2 583 4594
+4596 and 2 2289 4595
+4597 and 2 2361 4596
+4598 and 2 588 4597
+4599 and 2 2360 4598
+4600 and 2 2359 4599
+4601 and 2 594 4600
+4602 and 2 2358 4601
+4603 and 2 2357 4602
+4604 and 2 600 4603
+4605 and 2 2356 4604
+4606 and 2 2355 4605
+4607 and 2 606 4606
+4608 and 2 2354 4607
+4609 and 2 2353 4608
+4610 and 2 612 4609
+4611 and 2 2352 4610
+4612 and 2 2351 4611
+4613 and 2 618 4612
+4614 and 2 2350 4613
+4615 and 2 2349 4614
+4616 and 2 624 4615
+4617 and 2 2348 4616
+4618 and 2 2347 4617
+4619 and 2 630 4618
+4620 and 2 2346 4619
+4621 and 2 2345 4620
+4622 and 2 636 4621
+4623 and 2 2344 4622
+4624 and 2 2343 4623
+4625 and 2 2373 4624
+4626 and 2 2372 4625
+4627 and 2 2371 4626
+4628 and 2 2370 4627
+4629 and 2 2369 4628
+4630 and 2 2368 4629
+4631 and 2 2367 4630
+4632 and 2 2366 4631
+4633 and 2 2365 4632
+4634 and 2 2364 4633
+4635 and 2 554 4634
+4636 and 2 556 4635
+4637 and 2 558 4636
+4638 and 2 560 4637
+4639 and 2 562 4638
+4640 and 2 564 4639
+4641 and 2 566 4640
+4642 and 2 568 4641
+4643 and 2 570 4642
+4644 and 2 572 4643
+4645 and 2 574 4644
+4646 and 2 576 4645
+4647 and 2 2363 4646
+4648 and 2 4568 4647
+4649 and 2 583 4648
+4650 and 2 2289 4649
+4651 and 2 2361 4650
+4652 and 2 588 4651
+4653 and 2 2360 4652
+4654 and 2 2359 4653
+4655 and 2 594 4654
+4656 and 2 2358 4655
+4657 and 2 2357 4656
+4658 and 2 600 4657
+4659 and 2 2356 4658
+4660 and 2 2355 4659
+4661 and 2 606 4660
+4662 and 2 2354 4661
+4663 and 2 2353 4662
+4664 and 2 612 4663
+4665 and 2 2352 4664
+4666 and 2 2351 4665
+4667 and 2 618 4666
+4668 and 2 2350 4667
+4669 and 2 2349 4668
+4670 and 2 624 4669
+4671 and 2 2348 4670
+4672 and 2 2347 4671
+4673 and 2 630 4672
+4674 and 2 2346 4673
+4675 and 2 2345 4674
+4676 and 2 636 4675
+4677 and 2 2344 4676
+4678 and 2 2343 4677
+4679 and 2 4479 4678
+4680 and 2 3295 4679
+4681 and 2 4490 4680
+4682 and 2 3366 4681
+4683 and 2 4682 4567
+4684 and 2 4479 4624
+4685 and 2 3295 4684
+4686 and 2 4490 4685
+4687 and 2 3366 4686
+4688 and 2 4687 4567
+4689 or 2 4688 4683
+4690 or 2 4689 4564
+4691 or 2 4690 4493
+4692 or 2 4691 3390
+4693 or 2 4692 3369
+4694 not 2 516
+4695 and 2 4694 522
+4696 and 2 524 4695
+4697 and 2 4696 531
+4698 and 2 2426 4697
+4699 and 2 2431 2335
+4700 and 2 530 4699
+4701 and 2 4694 2339
+4702 and 2 524 4701
+4703 and 2 4702 4700
+4704 and 2 2426 4703
+4705 and 2 2428 4694
+4706 and 2 4705 524
+4707 and 2 4706 2434
+4708 eq 2 455 642
+4709 eq 2 454 642
+4710 eq 2 453 578
+4711 eq 2 452 642
+4712 eq 2 451 642
+4713 eq 2 450 578
+4714 eq 2 449 642
+4715 eq 2 448 642
+4716 eq 2 447 578
+4717 eq 2 446 642
+4718 eq 2 445 642
+4719 eq 2 444 578
+4720 eq 2 443 642
+4721 eq 2 442 642
+4722 eq 2 441 578
+4723 eq 2 440 642
+4724 eq 2 439 642
+4725 eq 2 438 578
+4726 eq 2 437 642
+4727 eq 2 436 642
+4728 eq 2 435 578
+4729 eq 2 434 642
+4730 eq 2 433 642
+4731 eq 2 432 578
+4732 eq 2 431 642
+4733 eq 2 430 642
+4734 eq 2 429 578
+4735 eq 2 428 642
+4736 eq 2 427 642
+4737 eq 2 426 578
+4738 eq 2 425 642
+4739 eq 2 424 642
+4740 eq 2 423 578
+4741 eq 2 422 535
+4742 eq 2 421 535
+4743 eq 2 420 535
+4744 eq 2 419 535
+4745 eq 2 418 535
+4746 eq 2 417 535
+4747 eq 2 416 535
+4748 eq 2 415 535
+4749 eq 2 414 535
+4750 eq 2 413 535
+4751 eq 2 412 535
+4752 eq 2 411 535
+4753 eq 2 410 535
+4754 eq 2 409 535
+4755 eq 2 408 535
+4756 eq 2 407 535
+4757 eq 2 406 535
+4758 eq 2 405 535
+4759 eq 2 404 535
+4760 eq 2 403 535
+4761 and 2 536 4760
+4762 and 2 4761 4759
+4763 and 2 4762 4758
+4764 and 2 4763 4757
+4765 and 2 4764 4756
+4766 and 2 4765 4755
+4767 and 2 4766 4754
+4768 and 2 4767 4753
+4769 and 2 4768 4752
+4770 and 2 4769 4751
+4771 and 2 4770 4750
+4772 and 2 4771 4749
+4773 and 2 4772 4748
+4774 and 2 4773 4747
+4775 and 2 4774 4746
+4776 and 2 4775 4745
+4777 and 2 4776 4744
+4778 and 2 4777 4743
+4779 and 2 4778 4742
+4780 and 2 4779 4741
+4781 and 2 4780 4740
+4782 and 2 4781 4739
+4783 and 2 4782 4738
+4784 and 2 4783 4737
+4785 and 2 4784 4736
+4786 and 2 4785 4735
+4787 and 2 4786 4734
+4788 and 2 4787 4733
+4789 and 2 4788 4732
+4790 and 2 4789 4731
+4791 and 2 4790 4730
+4792 and 2 4791 4729
+4793 and 2 4792 4728
+4794 and 2 4793 4727
+4795 and 2 4794 4726
+4796 and 2 4795 4725
+4797 and 2 4796 4724
+4798 and 2 4797 4723
+4799 and 2 4798 4722
+4800 and 2 4799 4721
+4801 and 2 4800 4720
+4802 and 2 4801 4719
+4803 and 2 4802 4718
+4804 and 2 4803 4717
+4805 and 2 4804 4716
+4806 and 2 4805 4715
+4807 and 2 4806 4714
+4808 and 2 4807 4713
+4809 and 2 4808 4712
+4810 and 2 4809 4711
+4811 and 2 4810 4710
+4812 and 2 4811 4709
+4813 and 2 4812 4708
+4814 and 2 4813 4707
+4815 or 2 4814 4704
+4816 or 2 4815 4698
+4817 or 2 4816 4693
+4818 or 2 4817 2427
+4819 or 2 4818 2334
+4820 and 2 4819 519
+4821 or 2 4820 520
+4822 and 2 2431 528
+4823 and 2 530 4822
+4824 or 2 518 4823
+4825 and 2 4824 4821
+4826 or 2 4702 2341
+4827 and 2 514 515
+4828 and 2 516 4827
+4829 and 2 524 4828
+4830 or 2 4829 4826
+4831 and 2 4830 519
+4832 next 1 460 402
+4833 next 1 461 403
+4834 next 1 462 404
+4835 next 1 463 405
+4836 next 1 464 406
+4837 next 1 465 407
+4838 next 1 466 408
+4839 next 1 467 409
+4840 next 1 468 410
+4841 next 1 469 411
+4842 next 1 470 412
+4843 next 1 471 413
+4844 next 1 472 414
+4845 next 1 473 415
+4846 next 1 474 416
+4847 next 1 475 417
+4848 next 1 476 418
+4849 next 1 477 419
+4850 next 1 478 420
+4851 next 1 479 421
+4852 next 1 480 422
+4853 next 1 481 423
+4854 next 1 482 424
+4855 next 1 483 425
+4856 next 1 484 426
+4857 next 1 485 427
+4858 next 1 486 428
+4859 next 1 487 429
+4860 next 1 488 430
+4861 next 1 489 431
+4862 next 1 490 432
+4863 next 1 491 433
+4864 next 1 492 434
+4865 next 1 493 435
+4866 next 1 494 436
+4867 next 1 495 437
+4868 next 1 496 438
+4869 next 1 497 439
+4870 next 1 498 440
+4871 next 1 499 441
+4872 next 1 500 442
+4873 next 1 501 443
+4874 next 1 502 444
+4875 next 1 503 445
+4876 next 1 504 446
+4877 next 1 505 447
+4878 next 1 506 448
+4879 next 1 507 449
+4880 next 1 508 450
+4881 next 1 509 451
+4882 next 1 510 452
+4883 next 1 511 453
+4884 next 1 512 454
+4885 next 1 513 455
+4886 next 2 514 456
+4887 next 2 515 457
+4888 next 2 516 458
+4889 next 2 517 459
+4890 init 2 518 3
+4891 next 2 518 4
+4892 init 2 519 3
+4893 next 2 519 4825
+; Relabel bad to justice
+; 4894 bad 4831
+4895 not 2 4830
+; 4896 justice 1 4895 ; removed by l2s
+4897 constraint 4895
+4898 or 2 -518 519 ; reset0 => valid
+4899 constraint 4898
+; Create state copies
+4900 state 1 ; copy of 460
+4901 state 1 ; copy of 461
+4902 state 1 ; copy of 462
+4903 state 1 ; copy of 463
+4904 state 1 ; copy of 464
+4905 state 1 ; copy of 465
+4906 state 1 ; copy of 466
+4907 state 1 ; copy of 467
+4908 state 1 ; copy of 468
+4909 state 1 ; copy of 469
+4910 state 1 ; copy of 470
+4911 state 1 ; copy of 471
+4912 state 1 ; copy of 472
+4913 state 1 ; copy of 473
+4914 state 1 ; copy of 474
+4915 state 1 ; copy of 475
+4916 state 1 ; copy of 476
+4917 state 1 ; copy of 477
+4918 state 1 ; copy of 478
+4919 state 1 ; copy of 479
+4920 state 1 ; copy of 480
+4921 state 1 ; copy of 481
+4922 state 1 ; copy of 482
+4923 state 1 ; copy of 483
+4924 state 1 ; copy of 484
+4925 state 1 ; copy of 485
+4926 state 1 ; copy of 486
+4927 state 1 ; copy of 487
+4928 state 1 ; copy of 488
+4929 state 1 ; copy of 489
+4930 state 1 ; copy of 490
+4931 state 1 ; copy of 491
+4932 state 1 ; copy of 492
+4933 state 1 ; copy of 493
+4934 state 1 ; copy of 494
+4935 state 1 ; copy of 495
+4936 state 1 ; copy of 496
+4937 state 1 ; copy of 497
+4938 state 1 ; copy of 498
+4939 state 1 ; copy of 499
+4940 state 1 ; copy of 500
+4941 state 1 ; copy of 501
+4942 state 1 ; copy of 502
+4943 state 1 ; copy of 503
+4944 state 1 ; copy of 504
+4945 state 1 ; copy of 505
+4946 state 1 ; copy of 506
+4947 state 1 ; copy of 507
+4948 state 1 ; copy of 508
+4949 state 1 ; copy of 509
+4950 state 1 ; copy of 510
+4951 state 1 ; copy of 511
+4952 state 1 ; copy of 512
+4953 state 1 ; copy of 513
+4954 state 2 ; copy of 514
+4955 state 2 ; copy of 515
+4956 state 2 ; copy of 516
+4957 state 2 ; copy of 517
+4958 state 2 ; copy of 518
+4959 init 2 4958 3
+4960 state 2 ; copy of 519
+4961 init 2 4960 3
+; Record state nondeterministically
+4962 sort bitvec 1
+4963 const 4962 0
+4964 input 4962 save
+4965 state 4962 saved
+4966 init 4962 4965 4963
+4967 or 4962 4964 4965
+4968 next 4962 4965 4967
+4969 and 4962 4964 -4965 ; save & !saved
+4970 ite 1 4969 460 4900
+4971 next 1 4900 4970
+4972 ite 1 4969 461 4901
+4973 next 1 4901 4972
+4974 ite 1 4969 462 4902
+4975 next 1 4902 4974
+4976 ite 1 4969 463 4903
+4977 next 1 4903 4976
+4978 ite 1 4969 464 4904
+4979 next 1 4904 4978
+4980 ite 1 4969 465 4905
+4981 next 1 4905 4980
+4982 ite 1 4969 466 4906
+4983 next 1 4906 4982
+4984 ite 1 4969 467 4907
+4985 next 1 4907 4984
+4986 ite 1 4969 468 4908
+4987 next 1 4908 4986
+4988 ite 1 4969 469 4909
+4989 next 1 4909 4988
+4990 ite 1 4969 470 4910
+4991 next 1 4910 4990
+4992 ite 1 4969 471 4911
+4993 next 1 4911 4992
+4994 ite 1 4969 472 4912
+4995 next 1 4912 4994
+4996 ite 1 4969 473 4913
+4997 next 1 4913 4996
+4998 ite 1 4969 474 4914
+4999 next 1 4914 4998
+5000 ite 1 4969 475 4915
+5001 next 1 4915 5000
+5002 ite 1 4969 476 4916
+5003 next 1 4916 5002
+5004 ite 1 4969 477 4917
+5005 next 1 4917 5004
+5006 ite 1 4969 478 4918
+5007 next 1 4918 5006
+5008 ite 1 4969 479 4919
+5009 next 1 4919 5008
+5010 ite 1 4969 480 4920
+5011 next 1 4920 5010
+5012 ite 1 4969 481 4921
+5013 next 1 4921 5012
+5014 ite 1 4969 482 4922
+5015 next 1 4922 5014
+5016 ite 1 4969 483 4923
+5017 next 1 4923 5016
+5018 ite 1 4969 484 4924
+5019 next 1 4924 5018
+5020 ite 1 4969 485 4925
+5021 next 1 4925 5020
+5022 ite 1 4969 486 4926
+5023 next 1 4926 5022
+5024 ite 1 4969 487 4927
+5025 next 1 4927 5024
+5026 ite 1 4969 488 4928
+5027 next 1 4928 5026
+5028 ite 1 4969 489 4929
+5029 next 1 4929 5028
+5030 ite 1 4969 490 4930
+5031 next 1 4930 5030
+5032 ite 1 4969 491 4931
+5033 next 1 4931 5032
+5034 ite 1 4969 492 4932
+5035 next 1 4932 5034
+5036 ite 1 4969 493 4933
+5037 next 1 4933 5036
+5038 ite 1 4969 494 4934
+5039 next 1 4934 5038
+5040 ite 1 4969 495 4935
+5041 next 1 4935 5040
+5042 ite 1 4969 496 4936
+5043 next 1 4936 5042
+5044 ite 1 4969 497 4937
+5045 next 1 4937 5044
+5046 ite 1 4969 498 4938
+5047 next 1 4938 5046
+5048 ite 1 4969 499 4939
+5049 next 1 4939 5048
+5050 ite 1 4969 500 4940
+5051 next 1 4940 5050
+5052 ite 1 4969 501 4941
+5053 next 1 4941 5052
+5054 ite 1 4969 502 4942
+5055 next 1 4942 5054
+5056 ite 1 4969 503 4943
+5057 next 1 4943 5056
+5058 ite 1 4969 504 4944
+5059 next 1 4944 5058
+5060 ite 1 4969 505 4945
+5061 next 1 4945 5060
+5062 ite 1 4969 506 4946
+5063 next 1 4946 5062
+5064 ite 1 4969 507 4947
+5065 next 1 4947 5064
+5066 ite 1 4969 508 4948
+5067 next 1 4948 5066
+5068 ite 1 4969 509 4949
+5069 next 1 4949 5068
+5070 ite 1 4969 510 4950
+5071 next 1 4950 5070
+5072 ite 1 4969 511 4951
+5073 next 1 4951 5072
+5074 ite 1 4969 512 4952
+5075 next 1 4952 5074
+5076 ite 1 4969 513 4953
+5077 next 1 4953 5076
+5078 ite 2 4969 514 4954
+5079 next 2 4954 5078
+5080 ite 2 4969 515 4955
+5081 next 2 4955 5080
+5082 ite 2 4969 516 4956
+5083 next 2 4956 5082
+5084 ite 2 4969 517 4957
+5085 next 2 4957 5084
+5086 ite 2 4969 518 4958
+5087 next 2 4958 5086
+5088 ite 2 4969 519 4960
+5089 next 2 4960 5088
+; Check if the saved state is visited again
+5090 eq 4962 460 4900
+5091 eq 4962 461 4901
+5092 eq 4962 462 4902
+5093 eq 4962 463 4903
+5094 eq 4962 464 4904
+5095 eq 4962 465 4905
+5096 eq 4962 466 4906
+5097 eq 4962 467 4907
+5098 eq 4962 468 4908
+5099 eq 4962 469 4909
+5100 eq 4962 470 4910
+5101 eq 4962 471 4911
+5102 eq 4962 472 4912
+5103 eq 4962 473 4913
+5104 eq 4962 474 4914
+5105 eq 4962 475 4915
+5106 eq 4962 476 4916
+5107 eq 4962 477 4917
+5108 eq 4962 478 4918
+5109 eq 4962 479 4919
+5110 eq 4962 480 4920
+5111 eq 4962 481 4921
+5112 eq 4962 482 4922
+5113 eq 4962 483 4923
+5114 eq 4962 484 4924
+5115 eq 4962 485 4925
+5116 eq 4962 486 4926
+5117 eq 4962 487 4927
+5118 eq 4962 488 4928
+5119 eq 4962 489 4929
+5120 eq 4962 490 4930
+5121 eq 4962 491 4931
+5122 eq 4962 492 4932
+5123 eq 4962 493 4933
+5124 eq 4962 494 4934
+5125 eq 4962 495 4935
+5126 eq 4962 496 4936
+5127 eq 4962 497 4937
+5128 eq 4962 498 4938
+5129 eq 4962 499 4939
+5130 eq 4962 500 4940
+5131 eq 4962 501 4941
+5132 eq 4962 502 4942
+5133 eq 4962 503 4943
+5134 eq 4962 504 4944
+5135 eq 4962 505 4945
+5136 eq 4962 506 4946
+5137 eq 4962 507 4947
+5138 eq 4962 508 4948
+5139 eq 4962 509 4949
+5140 eq 4962 510 4950
+5141 eq 4962 511 4951
+5142 eq 4962 512 4952
+5143 eq 4962 513 4953
+5144 eq 4962 514 4954
+5145 eq 4962 515 4955
+5146 eq 4962 516 4956
+5147 eq 4962 517 4957
+5148 eq 4962 518 4958
+5149 eq 4962 519 4960
+5150 and 4962 4965 5090
+5151 and 4962 5150 5091
+5152 and 4962 5151 5092
+5153 and 4962 5152 5093
+5154 and 4962 5153 5094
+5155 and 4962 5154 5095
+5156 and 4962 5155 5096
+5157 and 4962 5156 5097
+5158 and 4962 5157 5098
+5159 and 4962 5158 5099
+5160 and 4962 5159 5100
+5161 and 4962 5160 5101
+5162 and 4962 5161 5102
+5163 and 4962 5162 5103
+5164 and 4962 5163 5104
+5165 and 4962 5164 5105
+5166 and 4962 5165 5106
+5167 and 4962 5166 5107
+5168 and 4962 5167 5108
+5169 and 4962 5168 5109
+5170 and 4962 5169 5110
+5171 and 4962 5170 5111
+5172 and 4962 5171 5112
+5173 and 4962 5172 5113
+5174 and 4962 5173 5114
+5175 and 4962 5174 5115
+5176 and 4962 5175 5116
+5177 and 4962 5176 5117
+5178 and 4962 5177 5118
+5179 and 4962 5178 5119
+5180 and 4962 5179 5120
+5181 and 4962 5180 5121
+5182 and 4962 5181 5122
+5183 and 4962 5182 5123
+5184 and 4962 5183 5124
+5185 and 4962 5184 5125
+5186 and 4962 5185 5126
+5187 and 4962 5186 5127
+5188 and 4962 5187 5128
+5189 and 4962 5188 5129
+5190 and 4962 5189 5130
+5191 and 4962 5190 5131
+5192 and 4962 5191 5132
+5193 and 4962 5192 5133
+5194 and 4962 5193 5134
+5195 and 4962 5194 5135
+5196 and 4962 5195 5136
+5197 and 4962 5196 5137
+5198 and 4962 5197 5138
+5199 and 4962 5198 5139
+5200 and 4962 5199 5140
+5201 and 4962 5200 5141
+5202 and 4962 5201 5142
+5203 and 4962 5202 5143
+5204 and 4962 5203 5144
+5205 and 4962 5204 5145
+5206 and 4962 5205 5146
+5207 and 4962 5206 5147
+5208 and 4962 5207 5148
+5209 and 4962 5208 5149
+5210 bad 5209

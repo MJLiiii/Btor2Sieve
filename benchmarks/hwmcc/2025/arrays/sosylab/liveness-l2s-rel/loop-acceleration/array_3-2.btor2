@@ -1,0 +1,193 @@
+1 sort bitvec 32
+2 sort array 1 1
+3 sort bitvec 1
+4 constd 3 0
+5 constd 3 1
+6 input 1 !{$(in___cpv_main#0)<$(in_main#0)<$(in___VERIFIER_nondet_int#0)<h#<__VERIFIER_nondet_int.return>>>>}
+7 input 2 %{$(in___cpv_main#0)<$(in_main#0)<A.1>>}#1
+8 input 1 %{$(in___cpv_main#0)<$(in_main#0)<main.return>>}#1
+9 input 1 !{$(in___cpv_main#0)<$(in_main#0)<i>>}.next
+10 input 2 !{$(in___cpv_main#0)<$(in_main#0)<A.1>>}.next
+11 input 1 !{$(in___cpv_main#0)<$(in_main#0)<main.return>>}.next
+12 input 3 !pc[0].next
+13 input 3 !pc[1].next
+14 input 3 !pc[2].next
+15 state 1 !{$(in___cpv_main#0)<$(in_main#0)<i>>}
+16 state 2 !{$(in___cpv_main#0)<$(in_main#0)<A.1>>}
+17 state 1 !{$(in___cpv_main#0)<$(in_main#0)<main.return>>}
+18 state 3 !pc[0]
+19 state 3 !pc[1]
+20 state 3 !pc[2]
+21 state 3 reset0
+22 state 3 valid
+23 not 3 21
+24 not 3 19
+25 and 3 18 24
+26 not 3 20
+27 and 3 26 25
+28 not 3 12
+29 and 3 13 28
+30 and 3 14 29
+31 and 3 30 27
+32 eq 3 16 10
+33 constd 1 0
+34 eq 3 9 33
+35 and 3 34 32
+36 eq 3 17 11
+37 and 3 36 35
+38 constd 1 1024
+39 slt 3 15 38
+40 not 3 39
+41 and 3 40 37
+42 and 3 41 31
+43 not 3 14
+44 not 3 13
+45 and 3 12 44
+46 and 3 45 43
+47 and 3 46 27
+48 write 2 16 15 6
+49 eq 3 10 48
+50 constd 1 1
+51 add 1 50 15
+52 eq 3 9 51
+53 and 3 52 49
+54 and 3 36 53
+55 and 3 39 54
+56 and 3 55 47
+57 or 3 56 42
+58 not 3 18
+59 and 3 19 58
+60 and 3 20 59
+61 and 3 43 29
+62 and 3 61 60
+63 constd 1 512
+64 slt 3 63 15
+65 not 3 64
+66 ite 1 65 50 33
+67 eq 3 66 33
+68 not 3 67
+69 eq 3 15 9
+70 and 3 69 32
+71 and 3 70 36
+72 and 3 71 68
+73 read 1 16 15
+74 eq 3 73 33
+75 not 3 74
+76 and 3 39 75
+77 not 3 76
+78 and 3 77 72
+79 and 3 78 62
+80 and 3 44 28
+81 and 3 14 80
+82 and 3 60 81
+83 and 3 71 67
+84 and 3 77 83
+85 and 3 84 82
+86 and 3 60 30
+87 and 3 32 52
+88 and 3 36 87
+89 and 3 76 88
+90 and 3 89 86
+91 or 3 90 85
+92 or 3 91 79
+93 and 3 14 45
+94 and 3 58 24
+95 and 3 20 94
+96 and 3 95 93
+97 and 3 71 96
+98 and 3 12 13
+99 and 3 43 98
+100 and 3 26 59
+101 and 3 100 99
+102 and 3 71 101
+103 and 3 94 26
+104 and 3 103 46
+105 eq 3 11 8
+106 eq 3 10 7
+107 and 3 34 106
+108 and 3 107 105
+109 and 3 108 104
+110 or 3 109 102
+111 or 3 110 97
+112 or 3 111 92
+113 or 3 112 57
+114 and 3 113 22
+115 or 3 114 23
+116 and 3 43 80
+117 or 3 21 116
+118 and 3 117 115
+119 or 3 100 95
+120 and 3 20 25
+121 or 3 120 119
+122 and 3 121 22
+123 next 1 15 9
+124 next 2 16 10
+125 next 1 17 11
+126 next 3 18 12
+127 next 3 19 13
+128 next 3 20 14
+129 init 3 21 4
+130 next 3 21 5
+131 init 3 22 4
+132 next 3 22 118
+; Relabel bad to justice
+; 133 bad 122
+134 not 3 121
+; 135 justice 1 134 ; removed by l2s
+136 constraint 134
+137 or 3 -21 22 ; reset0 => valid
+138 constraint 137
+; Create state copies
+139 state 1 ; copy of 15
+140 state 2 ; copy of 16
+141 state 1 ; copy of 17
+142 state 3 ; copy of 18
+143 state 3 ; copy of 19
+144 state 3 ; copy of 20
+145 state 3 ; copy of 21
+146 init 3 145 4
+147 state 3 ; copy of 22
+148 init 3 147 4
+; Record state nondeterministically
+149 sort bitvec 1
+150 const 149 0
+151 input 149 save
+152 state 149 saved
+153 init 149 152 150
+154 or 149 151 152
+155 next 149 152 154
+156 and 149 151 -152 ; save & !saved
+157 ite 1 156 15 139
+158 next 1 139 157
+159 ite 2 156 16 140
+160 next 2 140 159
+161 ite 1 156 17 141
+162 next 1 141 161
+163 ite 3 156 18 142
+164 next 3 142 163
+165 ite 3 156 19 143
+166 next 3 143 165
+167 ite 3 156 20 144
+168 next 3 144 167
+169 ite 3 156 21 145
+170 next 3 145 169
+171 ite 3 156 22 147
+172 next 3 147 171
+; Check if the saved state is visited again
+173 eq 149 15 139
+174 eq 149 16 140
+175 eq 149 17 141
+176 eq 149 18 142
+177 eq 149 19 143
+178 eq 149 20 144
+179 eq 149 21 145
+180 eq 149 22 147
+181 and 149 152 173
+182 and 149 181 174
+183 and 149 182 175
+184 and 149 183 176
+185 and 149 184 177
+186 and 149 185 178
+187 and 149 186 179
+188 and 149 187 180
+189 bad 188

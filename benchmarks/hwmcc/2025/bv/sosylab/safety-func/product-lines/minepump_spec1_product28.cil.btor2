@@ -1,0 +1,329 @@
+1 sort bitvec 1
+2 sort bitvec 8
+3 sort bitvec 32
+; Define PC variable and constraints
+5 const 2 00000001 ; error state
+6 const 2 00000010 ; initial state
+7 const 2 00000100
+8 const 2 00001000
+9 const 2 00010000
+10 const 2 00100000 ; error state
+11 const 2 01000000 ; error state
+12 const 2 10000000 ; auxiliary sink state
+13 state 2 !pc
+14 eq 1 13 5
+15 eq 1 13 6
+16 eq 1 13 7
+17 eq 1 13 8
+18 eq 1 13 9
+19 eq 1 13 10
+20 eq 1 13 11
+21 eq 1 13 12
+; Define constants
+23 const 1 1
+24 const 3 00000000000000000000000000000000
+25 const 3 00000000000000000000000000000010
+26 const 3 00000000000000000000000000000001
+27 const 3 11111111111111111111111111111111
+28 const 3 00000000000000000000000000000100
+; Define state and input variables
+30 state 3 !{waterLevel}
+31 state 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<splverifierCounter>>>}
+32 state 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<i>>>>}
+33 state 3 !{cleanupTimeShifts}
+34 state 3 !{methaneLevelCritical}
+35 state 3 !{pumpRunning}
+36 state 3 !{systemActive}
+37 input 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in___VERIFIER_nondet_int#0)<h#<__VERIFIER_nondet_int.return>>>>>}
+38 input 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in___VERIFIER_nondet_int#2)<h#<__VERIFIER_nondet_int.return>>>>>}
+39 input 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in___VERIFIER_nondet_int#4)<h#<__VERIFIER_nondet_int.return>>>>>}
+40 input 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in___VERIFIER_nondet_int#5)<h#<__VERIFIER_nondet_int.return>>>>>}
+41 input 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_timeShift#8)<$(in___utac_acc__Specification1_spec__1#2)<tmp___0>>>>>}
+42 input 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_timeShift#8)<$(in___utac_acc__Specification1_spec__1#2)<$tmp.1>>>>>}
+43 input 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<$(in_timeShift#0)<$(in___utac_acc__Specification1_spec__1#2)<tmp___0>>>>>>}
+44 input 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<$(in_timeShift#0)<$(in___utac_acc__Specification1_spec__1#2)<$tmp.1>>>>>>}
+45 input 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<$(in_timeShift#1)<$(in___utac_acc__Specification1_spec__1#2)<tmp___0>>>>>>}
+46 input 3 !{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<$(in_timeShift#1)<$(in___utac_acc__Specification1_spec__1#2)<$tmp.1>>>>>>}
+47 input 3 %{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<$(in_timeShift#1)<$(in___utac_acc__Specification1_spec__1#2)<tmp___0>>>>>>}#3
+48 input 3 %{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<$(in_timeShift#1)<$(in___utac_acc__Specification1_spec__1#2)<$tmp.1>>>>>>}#3
+49 input 3 %{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<$(in_timeShift#1)<$(in___utac_acc__Specification1_spec__1#2)<$temp.1>>>>>>}#4
+50 input 3 %{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_timeShift#8)<$(in___utac_acc__Specification1_spec__1#2)<$tmp.1>>>>>}#3
+51 input 3 %{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_timeShift#8)<$(in___utac_acc__Specification1_spec__1#2)<$temp.1>>>>>}#4
+52 input 3 %{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_timeShift#8)<$(in___utac_acc__Specification1_spec__1#2)<tmp___0>>>>>}#3
+53 input 3 %{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<i>>>>}#1
+54 input 3 %{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<$(in_timeShift#0)<$(in___utac_acc__Specification1_spec__1#2)<$temp.1>>>>>>}#4
+55 input 3 %{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<$(in_timeShift#0)<$(in___utac_acc__Specification1_spec__1#2)<tmp___0>>>>>>}#3
+56 input 3 %{$(in_main#0)<$(in_runTest#4)<$(in_test#0)<$(in_cleanup#9)<$(in_timeShift#0)<$(in___utac_acc__Specification1_spec__1#2)<$tmp.1>>>>>>}#3
+; Construct netlist
+58 eq 1 39 24
+59 eq 1 40 24
+60 eq 1 35 24
+61 eq 1 37 24
+62 slt 1 30 25
+63 add 3 26 30
+64 add 3 27 33
+65 slt 1 31 28
+66 eq 1 38 24
+67 eq 1 34 24
+68 eq 1 42 50
+69 eq 1 41 52
+70 eq 1 34 54
+71 eq 1 43 55
+72 eq 1 44 56
+73 eq 1 36 24
+74 slt 1 24 30
+75 add 3 27 30
+76 eq 1 45 47
+77 eq 1 46 48
+78 eq 1 34 49
+79 add 3 26 32
+80 not 1 58
+81 ite 3 60 35 24
+82 not 1 62
+83 slt 1 32 64
+84 and 1 23 65
+85 not 1 67
+86 ite 3 59 36 24
+87 not 1 65
+88 and 1 67 70
+89 not 1 74
+90 and 1 67 76
+91 ite 3 59 35 81
+92 ite 3 82 30 63
+93 not 1 83
+94 ite 3 85 24 26
+95 ite 3 80 26 86
+96 and 1 23 87
+97 and 1 88 71
+98 ite 3 89 30 75
+99 and 1 90 77
+100 ite 3 80 35 91
+101 ite 3 61 30 92
+102 and 1 23 93
+103 ite 3 66 34 94
+104 eq 1 95 24
+105 and 1 97 72
+106 ite 3 60 30 98
+107 and 1 99 78
+108 eq 1 100 24
+109 slt 1 24 101
+110 add 3 27 101
+111 eq 1 103 24
+112 eq 1 103 51
+113 eq 1 106 24
+114 not 1 109
+115 and 1 111 68
+116 not 1 111
+117 ite 3 113 26 24
+118 ite 3 114 101 110
+119 and 1 115 112
+120 eq 1 117 24
+121 and 1 84 116
+122 ite 3 108 101 118
+123 and 1 119 69
+124 not 1 120
+125 eq 1 122 24
+126 ite 3 124 24 26
+127 ite 3 125 26 24
+128 eq 1 126 24
+129 eq 1 127 24
+130 ite 3 128 35 24
+131 not 1 129
+132 ite 3 60 35 130
+133 ite 3 131 24 26
+134 ite 3 73 35 132
+135 eq 1 133 24
+136 eq 1 134 24
+137 eq 1 134 54
+138 eq 1 134 55
+139 eq 1 134 56
+140 eq 1 134 47
+141 eq 1 134 48
+142 eq 1 134 49
+143 ite 3 135 100 24
+144 and 1 85 136
+145 not 1 136
+146 ite 3 108 100 143
+147 and 1 144 137
+148 and 1 144 140
+149 and 1 23 145
+150 and 1 96 145
+151 ite 3 104 100 146
+152 and 1 147 138
+153 and 1 148 141
+154 and 1 149 85
+155 and 1 150 85
+156 eq 1 151 24
+157 eq 1 151 50
+158 eq 1 151 51
+159 eq 1 151 52
+160 and 1 152 139
+161 and 1 153 142
+162 and 1 154 83
+163 and 1 116 156
+164 or 1 105 160
+165 or 1 107 161
+166 not 1 156
+167 and 1 163 157
+168 and 1 96 164
+169 and 1 23 165
+170 and 1 121 166
+171 and 1 167 158
+172 and 1 169 83
+173 and 1 171 159
+174 or 1 123 173
+175 and 1 84 174
+; Assign next states
+177 and 1 18 172
+178 ite 3 177 31 31
+179 and 1 16 170
+180 ite 3 179 31 178
+181 and 1 16 155
+182 ite 3 181 31 180
+183 and 1 16 168
+184 ite 3 183 31 182
+185 and 1 18 162
+186 ite 3 185 31 184
+187 and 1 15 23
+188 ite 3 187 24 186
+189 and 1 16 175
+190 ite 3 189 31 188
+191 and 1 18 102
+192 ite 3 191 31 190
+193 next 3 31 192
+194 and 1 18 172
+195 ite 3 194 33 33
+196 and 1 16 170
+197 ite 3 196 33 195
+198 and 1 16 155
+199 ite 3 198 33 197
+200 and 1 16 168
+201 ite 3 200 33 199
+202 and 1 18 162
+203 ite 3 202 33 201
+204 and 1 15 23
+205 ite 3 204 28 203
+206 and 1 16 175
+207 ite 3 206 33 205
+208 and 1 18 102
+209 ite 3 208 33 207
+210 next 3 33 209
+211 and 1 18 172
+212 ite 3 211 34 34
+213 and 1 16 170
+214 ite 3 213 103 212
+215 and 1 16 155
+216 ite 3 215 34 214
+217 and 1 16 168
+218 ite 3 217 34 216
+219 and 1 18 162
+220 ite 3 219 34 218
+221 and 1 15 23
+222 ite 3 221 24 220
+223 and 1 16 175
+224 ite 3 223 103 222
+225 and 1 18 102
+226 ite 3 225 34 224
+227 next 3 34 226
+228 and 1 18 172
+229 ite 3 228 79 32
+230 and 1 16 170
+231 ite 3 230 32 229
+232 and 1 16 155
+233 ite 3 232 53 231
+234 and 1 16 168
+235 ite 3 234 24 233
+236 and 1 18 162
+237 ite 3 236 32 235
+238 and 1 15 23
+239 ite 3 238 32 237
+240 and 1 16 175
+241 ite 3 240 32 239
+242 and 1 18 102
+243 ite 3 242 32 241
+244 next 3 32 243
+245 and 1 18 172
+246 ite 3 245 134 35
+247 and 1 16 170
+248 ite 3 247 151 246
+249 and 1 16 155
+250 ite 3 249 134 248
+251 and 1 16 168
+252 ite 3 251 134 250
+253 and 1 18 162
+254 ite 3 253 134 252
+255 and 1 15 23
+256 ite 3 255 24 254
+257 and 1 16 175
+258 ite 3 257 151 256
+259 and 1 18 102
+260 ite 3 259 35 258
+261 next 3 35 260
+262 and 1 18 172
+263 ite 3 262 36 36
+264 and 1 16 170
+265 ite 3 264 95 263
+266 and 1 16 155
+267 ite 3 266 36 265
+268 and 1 16 168
+269 ite 3 268 36 267
+270 and 1 18 162
+271 ite 3 270 36 269
+272 and 1 15 23
+273 ite 3 272 26 271
+274 and 1 16 175
+275 ite 3 274 95 273
+276 and 1 18 102
+277 ite 3 276 36 275
+278 next 3 36 277
+279 and 1 18 172
+280 ite 3 279 106 30
+281 and 1 16 170
+282 ite 3 281 122 280
+283 and 1 16 155
+284 ite 3 283 106 282
+285 and 1 16 168
+286 ite 3 285 106 284
+287 and 1 18 162
+288 ite 3 287 106 286
+289 and 1 15 23
+290 ite 3 289 26 288
+291 and 1 16 175
+292 ite 3 291 122 290
+293 and 1 18 102
+294 ite 3 293 30 292
+295 next 3 30 294
+; Assign next PC
+297 and 1 18 172
+298 ite 2 297 9 12
+299 and 1 16 170
+300 ite 2 299 11 298
+301 and 1 16 155
+302 ite 2 301 5 300
+303 and 1 16 168
+304 ite 2 303 9 302
+305 and 1 18 162
+306 ite 2 305 10 304
+307 and 1 15 23
+308 ite 2 307 7 306
+309 and 1 16 175
+310 ite 2 309 7 308
+311 and 1 18 102
+312 ite 2 311 8 310
+313 next 2 13 312
+; Initialize PC
+315 init 2 13 6
+; Initialize states
+317 init 3 30 24
+318 init 3 31 24
+319 init 3 32 24
+320 init 3 33 24
+321 init 3 34 24
+322 init 3 35 24
+323 init 3 36 24
+; Constrain PC to not be the sink state
+325 constraint -21
+; Assert property
+327 or 1 19 14
+328 or 1 327 20
+329 bad 328

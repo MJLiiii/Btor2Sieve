@@ -1,5 +1,7 @@
 # BTOR2 frontend: sources, semantics, and a small public corpus
 
+Historical note: the starter corpus described below was replaced on 2026-11-09 by the user-supplied HWMCC’25 files. See [the current corpus](../../benchmarks/README.md). Prior corpus validation results below do not apply to the replacement.
+
 Verified 2026-11-08. This note records implementation decisions for Btor2Sieve; it does not establish correctness of a completed implementation.
 
 ## Primary references and version pins
@@ -99,8 +101,8 @@ Pono **2.0.0 was released 2026-05-05**, adding BTOR2 liveness, VMT-LIB, addition
 
 ## Corpus and implementation validation performed
 
-The final vendored corpus is recorded in [benchmarks/manifest.json](../../benchmarks/manifest.json): 13 BTOR2 files, 49,024 bytes, plus three license notices. SHA-256 equality against independently downloaded HWMCC19 mirror files was checked for four selected competition entries; unverified exact membership remains explicitly labeled for the other two Mann family examples. Every file was accepted by the pinned official parser.
+The original, now removed corpus contained: 13 BTOR2 files, 49,024 bytes, plus three license notices. SHA-256 equality against independently downloaded HWMCC19 mirror files was checked for four selected competition entries; unverified exact membership remains explicitly labeled for the other two Mann family examples. Every file was accepted by the pinned official parser.
 
-The official `catbtor` was built locally from `src/catbtor.c`, `src/btor2parser/btor2parser.c`, and the parser/utility headers using the system C compiler. Build and downloaded artifacts remain under `tmp/research/official/` as optional development evidence; the Python package does not depend on this build. `python3 scripts/fetch_benchmarks.py --check` verified 16/16 benchmark/license files. An independent re-download to `tmp/research/refetched-corpus` also verified 16/16.
+The official `catbtor` was built locally from `src/catbtor.c`, `src/btor2parser/btor2parser.c`, and the parser/utility headers using the system C compiler. Build and downloaded artifacts remain under `tmp/research/official/` as optional development evidence; the Python package does not depend on this build. The former corpus verification step checked 16/16 benchmark/license files. An independent re-download to `tmp/research/refetched-corpus` also verified 16/16.
 
 A read-only review of the initial Python parser/encoder, followed by 3,150 exhaustive width-1-through-4 truth-table comparisons, found no mismatch for the seven overflow operators, both rotations, or the three reductions. Expected values were calculated using Python integers, explicit signed ranges, and bit-count parity. This checks these operators only; it is not an independent proof of the entire frontend. The review also flagged that liveness-containing inputs must have an explicit analysis policy rather than silently appearing fully supported.
