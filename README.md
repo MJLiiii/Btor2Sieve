@@ -2,7 +2,7 @@
 
 Extract word-level bit-vector and array constraints from BTOR2 hardware models. Every candidate is independently checked with SMT. The product includes a CLI, searchable HTML reports, CSV/JSON results, standalone SMT-LIB obligations, cross-property revalidation, and a pinned public benchmark corpus.
 
-**Start with the [method](docs/METHODS.md), [research notes](docs/research/constraint-literature.md), and [measured results](docs/RESULTS.md).** The supplied assignment and proposal are preserved unchanged. Design decisions and the implementation plan are in [docs/superpowers](docs/superpowers).
+Start with the installation and counter example below. The [method](docs/METHODS.md) explains what the results establish; the [research notes](docs/research/constraint-literature.md) and [historical measurements](docs/RESULTS.md) provide background. The supplied assignment and proposal are preserved unchanged in `docs/`. Original design decisions and the implementation plan are in [docs/superpowers](docs/superpowers).
 
 ## Install
 
@@ -49,6 +49,29 @@ btor2sieve batch benchmarks/public/*.btor2 --out results/my-suite \
 
 `--syntax-only` disables solver-guided range and known-bit discovery. `--property ID` selects a **bad directive ID**, not the ID of its Boolean expression. For example, the counter's properties are bad directives 11 and 14. `--max-reuse` limits reuse queries per target property. Timeouts are per solver call, not a total run deadline.
 
+## Find your way around the code
+
+Follow one model through the package:
+
+```text
+BTOR2 text → typed Model → Encoder → exact scopes → candidate proposals
+                                                        ↓
+reports and SMT files ← pipeline ← independent Validator
+```
+
+| Module | Responsibility |
+| --- | --- |
+| [btor2.py](src/btor2sieve/btor2.py) | Parse lines into sorts and nodes, checking references and types. |
+| [encoding.py](src/btor2sieve/encoding.py) | Translate nodes into Z3 expressions and build assumptions, initialization, and transition equations. |
+| [candidates.py](src/btor2sieve/candidates.py) | Propose formulas within budgets and select candidates for each scope. Proposals are untrusted. |
+| [validation.py](src/btor2sieve/validation.py) | Define exact scope hypotheses, check each candidate independently, and replay individual SMT queries. |
+| [pipeline.py](src/btor2sieve/pipeline.py) | Run those steps, revalidate reuse, and record evidence; isolate failures by model. |
+| [reporting.py](src/btor2sieve/reporting.py) | Write JSON, CSV, and a self-contained HTML report from the result dictionaries. |
+| [replay.py](src/btor2sieve/replay.py) | Read a report or SMT file, verify artifact paths/hashes, and replay its queries. |
+| [cli.py](src/btor2sieve/cli.py) | Parse command-line options, call the operation, and print its result. |
+
+Tests follow these boundaries in `tests/`. The two scripts in `scripts/` verify/fetch the pinned corpus and reproduce the evaluation.
+
 ## Read the results correctly
 
 For each bad node `b`, the property is `P = not b`. A property candidate is accepted only when `P and not C` is UNSAT and P itself is SAT. The validator does not silently assume initialization, transition equations, environment constraints, or other properties.
@@ -91,11 +114,27 @@ The suite covers strict parsing, bit-vector wraparound and signed operations, ar
 
 ## Extend the extractor
 
-The modules are intentionally small:
+To try a new candidate, build a Boolean Z3 expression, attach its source node IDs, and pass it to the existing validator. For example, run this from the project root:
 
-* `btor2.py` and `encoding.py`: strict typed reader and word-level semantics.
-* `candidates.py`: bounded, untrusted templates and semantic discovery.
-* `validation.py`: independent exact-hypothesis checks and SMT replay.
-* `pipeline.py`, `reporting.py`, `cli.py`: orchestration and user-facing artifacts.
+```python
+import z3
+from btor2sieve.btor2 import parse_file
+from btor2sieve.candidates import Candidate
+from btor2sieve.encoding import Encoder
+from btor2sieve.validation import Validator
 
-To evaluate a new candidate generator, emit `Candidate(expr, family, origin, source_nodes)` and keep the validator unchanged. See [METHODS.md](docs/METHODS.md) for a Python/API-level explanation of the boundaries. Inductive/Houdini inference, Pono integration, proof-certificate production, and large-suite speedup evaluation are documented research extensions, not implemented capabilities.
+encoder = Encoder(parse_file("examples/counter.btor2"))
+hypothesis = encoder.property(11)  # Safety predicate for bad directive 11.
+candidate = Candidate(
+    z3.ULE(encoder.states[5], 9),
+    family="unsigned_bound",
+    origin="example:counter-bound",
+    source_nodes=(5,),
+)
+result = Validator(hypothesis).check(candidate.expr)
+print(result.status)  # accepted: the predicate implies counter <= 9.
+```
+
+To include a template in normal extraction, yield its `Candidate` from the appropriate generator in `candidates.py` and add a focused test. `generate_candidates` produces bounded proposals; `select_scope_candidates` combines those proposals with transition templates when needed and applies the final validation budget/filter. The pipeline calls these two stages explicitly. Keep the validator unchanged: it must never assume a proposed or previously accepted formula.
+
+See [METHODS.md](docs/METHODS.md) for the soundness boundaries. Inductive/Houdini inference, Pono integration, proof-certificate production, and large-suite speedup evaluation remain research extensions.

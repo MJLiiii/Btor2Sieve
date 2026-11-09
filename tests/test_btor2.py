@@ -3,6 +3,34 @@ import pytest
 from btor2sieve.btor2 import Btor2Error, parse, parse_file
 
 
+def test_whitespace_numeric_symbols_and_comment_token_boundaries():
+    model = parse(
+        " \t; a whole-line comment\r\n"
+        "\t1  sort\tbitvec  1  99 ; sort symbol\r\n"
+        "2\tinput 1 123\r\n"
+        "3 zero 1 name;still_symbol ; separated comment\r\n"
+        "4 bad\t3\t456 ; ignored tokens"
+    )
+    assert model.sorts[1].width == 1
+    assert model.inputs[0].symbol == "123"
+    assert model.nodes[3].symbol == "name;still_symbol"
+    assert model.bads[0].symbol == "456"
+    assert model.bads[0].line == 5
+
+
+def test_attached_comment_is_part_of_a_constant_token():
+    with pytest.raises(Btor2Error, match="invalid constd constant"):
+        parse("1 sort bitvec 1\n2 constd 1 0;comment")
+
+
+@pytest.mark.parametrize("sign", ["", "-"])
+def test_decimal_constants_beyond_python_integer_string_limit(sign):
+    digits = "1" + "0" * 4499 + "7"
+    model = parse(f"1 sort bitvec 15000\n2 constd 1 {sign}{digits}")
+    expected = 10 ** 4500 + 7
+    assert model.nodes[2].params == (-expected if sign else expected,)
+
+
 def test_records_source_directives_and_signed_term_references(tmp_path):
     path = tmp_path / "sample.btor2"
     path.write_text(

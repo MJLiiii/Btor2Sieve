@@ -5,6 +5,101 @@ from btor2sieve.btor2 import Btor2Error, parse
 from btor2sieve.encoding import Encoder
 
 
+@pytest.mark.parametrize("sign", ["", "-"])
+def test_decimal_encoding_beyond_python_integer_string_limit(sign):
+    width = 15000
+    digits = "1" + "0" * 4499 + "7"
+    encoder = Encoder(parse(f"1 sort bitvec {width}\n2 constd 1 {sign}{digits}"))
+    expected = 10 ** 4500 + 7
+    if sign:
+        expected = -expected
+    # Binary conversion has no decimal digit limit and checks every output bit.
+    actual = int(z3.simplify(encoder.expr(2)).as_binary_string(), 2)
+    assert actual == expected % (1 << width)
+
+
+def _rotation_reference(word, amount, width, op):
+    bits = f"{word:0{width}b}"
+    shift = amount % width
+    rotated = bits[shift:] + bits[:shift] if op == "rol" else bits[-shift:] + bits[:-shift]
+    return int(rotated, 2)
+
+
+@pytest.mark.parametrize("width", [1, 2, 3])
+def test_small_width_arithmetic_overflow_and_rotation_exhaustively(width):
+    word_ops = ("add", "sub", "mul", "sdiv", "udiv", "srem", "urem", "smod", "sll", "sra", "srl", "rol", "ror")
+    overflow_ops = ("saddo", "ssubo", "smulo", "sdivo", "uaddo", "usubo", "umulo")
+    ops = word_ops + overflow_ops
+    program = f"1 sort bitvec {width}\n2 sort bitvec 1\n3 input 1\n4 input 1\n"
+    for ref, op in enumerate(ops, start=5):
+        result_sort = 2 if op in overflow_ops else 1
+        program += f"{ref} {op} {result_sort} 3 4\n"
+    encoder = Encoder(parse(program))
+    modulus = 1 << width
+    mask = modulus - 1
+    minimum, maximum = -(modulus // 2), modulus // 2 - 1
+    for left in range(modulus):
+        signed_left = left if left <= maximum else left - modulus
+        for right in range(modulus):
+            signed_right = right if right <= maximum else right - modulus
+            if signed_right:
+                quotient = abs(signed_left) // abs(signed_right)
+                if (signed_left < 0) != (signed_right < 0):
+                    quotient = -quotient
+                remainder = signed_left - quotient * signed_right
+            else:
+                quotient = 1 if signed_left < 0 else -1
+                remainder = signed_left
+            expected = {
+                "add": left + right,
+                "sub": left - right,
+                "mul": left * right,
+                "sdiv": quotient,
+                "udiv": left // right if right else mask,
+                "srem": remainder,
+                "urem": left % right if right else left,
+                "smod": signed_left % signed_right if signed_right else signed_left,
+                "sll": left << right,
+                "sra": signed_left >> right,
+                "srl": left >> right,
+                "rol": _rotation_reference(left, right, width, "rol"),
+                "ror": _rotation_reference(left, right, width, "ror"),
+                "saddo": not minimum <= signed_left + signed_right <= maximum,
+                "ssubo": not minimum <= signed_left - signed_right <= maximum,
+                "smulo": not minimum <= signed_left * signed_right <= maximum,
+                "sdivo": signed_left == minimum and signed_right == -1,
+                "uaddo": left + right > mask,
+                "usubo": left < right,
+                "umulo": left * right > mask,
+            }
+            substitutions = (
+                (encoder.inputs[3], z3.BitVecVal(left, width)),
+                (encoder.inputs[4], z3.BitVecVal(right, width)),
+            )
+            for ref, op in enumerate(ops, start=5):
+                actual = z3.simplify(z3.substitute(encoder.expr(ref), *substitutions)).as_long()
+                assert actual == (int(expected[op]) & mask), (width, op, left, right)
+
+
+@pytest.mark.parametrize("width", [1, 3, 70])
+def test_rotations_at_width_boundaries(width):
+    encoder = Encoder(parse(
+        f"1 sort bitvec {width}\n2 input 1\n3 input 1\n4 rol 1 2 3\n5 ror 1 2 3"
+    ))
+    mask = (1 << width) - 1
+    words = {0, 1, mask, 1 << (width - 1), (1 << (width - 1)) | 1}
+    amounts = {amount for amount in (0, 1, width - 1, width, width + 1, mask) if amount <= mask}
+    for word in words:
+        for amount in amounts:
+            substitutions = (
+                (encoder.inputs[2], z3.BitVecVal(word, width)),
+                (encoder.inputs[3], z3.BitVecVal(amount, width)),
+            )
+            for ref, op in ((4, "rol"), (5, "ror")):
+                term = z3.substitute(encoder.expr(ref), *substitutions)
+                assert z3.simplify(term).as_long() == _rotation_reference(word, amount, width, op)
+
+
 def test_wraparound_and_complement_use_bitvector_semantics():
     encoder = Encoder(parse("""1 sort bitvec 4
 2 ones 1

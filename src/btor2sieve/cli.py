@@ -3,9 +3,6 @@
 from __future__ import annotations
 
 import argparse
-from dataclasses import asdict
-import hashlib
-from importlib.metadata import PackageNotFoundError, version
 import json
 from pathlib import Path
 import sys
@@ -17,7 +14,7 @@ from .btor2 import parse_file
 from .candidates import GenerationOptions
 from .pipeline import analyze, features
 from .reporting import write_report
-from .validation import replay_smt2
+from .replay import replay
 
 
 def _positive(text: str) -> int:
@@ -56,55 +53,6 @@ def _parser() -> argparse.ArgumentParser:
     return parser
 
 
-def _replay(args) -> tuple[dict, int]:
-    path = args.input
-    if path.suffix == ".smt2":
-        result = replay_smt2(path.read_text(), args.timeout_ms, args.backend)
-        return asdict(result), 0 if result.status in {"sat", "unsat"} else 1
-    report_path = path / "results.json" if path.is_dir() else path
-    data = json.loads(report_path.read_text())
-    root = report_path.parent.resolve()
-    checks = []
-    selected = [dict(r, kind="implication") for r in data["records"]
-                if not args.accepted_only or r["status"] == "accepted"]
-    # Replay the antecedents as well: UNSAT implication alone does not establish
-    # the non-vacuity required by an accepted result.
-    for model in data["models"]:
-        for scope in model["scopes"]:
-            selected.append({"id": f"{model['id']}:{scope['name']}:hypothesis", "kind": "hypothesis",
-                             "obligation": scope["obligation"], "sha256": scope["sha256"],
-                             "solver_result": scope["hypothesis_result"]})
-    for row in selected:
-        obligation = (root / row["obligation"]).resolve()
-        if not obligation.is_relative_to(root):
-            checks.append({"id": row["id"], "status": "error", "matches": False,
-                           "reason": "obligation path escapes report directory"})
-            continue
-        try:
-            content = obligation.read_bytes()
-            if hashlib.sha256(content).hexdigest() != row["sha256"]:
-                checks.append({"id": row["id"], "status": "error", "matches": False,
-                               "reason": "obligation SHA-256 mismatch"})
-                continue
-            result = replay_smt2(content.decode(), args.timeout_ms, args.backend)
-            expected = row["solver_result"]
-            checks.append({"id": row["id"], "kind": row["kind"], "expected": expected, **asdict(result),
-                           "matches": result.status == expected and result.status in {"sat", "unsat"}})
-        except (OSError, UnicodeError) as exc:
-            checks.append({"id": row["id"], "status": "error", "matches": False, "reason": str(exc)})
-    mismatch = sum(not row["matches"] for row in checks)
-    try:
-        backend_version = version("z3-solver" if args.backend == "z3" else "cvc5")
-    except PackageNotFoundError:
-        backend_version = None
-    result = {"backend": args.backend, "solver_version": backend_version,
-              "solver_options": ({"tlimit-per": args.timeout_ms, "arrays-exp": True, "produce-models": True}
-                                 if args.backend == "cvc5" else {"timeout": args.timeout_ms, "random_seed": 0}),
-              "checked": len(checks), "mismatched": mismatch,
-              "incomplete_run_errors": len(data.get("errors", [])), "checks": checks}
-    return result, 1 if mismatch or not checks or data.get("errors") else 0
-
-
 def main(argv: list[str] | None = None) -> int:
     parser = _parser()
     args = parser.parse_args(argv)
@@ -123,7 +71,8 @@ def main(argv: list[str] | None = None) -> int:
                     print("Fair/justice declarations present; extraction analyzes safety only.")
             return 0
         if args.command == "replay":
-            result, code = _replay(args)
+            result, code = replay(args.input, backend=args.backend, timeout_ms=args.timeout_ms,
+                                  accepted_only=args.accepted_only)
             print(json.dumps(result, indent=2))
             return code
         options = GenerationOptions(max_candidates=args.max_candidates, max_terms=args.max_terms,

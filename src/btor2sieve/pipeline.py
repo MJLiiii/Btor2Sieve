@@ -14,9 +14,9 @@ import z3
 
 from . import __version__
 from .btor2 import Model, parse_file
-from .candidates import Candidate, GenerationOptions, generate_candidates
+from .candidates import Candidate, GenerationOptions, generate_candidates, select_scope_candidates
 from .encoding import Encoder
-from .validation import Scope, Validator, make_scopes
+from .validation import Scope, ValidationResult, Validator, make_scopes
 
 
 SCOPE_DESCRIPTIONS = {
@@ -38,38 +38,37 @@ def features(model: Model) -> dict:
     }
 
 
-def _transition_candidates(encoder: Encoder, options: GenerationOptions) -> list[Candidate]:
-    """Include primed terms: total functional T alone cannot constrain current s."""
-    pool = []
-    for node in encoder.model.nexts[:options.max_terms]:
-        state, update = node.args
-        nxt, current, rhs = encoder.next_states[state], encoder.expr(state), encoder.expr(update)
-        pool.append(Candidate(nxt == rhs, "transition", "next-equation", (node.id,)))
-        pool.append(Candidate(nxt == current, "equality", "transition-stability-guess", (node.id,)))
-        if z3.is_bv(nxt) and nxt.size() <= options.max_width:
-            pool.extend([
-                Candidate(nxt == 0, "equality", "next-value-guess", (node.id,)),
-                Candidate(z3.ULE(nxt, rhs), "unsigned_bound", "next-bound", (node.id,)),
-            ])
-        elif z3.is_array(nxt) and z3.is_store(rhs):
-            index, value = rhs.arg(1), rhs.arg(2)
-            pool.append(Candidate(z3.Select(nxt, index) == value, "array", "next-read-over-write", (node.id,)))
-    return pool
+def _write_obligation(output: Path, filename: str, smt2: str) -> dict:
+    data = smt2.encode()
+    (output / filename).write_bytes(data)
+    return {"obligation": filename, "sha256": hashlib.sha256(data).hexdigest()}
 
 
-def _deduplicate(candidates: list[Candidate], limit: int) -> list[Candidate]:
-    if limit <= 0:
-        return []
-    result, seen = [], set()
-    for candidate in candidates:
-        key = z3.simplify(candidate.expr).sexpr()
-        if key in seen or key == "true":
-            continue
-        seen.add(key)
-        result.append(candidate)
-        if len(result) >= limit:
-            break
-    return result
+def _validation_fields(candidate: Candidate, result: ValidationResult) -> dict:
+    return {
+        "family": candidate.family, "origin": candidate.origin,
+        "source_nodes": list(candidate.source_nodes), "expression": candidate.expr.sexpr(),
+        "status": result.status, "solver_result": result.solver_result,
+        "hypothesis_result": result.hypothesis_result,
+        "validation_seconds": result.duration_seconds, "counterexample": result.counterexample,
+        "reason": result.reason,
+    }
+
+
+def _scope_summary(rows: list[dict], validator: Validator, extraction_seconds: float) -> dict:
+    counts = Counter(row["status"] for row in rows)
+    families = {}
+    for row in rows:
+        families.setdefault(row["family"], Counter())[row["status"]] += 1
+    return {
+        "candidates": len(rows),
+        **{key: counts[key] for key in ("accepted", "rejected", "unknown", "vacuous")},
+        "extraction_seconds": extraction_seconds,
+        "validation_seconds": sum(row["validation_seconds"] for row in rows),
+        "hypothesis_result": validator.hypothesis_result,
+        "hypothesis_seconds": validator.hypothesis_seconds,
+        "families": {key: dict(value) for key, value in sorted(families.items())},
+    }
 
 
 def analyze(paths: list[Path], output: Path, options: GenerationOptions,
@@ -144,17 +143,11 @@ def _analyze_model(path: Path, model_index: int, output: Path, options: Generati
         result = validator.check(candidate.expr)
         counter += 1
         filename = f"obligations/{model_id}-{counter:05d}.smt2"
-        data = result.smt2.encode()
-        (output / filename).write_bytes(data)
+        evidence = _write_obligation(output, filename, result.smt2)
         row = {
             "id": f"{model_id}-{counter:05d}", "model_id": model_id, "model": str(path),
-            "scope": scope.name, "property_id": scope.property_id, "family": candidate.family,
-            "origin": candidate.origin, "source_nodes": list(candidate.source_nodes),
-            "expression": candidate.expr.sexpr(), "status": result.status,
-            "solver_result": result.solver_result, "hypothesis_result": result.hypothesis_result,
-            "validation_seconds": result.duration_seconds, "counterexample": result.counterexample,
-            "reason": result.reason, "obligation": filename,
-            "sha256": hashlib.sha256(data).hexdigest(), "reuse_from": reuse_from,
+            "scope": scope.name, "property_id": scope.property_id,
+            **_validation_fields(candidate, result), **evidence, "reuse_from": reuse_from,
             "syntactically_same_as_hypothesis": z3.eq(z3.simplify(candidate.expr), z3.simplify(scope.hypothesis)),
         }
         report["records"].append(row)
@@ -164,19 +157,20 @@ def _analyze_model(path: Path, model_index: int, output: Path, options: Generati
         validator = Validator(scope.hypothesis, options.timeout_ms)
         validators[scope.name] = validator
         hyp_file = f"obligations/{model_id}-{scope.name.replace(':', '-')}-hypothesis.smt2"
-        (output / hyp_file).write_text(validator.hypothesis_smt2)
+        evidence = _write_obligation(output, hyp_file, validator.hypothesis_smt2)
         entry["scopes"].append({"name": scope.name, "property_id": scope.property_id,
                                 "hypothesis": scope.hypothesis.sexpr(),
                                 "hypothesis_result": validator.hypothesis_result,
                                 "hypothesis_seconds": validator.hypothesis_seconds,
                                 "hypothesis_reason": validator.hypothesis_reason,
-                                "obligation": hyp_file,
-                                "sha256": hashlib.sha256(validator.hypothesis_smt2.encode()).hexdigest()})
+                                **evidence})
         start = perf_counter()
+        # Assign the raw pool first: releasing the previous pool before selection
+        # preserves Z3's allocation-sensitive simplification behavior.
         candidates = generate_candidates(encoder, scope.hypothesis, scope.roots, options)
-        if scope.name == "transition":
-            candidates = _transition_candidates(encoder, options) + candidates
-        candidates = _deduplicate(candidates, options.max_candidates)
+        candidates = select_scope_candidates(
+            encoder, candidates, options, transition=scope.name == "transition",
+        )
         extraction_seconds = perf_counter() - start
         rows = []
         accepted_by_scope[scope.name] = []
@@ -185,20 +179,11 @@ def _analyze_model(path: Path, model_index: int, output: Path, options: Generati
             rows.append(row)
             if row["status"] == "accepted":
                 accepted_by_scope[scope.name].append(candidate)
-        counts = Counter(r["status"] for r in rows)
-        families = {}
-        for row in rows:
-            families.setdefault(row["family"], Counter())[row["status"]] += 1
         report["summaries"].append({
             "model_id": model_id, "model": str(path), "scope": scope.name,
             "property_id": scope.property_id, "array_sorts": entry["features"]["array_sorts"],
-            "nodes": entry["features"]["nodes"], "candidates": len(rows),
-            **{k: counts[k] for k in ("accepted", "rejected", "unknown", "vacuous")},
-            "extraction_seconds": extraction_seconds,
-            "validation_seconds": sum(r["validation_seconds"] for r in rows),
-            "hypothesis_result": validator.hypothesis_result,
-            "hypothesis_seconds": validator.hypothesis_seconds,
-            "families": {k: dict(v) for k, v in sorted(families.items())},
+            "nodes": entry["features"]["nodes"],
+            **_scope_summary(rows, validator, extraction_seconds),
         })
     if reuse:
         property_scopes = [s for s in scopes if s.property_id is not None]

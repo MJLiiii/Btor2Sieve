@@ -153,3 +153,4 @@ def test_failed_model_does_not_leave_inconsistent_partial_counts(tmp_path, monke
     report = pipeline.analyze([model], tmp_path / "out", GenerationOptions())
     assert len(report["errors"]) == 1
     assert report["models"] == report["records"] == report["summaries"] == []
+    assert list((tmp_path / "out" / "obligations").iterdir()) == []

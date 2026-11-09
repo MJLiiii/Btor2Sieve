@@ -80,3 +80,25 @@ def test_validator_accepts_formulas_from_an_explicit_z3_context():
     validator = Validator(x == 10)
     assert validator.check(z3.ULE(x, 20)).status == "accepted"
     assert validator.check(x == 9).status == "rejected"
+
+
+def test_unsat_implication_with_unknown_hypothesis_is_not_accepted(monkeypatch):
+    # Force only the antecedent check to be UNKNOWN; solve the implication
+    # normally so this tests classification without a wall-clock timeout race.
+    original_check = z3.Solver.check
+    first_check = True
+
+    def interrupted_hypothesis(solver, *assumptions):
+        nonlocal first_check
+        if first_check:
+            first_check = False
+            return z3.unknown
+        return original_check(solver, *assumptions)
+
+    monkeypatch.setattr(z3.Solver, "check", interrupted_hypothesis)
+    word = z3.BitVec("word", 4)
+    result = Validator(word == 3).check(z3.ULE(word, 3))
+    assert result.solver_result == "unsat"
+    assert result.hypothesis_result == "unknown"
+    assert result.status == "unknown"
+    assert "hypothesis satisfiability unknown" in result.reason

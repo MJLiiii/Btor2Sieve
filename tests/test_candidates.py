@@ -250,3 +250,42 @@ def test_zero_budgets_disable_only_the_relevant_work(zero_budget):
         assert all(c.origin.startswith("syntax:") for c in candidates)
     else:
         assert candidates == []
+
+
+@pytest.mark.parametrize("stop_call, expected", [(4, "minimum"), (8, "maximum")])
+@pytest.mark.parametrize("interruption", ["budget", "unknown"])
+def test_partial_bounds_after_unsat_refinement_remain_sound(monkeypatch, stop_call, expected, interruption):
+    encoder = Encoder(parse("1 sort bitvec 4\n2 state 1 word\n"))
+    word = encoder.expr(2)
+    hypothesis = z3.And(z3.UGE(word, 5), z3.ULE(word, 10))
+    real_solver = z3.Solver
+    results = []
+
+    class InterruptingSolver:
+        def __init__(self, *args, **kwargs):
+            self.solver = real_solver(*args, **kwargs)
+
+        def __getattr__(self, name):
+            return getattr(self.solver, name)
+
+        def check(self, *args):
+            if interruption == "unknown" and len(results) + 1 == stop_call:
+                result = z3.unknown
+            else:
+                result = self.solver.check(*args)
+            results.append(result)
+            return result
+
+    with monkeypatch.context() as patch:
+        patch.setattr(z3, "Solver", InterruptingSolver)
+        budget = stop_call - 1 if interruption == "budget" else 256
+        candidates = generate_candidates(encoder, hypothesis, [], GenerationOptions(max_queries=budget))
+    assert results[-2 if interruption == "unknown" else -1] == z3.unsat
+    partial = [c for c in candidates if c.origin == "semantic:interval-partial"]
+    bound = z3.UGE(word, 4) if expected == "minimum" else z3.ULE(word, 11)
+    assert any(c.expr.eq(bound) for c in partial)
+    for candidate in partial:
+        assert candidate.family == "unsigned_bound"
+        assert candidate.source_nodes == (2,)
+        # Check each partial guarantee with a fresh, uninterrupted solver.
+        assert check(hypothesis, candidate.expr) == z3.unsat
