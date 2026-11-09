@@ -5,7 +5,7 @@ from importlib.metadata import version
 
 import pytest
 
-from btor2sieve.candidates import GenerationOptions
+from btor2sieve.methods.common import GenerationOptions
 from btor2sieve.pipeline import analyze
 from btor2sieve.replay import replay
 

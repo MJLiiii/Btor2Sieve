@@ -11,7 +11,7 @@ import z3
 
 from . import __version__
 from .btor2 import parse_file
-from .candidates import GenerationOptions
+from .methods.common import GenerationOptions
 from .pipeline import analyze, features
 from .reporting import write_report
 from .replay import replay
@@ -35,13 +35,18 @@ def _parser() -> argparse.ArgumentParser:
         run = commands.add_parser(command, help="extract and validate " + ("one model" if command == "extract" else "a set of models"))
         run.add_argument("models", type=Path, nargs=1 if command == "extract" else "+")
         run.add_argument("--out", type=Path, required=True, help="new output directory (never overwritten)")
-        run.add_argument("--scopes", default="property,model", help="comma-separated property,model,initial,transition")
+        run.add_argument("--method", choices=("word-level", "implied"), default="word-level",
+                         help="word-level (existing method) or paper state-literal implications")
+        run.add_argument("--scopes", help="comma-separated property,model,initial,transition; "
+                         "default: property,model for word-level; property for implied")
         run.add_argument("--property", dest="property_id", type=_positive, help="select one bad directive ID")
         run.add_argument("--syntax-only", action="store_true", help="disable solver-guided discovery")
         run.add_argument("--max-candidates", type=_positive, default=200, help="per-scope candidate budget")
-        run.add_argument("--max-terms", type=_positive, default=16, help="per-scope discovery term budget")
+        run.add_argument("--max-terms", type=_positive, default=16,
+                         help="per-scope term budget; selected state bits for implied")
         run.add_argument("--max-width", type=_positive, default=64, help="maximum bit width for scalar discovery")
-        run.add_argument("--max-queries", type=_positive, default=256, help="per-scope discovery query budget")
+        run.add_argument("--max-queries", type=_positive, default=256,
+                         help="word-level discovery query budget (unused by implied)")
         run.add_argument("--timeout-ms", type=_positive, default=1000, help="timeout per SMT query, in milliseconds")
         run.add_argument("--reuse", action="store_true", help="revalidate accepted property facts against other properties")
         run.add_argument("--max-reuse", type=_positive, default=100, help="reuse query limit per target property")
@@ -75,10 +80,14 @@ def main(argv: list[str] | None = None) -> int:
                                   accepted_only=args.accepted_only)
             print(json.dumps(result, indent=2))
             return code
+        if args.method == "implied" and args.syntax_only:
+            parser.error("--syntax-only is only available for word-level, not implied")
         options = GenerationOptions(max_candidates=args.max_candidates, max_terms=args.max_terms,
                                     max_width=args.max_width, semantic=not args.syntax_only,
-                                    timeout_ms=args.timeout_ms, max_queries=args.max_queries)
-        report = analyze(args.models, args.out, options, tuple(args.scopes.split(",")),
+                                    timeout_ms=args.timeout_ms, max_queries=args.max_queries,
+                                    method=args.method)
+        scopes = tuple(args.scopes.split(",")) if args.scopes is not None else None
+        report = analyze(args.models, args.out, options, scopes,
                          args.reuse, args.property_id, args.max_reuse)
         write_report(report, args.out)
         total = len([r for r in report["records"] if not r["reuse_from"]])

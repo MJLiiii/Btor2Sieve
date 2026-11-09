@@ -86,6 +86,20 @@ def render_html(report: dict) -> str:
     warnings += [f'{e["model"]}: {e["error"]}' for e in report["errors"]]
     warning_html = "".join(f'<p class="warning">{_escape(w)}</p>' for w in warnings)
     reuse_counts = dict(Counter(r["status"] for r in report["records"] if r["reuse_from"]))
+    proof_records = {row["id"]: row for row in report["records"]}
+    equivalences = []
+    for summary in report["summaries"]:
+        for equivalence in summary.get("equivalences", []):
+            links = ", ".join(
+                f'<a href="{_escape(proof_records[id_]["obligation"])}">{_escape(id_)}</a>'
+                for id_ in equivalence["implication_ids"]
+            )
+            equivalences.append(f'<li>{_escape(Path(summary["model"]).name)} · '
+                                f'{_escape(summary["scope"])}<pre>{_escape(equivalence["expression"])}</pre>'
+                                f'Accepted implication proofs: {links}</li>')
+    equivalence_html = ("<h2>Literal equivalences</h2><p>Derived from two accepted implications "
+                        "under the same property; excluded from candidate counts.</p><ul>"
+                        + "".join(equivalences) + "</ul>") if equivalences else ""
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Btor2Sieve · Constraint report</title><style>
@@ -105,6 +119,7 @@ a{{color:var(--accent)}}.warning{{padding:12px;border-left:4px solid #bd6d1d;bac
 </style></head><body><main>
 <header><div class="eyebrow">Word-level analysis · auditable SMT evidence</div><h1>Btor2Sieve</h1>
 <p>Constraint extraction report for {len(report['models'])} model(s). Every accepted implication was checked with a fresh SMT solver.</p>
+<p>Method: {_escape(report['configuration'].get('method', 'word-level'))}</p>
 <p class="muted">Generated {_escape(report['created_utc'])} · Btor2Sieve {_escape(report['tool']['version'])} · Z3 {_escape(report['tool']['z3'])} · {report['duration_seconds']:.2f}s</p></header>
 {warning_html}<div class="cards">{cards}</div>
 <p class="muted">Counts exclude cross-property reuse checks. Accepted means a non-vacuous implication, not proof that the hardware property is safe. Syntactic facts and direct property atoms may be included; these counts do not measure novelty.</p>
@@ -112,6 +127,7 @@ a{{color:var(--accent)}}.warning{{padding:12px;border-left:4px solid #bd6d1d;bac
 <p>Cross-property revalidation: {_escape(reuse_counts or 'not requested / no eligible source constraints')}. Each target uses its own safety predicate.</p>
 <h2>What each result establishes</h2><ul>{scope_rows}</ul>
 <p>Vacuous implications have an inconsistent hypothesis and are excluded from accepted counts. Unknown results establish no accepted constraint. This tool does not add property-derived constraints to a model's assumptions.</p>
+{equivalence_html}
 <h2>Inspect the constraints</h2><div class="controls"><input id="search" aria-label="Search constraints" placeholder="Search models, expressions, families…"><select id="status" aria-label="Filter by status"><option value="">All statuses</option><option>accepted</option><option>rejected</option><option>unknown</option><option>vacuous</option></select></div>
 <p id="visible" class="muted"></p>{records}
 <footer><a href="results.json">Full JSON evidence</a> · <a href="summary.csv">Summary CSV</a> · <a href="families.csv">Family CSV</a> · <a href="constraints.csv">Constraint CSV</a><br>

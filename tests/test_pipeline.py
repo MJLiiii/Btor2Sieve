@@ -6,7 +6,8 @@ import pytest
 import z3
 
 from btor2sieve.btor2 import parse
-from btor2sieve.candidates import Candidate, GenerationOptions, generate_candidates, select_scope_candidates
+from btor2sieve.methods.common import Candidate, GenerationOptions
+from btor2sieve.methods.word_level import generate_candidates, select_scope_candidates
 from btor2sieve.encoding import Encoder
 import btor2sieve.pipeline as pipeline
 from btor2sieve.validation import make_scopes
@@ -133,7 +134,7 @@ def test_failed_model_rolls_back_all_scopes_and_files_and_keeps_next_model(tmp_p
 
 
 def test_scope_selection_does_not_generate_more_candidates(monkeypatch):
-    import btor2sieve.candidates as candidates
+    import btor2sieve.methods.word_level as word_level
 
     encoder = Encoder(parse(MODEL))
     options = GenerationOptions(max_candidates=1)
@@ -142,7 +143,7 @@ def test_scope_selection_does_not_generate_more_candidates(monkeypatch):
     def unexpected_generation(*args, **kwargs):
         raise AssertionError("selection must use the supplied pool")
 
-    monkeypatch.setattr(candidates, "generate_candidates", unexpected_generation)
+    monkeypatch.setattr(word_level, "generate_candidates", unexpected_generation)
     assert select_scope_candidates(encoder, raw, options) == raw
 
 

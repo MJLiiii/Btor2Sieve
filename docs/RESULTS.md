@@ -13,7 +13,7 @@ python -m btor2sieve batch examples/*.btor2 --out results/my-demo \
   --scopes property,model,initial,transition --reuse
 ```
 
-The evaluation writes `evaluation.json` and `syntax/` and `semantic/` directories containing `report.html`, `summary.csv`, `families.csv`, `constraints.csv`, and replay receipts. The demo writes its all-scope report to `results/my-demo/report.html`. New timings and environment details will differ from this historical run.
+The current evaluation writes `evaluation.json`, `comparison.csv`, and the default method directories `word-level/semantic/` and `implied-constraints/`, each containing `report.html`, `summary.csv`, `families.csv`, `constraints.csv`, and replay receipts. Selecting `--methods syntax semantic` produces `word-level/syntax/` and `word-level/semantic/` for the original method's ablation. The demo writes its all-scope report to `results/my-demo/report.html`. New timings and environment details will differ from this historical run.
 
 ## Corpus and configuration
 

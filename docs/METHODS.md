@@ -1,10 +1,20 @@
 # Methods and soundness contract
 
-Btor2Sieve implements a bounded, word-level generate-and-validate pipeline. It is a constraint extractor, not a reachability model checker. The project decision is to make the core C14 deliverable easy to install, inspect, and reproduce, then leave model-checker integration as a separately measurable extension.
+Btor2Sieve implements two bounded generate-and-validate methods: the original
+word-level method and the paper's state-literal implied-constraint method.
+It is a constraint extractor, not a reachability model checker. Model-checker
+integration remains a separately measurable extension.
 
 ## Code boundaries
 
-The package follows the data flow described in the [source walkthrough](../README.md#find-your-way-around-the-code). The parser owns the typed model; the encoder owns its Z3 translation. `make_scopes` in `validation.py` chooses the exact hypothesis. The pipeline calls `generate_candidates` and then `select_scope_candidates`, both in `candidates.py`, to produce and select the ordered candidates to validate, including transition templates when requested. `Validator` checks each proposal independently. The pipeline records obligations and results, and the reporting module renders those plain dictionaries.
+The package follows the data flow described in the [source walkthrough](../README.md#find-your-way-around-the-code). The parser owns the typed model; the encoder owns its Z3 translation. `make_scopes` in `validation.py` chooses the exact hypothesis. The pipeline calls `generate_candidates` and then `select_scope_candidates`, both in `methods/word_level.py`, to produce and select the original method's ordered candidates to validate, including transition templates when requested. `Validator` checks each proposal independently. The pipeline records obligations and results, and the reporting module renders those plain dictionaries.
+
+That generation path is retained for `word-level`. For `implied`, the pipeline
+calls `generate_implied_candidates` in `methods/implied_constraints.py`, then the same Validator;
+`find_equivalences` derives summary entries from accepted implication proofs.
+Both methods import their shared `Candidate` and `GenerationOptions` data
+classes from `methods/common.py`. Neither implementation imports the other.
+The old root-level `candidates.py` and `implied.py` only preserve public imports.
 
 Report replay is a separate operation: `replay(path, *, backend="z3", timeout_ms=5000, accepted_only=False)` in `replay.py` returns a result dictionary and an exit code. It verifies report artifacts and calls `validation.replay_smt2` for each query. The CLI supplies arguments and presents the result. This separation keeps argument parsing and report loading out of the proof checks.
 
@@ -55,7 +65,69 @@ Complete binary searches use at most `w` queries per endpoint. Partial search ma
 
 Deduplication uses normalized expressions; obvious tautologies and the normalized hypothesis itself are suppressed. This is not an expensive logical independence or minimality test. Accepted constraints can overlap or be semantically equivalent; counts measure validated formulas, not independent information or novelty.
 
-Candidate generation has two deliberately different selection steps. `generate_candidates` retains structural array identities as useful rewrite proposals, including identities that simplify to true. `select_scope_candidates` prepends transition templates when requested, then removes tautologies and duplicate normalized expressions before applying the final candidate limit. It does not refill slots vacated by filtering. Both steps live in `candidates.py`; keeping their policies distinct preserves candidate order and resource budgets.
+Candidate generation has two deliberately different selection steps. `generate_candidates` retains structural array identities as useful rewrite proposals, including identities that simplify to true. `select_scope_candidates` prepends transition templates when requested, then removes tautologies and duplicate normalized expressions before applying the final candidate limit. It does not refill slots vacated by filtering. Both steps live in `methods/word_level.py`; keeping their policies distinct preserves candidate order and resource budgets.
+
+## Paper implied-constraint extraction
+
+`--method implied` implements the implication family in Cabodi et al.,
+*Speeding up Model Checking by Exploiting Explicit and Hidden Verification
+Constraints*, DATE 2009, §V-B–C, PDF page 4 / proceedings page 1689. The supplied
+[paper](Speeding%20up%20Model%20Checking%20by%20Exploiting%20Explicit%20and%20Hidden%20Verification%20Constraints.pdf)
+defines `C_impl = conjunction(li => lj)` with every implication satisfying
+`P => (li => lj)`. Its Boolean state literals include both polarities. Two
+opposite directions establish equivalence. The paper permits nearby
+combinational nodes as an optional extension; this implementation uses its
+state-variable-only variant.
+
+The BTOR2 adaptation treats each selected bit of a bit-vector state as a
+Boolean atom. For example, an 8-bit state contributes literals such as
+`Extract(0, 0, state) == 1` and its negation. Arrays are retained in the SMT
+encoding of the property but are not literal candidates; neither inputs nor
+combinational nodes enter this vocabulary. Properties involving inputs are
+checked over all input valuations, so accepted state implications still
+follow from that exact predicate. This is a logical extension of the
+paper's state-property setting, not a transition-transformation claim.
+
+The paper does not specify exact enumeration order, bit-vector lowering,
+budgets, or duplicate policy. Our implementation choices are:
+
+- Walk the property cone to prioritize state words. Select low bits round
+  robin across eligible cone states, then other states, up to `max_terms`
+  Boolean atoms. Skip state words wider than `max_width`.
+- Propose each atom's two unit implications (`x => not x` and
+  `not x => x`), followed by four binary clauses per unordered atom pair.
+  Both polarities are covered; tautologies and contrapositive duplicates
+  are omitted. `max_candidates` caps this deterministic proposal sequence.
+- Send every proposal to the existing independent validator. Its query is
+  exactly `P and li and not lj`, equivalently `P and not (li => lj)`.
+  There is no discovery solver or simulation pruning; `max_queries` is
+  unused. `timeout_ms` applies to each proof and non-vacuity query.
+- Recognize equivalences only from accepted implications. Each summary's
+  `equivalences` list includes the SMT expression, source state node IDs and
+  two `implication_ids` linking to the proof records. The HTML links to those
+  obligations. Equivalences do not add to candidate counts. The conjunction
+  of all accepted ordinary implication records is the extracted `C_impl`.
+
+The property itself may be one of these literal implications; the paper
+explicitly allows that. Counts therefore measure validated formulas, not
+independent information or newly discovered constraints. The original
+word-level method retains its own candidate and filtering policy unchanged.
+Budgets make both methods incomplete, and equal numeric term budgets mean
+different vocabularies (word-level terms versus Boolean state bits).
+
+Only property scopes are supported for the paper method, and each selected
+bad directive is analyzed separately. No initialization, transition,
+environment assumptions, or other properties are added to `P`. UNKNOWN
+and vacuous results cannot establish an equivalence. Cross-property reuse,
+when requested, repeats the target property's independent proof check.
+
+The paper's separate exploitation theorem (§V-B, Theorem 1) assumes
+`P => C` and `I => P`, and constrains **source** transitions using
+`T_C = C(current) and T`, retaining the original property. Its circuit form
+stutters outside `C`. Extraction does not check the theorem's initiation
+premise or transform the model. In particular, imposing `C(next)` or adding
+property facts as global BTOR2 constraints can hide the first bad state.
+Conditionally equivalent literals are reported, never globally merged.
 
 ## Independent validation and replay
 

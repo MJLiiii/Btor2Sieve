@@ -2,7 +2,8 @@ import pytest
 import z3
 
 from btor2sieve.btor2 import parse
-from btor2sieve.candidates import GenerationOptions, generate_candidates
+from btor2sieve.methods.common import GenerationOptions
+from btor2sieve.methods.word_level import generate_candidates
 from btor2sieve.encoding import Encoder
 
 

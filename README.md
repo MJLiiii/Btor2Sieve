@@ -49,11 +49,56 @@ btor2sieve batch benchmarks/hwmcc/2025/bv/hkust/*.btor2 --out results/my-suite \
 
 `--syntax-only` disables solver-guided range and known-bit discovery. `--property ID` selects a **bad directive ID**, not the ID of its Boolean expression. For example, the counter's properties are bad directives 11 and 14. `--max-reuse` limits reuse queries per target property. Timeouts are per solver call, not a total run deadline.
 
+## Compare the two extraction methods
+
+The existing method remains the default (`--method word-level`), including
+its syntax-only option. The new `--method implied` implements the literal
+implication family from *Speeding up Model Checking by Exploiting Explicit and
+Hidden Verification Constraints*, §V-B–C. It selects individual state bits,
+tests both literal polarities under `P = not bad`, and reports equivalences
+when both directions have accepted proofs.
+
+```sh
+btor2sieve extract examples/counter.btor2 --method implied --out results/counter-implied
+python scripts/evaluate.py --limit 5 --out results/compare-5
+```
+
+The evaluation command runs your semantic word-level method and the paper
+method on the same selected files and property scopes. It writes
+`comparison.csv`, `evaluation.json`, and a complete report with replayable
+proofs in `word-level/semantic/` and `implied-constraints/`. For all local
+benchmarks, omit `--limit`. Use a new output directory for each run.
+
+```sh
+# Choose a track and a filename pattern for a smaller comparison.
+python scripts/evaluate.py --benchmarks benchmarks/hwmcc/2025/bv \
+  --filter '*example_156*' --out results/compare-selected
+# Run just the paper method, or the original syntax/semantic comparison.
+python scripts/evaluate.py --methods implied --limit 5 --out results/paper-5
+python scripts/evaluate.py --methods syntax semantic --scopes property,model \
+  --limit 5 --out results/word-level-5
+```
+
+Implied mode supports property scope only. It uses at most `--max-terms`
+Boolean state bits and `--max-candidates` implication checks per property;
+`--max-width` limits eligible state word widths. Array states, inputs, and
+combinational nodes are outside its candidate vocabulary. `--max-queries`
+controls only word-level semantic discovery. The implementation extracts and
+validates facts; it does not perform the paper's circuit rewriting or measure
+model-checking speedup. See [method details](docs/METHODS.md#paper-implied-constraint-extraction).
+
 ## Project layout
 
 ```text
 src/btor2sieve/          Python package
+  methods/
+    common.py           Shared candidate representation and budgets
+    word_level.py       Your original word-level method (syntax + semantic)
+    implied_constraints.py  Paper's state-literal implication method
 tests/                  Automated tests
+  test_word_level.py
+  test_implied_constraints.py
+  test_implied_constraints_pipeline.py
 scripts/                Evaluation entry point
 examples/               Small runnable BTOR2 examples
 benchmarks/             Input datasets, grouped by source/year/track
@@ -65,6 +110,28 @@ results/                Generated evaluation reports
 ```
 
 Use lowercase names for collection directories and descriptive track names. Keep upstream family directories and model filenames unchanged so inputs remain traceable to their source. Store generated reports in `results/`.
+
+Both implementations live under `methods/`; parsing, SMT encoding, validation,
+replay and reporting are shared. The root-level `candidates.py` and `implied.py`
+are compatibility imports for older Python callers, with no implementation.
+New code should import the named method modules directly.
+
+Benchmark outputs use the same distinction:
+
+```text
+results/my-comparison/
+  evaluation.json
+  comparison.csv
+  word-level/
+    semantic/           Original method with solver-guided discovery
+    syntax/             Original method's optional syntax-only baseline
+  implied-constraints/  Paper method
+```
+
+Each method directory contains its HTML/CSV/JSON reports and SMT obligations.
+Only selected modes are created; `word-level/syntax/` appears when `syntax` is
+requested. `output_directory` in the evaluation JSON and comparison CSV gives
+the report directory relative to the evaluation root.
 
 ## Find your way around the code
 
@@ -80,7 +147,9 @@ reports and SMT files ← pipeline ← independent Validator
 | --- | --- |
 | [btor2.py](src/btor2sieve/btor2.py) | Parse lines into sorts and nodes, checking references and types. |
 | [encoding.py](src/btor2sieve/encoding.py) | Translate nodes into Z3 expressions and build assumptions, initialization, and transition equations. |
-| [candidates.py](src/btor2sieve/candidates.py) | Propose formulas within budgets and select candidates for each scope. Proposals are untrusted. |
+| [methods/common.py](src/btor2sieve/methods/common.py) | Shared `Candidate` and `GenerationOptions` data classes. |
+| [methods/word_level.py](src/btor2sieve/methods/word_level.py) | Your original method: syntax templates, SMT-guided word-level discovery and scope selection. |
+| [methods/implied_constraints.py](src/btor2sieve/methods/implied_constraints.py) | Paper method: enumerate state-bit literal implications and recognize proved equivalences. |
 | [validation.py](src/btor2sieve/validation.py) | Define exact scope hypotheses, check each candidate independently, and replay individual SMT queries. |
 | [pipeline.py](src/btor2sieve/pipeline.py) | Run those steps, revalidate reuse, and record evidence; isolate failures by model. |
 | [reporting.py](src/btor2sieve/reporting.py) | Write JSON, CSV, and a self-contained HTML report from the result dictionaries. |
@@ -132,7 +201,7 @@ To evaluate a different directory:
 python scripts/evaluate.py --benchmarks /path/to/extracted/models --out results/my-evaluation
 ```
 
-Evaluation runs syntax and semantic modes with the same budgets, then replays accepted implications and all hypotheses with Z3 and cvc5. It requires the `crosscheck` extra (or `--skip-cvc5`). `evaluation.json` records the selected input paths; each mode’s `results.json` records model hashes. Budgets limit individual queries, not total runtime. Run the automated test suite locally with `python -m pytest -q`; it does not require a downloaded benchmark corpus.
+Evaluation defaults to semantic word-level and implied extraction with the same budgets and property scopes, then replays accepted implications and all hypotheses with Z3 and cvc5. It requires the `crosscheck` extra (or `--skip-cvc5`). `evaluation.json` records the selected input paths; `comparison.csv` combines per-model results, and each mode’s `results.json` records model hashes. Use `--methods syntax semantic --scopes property,model` for the previous comparison. Budgets limit individual queries, not total runtime. Run the automated test suite locally with `python -m pytest -q`; it does not require a downloaded benchmark corpus.
 
 The suite covers strict parsing, bit-vector wraparound and signed operations, arrays, missing initialization/next, deep DAGs, finite safety/liveness separation, candidate budgets, invalid guesses, vacuity, solver UNKNOWN, exact property scopes, cross-property reuse, report counts, failed-model isolation, and tamper detection.
 
@@ -143,7 +212,7 @@ To try a new candidate, build a Boolean Z3 expression, attach its source node ID
 ```python
 import z3
 from btor2sieve.btor2 import parse_file
-from btor2sieve.candidates import Candidate
+from btor2sieve.methods.common import Candidate
 from btor2sieve.encoding import Encoder
 from btor2sieve.validation import Validator
 
@@ -159,6 +228,6 @@ result = Validator(hypothesis).check(candidate.expr)
 print(result.status)  # accepted: the predicate implies counter <= 9.
 ```
 
-To include a template in normal extraction, yield its `Candidate` from the appropriate generator in `candidates.py` and add a focused test. `generate_candidates` produces bounded proposals; `select_scope_candidates` combines those proposals with transition templates when needed and applies the final validation budget/filter. The pipeline calls these two stages explicitly. Keep the validator unchanged: it must never assume a proposed or previously accepted formula.
+To extend the original method, yield a `Candidate` from the appropriate generator in `methods/word_level.py` and add a focused test in `tests/test_word_level.py`. `generate_candidates` produces bounded proposals; `select_scope_candidates` combines those proposals with transition templates when needed and applies the final validation budget/filter. The pipeline calls these two stages explicitly. The paper method lives separately in `methods/implied_constraints.py`, with tests in `tests/test_implied_constraints.py`. Both use the same validator: it must never assume a proposed or previously accepted formula.
 
 See [METHODS.md](docs/METHODS.md) for the soundness boundaries. Inductive/Houdini inference, Pono integration, proof-certificate production, and large-suite speedup evaluation remain research extensions.

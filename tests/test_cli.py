@@ -141,7 +141,7 @@ def test_replay_checks_nonvacuity_and_detects_tampered_hypothesis(tmp_path):
 
 def test_failed_model_does_not_leave_inconsistent_partial_counts(tmp_path, monkeypatch):
     import z3
-    from btor2sieve.candidates import Candidate, GenerationOptions
+    from btor2sieve.methods.common import Candidate, GenerationOptions
     import btor2sieve.pipeline as pipeline
 
     model = tmp_path / "counter.btor2"
