@@ -1,7 +1,8 @@
 """Implication checking independent of the candidate generator.
 
-The trusted boundary is BTOR2 translation plus the SMT solver. SMT-LIB files
-are replayable obligations, not independently kernel-checked proof certificates.
+The trusted boundary is Pono's BTOR2 frontend (which supplies P) plus the SMT
+solver. SMT-LIB files are replayable obligations, not independently
+kernel-checked proof certificates.
 """
 
 from __future__ import annotations
@@ -13,37 +14,21 @@ from typing import TYPE_CHECKING
 import z3
 
 if TYPE_CHECKING:
-    from .encoding import Encoder
+    from .pono import PonoModel
 
 
 @dataclass
 class Scope:
+    """One proof context: the hypothesis P = not bad for a single bad directive."""
     name: str
     hypothesis: z3.BoolRef
-    roots: tuple[int, ...]
-    property_id: int | None = None
+    property_id: int
 
 
-def make_scopes(encoder: Encoder, kinds: tuple[str, ...] = ("property", "model")) -> list[Scope]:
-    """Build exact proof contexts without strengthening property hypotheses."""
-    model = encoder.model
-    scopes: list[Scope] = []
-    for kind in kinds:
-        if kind == "property":
-            scopes.extend(Scope(f"property:{n.id}", encoder.property(n.id), n.args, n.id)
-                          for n in model.bads)
-        elif kind == "model":
-            scopes.append(Scope("model", encoder.assumptions,
-                                tuple(a for n in model.constraints for a in n.args)))
-        elif kind == "initial":
-            scopes.append(Scope("initial", z3.And(encoder.initial, encoder.assumptions),
-                                tuple(a for n in model.inits + model.constraints for a in n.args)))
-        elif kind == "transition":
-            scopes.append(Scope("transition", z3.And(encoder.transition, encoder.assumptions),
-                                tuple(a for n in model.nexts + model.constraints for a in n.args)))
-        else:
-            raise ValueError(f"unknown scope: {kind}")
-    return scopes
+def property_scopes(model: PonoModel) -> list[Scope]:
+    """One scope per property Pono read. Nothing else (init, transition,
+    environment constraints, other properties) is ever assumed."""
+    return [Scope(f"property:{p.id}", p.hypothesis, p.id) for p in model.properties]
 
 
 @dataclass

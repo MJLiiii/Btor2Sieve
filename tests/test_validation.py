@@ -3,7 +3,8 @@
 import z3
 import pytest
 
-from btor2sieve.validation import Validator, replay_smt2
+from btor2sieve.pono import read_model
+from btor2sieve.validation import Validator, property_scopes, replay_smt2
 
 
 def test_invalid_candidate_has_counterexample_and_valid_one_replays():
@@ -102,3 +103,23 @@ def test_unsat_implication_with_unknown_hypothesis_is_not_accepted(monkeypatch):
     assert result.hypothesis_result == "unknown"
     assert result.status == "unknown"
     assert "hypothesis satisfiability unknown" in result.reason
+
+
+def test_property_scope_does_not_silently_assume_environment(tmp_path):
+    path = tmp_path / "model.btor2"
+    path.write_text("""1 sort bitvec 1
+2 sort bitvec 8
+3 state 2 counter
+4 constd 2 10
+5 eq 1 3 4
+6 bad 5
+7 ult 1 3 4
+8 constraint 7
+""")
+    [scope] = property_scopes(read_model("pono", path))
+    counter = z3.BitVec("s_3", 8)
+    # Pono read P = counter != 10, without the environment constraint counter < 10.
+    solver = z3.Solver()
+    solver.add(scope.hypothesis != (counter != 10))
+    assert solver.check() == z3.unsat
+    assert Validator(scope.hypothesis).check(z3.ULT(counter, 10)).status == "rejected"

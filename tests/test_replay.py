@@ -5,7 +5,7 @@ from importlib.metadata import version
 
 import pytest
 
-from btor2sieve.methods.common import GenerationOptions
+from btor2sieve.implied import GenerationOptions
 from btor2sieve.pipeline import analyze
 from btor2sieve.replay import replay
 
@@ -33,7 +33,7 @@ def report_files(tmp_path):
     model = tmp_path / "counter.btor2"
     model.write_text(MODEL)
     output = tmp_path / "report"
-    report = analyze([model], output, GenerationOptions(semantic=False, max_candidates=12))
+    report = analyze([model], output, GenerationOptions(matched_budgets=True, max_candidates=12))
     assert not report["errors"]
     (output / "results.json").write_text(json.dumps(report))
     return output, report
@@ -64,7 +64,7 @@ def test_generated_report_replays_from_directory_or_manifest(report_files, manif
     assert result["solver_version"] == version("z3-solver")
     assert result["solver_options"] == {"timeout": 3210, "random_seed": 0}
     assert result["mismatched"] == result["incomplete_run_errors"] == 0
-    assert result["checked"] == len(report["records"]) + 3
+    assert result["checked"] == len(report["records"]) + 2
     assert {row["kind"] for row in result["checks"]} == {"implication", "hypothesis"}
     assert all(row["matches"] and row["status"] == row["expected"] for row in result["checks"])
 
@@ -80,7 +80,7 @@ def test_accepted_only_skips_rejected_obligations_but_checks_every_hypothesis(re
     assert code == 0
     assert {row["id"] for row in result["checks"] if row["kind"] == "implication"} == accepted
     assert {row["id"] for row in result["checks"] if row["kind"] == "hypothesis"} == {
-        "m0000:property:11:hypothesis", "m0000:property:13:hypothesis", "m0000:model:hypothesis",
+        "m0000:property:11:hypothesis", "m0000:property:13:hypothesis",
     }
 
 
@@ -91,7 +91,7 @@ def test_accepted_only_replays_hypotheses_when_no_implication_is_accepted(report
     (output / "results.json").write_text(json.dumps(report))
     result, code = replay(output, accepted_only=True)
     assert code == 0
-    assert result["checked"] == 3
+    assert result["checked"] == 2
     assert all(row["kind"] == "hypothesis" for row in result["checks"])
 
 
@@ -107,7 +107,7 @@ def test_missing_and_tampered_obligations_are_reported_without_losing_other_chec
     assert checks[missing["id"]]["status"] == checks[tampered["id"]]["status"] == "error"
     assert "No such file" in checks[missing["id"]]["reason"]
     assert checks[tampered["id"]]["reason"] == "obligation SHA-256 mismatch"
-    assert result["checked"] == len(report["records"]) + 3
+    assert result["checked"] == len(report["records"]) + 2
 
 
 @pytest.mark.parametrize("symlink", [False, True])

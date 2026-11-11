@@ -1,13 +1,13 @@
-"""Report formats remain usable independently of their rendering helpers."""
+"""Report files: JSON and CSV fields, and the self-contained, escaped HTML page."""
 
 import csv
 import json
 
 import pytest
 
-from btor2sieve.methods.common import GenerationOptions
+from btor2sieve.implied import GenerationOptions
 from btor2sieve.pipeline import analyze
-from btor2sieve.reporting import write_report
+from btor2sieve.reporting import render_html, write_report
 
 
 @pytest.fixture
@@ -18,7 +18,7 @@ def report_files(tmp_path):
         "4 constd 2 10\n5 ult 1 3 4\n6 bad 5\n"
     )
     output = tmp_path / "report"
-    report = analyze([model], output, GenerationOptions(max_candidates=8, semantic=False))
+    report = analyze([model], output, GenerationOptions(max_candidates=8, matched_budgets=True))
     write_report(report, output)
     return report, output
 
@@ -29,7 +29,7 @@ def test_json_and_csv_preserve_fields_and_record_counts(report_files):
     assert saved["schema_version"] == 1
     assert set(saved) == {
         "schema_version", "tool", "created_utc", "configuration", "models", "summaries",
-        "records", "errors", "scope_definitions", "trust_boundary", "duration_seconds",
+        "records", "errors", "scope_definitions", "trust_boundary", "duration_seconds", "frontend",
     }
     assert saved["records"] == report["records"]
     expected_headers = {
@@ -52,7 +52,7 @@ def test_json_and_csv_preserve_fields_and_record_counts(report_files):
             reader = csv.DictReader(stream)
             assert reader.fieldnames == headers
             tables[filename] = list(reader)
-    assert len(tables["summary.csv"]) == 2
+    assert len(tables["summary.csv"]) == 1
     assert [row["id"] for row in tables["constraints.csv"]] == [row["id"] for row in saved["records"]]
     for row in tables["families.csv"]:
         matching = [record for record in saved["records"]
@@ -76,3 +76,32 @@ def test_html_escapes_data_and_contains_local_controls_and_evidence(report_files
         assert f'href="{record["obligation"]}"' in document
     for filename in ("results.json", "summary.csv", "constraints.csv", "families.csv"):
         assert f'href="{filename}"' in document
+
+
+@pytest.mark.parametrize("complete", [True, False])
+def test_html_shows_search_coverage_and_family_counts(tmp_path, complete):
+    model = tmp_path / "one.btor2"
+    model.write_text("1 sort bitvec 1\n2 state 1 flag\n3 bad 2\n")
+    report = analyze([model], tmp_path / "out", GenerationOptions())
+    report["summaries"][0]["search"] = {
+        "kind": "property-word-level", "term_count": 7, "predicate_count": 3,
+        "total_candidates": 12, "discovery_queries": 25,
+        "discovery_unknown": 0 if complete else 1, "hypothesis_result": "sat",
+        "complete": complete, "validation_complete": True,
+        "reason": None if complete else "timeout <bounded>",
+    }
+    report["summaries"][0]["families"] = {
+        "unsigned_bound": {"accepted": 2, "rejected": 1},
+        "masked_bits": {"accepted": 1, "unknown": 1},
+    }
+
+    rendered = render_html(report)
+
+    assert "property-word-level-v1" in rendered
+    assert "finite template" in rendered.lower()
+    assert ("complete" if complete else "partial") in rendered
+    assert "Discovery queries" in rendered
+    assert "Validation complete" in rendered
+    assert "unsigned_bound" in rendered and "masked_bits" in rendered
+    if not complete:
+        assert "timeout &lt;bounded&gt;" in rendered

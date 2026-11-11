@@ -1,0 +1,28 @@
+; C14 native property-implied examples; each bad directive is checked separately.
+; 4-bit 2*x = 10 permits x in {5,13}: bounds, disequalities, and (x & 7) = 5.
+1 sort bitvec 1
+2 sort bitvec 4
+3 sort bitvec 2
+4 sort array 3 2
+5 state 2 x
+6 state 2 y
+7 input 1 enable
+8 state 4 memory
+9 input 3 address
+10 constd 2 2
+11 mul 2 5 10
+12 constd 2 10
+13 eq 1 11 12
+14 bad -13 modular_word_property
+; Whole-word equality, without Boolean bit-pair expansion.
+15 eq 1 5 6
+16 bad -15 word_equality_property
+; A conditional word bound with an unconstrained input guard.
+17 constd 2 3
+18 ulte 1 5 17
+19 implies 1 7 18
+20 bad -19 guarded_bound_property
+; A native array read relation.
+21 read 2 8 9
+22 eq 1 21 5
+23 bad -22 array_read_property
