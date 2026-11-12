@@ -59,8 +59,9 @@
 \setbeamercolor{block title alerted}{fg=white,bg=RPLove}
 \setbeamercolor{block body alerted}{fg=RPText,bg=RPSurface}
 
-% Slide numbers
+% Slide numbers and buttons
 \setbeamercolor{page number in head/foot}{fg=RPSubtle}
+\setbeamercolor{button}{bg=RPPine,fg=white}
 
 % ==========================================
 % 3. PRESENTATION INFORMATION
@@ -206,57 +207,31 @@
 
 \begin{frame}{Experimental Results}
 
-  \begin{columns}[T,onlytextwidth]
-    \begin{column}{0.48\textwidth}
-      \begin{block}{Overall Summary (413 Benchmarks)}
-        \footnotesize
-        \begin{itemize}
-            \setlength\itemsep{0.35em}
-          \item \textbf{Models:} \textbf{373} completed ($\le 46\text{ s}$ each), 40 hit 300s CPU limit, 0 errors
-          \item \textbf{Properties:} \textbf{543} analyzed with 100\% complete search (0 \texttt{UNKNOWN})
-          \item \textbf{Candidates:} \textbf{7,409 accepted} / 122,660 proposed (\textbf{6.0\%}), 0 vacuous
-          \item \textbf{Cross-Property Reuse:} \textbf{689} accepted across multi-property models
-          \item \textbf{SMT Replay:} \textbf{8,641} \texttt{.smt2} obligations checked in \textbf{Z3} \& \textbf{cvc5} with \textbf{0 mismatches}
-        \end{itemize}
-      \end{block}
-    \end{column}
+  \begin{block}{Overall Summary}
+    \small
+    \begin{itemize}
+        \setlength\itemsep{0.2em}
+      \item \textbf{Scale:} Evaluated \textbf{413} benchmarks (\textbf{543} properties across \texttt{HWMCC'25} \& \texttt{CAV'18}) with \textbf{0 errors}
+      \item \textbf{Extraction:} Validated \textbf{7,409} implied constraints + \textbf{689} cross-property reuses
+      \item \textbf{Soundness:} All \textbf{8,641} exported \texttt{.smt2} obligations verified in \textbf{Z3} and \textbf{cvc5} (\textbf{0 mismatches})
+    \end{itemize}
+  \end{block}
 
-    \begin{column}{0.48\textwidth}
-      \begin{block}{Accepted by Family}
-        \centering
-        \scriptsize
-        \setlength{\tabcolsep}{4.5pt}
-        \begin{tabular}{lrr}
-          \toprule
-          \textbf{Family} & \textbf{Accepted} & \textbf{Candidates} \\
-          \midrule
-          Implication & 3,321 & 69,727 \\
-          Bounds (Signed/Unsigned) & 3,008 & 26,428 \\
-          Disequality / Equality & 1,070 & 24,724 \\
-          Array / Masked bits & 10 & 1,781 \\
-          \bottomrule
-        \end{tabular}
-      \end{block}
+  \vspace{0.15em}
 
-      \vspace{0.15em}
+  \begin{exampleblock}{Key Takeaways}
+    \small
+    \begin{itemize}
+        \setlength\itemsep{0.2em}
+      \item \textbf{Dominant Families:} \textbf{Implications (45\%)} and \textbf{Bounds (41\%)} make up over \textbf{85\%} of accepted constraints, followed by \textbf{Disequalities/Equalities (14\%)} and \textbf{Arrays}
+      \item \textbf{Multi- vs.\ Single-Property:} \texttt{CAV'18} multi- and single-property runs match at \textbf{$\sim$11\%} acceptance while enabling cross-property reuse
+      \item \textbf{Efficiency:} Every completed model finishes in \textbf{$\le 46\text{ s}$} with \textbf{0 \texttt{UNKNOWN}} solver queries
+    \end{itemize}
+  \end{exampleblock}
 
-      \begin{exampleblock}{Accepted by Benchmark Track}
-        \centering
-        \scriptsize
-        \setlength{\tabcolsep}{4.5pt}
-        \begin{tabular}{lrrr}
-          \toprule
-          \textbf{Track} & \textbf{Props} & \textbf{Accepted} & \textbf{Rate} \\
-          \midrule
-          \texttt{CAV'18 (multi)} & 178 & 859 & 10.8\% \\
-          \texttt{CAV'18 (single)} & 180 & 857 & 10.8\% \\
-          \texttt{HWMCC'25 (arrays)} & 80 & 1,833 & 8.7\% \\
-          \texttt{HWMCC'25 (bv)} & 105 & 3,860 & 4.5\% \\
-          \bottomrule
-        \end{tabular}
-      \end{exampleblock}
-    \end{column}
-  \end{columns}
+  \vspace{0.15em}
+  \centering
+  \href{https://github.com/MJLiiii/Btor2Sieve}{\beamerbutton{Interactive HTML Report \& Code: github.com/MJLiiii/Btor2Sieve}}
 
 \end{frame}
 
@@ -271,10 +246,10 @@
       \begin{exampleblock}{Completed}
         \begin{itemize}
             \setlength\itemsep{0.4em}
-          \item \textbf{Pono} BTOR2 frontend + subterm vocabulary extraction
-          \item Template + solver-guided generation across all 6 constraint families
-          \item Independent Z3 validator, \textbf{cvc5} \texttt{.smt2} replay, and \texttt{btor2sieve verify}
-          \item Added \texttt{HWMCC'25} + \texttt{CAV'18} benchmarks and Pono-checked conversion/splitting scripts
+          \item Selected and preprocessed benchmark suites (\texttt{HWMCC'25} \& \texttt{CAV'18})
+          \item Designed the end-to-end extraction and validation workflow
+          \item Completed core project implementation
+          \item Obtained initial experimental evaluation results
         \end{itemize}
       \end{exampleblock}
     \end{column}
@@ -284,7 +259,7 @@
         \begin{itemize}
             \setlength\itemsep{0.4em}
           \item Define the corresponding implication obligation for candidates derived directly from the model
-          \item Analyze per-family acceptance rates, extraction/validation times, and cross-property reuse
+          \item Analyze the experimental data
         \end{itemize}
       \end{block}
     \end{column}
